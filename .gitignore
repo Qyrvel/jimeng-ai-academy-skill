@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local evidence captures (do not publish by default)
+academy-data/jimeng/sources/materialized/
+academy-data/jimeng/sources/materialization-registry.json
+
+# Local audit / private release evidence
+academy-data/jimeng/audit/
+r3b_evidence/
+r3b-evidence/
+r3b-evidence-r1/
+r4b_evidence/
+
+# Local secrets / environment
+.env
+.env.*
+*.pem
+*.key
