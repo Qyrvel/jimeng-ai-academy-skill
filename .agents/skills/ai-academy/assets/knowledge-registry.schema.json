@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Academy Knowledge Registry",
+  "type": "object",
+  "required": ["items"],
+  "additionalProperties": false,
+  "properties": {"items": {"type": "array", "items": {"$ref": "#/$defs/item"}}},
+  "$defs": {
+    "text": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "evidence_ref": {
+      "type": "object",
+      "required": ["source_id", "support_note"],
+      "additionalProperties": false,
+      "properties": {
+        "source_id": {"$ref": "#/$defs/text"},
+        "support_note": {"$ref": "#/$defs/text"}
+      }
+    },
+    "item": {
+      "type": "object",
+      "required": ["knowledge_id", "title", "domain", "knowledge_type", "statement", "learner_outcome", "information_type", "scope", "version_scope", "evidence_refs", "limitations", "status"],
+      "additionalProperties": false,
+      "properties": {
+        "knowledge_id": {"$ref": "#/$defs/text"},
+        "title": {"$ref": "#/$defs/text"},
+        "domain": {"$ref": "#/$defs/text"},
+        "knowledge_type": {"type": "string", "enum": ["CONCEPT", "CAPABILITY", "PROCEDURE", "CONSTRAINT", "POLICY", "VERSION_CONTEXT"]},
+        "statement": {"$ref": "#/$defs/text"},
+        "learner_outcome": {"$ref": "#/$defs/text"},
+        "information_type": {"type": "string", "enum": ["DOCUMENTED", "OBSERVED", "INFERRED"]},
+        "scope": {"$ref": "#/$defs/text"},
+        "version_scope": {"$ref": "#/$defs/text"},
+        "evidence_refs": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/evidence_ref"}},
+        "limitations": {"$ref": "#/$defs/text"},
+        "status": {"type": "string", "enum": ["draft", "validated", "deprecated"]}
+      }
+    }
+  }
+}

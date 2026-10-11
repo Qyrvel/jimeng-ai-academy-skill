@@ -1,0 +1,37 @@
+{
+  "items": [
+    {
+      "knowledge_id": "JIM-K-0001",
+      "title": "Seedance音视频联合生成",
+      "domain": "Seedance",
+      "knowledge_type": "LESSON",
+      "statement": "   ",
+      "learner_outcome": "识别该版本的生成模态。",
+      "information_type": "DOCUMENTED",
+      "scope": "ByteDance Seed Model Layer；仅官方模型能力说明，不代表即梦产品已部署或开放。",
+      "version_scope": "Seedance 2.5",
+      "evidence_refs": [],
+      "limitations": "仅模型声明；不证明产品端权限或音画同步效果。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0001",
+      "title": "Seedance音视频联合生成",
+      "domain": "Seedance",
+      "knowledge_type": "CAPABILITY",
+      "statement": "Seed官方将Seedance 2.5描述为音视频联合生成模型。",
+      "learner_outcome": "识别该版本的生成模态。",
+      "information_type": "DOCUMENTED",
+      "scope": "ByteDance Seed Model Layer；仅官方模型能力说明，不代表即梦产品已部署或开放。",
+      "version_scope": "Seedance 2.5",
+      "evidence_refs": [
+        {
+          "source_id": "M09",
+          "support_note": "开篇说明直接支持音视频联合生成这一模型定位。"
+        }
+      ],
+      "limitations": "仅模型声明；不证明产品端权限或音画同步效果。",
+      "status": "draft"
+    }
+  ]
+}

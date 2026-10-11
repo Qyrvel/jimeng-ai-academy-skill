@@ -1,0 +1,57 @@
+{
+  "map_id": "jimeng-creator-academy-v1-mastery-map",
+  "course_id": "jimeng-creator-academy-v1",
+  "status": "mastery_contract",
+  "outcome_reference_form": "<lesson_id>#<0-based index into that lesson's learner_outcomes>",
+  "mastery_definition": "Mastery = 学习者对一个明确 mastery unit 的所有 required outcomes，均产生满足 assessment requirement 的可观察 evidence。不是考试百分比、不是永久能力、不是心理推断、不是长期记忆状态。",
+  "decision_contract": {
+    "decision_enum": ["PASS", "RETRY", "REMEDIATION", "BLOCKED"],
+    "reason_enum": ["PASS_ALL_REQUIRED_OUTCOMES", "RETRY_EXECUTION_INCOMPLETE", "RETRY_EVIDENCE_INCOMPLETE", "REMEDIATE_OUTCOME_GAP", "REMEDIATE_BOUNDARY_MISCONCEPTION", "BLOCKED_BY_HARD_PREREQUISITE"],
+    "evaluation_order": "①hard_prerequisite_units 未满足 → BLOCKED；②全部 required outcome 满足 → PASS；③缺口中有 boundary/concept 误解 → REMEDIATION/REMEDIATE_BOUNDARY_MISCONCEPTION；④证据未提交 → RETRY/RETRY_EVIDENCE_INCOMPLETE；⑤execution criterion 未达标 → RETRY/RETRY_EXECUTION_INCOMPLETE；⑥仍有 outcome 缺口 → REMEDIATION/REMEDIATE_OUTCOME_GAP。④⑤必须排在⑥之前，否则 RETRY 永远不可达。分支顺序即合同。",
+    "no_student_state": "本文件只定义「给定一组 evidence 应该怎么判」，不存储任何学生身份、历史或持久状态。"
+  },
+  "rule_definitions": {
+    "LESSON_PASS": {"pass_rule": "所有 mastery_required requirement 均已有 evidence，且该 unit 的全部 required_outcomes 被满足，且 hard_prerequisite_units 已先满足。允许同时存在分数阈值，但分数不得覆盖 outcome 缺口。"},
+    "LESSON_RETRY": {"retry_rule": "hard prerequisites 已满足、无 concept/boundary 误解，主要缺失仅在 execution / evidence 层 → RETRY，无需重新教学全部内容。"},
+    "LESSON_REMEDIATION": {"remediation_rule": "assessment evidence 显示某个 required outcome 本身尚未达到 → REMEDIATION，必须指向 target_lesson_id 与 target_outcome 及 recommended_review_scope；不得生成课程外新教学内容。"}
+  },
+  "units": [
+    {"mastery_unit_id":"JCA-MU-L01","unit_type":"LESSON","lesson_ids":["JCA-M01-L01"],"required_requirement_ids":["JCA-AR-001"],"required_outcomes":["JCA-M01-L01#0","JCA-M01-L01#1","JCA-M01-L01#2"],"hard_prerequisite_units":[],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"只判定本课三条 outcome；不判定模型菜单或账号开放状态。"},
+    {"mastery_unit_id":"JCA-MU-L02","unit_type":"LESSON","lesson_ids":["JCA-M01-L02"],"required_requirement_ids":["JCA-AR-002"],"required_outcomes":["JCA-M01-L02#0","JCA-M01-L02#1","JCA-M01-L02#2","JCA-M01-L02#3"],"hard_prerequisite_units":[],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"不含登录后页面结构与移动端路径。"},
+    {"mastery_unit_id":"JCA-MU-L03","unit_type":"LESSON","lesson_ids":["JCA-M02-L01"],"required_requirement_ids":["JCA-AR-003","JCA-AR-004"],"required_outcomes":["JCA-M02-L01#0","JCA-M02-L01#1"],"hard_prerequisite_units":[],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"建议性数值不作为合格标准。"},
+    {"mastery_unit_id":"JCA-MU-L04","unit_type":"LESSON","lesson_ids":["JCA-M02-L02"],"required_requirement_ids":["JCA-AR-004"],"required_outcomes":["JCA-M02-L02#0","JCA-M02-L02#1"],"hard_prerequisite_units":["JCA-MU-L03"],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"顺序来自流程事实 CRR2-E-0004；不评分结果质量。"},
+    {"mastery_unit_id":"JCA-MU-L05","unit_type":"LESSON","lesson_ids":["JCA-M02-L03"],"required_requirement_ids":["JCA-AR-005"],"required_outcomes":["JCA-M02-L03#0","JCA-M02-L03#1"],"hard_prerequisite_units":[],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"只判定模型层与产品层的区分，不判定模型细节。"},
+    {"mastery_unit_id":"JCA-MU-L06","unit_type":"LESSON","lesson_ids":["JCA-M03-L01"],"required_requirement_ids":["JCA-AR-006"],"required_outcomes":["JCA-M03-L01#0","JCA-M03-L01#1"],"hard_prerequisite_units":[],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"不判定界面按钮位置与耗时。"},
+    {"mastery_unit_id":"JCA-MU-L07","unit_type":"LESSON","lesson_ids":["JCA-M03-L02"],"required_requirement_ids":["JCA-AR-007"],"required_outcomes":["JCA-M03-L02#0","JCA-M03-L02#1"],"hard_prerequisite_units":["JCA-MU-L06"],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"顺序依据 JIM-E-0004；不含音频上传方式。"},
+    {"mastery_unit_id":"JCA-MU-L08","unit_type":"LESSON","lesson_ids":["JCA-M03-L03"],"required_requirement_ids":["JCA-AR-008"],"required_outcomes":["JCA-M03-L03#0","JCA-M03-L03#1"],"hard_prerequisite_units":["JCA-MU-L07"],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"顺序依据 JIM-E-0026；不拆成四个官方步骤。"},
+    {"mastery_unit_id":"JCA-MU-L09","unit_type":"LESSON","lesson_ids":["JCA-M04-L01"],"required_requirement_ids":["JCA-AR-009"],"required_outcomes":["JCA-M04-L01#0","JCA-M04-L01#1"],"hard_prerequisite_units":[],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"不判定写作方法细节。"},
+    {"mastery_unit_id":"JCA-MU-L10","unit_type":"LESSON","lesson_ids":["JCA-M04-L02"],"required_requirement_ids":["JCA-AR-010"],"required_outcomes":["JCA-M04-L02#0","JCA-M04-L02#1"],"hard_prerequisite_units":[],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"官方建议不作效果承诺。"},
+    {"mastery_unit_id":"JCA-MU-L11","unit_type":"LESSON","lesson_ids":["JCA-M04-L03"],"required_requirement_ids":["JCA-AR-011"],"required_outcomes":["JCA-M04-L03#0","JCA-M04-L03#1"],"hard_prerequisite_units":[],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"不判定词汇选择偏好。"},
+    {"mastery_unit_id":"JCA-MU-L12","unit_type":"LESSON","lesson_ids":["JCA-M05-L01"],"required_requirement_ids":["JCA-AR-012"],"required_outcomes":["JCA-M05-L01#0","JCA-M05-L01#1","JCA-M05-L01#2"],"hard_prerequisite_units":[],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"不判定素材规格与优先级。"},
+    {"mastery_unit_id":"JCA-MU-L13","unit_type":"LESSON","lesson_ids":["JCA-M05-L02"],"required_requirement_ids":["JCA-AR-013"],"required_outcomes":["JCA-M05-L02#0","JCA-M05-L02#1","JCA-M05-L02#2"],"hard_prerequisite_units":[],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"50 为界面总量提示；独立音频入口未单独验证。"},
+    {"mastery_unit_id":"JCA-MU-L14","unit_type":"LESSON","lesson_ids":["JCA-M05-L03"],"required_requirement_ids":["JCA-AR-014"],"required_outcomes":["JCA-M05-L03#0","JCA-M05-L03#1","JCA-M05-L03#2"],"hard_prerequisite_units":["JCA-MU-L12"],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"1 个 gate 由 2 条 hard edge（JIM-E-0001、JIM-E-0003）支撑，仍只算 1 个 prerequisite unit。"},
+    {"mastery_unit_id":"JCA-MU-L15","unit_type":"LESSON","lesson_ids":["JCA-M06-L01"],"required_requirement_ids":["JCA-AR-015"],"required_outcomes":["JCA-M06-L01#0","JCA-M06-L01#1","JCA-M06-L01#2"],"hard_prerequisite_units":[],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"保留边界非实测保证；模型层能力不升级为 mastery gate。"},
+    {"mastery_unit_id":"JCA-MU-L16","unit_type":"LESSON","lesson_ids":["JCA-M06-L02"],"required_requirement_ids":["JCA-AR-016"],"required_outcomes":["JCA-M06-L02#0","JCA-M06-L02#1","JCA-M06-L02#2","JCA-M06-L02#3"],"hard_prerequisite_units":[],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"子工具内部步骤未验证，不作评分对象。"},
+    {"mastery_unit_id":"JCA-MU-L17","unit_type":"LESSON","lesson_ids":["JCA-M07-L01"],"required_requirement_ids":["JCA-AR-017"],"required_outcomes":["JCA-M07-L01#0","JCA-M07-L01#1"],"hard_prerequisite_units":[],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"不判定具体内容是否违规。"},
+    {"mastery_unit_id":"JCA-MU-L18","unit_type":"LESSON","lesson_ids":["JCA-M07-L02"],"required_requirement_ids":["JCA-AR-018"],"required_outcomes":["JCA-M07-L02#0","JCA-M07-L02#1"],"hard_prerequisite_units":[],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"POL-E-0008 是课内结构，不作为 gate。"},
+    {"mastery_unit_id":"JCA-MU-L19","unit_type":"LESSON","lesson_ids":["JCA-M07-L03"],"required_requirement_ids":["JCA-AR-019"],"required_outcomes":["JCA-M07-L03#0","JCA-M07-L03#1","JCA-M07-L03#2"],"hard_prerequisite_units":[],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"不复述条款子项；不构成法律意见。"},
+    {"mastery_unit_id":"JCA-MU-L20","unit_type":"LESSON","lesson_ids":["JCA-M07-L04"],"required_requirement_ids":["JCA-AR-020"],"required_outcomes":["JCA-M07-L04#0","JCA-M07-L04#1"],"hard_prerequisite_units":[],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"CONSTRAINS 关系不升级为 mastery gate。"},
+    {"mastery_unit_id":"JCA-MU-L21","unit_type":"LESSON","lesson_ids":["JCA-M08-L01"],"required_requirement_ids":["JCA-AR-021"],"required_outcomes":["JCA-M08-L01#0","JCA-M08-L01#1"],"hard_prerequisite_units":[],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"不判定账号权限。"},
+    {"mastery_unit_id":"JCA-MU-L22","unit_type":"LESSON","lesson_ids":["JCA-M08-L02"],"required_requirement_ids":["JCA-AR-022"],"required_outcomes":["JCA-M08-L02#0","JCA-M08-L02#1"],"hard_prerequisite_units":[],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"不评分美学质量与效果好坏。"},
+    {"mastery_unit_id":"JCA-MU-L23","unit_type":"LESSON","lesson_ids":["JCA-M08-L03"],"required_requirement_ids":["JCA-AR-023"],"required_outcomes":["JCA-M08-L03#0","JCA-M08-L03#1","JCA-M08-L03#2"],"hard_prerequisite_units":[],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"不评分美学质量；不判定账号与地区范围。"},
+    {"mastery_unit_id":"JCA-MU-L24","unit_type":"LESSON","lesson_ids":["JCA-M08-L04"],"required_requirement_ids":["JCA-AR-024"],"required_outcomes":["JCA-M08-L04#0","JCA-M08-L04#1"],"hard_prerequisite_units":[],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"不评分保真度；子工具内部步骤未验证。"}
+  ],
+  "hard_sequence_summary": {
+    "mastery_hard_transition_count": 4,
+    "mastery_supporting_hard_edge_count": 5,
+    "note": "4 个 transition 级 mastery gate：M02-L02←M02-L01、M03-L02←M03-L01、M03-L03←M03-L02、M05-L03←M05-L01。其中 M05 那一个 gate 由 2 条 hard edge（JIM-E-0001、JIM-E-0003）支撑，仍只算 1 个 prerequisite，不得重复制造 prior unit。"
+  },
+  "derived": {
+    "mastery_unit_count": 24,
+    "lesson_mastery_unit_count": 24,
+    "sequence_pair_mastery_unit_count": 0,
+    "mastery_hard_transition_count": 4,
+    "mastery_supporting_hard_edge_count": 5,
+    "non_order_mastery_gate_misuse_count": 0
+  }
+}

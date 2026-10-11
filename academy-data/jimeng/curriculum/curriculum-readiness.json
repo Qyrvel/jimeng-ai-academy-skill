@@ -1,0 +1,263 @@
+{
+  "track": "Jimeng Creator Academy V1 — Jimeng Creator Track",
+  "domains": [
+    {
+      "domain_id": "CRD-01",
+      "name": "产品/模型/版本边界",
+      "criticality": "FOUNDATIONAL",
+      "target_competency": "区分产品声明、模型声明和 API；不由模型能力推断账号开放。",
+      "knowledge_support": [
+        "JIM-K-0001",
+        "JIM-K-0014",
+        "JIM-K-0036",
+        "JIM-K-0038",
+        "JIM-K-0042",
+        "JIM-K-0043"
+      ],
+      "graph_support": "Seedance JIM-E-0016/0018/0019 及 VERSION_CONTEXT_FOR 已表达分层。",
+      "known_gaps": [
+        "C3 未解决；当前完整模型菜单不在本域许可内。"
+      ],
+      "status": "READY",
+      "decision": "ALLOW_CURRICULUM_DESIGN"
+    },
+    {
+      "domain_id": "CRD-02",
+      "name": "产品基础与 Web/App 入口",
+      "criticality": "FOUNDATIONAL",
+      "target_competency": "在明确支持的客户端定位创作入口与必要准入条件；不把历史 App 条目当当前操作。",
+      "knowledge_support": [
+        "JIM-K-0010",
+        "JIM-K-0029",
+        "JIM-K-0044",
+        "JIM-K-0045",
+        "JIM-K-0054",
+        "JIM-K-0055",
+        "JIM-K-0056"
+      ],
+      "graph_support": "Core Graph R2 以 CONSTRAINS 表达 Web 未登录准入条件对其入口流程的直接约束（CRR2-E-0005）；其余入口知识为条目级，历史 App 条目与 Web 观察由 NR-0053 判为 SCOPE_PARALLEL，未用图边连接不同客户端。",
+      "known_gaps": [
+        "非阻断：入口与准入只覆盖 2026-10-04 观察到的 Jimeng Web 未登录状态；登录后页面结构、iOS/Android 路径与其它地区/账号差异未验证，故只作为该观察范围内的知识保留。"
+      ],
+      "status": "READY",
+      "decision": "ALLOW_CURRICULUM_DESIGN"
+    },
+    {
+      "domain_id": "CRD-03",
+      "name": "图片生成 / Seedream 产品边界",
+      "criticality": "CORE",
+      "target_competency": "在指定即梦产品端完成基础图片生成、查看和保存，保持模型与产品范围分离。",
+      "knowledge_support": [
+        "JIM-K-0004",
+        "JIM-K-0005",
+        "JIM-K-0006",
+        "JIM-K-0007",
+        "JIM-K-0008",
+        "JIM-K-0051",
+        "JIM-K-0052",
+        "JIM-K-0053"
+      ],
+      "graph_support": "Core Graph R2 含图片生成流程的整体条目与两个步骤条目，以 STEP_OF 表达步骤归属、PROCEDURE_PRECEDES 表达第1–2步到第3步的流程先后；模型与产品的范围分离由各条 scope 与 NR-0046 的 SCOPE_PARALLEL 保证，未用图边断言模型到产品的可用性。",
+      "known_gaps": [
+        "非阻断：P19 未标明客户端与软件版本，流程只记录为该官方产品页所述内容；客户端级入口与适用版本边界另由 G40-01 跟踪，不在本域重复计为阻断。"
+      ],
+      "status": "READY",
+      "decision": "ALLOW_CURRICULUM_DESIGN"
+    },
+    {
+      "domain_id": "CRD-04",
+      "name": "Seedance 视频基础流程",
+      "criticality": "CORE",
+      "target_competency": "解释指定产品页三步流程及产物，识别各步骤职责；独立执行依赖入口、Prompt 和素材域闭合。",
+      "knowledge_support": [
+        "JIM-K-0009",
+        "JIM-K-0010",
+        "JIM-K-0011",
+        "JIM-K-0012",
+        "JIM-K-0014",
+        "JIM-K-0024",
+        "JIM-K-0046"
+      ],
+      "graph_support": "JIM-E-0004/0023–0026 已有步骤归属和先后。",
+      "known_gaps": [
+        "本域 READY 仅指流程结构；不许可绕过 CRD-02/05/06 的执行阻断。"
+      ],
+      "status": "READY",
+      "decision": "ALLOW_CURRICULUM_DESIGN"
+    },
+    {
+      "domain_id": "CRD-05",
+      "name": "Prompt 基础表达",
+      "criticality": "CORE",
+      "target_competency": "把创作意图写成可用于基础生成的提示词并做必要调整，不承诺效果。",
+      "knowledge_support": [
+        "JIM-K-0011",
+        "JIM-K-0020",
+        "JIM-K-0047",
+        "JIM-K-0048",
+        "JIM-K-0049",
+        "JIM-K-0050"
+      ],
+      "graph_support": "既有第二步与生成检查步骤结构可用；K0047–0050 为自足表达方法，无必要新增依赖或教学顺序边。",
+      "known_gaps": [
+        "限官方基础表达建议，不承诺效果；完整 Prompt 技法为非阻断未来项。产品实际生成仍受 CRD-02/03/06 约束。"
+      ],
+      "status": "READY",
+      "decision": "ALLOW_CURRICULUM_DESIGN"
+    },
+    {
+      "domain_id": "CRD-06",
+      "name": "参考图片 / 视频 / 音频",
+      "criticality": "CORE",
+      "target_competency": "区分参考用途并在限定产品流程中完成素材输入；不假定独立音频上传入口。",
+      "knowledge_support": [
+        "JIM-K-0011",
+        "JIM-K-0012",
+        "JIM-K-0013",
+        "JIM-K-0014",
+        "JIM-K-0015",
+        "JIM-K-0017",
+        "JIM-K-0022",
+        "JIM-K-0023",
+        "JIM-K-0057",
+        "JIM-K-0058",
+        "JIM-K-0059"
+      ],
+      "graph_support": "Core Graph R2 以 CONSTRAINS 表达参考素材总量提示对参考输入路径的直接约束（CRR2-E-0006）；参考用途、概念与边界沿用既有 Pilot 结构，未用图边断言模型层上限或独立音频入口。",
+      "known_gaps": [
+        "非阻断：只覆盖 2026-10-04 观察到的 Jimeng Web 视频生成 / Seedance 2.5 / 全能参考界面；截图未显示素材格式、大小、时长与分项数量条件，独立音频上传路径未由该截图单独验证（未单独验证不等于不支持），其它客户端与账号差异未验证。"
+      ],
+      "status": "READY",
+      "decision": "ALLOW_CURRICULUM_DESIGN"
+    },
+    {
+      "domain_id": "CRD-07",
+      "name": "编辑功能",
+      "criticality": "CORE",
+      "target_competency": "对已有作品执行一次证据支持的局部修改并保存，理解保留边界。",
+      "knowledge_support": [
+        "JIM-K-0003",
+        "JIM-K-0005",
+        "JIM-K-0006",
+        "JIM-K-0007",
+        "JIM-K-0016",
+        "JIM-K-0019",
+        "JIM-K-0021",
+        "JIM-K-0060",
+        "JIM-K-0061"
+      ],
+      "graph_support": "Core Graph R2 以 STEP_OF 表达图片修改任务的结果阶段归属（CRR2-E-0007）；视频局部编辑边界仍由 JIM-E-0005/0017 支持；本轮未用图边断言 Seedream 模型能力或子工具流程。",
+      "known_gaps": [
+        "非阻断：编辑闭环只覆盖 2026-10-04 观察到的 Jimeng Web / Seedream 5.0 Pro 图片修改任务；结果页“局部重绘”“去画布编辑”等子工具内部步骤未验证（NOT_VERIFIED，非 UNSUPPORTED）；Seedance 2.5 视频编辑未被本轮证据验证；C1 全历史仍未解决。"
+      ],
+      "status": "READY",
+      "decision": "ALLOW_CURRICULUM_DESIGN"
+    },
+    {
+      "domain_id": "CRD-08",
+      "name": "限定平台使用规则",
+      "criticality": "CORE",
+      "target_competency": "识别所选用户义务、标识要求和有条件处理上下文，不作完整政策或法律保证。",
+      "knowledge_support": [
+        "JIM-K-0025",
+        "JIM-K-0026",
+        "JIM-K-0027",
+        "JIM-K-0028",
+        "JIM-K-0029",
+        "JIM-K-0030",
+        "JIM-K-0031",
+        "JIM-K-0032",
+        "JIM-K-0033",
+        "JIM-K-0034",
+        "JIM-K-0035"
+      ],
+      "graph_support": "Policy R1 19 edges 已通过 final；9 条 Enforcement 保持条件与方向。",
+      "known_gaps": [
+        "仅 P14 第4.1–4.8所选命题；社区公约、阈值、法律解释不在许可内。"
+      ],
+      "status": "READY",
+      "decision": "ALLOW_CURRICULUM_DESIGN"
+    },
+    {
+      "domain_id": "CRD-09",
+      "name": "核心工作流的准入约束结构",
+      "criticality": "CORE",
+      "target_competency": "使基础生成工作流显式关联已存在的身份认证前提，不把规则作为孤立背景遗漏。",
+      "knowledge_support": [
+        "JIM-K-0009",
+        "JIM-K-0010",
+        "JIM-K-0029",
+        "JIM-K-0046"
+      ],
+      "graph_support": "curriculum-readiness-core-graph-r1.json：CRR1-E-0001 以 CONSTRAINS 连接 K0029→K0046，限第三步中的实际生成动作；已完成直接性/版本/课程泄漏审核。",
+      "known_gaps": [
+        "仅所存 P14 协议及 P10 产品页范围；不代表认证界面、当前账号准入实测或完整政策。"
+      ],
+      "status": "READY",
+      "decision": "ALLOW_CURRICULUM_DESIGN"
+    },
+    {
+      "domain_id": "CRD-10",
+      "name": "产品与模型历史背景",
+      "criticality": "SUPPORTING",
+      "target_competency": "识别已保存的版本记录及时间限制，不推断替代或完整沿革。",
+      "knowledge_support": [
+        "JIM-K-0036",
+        "JIM-K-0037",
+        "JIM-K-0038",
+        "JIM-K-0039",
+        "JIM-K-0040",
+        "JIM-K-0041",
+        "JIM-K-0042",
+        "JIM-K-0043",
+        "JIM-K-0044",
+        "JIM-K-0045"
+      ],
+      "graph_support": "Seedance 已有版本关系；App 历史可后续受控扩图。",
+      "known_gaps": [
+        "P04 2.3.5、M03–M08 完整沿革延期；不是选择当前唯一操作路径的依据。"
+      ],
+      "status": "PARTIAL",
+      "decision": "ALLOW_CURRICULUM_DESIGN"
+    },
+    {
+      "domain_id": "CRD-11",
+      "name": "会员 / 积分 / 实时价格",
+      "criticality": "DYNAMIC",
+      "target_competency": "识别动态信息需要按渠道与时点另行核查，不纳入稳定骨架。",
+      "knowledge_support": [],
+      "graph_support": "无，当前目标不依赖价格图。",
+      "known_gaps": [
+        "P05/P08 candidate，C2 未解决；不承诺免费额度。"
+      ],
+      "status": "PARTIAL",
+      "decision": "DEFER_DYNAMIC"
+    },
+    {
+      "domain_id": "CRD-12",
+      "name": "API / 社区经验 / 可复现实验",
+      "criticality": "OPTIONAL",
+      "target_competency": "Creator Track 不要求 API 开发或高级实测；无证据时不作质量保证。",
+      "knowledge_support": [],
+      "graph_support": "无，当前核心目标不依赖。",
+      "known_gaps": [
+        "A01–A07、O01/O02 未准入；无 OBSERVED Item。"
+      ],
+      "status": "PARTIAL",
+      "decision": "DEFER_OPTIONAL"
+    },
+    {
+      "domain_id": "CRD-13",
+      "name": "API 实时服务状态",
+      "criticality": "OUT_OF_SCOPE",
+      "target_competency": "不属于当前普通创作者 Track。",
+      "knowledge_support": [],
+      "graph_support": "不适用。",
+      "known_gaps": [],
+      "status": "NOT_APPLICABLE",
+      "decision": "NOT_APPLICABLE"
+    }
+  ],
+  "blocking_gaps": [],
+  "track_verdict": "READY_FOR_CURRICULUM_DESIGN"
+}

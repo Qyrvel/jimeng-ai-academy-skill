@@ -1,0 +1,14 @@
+{
+  "pack_id": "fixture-invalid-hard-order-pack",
+  "curriculum_id": "jimeng-creator-academy-v1",
+  "blueprint_id": "jimeng-creator-academy-v1-blueprint",
+  "status": "pilot",
+  "selection_rationale": "反例：故意把 JCA-M02-L02 排在 JCA-M02-L01 之前，违反真实 hard sequence（CRR2-E-0004）。",
+  "lesson_order": ["JCA-M02-L02", "JCA-M02-L01"],
+  "lesson_files": {
+    "JCA-M02-L01": "pack-l01.json",
+    "JCA-M02-L02": "pack-l02.json"
+  },
+  "pilot_a": {"module_id": "JCA-M02", "purpose": "hard_sequence_test", "lessons": ["JCA-M02-L01", "JCA-M02-L02"], "lesson_count": 2},
+  "pilot_b": {"module_id": "JCA-M02", "purpose": "hard_sequence_test", "lessons": ["JCA-M02-L01", "JCA-M02-L02"], "lesson_count": 2}
+}

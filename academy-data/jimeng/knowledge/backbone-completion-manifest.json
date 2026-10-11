@@ -1,0 +1,10 @@
+{
+  "gate": "2.3-R1",
+  "new_item_ids": ["JIM-K-0025", "JIM-K-0026", "JIM-K-0027", "JIM-K-0028", "JIM-K-0029", "JIM-K-0030", "JIM-K-0031", "JIM-K-0032", "JIM-K-0033", "JIM-K-0034", "JIM-K-0035", "JIM-K-0036", "JIM-K-0037", "JIM-K-0038", "JIM-K-0039", "JIM-K-0040", "JIM-K-0041"],
+  "source_ids_used": ["P14", "M01", "M02"],
+  "materialized_source_ids_used": ["P14", "M01", "M02"],
+  "knowledge_type_counts": {
+    "POLICY": 11,
+    "VERSION_CONTEXT": 6
+  }
+}

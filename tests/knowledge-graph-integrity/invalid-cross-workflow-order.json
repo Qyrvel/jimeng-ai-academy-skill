@@ -1,0 +1,39 @@
+{
+  "graph_id": "test-invalid-cross-workflow-order",
+  "scope": "Integrity fixture: a PROCEDURE_PRECEDES edge joins two steps whose STEP_OF parents differ (K-0009 vs K-0024) without CROSS_WORKFLOW_ORDER_JUSTIFICATION. Expected: FAIL with the WORKFLOW rule.",
+  "nodes": [
+    {"knowledge_id": "JIM-K-0009"},
+    {"knowledge_id": "JIM-K-0010"},
+    {"knowledge_id": "JIM-K-0024"},
+    {"knowledge_id": "JIM-K-0046"}
+  ],
+  "edges": [
+    {
+      "edge_id": "CWO-E-0001",
+      "from": "JIM-K-0010",
+      "relation": "STEP_OF",
+      "to": "JIM-K-0009",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "K-0010 属于 workflow K-0009。",
+      "limitations": "测试用。"
+    },
+    {
+      "edge_id": "CWO-E-0002",
+      "from": "JIM-K-0046",
+      "relation": "STEP_OF",
+      "to": "JIM-K-0024",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "K-0046 属于另一个 workflow K-0024。",
+      "limitations": "测试用。"
+    },
+    {
+      "edge_id": "CWO-E-0003",
+      "from": "JIM-K-0010",
+      "relation": "PROCEDURE_PRECEDES",
+      "to": "JIM-K-0046",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "跨 workflow 的顺序，但未写 CROSS_WORKFLOW_ORDER_JUSTIFICATION，应被拒绝。",
+      "limitations": "测试用。"
+    }
+  ]
+}

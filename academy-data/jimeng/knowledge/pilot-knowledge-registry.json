@@ -1,0 +1,1167 @@
+{
+  "items": [
+    {
+      "knowledge_id": "JIM-K-0001",
+      "title": "Seedance音视频联合生成",
+      "domain": "Seedance",
+      "knowledge_type": "CAPABILITY",
+      "statement": "Seed官方将Seedance 2.5描述为音视频联合生成模型。",
+      "learner_outcome": "识别该版本的生成模态。",
+      "information_type": "DOCUMENTED",
+      "scope": "ByteDance Seed Model Layer；仅官方模型能力说明，不代表即梦产品已部署或开放。",
+      "version_scope": "Seedance 2.5",
+      "evidence_refs": [
+        {
+          "source_id": "M09",
+          "support_note": "开篇说明直接支持音视频联合生成这一模型定位。"
+        }
+      ],
+      "limitations": "仅模型声明；不证明产品端权限或音画同步效果。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0002",
+      "title": "Seedance参考视频的构图信息",
+      "domain": "Seedance",
+      "knowledge_type": "CAPABILITY",
+      "statement": "Seedance 2.5官方说明将参考视频中的构图列为模型可理解的信息。",
+      "learner_outcome": "指出该官方说明涉及的参考信息类型。",
+      "information_type": "DOCUMENTED",
+      "scope": "ByteDance Seed Model Layer；仅官方模型能力说明，不代表即梦产品已部署或开放。",
+      "version_scope": "Seedance 2.5",
+      "evidence_refs": [
+        {
+          "source_id": "M09",
+          "support_note": "Smarter Reference and Editing说明段列出参考视频的framing，支持构图信息这一部分。"
+        }
+      ],
+      "limitations": "不扩展为精确复现保证、上传规格或即梦操作参数。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0003",
+      "title": "Seedance绿幕编辑能力",
+      "domain": "Seedance",
+      "knowledge_type": "CAPABILITY",
+      "statement": "Seedance 2.5官方模型说明列出绿幕编辑能力。",
+      "learner_outcome": "识别绿幕编辑属于该版本官方列出的模型能力。",
+      "information_type": "DOCUMENTED",
+      "scope": "ByteDance Seed Model Layer；仅官方模型能力说明，不代表即梦产品已部署或开放。",
+      "version_scope": "Seedance 2.5",
+      "evidence_refs": [
+        {
+          "source_id": "M09",
+          "support_note": "Aiming for Professional Production说明段明确列出green-screen editing。"
+        }
+      ],
+      "limitations": "未提供本Item所需的操作细节，不解释绿幕处理机制或即梦入口。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0004",
+      "title": "Seedream文字密集图像生成",
+      "domain": "Seedream",
+      "knowledge_type": "CAPABILITY",
+      "statement": "Seedream 5.0 Pro官方说明支持生成包含较多文字的图像。",
+      "learner_outcome": "识别文字密集图像属于官方描述的生成对象。",
+      "information_type": "DOCUMENTED",
+      "scope": "ByteDance Seed Model Layer；仅官方模型能力说明，不代表即梦产品已部署或开放。",
+      "version_scope": "Seedream 5.0 Pro",
+      "evidence_refs": [
+        {
+          "source_id": "M10",
+          "support_note": "High-Density Infographics说明段直接支持text-rich images，不使用下方示例Prompt。"
+        }
+      ],
+      "limitations": "不承诺文字准确率、内容正确性或即梦端可用性。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0005",
+      "title": "Seedream空间标注引导",
+      "domain": "编辑功能",
+      "knowledge_type": "CAPABILITY",
+      "statement": "Seedream 5.0 Pro官方说明支持响应空间标注进行交互编辑。",
+      "learner_outcome": "识别空间标注是该模型说明中的编辑引导方式。",
+      "information_type": "DOCUMENTED",
+      "scope": "ByteDance Seed Model Layer；仅官方模型能力说明，不代表即梦产品已部署或开放。",
+      "version_scope": "Seedream 5.0 Pro",
+      "evidence_refs": [
+        {
+          "source_id": "M10",
+          "support_note": "Interactive Editing说明段的spatial annotations支持此编辑引导类型。"
+        }
+      ],
+      "limitations": "不推导标注格式、坐标参数、像素精度或即梦UI。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0006",
+      "title": "Seedream草图引导",
+      "domain": "编辑功能",
+      "knowledge_type": "CAPABILITY",
+      "statement": "Seedream 5.0 Pro官方说明支持草图引导的交互编辑。",
+      "learner_outcome": "识别草图引导是该模型官方说明中的一种编辑引导方式。",
+      "information_type": "DOCUMENTED",
+      "scope": "ByteDance Seed Model Layer；仅官方模型能力说明，不代表即梦产品已部署或开放。",
+      "version_scope": "Seedream 5.0 Pro",
+      "evidence_refs": [
+        {
+          "source_id": "M10",
+          "support_note": "Interactive Editing说明段的sketch-based guidance支持草图引导；同段另列空间标注。"
+        }
+      ],
+      "limitations": "不补充草图制作方法、格式或产品端操作。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0007",
+      "title": "Seedream图层分离",
+      "domain": "编辑功能",
+      "knowledge_type": "CAPABILITY",
+      "statement": "Seedream 5.0 Pro官方说明列出图层分离能力。",
+      "learner_outcome": "识别图层分离属于该模型公开描述的能力。",
+      "information_type": "DOCUMENTED",
+      "scope": "ByteDance Seed Model Layer；仅官方模型能力说明，不代表即梦产品已部署或开放。",
+      "version_scope": "Seedream 5.0 Pro",
+      "evidence_refs": [
+        {
+          "source_id": "M10",
+          "support_note": "Interactive Editing说明段直接提到layer separation。"
+        }
+      ],
+      "limitations": "不推导图层数量、文件格式、API字段或即梦部署状态。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0008",
+      "title": "Seedream多语言图像生成",
+      "domain": "Seedream",
+      "knowledge_type": "CAPABILITY",
+      "statement": "Seedream 5.0 Pro官方说明支持多语言图像生成。",
+      "learner_outcome": "指出多语言图像生成是该版本的官方模型声明。",
+      "information_type": "DOCUMENTED",
+      "scope": "ByteDance Seed Model Layer；仅官方模型能力说明，不代表即梦产品已部署或开放。",
+      "version_scope": "Seedream 5.0 Pro",
+      "evidence_refs": [
+        {
+          "source_id": "M10",
+          "support_note": "Native Multilingual Generation说明段支持多语言图像生成，不依赖示例Prompt。"
+        }
+      ],
+      "limitations": "不建立完整语言清单，不承诺翻译或文字准确性，不外推产品开放范围。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0009",
+      "title": "Seedance 2.5产品页三步生成流程",
+      "domain": "视频生成",
+      "knowledge_type": "PROCEDURE",
+      "statement": "即梦Seedance 2.5公开产品页把视频生成说明为三个步骤：打开AI视频生成器、上传素材并输入提示词、生成预览并保存；该流程的产物为可下载的AI视频。",
+      "learner_outcome": "按顺序复述该产品页说明的三步生成流程及其产物。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦Seedance 2.5公开产品页流程说明，不代表底层模型完整能力，也不代表所有账号、地区或设备端已开放相同流程。",
+      "version_scope": "Seedance 2.5；2026-10-03 公开产品页",
+      "evidence_refs": [
+        {
+          "source_id": "P10",
+          "support_note": "“如何使用 Seedance 2.5 AI 视频生成器”段落列出的第一步、第二步、第三步及开篇“只需三个简单步骤……转化为可下载的 AI 视频”支持该三步流程与产物描述。"
+        }
+      ],
+      "limitations": "仅为产品页概述流程，不含按钮位置、界面布局、耗时、队列或失败重试规则；不承诺生成效果，也不证明所有账号的实时界面一致。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0010",
+      "title": "Seedance 2.5流程的入口与模型选择",
+      "domain": "模型选择",
+      "knowledge_type": "PROCEDURE",
+      "statement": "即梦产品页说明，生成流程的第一步是进入即梦的AI视频工具并选择Seedance 2.5模型。",
+      "learner_outcome": "指出该产品页流程中进入工具并选择模型这一步骤及其位置。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦Seedance 2.5公开产品页流程说明，不代表底层模型完整能力，也不代表所有账号、地区或设备端已开放相同流程。",
+      "version_scope": "Seedance 2.5；2026-10-03 公开产品页",
+      "evidence_refs": [
+        {
+          "source_id": "P10",
+          "support_note": "第一步“打开 AI 视频生成器”正文说明“进入 即梦 的 AI 视频工具并选择 Seedance 2.5 模型”，直接支持入口与模型选择这一步。"
+        }
+      ],
+      "limitations": "不提供工具入口的完整URL结构、按钮文案与界面跳转细节，也不说明Seedance 2.5是否为该工具的默认模型或其他可选模型。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0011",
+      "title": "Seedance 2.5流程中的素材与提示词输入",
+      "domain": "Prompt",
+      "knowledge_type": "PROCEDURE",
+      "statement": "即梦产品页把上传素材与输入提示词列为同一步骤：可添加参考图片或视频，并用提示词描述主体、动作、镜头和视觉风格。",
+      "learner_outcome": "指出该步骤允许的输入类型，以及提示词需要描述的四类要素。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦Seedance 2.5公开产品页流程说明，不代表底层模型完整能力，也不代表所有账号、地区或设备端已开放相同流程。",
+      "version_scope": "Seedance 2.5；2026-10-03 公开产品页",
+      "evidence_refs": [
+        {
+          "source_id": "P10",
+          "support_note": "第二步“上传素材并输入提示词”正文列出“添加参考图片或视频，描述主体、动作、镜头和视觉风格”，支持该步骤的输入类型与四类描述要素。"
+        }
+      ],
+      "limitations": "不给出提示词结构、字数、语法或示例，也不包含素材数量、格式、大小与时长等数值规格。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0012",
+      "title": "Seedance 2.5文字与图片输入方式",
+      "domain": "视频生成",
+      "knowledge_type": "CAPABILITY",
+      "statement": "即梦产品页说明Seedance 2.5支持直接输入文字提示词生成视频，也支持上传图片作为视觉参考生成视频。",
+      "learner_outcome": "区分该产品页说明的两种输入方式：文字提示词与图片视觉参考。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦Seedance 2.5公开产品页说明，不代表底层模型完整能力，也不代表所有账号、地区或设备端已开放相同能力。",
+      "version_scope": "Seedance 2.5；2026-10-03 公开产品页",
+      "evidence_refs": [
+        {
+          "source_id": "P12",
+          "support_note": "常见问题“Seedance 2.5 支持文生视频和图生视频吗？”的答复“你可以直接输入文字提示词，也可以上传图片作为视觉参考”支持这两种输入方式。"
+        }
+      ],
+      "limitations": "同句还提到组合脚本、视频、音频和风格素材的多模态创作，该部分另立Item，不并入本条；本条不说明图片的格式、数量、分辨率或主体一致性保证。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0013",
+      "title": "Seedance 2.5多模态素材组合创作",
+      "domain": "视频生成",
+      "knowledge_type": "CAPABILITY",
+      "statement": "即梦产品页说明Seedance 2.5支持组合脚本、视频、音频和风格素材完成多模态AI视频创作。",
+      "learner_outcome": "指出该产品页列出的可组合多模态素材种类。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦Seedance 2.5公开产品页说明，不代表底层模型完整能力，也不代表所有账号、地区或设备端已开放相同能力。",
+      "version_scope": "Seedance 2.5；2026-10-03 公开产品页",
+      "evidence_refs": [
+        {
+          "source_id": "P12",
+          "support_note": "常见问题“Seedance 2.5 支持文生视频和图生视频吗？”的答复后半句“还能组合脚本、视频、音频和风格素材完成多模态 AI 视频创作”支持该组合创作描述。"
+        }
+      ],
+      "limitations": "不说明各素材类型的数量上限、格式、优先级与冲突规则，也不承诺组合后的效果；与文字、图片两种基础输入方式分列为不同知识实体。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0014",
+      "title": "Seedance 2.5带声音视频与音画协同创作",
+      "domain": "视频生成",
+      "knowledge_type": "CAPABILITY",
+      "statement": "即梦产品页说明Seedance 2.5可以生成带声音的视频，并支持音画协同创作，让对白、音乐、环境氛围和画面节奏共同服务于同一个故事。",
+      "learner_outcome": "指出该产品页对生成带声音视频的说明，以及音画协同创作包含的要素。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦Seedance 2.5公开产品页说明，不代表底层模型完整能力，也不代表所有账号、地区或设备端已开放相同能力。",
+      "version_scope": "Seedance 2.5；2026-10-03 公开产品页",
+      "evidence_refs": [
+        {
+          "source_id": "P12",
+          "support_note": "常见问题“Seedance 2.5 可以生成带声音的视频吗？”的答复“可以。Seedance 2.5 支持音画协同创作，让对白、音乐、环境氛围和画面节奏共同服务于同一个故事”同时支持可生成带声音视频与音画协同要素两部分。"
+        }
+      ],
+      "limitations": "不说明音频上传方式、格式、时长、语言与口型同步精度，也不承诺声音与画面的一致性效果；产品层音画协同声明不等于底层模型的音视频联合生成技术细节。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0015",
+      "title": "Seedance 2.5参考视频控制复杂动作",
+      "domain": "参考视频/音频",
+      "knowledge_type": "CAPABILITY",
+      "statement": "即梦产品页的“参考生视频”说明：上传参考视频可传达运镜速度、人物轨迹、动作调度和多人互动，用于补足文字提示词难以描述的动态细节。",
+      "learner_outcome": "指出该产品页说明的参考视频可传达的四类动态信息及其用途。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦Seedance 2.5公开产品页说明，不代表底层模型完整能力，也不代表所有账号、地区或设备端已开放相同能力。",
+      "version_scope": "Seedance 2.5；2026-10-03 公开产品页",
+      "evidence_refs": [
+        {
+          "source_id": "P12",
+          "support_note": "“参考生视频”小节标题“用参考视频准确控制复杂动作”及正文所列运镜速度、人物轨迹、动作调度、多人互动与补足动态细节，支持本条说明。"
+        }
+      ],
+      "limitations": "产品页写“准确控制”，此处只记录为该发布方的产品层说明，不作为精确复现效果的保证；不说明参考视频的时长、格式、数量或动作迁移精度。本条与模型层参考视频能力（如JIM-K-0002所述模型对framing的理解）分开，不因措辞相似而合并。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0016",
+      "title": "Seedance 2.5局部编辑",
+      "domain": "编辑功能",
+      "knowledge_type": "CAPABILITY",
+      "statement": "即梦产品页的“局部编辑”说明：可只修改局部而无需重新生成整段视频，例如替换错误物体或优化人物细节，同时保留原有构图、光影、音频、动作和时间线连续性。",
+      "learner_outcome": "指出该产品页说明的局部编辑用途及其声明保留的原有要素。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦Seedance 2.5公开产品页说明，不代表底层模型完整能力，也不代表所有账号、地区或设备端已开放相同能力。",
+      "version_scope": "Seedance 2.5；2026-10-03 公开产品页",
+      "evidence_refs": [
+        {
+          "source_id": "P13",
+          "support_note": "“局部编辑”小节的标题“只修改局部，无需重新生成整段视频”及正文“替换错误物体或优化人物细节，同时保留原有构图、光影、音频、动作和时间线连续性”，支持用途与保留要素两部分。"
+        }
+      ],
+      "limitations": "不说明编辑操作入口、选区方式、参数与可编辑范围，也不保证保留要素的实测一致性；本条为产品层编辑用途，与模型层编辑能力（如JIM-K-0003绿幕编辑、JIM-K-0005空间标注、JIM-K-0006草图引导、JIM-K-0007图层分离）分别记录，不合并。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0017",
+      "title": "参考生视频的产品概念",
+      "domain": "参考视频/音频",
+      "knowledge_type": "CONCEPT",
+      "statement": "在即梦Seedance 2.5公开产品页中，“参考生视频”指上传参考视频参与生成的一类视频生成方式，其产品语义是用参考视频来传达生成时需要遵循的动态细节。",
+      "learner_outcome": "区分“参考生视频”与其它输入方式，并解释参考视频在该产品页中承担的角色。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦Seedance 2.5公开产品页概念说明，不代表底层模型完整能力，也不代表所有账号、地区或设备端已开放相同方式。",
+      "version_scope": "Seedance 2.5；2026-10-03 公开产品页",
+      "evidence_refs": [
+        {
+          "source_id": "P12",
+          "support_note": "“参考生视频”小节标题“用参考视频准确控制复杂动作”及其正文“上传参考视频传达……补足文字提示词难以描述的动态细节”，说明该方式以上传参考视频为特征并以其传达动态细节为语义。"
+        }
+      ],
+      "limitations": "仅是该产品页的概念说明；不包含参考视频的上传规格、时长与数量，也不说明该方式与其他输入方式可否同时使用。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0018",
+      "title": "文生视频与图生视频的产品概念",
+      "domain": "视频生成",
+      "knowledge_type": "CONCEPT",
+      "statement": "即梦Seedance 2.5公开产品页把“文生视频”与“图生视频”并列说明为两种输入方式的概念：前者直接输入文字提示词，后者上传图片作为视觉参考。",
+      "learner_outcome": "解释文生视频与图生视频在产品页中的区别，并说明二者各自使用的输入。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦Seedance 2.5公开产品页概念说明，不代表底层模型完整能力，也不代表所有账号、地区或设备端已开放相同方式。",
+      "version_scope": "Seedance 2.5；2026-10-03 公开产品页",
+      "evidence_refs": [
+        {
+          "source_id": "P12",
+          "support_note": "常见问题“Seedance 2.5 支持文生视频和图生视频吗？”及其答复“你可以直接输入文字提示词，也可以上传图片作为视觉参考”，把两种方式以各自输入方式并列区分。"
+        }
+      ],
+      "limitations": "仅是概念区分；不说明两种方式的效果差异、可否组合使用或其输入规格。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0019",
+      "title": "局部编辑的产品概念",
+      "domain": "编辑功能",
+      "knowledge_type": "CONCEPT",
+      "statement": "在即梦Seedance 2.5公开产品页中，“局部编辑”指只修改视频局部、而不重新生成整段视频的编辑方式。",
+      "learner_outcome": "解释局部编辑这一产品概念，并说明它与“重新生成整段视频”的区别。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦Seedance 2.5公开产品页概念说明，不代表底层模型完整能力，也不代表所有账号、地区或设备端已开放相同方式。",
+      "version_scope": "Seedance 2.5；2026-10-03 公开产品页",
+      "evidence_refs": [
+        {
+          "source_id": "P13",
+          "support_note": "“局部编辑”小节标题“只修改局部，无需重新生成整段视频”直接给出该概念的定义性对比。"
+        }
+      ],
+      "limitations": "仅是产品概念说明；不包含操作入口、选区方式与可编辑范围等操作方法。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0020",
+      "title": "提示词在产品生成流程中的角色",
+      "domain": "Prompt",
+      "knowledge_type": "CONCEPT",
+      "statement": "在即梦Seedance 2.5公开产品页的生成流程中，提示词承担描述作用：它用于描述主体、动作、镜头和视觉风格这四类要素。",
+      "learner_outcome": "解释提示词在该产品流程中承担的描述角色，并列举它用于描述的四类要素。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦Seedance 2.5公开产品页概念说明，不代表底层模型完整能力，也不代表所有账号、地区或设备端已开放相同方式。",
+      "version_scope": "Seedance 2.5；2026-10-03 公开产品页",
+      "evidence_refs": [
+        {
+          "source_id": "P10",
+          "support_note": "第二步“上传素材并输入提示词”的说明“描述主体、动作、镜头和视觉风格”，指明提示词在产品流程中的描述对象。"
+        }
+      ],
+      "limitations": "仅是角色与要素说明；不含提示词结构、语法、字数与示例，也不构成写作方法指导。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0021",
+      "title": "局部编辑的修改与保留边界",
+      "domain": "编辑功能",
+      "knowledge_type": "CONSTRAINT",
+      "statement": "即梦Seedance 2.5公开产品页对局部编辑的适用范围给出边界：修改对象限于替换错误物体或优化人物细节，并且声明保留原有构图、光影、音频、动作和时间线连续性。",
+      "learner_outcome": "指出局部编辑在产品页声明中可修改的对象范围，以及声明保留的原有要素。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦Seedance 2.5公开产品页适用范围说明，不代表底层模型完整能力，也不代表所有账号、地区或设备端已开放相同能力。",
+      "version_scope": "Seedance 2.5；2026-10-03 公开产品页",
+      "evidence_refs": [
+        {
+          "source_id": "P13",
+          "support_note": "正文“替换错误物体或优化人物细节，同时保留原有构图、光影、音频、动作和时间线连续性”同时给出可修改对象范围与保留要素范围。"
+        }
+      ],
+      "limitations": "是适用范围边界，不是实测保证：不保证保留要素在每次编辑中都一致，也不说明超出该举例范围的其他编辑对象是否受支持。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0022",
+      "title": "参考视频与参考图片的作用边界",
+      "domain": "参考视频/音频",
+      "knowledge_type": "CONSTRAINT",
+      "statement": "按即梦Seedance 2.5公开产品页的说明，上传参考视频与参考图片处于参照与控制位置：参考视频用于传达动态信息，参考图片作为视觉参考；该产品页未把这两类参考素材的作用范围扩展到改变生成结果的其他内容。",
+      "learner_outcome": "指出参考视频与参考图片在产品页说明中的作用范围，并说明该范围限于传达与参考。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦Seedance 2.5公开产品页作用范围说明，不代表底层模型完整能力，也不代表所有账号、地区或设备端已开放相同能力。",
+      "version_scope": "Seedance 2.5；2026-10-03 公开产品页",
+      "evidence_refs": [
+        {
+          "source_id": "P12",
+          "support_note": "“参考生视频”正文“上传参考视频传达运镜速度、人物轨迹、动作调度和多人互动”与 FAQ 答复“上传图片作为视觉参考”，把两类素材的作用限定为传达与参考。"
+        }
+      ],
+      "limitations": "是发布方作用范围描述，不等于禁止其他用法；不推导参考素材与其它输入是否互斥、是否可同时使用，也不说明其替代关系。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0023",
+      "title": "参考生视频的用途边界",
+      "domain": "参考视频/音频",
+      "knowledge_type": "CONSTRAINT",
+      "statement": "即梦Seedance 2.5公开产品页把“参考生视频”的用途限定在动态信息方面：上传参考视频用于传达运镜速度、人物轨迹、动作调度和多人互动，并用于补足文字提示词难以描述的动态细节。",
+      "learner_outcome": "指出参考视频在产品页声明中用于传达的四类动态信息，并说明其用途被限定在动态细节方面。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦Seedance 2.5公开产品页用途范围说明，不代表底层模型完整能力，也不代表所有账号、地区或设备端已开放相同能力。",
+      "version_scope": "Seedance 2.5；2026-10-03 公开产品页",
+      "evidence_refs": [
+        {
+          "source_id": "P12",
+          "support_note": "“参考生视频”正文列出运镜速度、人物轨迹、动作调度、多人互动，并说明其作用是“补足文字提示词难以描述的动态细节”，构成用途边界。"
+        }
+      ],
+      "limitations": "不说明参考视频可否用于非动态用途（例如画面风格或人物外观），也不说明其与文字提示词冲突时的优先级。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0024",
+      "title": "产品端三步生成流程的结构",
+      "domain": "视频生成",
+      "knowledge_type": "PROCEDURE",
+      "statement": "即梦Seedance 2.5公开产品页把生成流程组织为三步结构：打开AI视频生成器、上传素材并输入提示词、生成预览并保存。",
+      "learner_outcome": "按顺序复述该产品页给出的三步生成流程结构。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦Seedance 2.5公开产品页流程结构说明，不代表底层模型完整能力，也不代表所有账号、地区或设备端已开放相同流程。",
+      "version_scope": "Seedance 2.5；2026-10-03 公开产品页",
+      "evidence_refs": [
+        {
+          "source_id": "P10",
+          "support_note": "第一步“打开 AI 视频生成器”、第二步“上传素材并输入提示词”、第三步“生成、预览并保存”三个小标题构成该流程结构。"
+        }
+      ],
+      "limitations": "仅描述流程结构；不含各步界面位置、操作细节、耗时与失败重试，也不含流程之外的项目管理内容。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0025",
+      "title": "禁止输入或分享未经授权的信息",
+      "domain": "平台内容规则",
+      "knowledge_type": "POLICY",
+      "statement": "即梦AI用户服务协议第4.1节要求用户不得输入、分享任何未经授权的个人信息、保密信息（包括但不限于商业秘密）及未经授权的其他类型的信息。",
+      "learner_outcome": "指出该协议条款禁止输入或分享的信息类型。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦AI用户服务协议第4.1节已审核条款范围，不代表完整平台内容政策，也不构成法律意见或合规保证。",
+      "version_scope": "2025-08-25 更新；2025-09-01 生效",
+      "evidence_refs": [
+        {
+          "source_id": "P14",
+          "support_note": "第4.1节“不得输入、分享任何未经授权的个人信息、保密信息（包括但不限于商业秘密）及未经授权的其他类型的信息”直接支持本条。"
+        }
+      ],
+      "limitations": "只代表已审核的第4.1节条文；不解释“未经授权”的判定标准，不覆盖该节其余要求（如不得使用即梦AI假冒他人），也不代表完整政策或法律意见。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0026",
+      "title": "输入内容须合法且不侵害他人权益",
+      "domain": "平台内容规则",
+      "knowledge_type": "POLICY",
+      "statement": "即梦AI用户服务协议第4.1节要求用户确保输入内容合法合规、为本人所有或已获得合法授权，且不得侵害他人的著作权、专利权、商标权、肖像权、姓名权、声音权益、名誉权、荣誉权等权益。",
+      "learner_outcome": "指出该条款对输入内容提出的权属与不侵权要求。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦AI用户服务协议第4.1节已审核条款范围，不代表完整平台内容政策，也不构成法律意见或合规保证。",
+      "version_scope": "2025-08-25 更新；2025-09-01 生效",
+      "evidence_refs": [
+        {
+          "source_id": "P14",
+          "support_note": "第4.1节“确保您的输入内容均合法合规、为您本人所有或已获得合法授权，不得输入、分享任何未经授权的内容，不得侵害他人的著作权、专利权、商标权、肖像权、姓名权、声音权益、名誉权、荣誉权等权益”支持本条。"
+        }
+      ],
+      "limitations": "只代表已审核的第4.1节条文；不列举全部可能被侵害的权益类型，不提供授权取得方式，也不构成法律意见。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0027",
+      "title": "AI内容标识的添加规则",
+      "domain": "平台内容规则",
+      "knowledge_type": "POLICY",
+      "statement": "即梦AI用户服务协议第4.2节规定，用户生成、制作、发布或传播“AI内容”时，平台有权根据《人工智能生成合成内容标识办法》《网络安全技术 人工智能生成合成内容标识方法》等法律法规和强制性国家标准采取适当方式添加标识。",
+      "learner_outcome": "指出该条款下平台对AI内容添加标识的依据与触发情形。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦AI用户服务协议第4.2节已审核条款范围，不代表完整平台内容政策，也不构成法律意见或合规保证。",
+      "version_scope": "2025-08-25 更新；2025-09-01 生效",
+      "evidence_refs": [
+        {
+          "source_id": "P14",
+          "support_note": "第4.2节“我们有权根据《人工智能生成合成内容标识办法》《网络安全技术 人工智能生成合成内容标识方法》等法律法规和强制性国家标准采取适当方式添加标识”支持本条。"
+        }
+      ],
+      "limitations": "只代表已审核的第4.2节条文；不解释标识的具体形式与技术实现，不替代法律法规原文，也不构成合规保证。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0028",
+      "title": "禁止遮挡或删除AI内容标识",
+      "domain": "平台内容规则",
+      "knowledge_type": "POLICY",
+      "statement": "即梦AI用户服务协议第4.2节禁止用户以任何方式遮挡、涂抹、修改或删除平台对AI内容添加的标识。",
+      "learner_outcome": "指出该条款对被添加标识所禁止的操作方式。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦AI用户服务协议第4.2节已审核条款范围，不代表完整平台内容政策，也不构成法律意见或合规保证。",
+      "version_scope": "2025-08-25 更新；2025-09-01 生效",
+      "evidence_refs": [
+        {
+          "source_id": "P14",
+          "support_note": "第4.2节“不得以任何方式遮挡、涂抹、修改或删除我们对AI内容添加的标识”直接支持本条。"
+        }
+      ],
+      "limitations": "只代表已审核的第4.2节条文；不说明违规的处置方式与后果，也不覆盖用户自行添加显式标识的义务部分。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0029",
+      "title": "真实身份认证作为生成与发布的前提",
+      "domain": "平台内容规则",
+      "knowledge_type": "POLICY",
+      "statement": "即梦AI用户服务协议第4.3节规定，用户需按规定完成真实身份信息认证后，才可以使用即梦AI生成、制作、发布音视频、图片、文字等信息内容。",
+      "learner_outcome": "指出该条款把真实身份信息认证作为使用生成与发布功能的前提条件。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦AI用户服务协议第4.3节已审核条款范围，不代表完整平台内容政策，也不构成法律意见或合规保证。",
+      "version_scope": "2025-08-25 更新；2025-09-01 生效",
+      "evidence_refs": [
+        {
+          "source_id": "P14",
+          "support_note": "第4.3节“在您按规定完成真实身份信息认证后，可以使用即梦AI生成、制作、发布音视频、图片、文字等信息内容”支持本条。"
+        }
+      ],
+      "limitations": "只代表已审核的第4.3节条文；不说明认证的具体流程、所需材料与各端差异，也不说明未认证状态下的实际界面表现。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0030",
+      "title": "内容合规与特定信息须标注来源",
+      "domain": "平台内容规则",
+      "knowledge_type": "POLICY",
+      "statement": "即梦AI用户服务协议第4.3节要求用户保证所输入、生成、发布或传播的信息内容（无论是否公开）符合法律法规要求，并在涉及国内外时事、公共政策、社会事件等相关信息时准确标注信息来源。",
+      "learner_outcome": "指出该条款对内容合规的总体要求，以及需要标注信息来源的特定信息范围。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦AI用户服务协议第4.3节已审核条款范围，不代表完整平台内容政策，也不构成法律意见或合规保证。",
+      "version_scope": "2025-08-25 更新；2025-09-01 生效",
+      "evidence_refs": [
+        {
+          "source_id": "P14",
+          "support_note": "第4.3节“保证所输入、生成、发布或传播的信息内容（无论是否公开）符合法律法规要求，如您生成、发布或传播涉及国内外时事、公共政策、社会事件等相关信息时，应当准确标注信息来源”支持本条的两部分要求。"
+        }
+      ],
+      "limitations": "只代表已审核的第4.3节条文；标注来源的要求限于该节列举的时事、公共政策、社会事件等相关信息，不扩展为对所有内容的通用要求；不说明标注格式。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0031",
+      "title": "禁止输入或传播违法违规内容",
+      "domain": "平台内容规则",
+      "knowledge_type": "POLICY",
+      "statement": "即梦AI用户服务协议第4.4节禁止用户输入、生成、制作、复制、发布、传播该节列举的十二类违法违规内容。",
+      "learner_outcome": "指出该条款禁止的行为范围，并识别其采用分项列举的方式界定违法违规内容。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦AI用户服务协议第4.4节已审核条款范围，不代表完整平台内容政策，也不构成法律意见或合规保证。",
+      "version_scope": "2025-08-25 更新；2025-09-01 生效",
+      "evidence_refs": [
+        {
+          "source_id": "P14",
+          "support_note": "第4.4节“您不得输入、生成、制作、复制、发布、传播以下违法违规内容”及其（1）至（12）项列举支持本条所指的十二类内容与禁止范围。"
+        }
+      ],
+      "limitations": "只代表已审核的第4.4节条文；本条不复述十二项内容，具体子项以材料原文为准；不解释各项的判定标准，也不构成法律意见。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0032",
+      "title": "禁止输入或传播不良内容",
+      "domain": "平台内容规则",
+      "knowledge_type": "POLICY",
+      "statement": "即梦AI用户服务协议第4.5节禁止用户输入、生成、制作、复制、发布、传播该节列举的十一项不良内容，并要求用户主动抵制此类内容的传播。",
+      "learner_outcome": "指出该条款禁止的行为范围，并说明除禁止外还要求主动抵制此类内容传播。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦AI用户服务协议第4.5节已审核条款范围，不代表完整平台内容政策，也不构成法律意见或合规保证。",
+      "version_scope": "2025-08-25 更新；2025-09-01 生效",
+      "evidence_refs": [
+        {
+          "source_id": "P14",
+          "support_note": "第4.5节“您不得输入、生成、制作、复制、发布、传播以下不良内容，亦应当主动抵制此类内容的传播”及其（1）至（11）项列举支持本条的两部分要求。"
+        }
+      ],
+      "limitations": "只代表已审核的第4.5节条文；本条不复述十一项内容，具体子项以材料原文为准；不解释各项的判定标准。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0033",
+      "title": "禁止欺骗性与高危险性内容",
+      "domain": "平台内容规则",
+      "knowledge_type": "POLICY",
+      "statement": "即梦AI用户服务协议第4.6节禁止用户输入、生成、制作、复制、发布、传播含有欺骗性、高危险性、危害表演者自身或他人身心健康的内容，该节并列出了四类具体情形。",
+      "learner_outcome": "指出该条款禁止的内容类型，并识别其采用四类具体情形的方式界定。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦AI用户服务协议第4.6节已审核条款范围，不代表完整平台内容政策，也不构成法律意见或合规保证。",
+      "version_scope": "2025-08-25 更新；2025-09-01 生效",
+      "evidence_refs": [
+        {
+          "source_id": "P14",
+          "support_note": "第4.6节“您不得输入、生成、制作、复制、发布、传播含有欺骗性、高危险性、危害表演者自身或他人身心健康的内容”及其（1）至（4）项列举支持本条。"
+        }
+      ],
+      "limitations": "只代表已审核的第4.6节条文；不解释“高危险性”的判定标准，不复述四项内容，也不构成法律意见。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0034",
+      "title": "禁止扰乱平台经营秩序的信息",
+      "domain": "平台内容规则",
+      "knowledge_type": "POLICY",
+      "statement": "即梦AI用户服务协议第4.7节禁止用户输入、生成、制作、复制、发布、传播扰乱平台经营秩序的信息，并举例包括垃圾信息、商业招揽信息、过度营销信息、与所评论内容无关联的信息，以及刻意使用字符组合逃避技术审核的信息。",
+      "learner_outcome": "指出该条款禁止的信息类别，并列举其明确给出的示例类型。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦AI用户服务协议第4.7节已审核条款范围，不代表完整平台内容政策，也不构成法律意见或合规保证。",
+      "version_scope": "2025-08-25 更新；2025-09-01 生效",
+      "evidence_refs": [
+        {
+          "source_id": "P14",
+          "support_note": "第4.7节正文列出垃圾信息、商业招揽信息、过度营销信息、与所评论内容无关联的信息，以及刻意使用字符组合以逃避技术审核的信息。"
+        }
+      ],
+      "limitations": "只代表已审核的第4.7节条文；该节以“包括但不限于”举例，本条不穷尽所有情形，也不说明识别与处置机制。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0035",
+      "title": "平台对违规行为的处理权",
+      "domain": "平台内容规则",
+      "knowledge_type": "POLICY",
+      "statement": "即梦AI用户服务协议第4.8节规定，平台在有合理理由认为用户行为违反或可能违反上述约定时，有权采取包括警示提醒、限制账号功能、在不事先通知的情况下暂停或终止提供全部或部分服务等处理措施，并依法追究相关方责任。",
+      "learner_outcome": "指出该条款赋予平台的处理措施类型，以及其触发条件为有合理理由认为违反或可能违反约定。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦AI用户服务协议第4.8节已审核条款范围，不代表完整平台内容政策，也不构成法律意见或合规保证。",
+      "version_scope": "2025-08-25 更新；2025-09-01 生效",
+      "evidence_refs": [
+        {
+          "source_id": "P14",
+          "support_note": "第4.8节“我们有权进行处理，包括但不限于警示提醒、限制账号功能、在不事先通知的情况下暂停或终止向您提供即梦AI的全部或部分服务等处理措施，并依法追究相关方的法律责任”支持本条。"
+        }
+      ],
+      "limitations": "只代表已审核的第4.8节条文；不说明处理措施的实际执行顺序与申诉途径，不评估其合法性，也不构成法律意见；第4.8节提到的《“即梦AI”社区自律公约》未纳入本次材料范围。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0036",
+      "title": "Seedance 2.5 的正式发布与发布日期",
+      "domain": "模型版本历史",
+      "knowledge_type": "VERSION_CONTEXT",
+      "statement": "Seed官方发布页记载 Seedance 2.5 于 2026-07-31 正式发布，并将其称为新一代视频创作模型。",
+      "learner_outcome": "指出该版本的正式发布日期与发布方对该版本的定位表述。",
+      "information_type": "DOCUMENTED",
+      "scope": "ByteDance Seed Model Layer；仅官方发布页记载的模型发布事实，不代表即梦产品端可用性、账号权限或其他版本的状态变化。",
+      "version_scope": "Seedance 2.5；发布于 2026-07-31",
+      "evidence_refs": [
+        {
+          "source_id": "M01",
+          "support_note": "发布页标题“Seedance 2.5 正式发布”、日期行“2026-07-31”及开篇“我们正式发布新一代视频创作模型 Seedance 2.5”支持本条。"
+        }
+      ],
+      "limitations": "只记录宣示的发布日期与版本定位；不推断该日期之后是否修订、不代表所有端或账号同步开放，也不说明其它版本是否因此变更状态。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0037",
+      "title": "Seedance 2.5 与 2.0 的版本承接关系",
+      "domain": "模型版本历史",
+      "knowledge_type": "VERSION_CONTEXT",
+      "statement": "Seed官方发布页在介绍 Seedance 2.5 时记载，该版本延续了 Seedance 2.0 统一的多模态视频联合生成架构，并提到 Seedance 2.0 已经发布。",
+      "learner_outcome": "指出该发布页记载的两个版本之间的承接关系与共同架构。",
+      "information_type": "DOCUMENTED",
+      "scope": "ByteDance Seed Model Layer；仅官方发布页记载的版本承接关系，不代表任何版本已下线或被替代，也不代表即梦产品端开放情况。",
+      "version_scope": "Seedance 2.5 与 Seedance 2.0（依据 2026-07-31 发布页表述）",
+      "evidence_refs": [
+        {
+          "source_id": "M01",
+          "support_note": "开篇“Seedance 2.0 发布后……”“Seedance 2.5 延续了 Seedance 2.0 统一的多模态视频联合生成架构”同时支持 2.0 已发布与两版本的架构承接。"
+        }
+      ],
+      "limitations": "只记录发布页的承接表述；不推断 Seedance 2.0 已下线、被完全替代，不推断时间先后之外的分支关系，也不说明其它版本（如 1.5 pro、1.0）的状态。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0038",
+      "title": "Seedance 2.0 的正式发布与发布日期",
+      "domain": "模型版本历史",
+      "knowledge_type": "VERSION_CONTEXT",
+      "statement": "Seed官方发布页记载 Seedance 2.0 于 2026-02-12 正式发布，并将其称为新一代视频创作模型。",
+      "learner_outcome": "指出该版本的正式发布日期与发布方对该版本的定位表述。",
+      "information_type": "DOCUMENTED",
+      "scope": "ByteDance Seed Model Layer；仅官方发布页记载的模型发布事实，不代表即梦产品端可用性、账号权限或其他版本的状态变化。",
+      "version_scope": "Seedance 2.0；发布于 2026-02-12",
+      "evidence_refs": [
+        {
+          "source_id": "M02",
+          "support_note": "发布页标题“Seedance 2.0 正式发布”、日期行“2026-02-12”及开篇“我们正式发布新一代视频创作模型 Seedance 2.0”支持本条。"
+        }
+      ],
+      "limitations": "只记录宣示的发布日期与版本定位；不推断该日期之后是否修订、不代表所有端或账号同步开放，也不说明其它版本是否因此变更状态。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0039",
+      "title": "Seedance 2.0 的架构与输入支持",
+      "domain": "模型版本历史",
+      "knowledge_type": "VERSION_CONTEXT",
+      "statement": "Seed官方发布页记载 Seedance 2.0 采用统一的多模态音频视频联合生成架构，支持文字、图片、音频、视频和标签输入。",
+      "learner_outcome": "指出该版本所采用架构的名称特征及其开篇列出的输入类型。",
+      "information_type": "DOCUMENTED",
+      "scope": "ByteDance Seed Model Layer；仅官方发布页对该版本架构与输入类型的描述，不代表任何产品端能力、参数上限或账号权限。",
+      "version_scope": "Seedance 2.0；2026-02-12 发布页",
+      "evidence_refs": [
+        {
+          "source_id": "M02",
+          "support_note": "开篇“Seedance 2.0 采用统一的多模态音频视频联合生成架构，支持文字、图片、音频、视频和标签输入”直接支持本条。"
+        }
+      ],
+      "limitations": "只记录发布页的架构与输入类型描述；不说明各输入类型的规格与上限，不把「标签输入」解释为某种具体参数，也不由架构描述推出产品质量结论。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0040",
+      "title": "Seedance 2.0 与 1.5 版本的承接关系",
+      "domain": "模型版本历史",
+      "knowledge_type": "VERSION_CONTEXT",
+      "statement": "Seed官方发布页在介绍 Seedance 2.0 时以「相比 1.5 版本」作对比，据此记载 1.5 版本已经存在，并将 2.0 描述为生成质量相比 1.5 有所提升的版本。",
+      "learner_outcome": "指出该发布页提到的两个版本及其承接关系，并说明该表述为发布方的比较性陈述。",
+      "information_type": "DOCUMENTED",
+      "scope": "ByteDance Seed Model Layer；仅官方发布页记载的版本承接与比较表述，不代表任何版本已下线或被替代，也不代表产品端开放情况。",
+      "version_scope": "Seedance 2.0 与 1.5 版本（依据 2026-02-12 发布页表述）",
+      "evidence_refs": [
+        {
+          "source_id": "M02",
+          "support_note": "开篇“相比 1.5 版本，Seedance 2.0 的生成质量大幅提升，其在复杂交互和运动场景下的可用率更高、物理准确度高、画质高、可控性显著增强，更加贴合工业级创作场景的需求”支持 1.5 已存在与 2.0 的相对定位。"
+        }
+      ],
+      "limitations": "只记录发布方的比较性表述，不转成客观质量结论，也不作独立评测；该表述未指明 1.5 的具体分支名称（如 1.5 pro），本条不推断其具体版本号；不推断 1.5 已下线或被替代。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0041",
+      "title": "统一多模态架构在 2.0 与 2.5 之间的延续",
+      "domain": "模型版本历史",
+      "knowledge_type": "VERSION_CONTEXT",
+      "statement": "Seed官方发布页分别记载：Seedance 2.0 采用统一的多模态音频视频联合生成架构，Seedance 2.5 延续了 Seedance 2.0 统一的多模态视频联合生成架构。",
+      "learner_outcome": "指出两份官方发布页共同支持的架构延续事实，并说明该事实涉及哪两个版本。",
+      "information_type": "DOCUMENTED",
+      "scope": "ByteDance Seed Model Layer；仅两份官方发布页共同记载的架构延续事实，不代表产品的功能差异，也不代表任何版本已下线或被替代。",
+      "version_scope": "Seedance 2.0（2026-02-12 发布页）与 Seedance 2.5（2026-07-31 发布页）",
+      "evidence_refs": [
+        {
+          "source_id": "M02",
+          "support_note": "开篇“采用统一的多模态音频视频联合生成架构”支持 2.0 一侧的架构表述。"
+        },
+        {
+          "source_id": "M01",
+          "support_note": "开篇“Seedance 2.5 延续了 Seedance 2.0 统一的多模态视频联合生成架构”支持 2.5 对 2.0 架构的延续表述。"
+        }
+      ],
+      "limitations": "只记录两处官方表述所共同支持的架构延续事实；不据措辞差异（「音频视频联合生成」与「视频联合生成」）断言架构发生变更或完全相同，不推断 2.5 完全替代 2.0，也不推断其它版本是否共用该架构。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0042",
+      "title": "Seedance 2.5 在即梦 AI 的官方上线声明",
+      "domain": "产品版本历史",
+      "knowledge_type": "VERSION_CONTEXT",
+      "statement": "Seed官方发布页在其所述发布日期（2026-07-31）记载 Seedance 2.5 已上线即梦 AI。",
+      "learner_outcome": "指出该官方发布页记载的 Seedance 2.5 在即梦 AI 的上线事实及其所述发布日期。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；仅官方发布页所述的上线声明，不代表所有账号、地区或设备端均已开放，也不代表当前时点仍保持相同开放状态。",
+      "version_scope": "Seedance 2.5；官方发布页 2026-07-31 所述产品部署状态",
+      "evidence_refs": [
+        {
+          "source_id": "P16",
+          "support_note": "发布页末段部署句“今天，Seedance 2.5 正式上线即梦 AI、豆包专业版等平台……”中与即梦 AI 有关的部分支持本条。"
+        }
+      ],
+      "limitations": "只记录该发布页在所述时点的部署声明：不推断所有账号均开放、所有地区均开放、所有客户端同时开放、当前时点仍保持该状态，也不推断 Seedance 2.5 完全替代其它版本；同句提到的豆包专业版与 API 计划不属本条证据范围。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0043",
+      "title": "Seedance 2.0 在即梦 AI 的官方上线声明",
+      "domain": "产品版本历史",
+      "knowledge_type": "VERSION_CONTEXT",
+      "statement": "Seed官方发布页在其所述发布日期（2026-02-12）记载 Seedance 2.0 已上线即梦 AI。",
+      "learner_outcome": "指出该官方发布页记载的 Seedance 2.0 在即梦 AI 的上线事实及其所述发布日期。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；仅官方发布页所述的上线声明，不代表所有账号、地区或设备端均已开放，也不代表当前时点仍保持相同开放状态。",
+      "version_scope": "Seedance 2.0；官方发布页 2026-02-12 所述产品部署状态",
+      "evidence_refs": [
+        {
+          "source_id": "P17",
+          "support_note": "发布页末段部署句“目前，Seedance 2.0 已上线即梦 AI、豆包等平台，欢迎体验和反馈”中与即梦 AI 有关的部分支持本条。"
+        }
+      ],
+      "limitations": "只记录该发布页在所述时点的部署声明：不推断所有账号均开放、所有地区均开放、所有客户端同时开放、当前时点仍保持该状态，也不推断该版本已被替代或已下线；同句提到的豆包等其它平台不属本条证据范围。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0044",
+      "title": "即梦 iOS 2.3.0 版本条目与页面显示日期",
+      "domain": "App",
+      "knowledge_type": "VERSION_CONTEXT",
+      "statement": "App Store「即梦」官方版本历史中存在版本 2.3.0 条目，该条目在页面上显示的日期为「7月27日」（页面未显示年份）。",
+      "learner_outcome": "指出该版本条目存在及其页面显示日期，并说明该日期不含年份。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；仅 App Store 中国区 iOS 版本历史中该条目的版本号与显示日期，不代表 Android 或网页端，也不代表该版本之后的版本状态。",
+      "version_scope": "iOS 中国区；App 2.3.0",
+      "evidence_refs": [
+        {
+          "source_id": "P09",
+          "support_note": "2.3.0 条目的版本号“2.3.0”与其页面显示日期行“7月27日”支持本条。"
+        }
+      ],
+      "limitations": "只记录该条目的存在与页面显示日期；页面未显示年份，本材料不推断年份，Source Registry 的 published_at 保持 null；不等于 2.3.0 是首个版本或最后一个版本，也不说明其它版本条目。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0045",
+      "title": "即梦 iOS 2.3.0 更新说明：Seedance 2.0 fast 模型上线",
+      "domain": "App",
+      "knowledge_type": "VERSION_CONTEXT",
+      "statement": "App Store「即梦」版本 2.3.0 条目的更新说明记载：上线Seedance2.0 fast模型，全新多模态创作体验。",
+      "learner_outcome": "指出该版本更新说明所记载的模型上线与体验表述。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；仅 App Store 中国区 iOS 该版本的更新说明文字，不代表模型层技术能力，也不代表所有账号、地区或设备端可用。",
+      "version_scope": "iOS 中国区；App 2.3.0",
+      "evidence_refs": [
+        {
+          "source_id": "P09",
+          "support_note": "2.3.0 条目的更新说明句“上线Seedance2.0 fast模型，全新多模态创作体验。”支持本条。"
+        }
+      ],
+      "limitations": "只复述该版本更新说明的文字：不推断 Seedance 2.0 fast 的首次上线时间、fast 版与 Seedance 2.0 普通版的关系、所有账号/地区/设备端均已开放、或该版本取代了此前版本；亦不把「全新多模态创作体验」转成客观质量结论。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0046",
+      "title": "Seedance 2.5流程第三步：生成、预览并保存",
+      "domain": "视频生成",
+      "knowledge_type": "PROCEDURE",
+      "statement": "即梦 Seedance 2.5 公开产品页把生成流程的第三步说明为「生成、预览并保存」：生成 AI 视频，检查效果并完成必要调整，然后下载成片。",
+      "learner_outcome": "指出该产品页所述第三步的动作及其结果（生成视频、检查与调整、下载成片）。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；即梦Seedance 2.5公开产品页流程说明，不代表底层模型完整能力，也不代表所有账号、地区或设备端已开放相同流程。",
+      "version_scope": "Seedance 2.5；2026-10-03 公开产品页",
+      "evidence_refs": [
+        {
+          "source_id": "P10",
+          "support_note": "第三步小标题“生成、预览并保存”及其正文“生成 AI 视频，检查效果并完成必要调整，然后下载成片。”支持本条。"
+        }
+      ],
+      "limitations": "本 Item 表示该产品页三步流程中的第三步整体，不把「生成」「检查」「调整」「下载」分别当作独立的官方步骤；当前 Evidence 不支持更多内部步骤层级。仅描述该步的动作与结果，不含界面位置、操作细节、耗时与失败重试规则。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0047",
+      "title": "视频提示词的基础组织方法",
+      "domain": "Prompt基础表达",
+      "knowledge_type": "PROCEDURE",
+      "statement": "即梦官方视频生成器 FAQ 建议用主体、场景、动作、运镜和光线组织基础提示词。",
+      "learner_outcome": "按官方建议组织基础视频创作意图。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；官方视频生成器 FAQ 的基础表达建议。仅描述指导方法，不描述模型能力或客户端按钮。",
+      "version_scope": "unknown",
+      "evidence_refs": [
+        {
+          "source_id": "P07",
+          "support_note": "本地 FAQ 摘录中的五项组成结构直接支持该组织建议。"
+        }
+      ],
+      "limitations": "2026-10-04 读取的官方建议，未给出适用模型或软件版本；不是 OBSERVED 效果结论，不保证一次成功，不包含教学示例、完整 Prompt 技法、UI 操作或输入参数。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0048",
+      "title": "主体不清楚时的提示词调整",
+      "domain": "Prompt基础表达",
+      "knowledge_type": "PROCEDURE",
+      "statement": "即梦官方视频生成器 FAQ 建议：当主体不清楚时，在描述中补足其外观和位置。",
+      "learner_outcome": "针对主体表达不清楚这一问题选择一次有依据的描述修订。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；官方视频生成器 FAQ 的基础表达建议。仅描述指导方法，不描述模型能力或客户端按钮。",
+      "version_scope": "unknown",
+      "evidence_refs": [
+        {
+          "source_id": "P07",
+          "support_note": "本地 FAQ 摘录给出主体不清楚这一条件及相应修改方向。"
+        }
+      ],
+      "limitations": "2026-10-04 读取的官方建议，未给出适用模型或软件版本；不是 OBSERVED 效果结论，不保证一次成功，不包含教学示例、完整 Prompt 技法、UI 操作或输入参数。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0049",
+      "title": "图片提示词的对象与短句组织",
+      "domain": "Prompt基础表达",
+      "knowledge_type": "PROCEDURE",
+      "statement": "即梦官方图片提示词指南建议先交代要创作的对象，并将提示组织为短句。",
+      "learner_outcome": "将图片创作意图组织为以对象为起点的短句描述。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；官方图片提示词指南的基础表达建议。仅描述指导方法，不描述模型能力或客户端按钮。",
+      "version_scope": "unknown",
+      "evidence_refs": [
+        {
+          "source_id": "P18",
+          "support_note": "本地摘录保存了对象先行和拆为小句子的建议。"
+        }
+      ],
+      "limitations": "2026-10-04 读取的官方建议，未给出适用模型或软件版本；不是 OBSERVED 效果结论，不保证一次成功，不包含教学示例、完整 Prompt 技法、UI 操作或输入参数。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0050",
+      "title": "图片提示词的歧义修订",
+      "domain": "Prompt基础表达",
+      "knowledge_type": "PROCEDURE",
+      "statement": "即梦官方图片提示词指南建议避免歧义词，并重新措辞提示。",
+      "learner_outcome": "识别表达歧义后，以重新措辞完成一次基础提示词修订。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；官方图片提示词指南的基础表达建议。仅描述指导方法，不描述模型能力或客户端按钮。",
+      "version_scope": "unknown",
+      "evidence_refs": [
+        {
+          "source_id": "P18",
+          "support_note": "本地摘录保存了避免歧义词及重新措辞提示两处直接表述。"
+        }
+      ],
+      "limitations": "2026-10-04 读取的官方建议，未给出适用模型或软件版本；不是 OBSERVED 效果结论，不保证一次成功，不包含教学示例、完整 Prompt 技法、UI 操作或输入参数。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0051",
+      "title": "即梦图片生成的整体流程",
+      "domain": "图片生成",
+      "knowledge_type": "PROCEDURE",
+      "statement": "即梦官方产品页把从文本生成图像说明为三个步骤：输入提示引导AI、生成您的图像、增强定制和导出；该页说明起点为登录后导航到“生成图像”下的“文本/图像到图像生成”部分。",
+      "learner_outcome": "按该官方页描述的顺序说出图片生成的整体流程，并指出其起点是登录后进入“生成图像”下的“文本/图像到图像生成”。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；该官方产品页所述的图片生成流程。只描述该页写明的步骤与起点，不代表所有客户端、账号或版本具有相同入口。",
+      "version_scope": "unknown",
+      "evidence_refs": [
+        {
+          "source_id": "P19",
+          "support_note": "本地转录保存了页面标题与三个步骤小标题，并保存了第1步中“登录后，导航到‘生成图像’下的‘文本/图像到图像生成’部分”这一起点表述。"
+        }
+      ],
+      "limitations": "2026-10-04 由用户人工转录的官方页面，未标明客户端与软件版本；不描述界面按钮位置、菜单层级、账号权限、会员或积分条件，也不证明该页之后流程未发生变化。不是 OBSERVED 操作结论。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0052",
+      "title": "图片生成的提示输入与触发生成",
+      "domain": "图片生成",
+      "knowledge_type": "PROCEDURE",
+      "statement": "即梦官方产品页说明，在聊天框中输入文本提示后，单击“生成”按钮触发图片生成；该页建议使用高像素输入以获得更好的视觉效果，并称将在几分钟内生成4张图片。",
+      "learner_outcome": "在该页所述的输入位置提供文本提示，并通过“生成”按钮触发一次图片生成。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；该官方产品页第1、2步的输入与触发动作。只描述该页写明的动作顺序。",
+      "version_scope": "unknown",
+      "evidence_refs": [
+        {
+          "source_id": "P19",
+          "support_note": "本地转录保存了第1步“在聊天框中输入文本提示”与第2步“单击‘生成’按钮”，以及该页对高像素输入的建议和生成张数、耗时表述。"
+        }
+      ],
+      "limitations": "“建议输入3840 x 2160或4000 x 3000等高像素”是该页建议，不是强制输入规格；“几分钟”不是稳定 SLA；“4张图片”不是固定产出承诺；不含提示词写法（另属提示词表达知识），不含输入校验、失败处理或重试路径，未标明客户端与版本。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0053",
+      "title": "图片结果的调整与导出",
+      "domain": "图片生成",
+      "knowledge_type": "PROCEDURE",
+      "statement": "即梦官方产品页说明，生成后可查看图像，并使用修复、展开和删除调整图像，满意后点击下载按钮导出，也可转到“画布”进行进一步的图像编辑。",
+      "learner_outcome": "在查看生成结果后，按该页描述使用调整功能并完成下载，或转入“画布”继续编辑。",
+      "information_type": "DOCUMENTED",
+      "scope": "Jimeng Product Layer；该官方产品页第3步的查看、调整与导出动作。只描述该页写明的动作与去向。",
+      "version_scope": "unknown",
+      "evidence_refs": [
+        {
+          "source_id": "P19",
+          "support_note": "本地转录保存了第3步“使用修复、展开和删除来调整图像”“点击下载按钮”以及“转到‘画布’进行进一步的图像编辑”。"
+        }
+      ],
+      "limitations": "“免费编辑”是该页措辞，不作为价格或权益承诺；不描述修复、展开、删除的具体参数与效果，不证明这些功能在所有版本均存在，也不说明“画布”的完整能力；未标明客户端与版本。不是 OBSERVED 效果结论。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0054",
+      "title": "Jimeng Web 创作首页的创作区域与生成/画布入口",
+      "domain": "产品入口",
+      "knowledge_type": "CONCEPT",
+      "statement": "在 2026-10-04 观察到的即梦官方 Web 未登录创作首页上，存在名为“创作”的导航区域，主创作区可见“生成”与“画布”两个入口标签，并显示“你好，今天想要创作什么？”的创作输入区。",
+      "learner_outcome": "在 Jimeng Web 创作首页上指出创作区域，以及“生成”“画布”入口与主创作输入区的位置。",
+      "information_type": "OBSERVED",
+      "scope": "Jimeng Product Layer；2026-10-04 未登录状态下 Jimeng Web 创作首页的观察。仅描述该时点该状态可见的入口，不代表登录后的页面结构，也不代表 iOS/Android 或其它地区、其它账号。",
+      "version_scope": "unknown（观察时点 2026-10-04；页面未标明版本）",
+      "evidence_refs": [
+        {
+          "source_id": "P20",
+          "support_note": "本地转录保存了导航项“创作/探索/资产/主体”、主创作区提示语“你好，今天想要创作什么？”以及“生成”“画布”两个标签。"
+        }
+      ],
+      "limitations": "来自单次未登录状态观察，未标注客户端版本与发布日期；不证明这些名称与入口在其他客户端、其他账号或其他时点保持一致；不包含登录后页面、按钮行为、会员、积分、价格或权限条件。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0055",
+      "title": "Jimeng Web 未登录状态下对话与画布的准入提示",
+      "domain": "产品入口",
+      "knowledge_type": "CONSTRAINT",
+      "statement": "在 2026-10-04 观察到的即梦官方 Web 未登录创作首页上，“对话”与“画布”区域均显示“请先登录”，页面上存在“登录”入口；该观察只说明这两个区域在未登录状态下不被直接开放。",
+      "learner_outcome": "说明在 Jimeng Web 未登录状态下“对话”与“画布”会提示先登录，并指出登录入口在页面上可见。",
+      "information_type": "OBSERVED",
+      "scope": "Jimeng Product Layer；仅限该时点该客户端该状态下“对话”与“画布”两个区域的准入提示。不表示整个平台的全部功能都必须登录，也不表示登录等同于真实身份信息认证。",
+      "version_scope": "unknown（观察时点 2026-10-04；页面未标明版本）",
+      "evidence_refs": [
+        {
+          "source_id": "P20",
+          "support_note": "本地转录保存了“对话 / 请先登录”“画布 / 请先登录”两组文字，以及页面上的“登录”入口文字。"
+        }
+      ],
+      "limitations": "不说明登录方式、账号类型、地区差异或权限条件；不表示未登录时无法使用其它任何功能；不说明登录之后的页面结构；不等于也不替代 JIM-K-0029 的真实身份信息认证要求；来自单次观察，不证明该提示在所有版本永久存在。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0056",
+      "title": "Jimeng Web 创作区域的入口路径",
+      "domain": "产品入口",
+      "knowledge_type": "PROCEDURE",
+      "statement": "在 2026-10-04 观察到的即梦官方 Web 上，进入创作区域的最小路径为：打开官方 Web → 进入“创作”区域 → 若要使用当前的“对话”或“画布”区域，则页面提示需要先登录 → 通过页面上的“登录”入口完成准入 → 回到创作首页 → 识别“生成”“画布”入口 → 在主创作输入区开始创作。",
+      "learner_outcome": "在 Jimeng Web 上按该路径找到创作入口，并知道使用“对话”“画布”区域需要先完成登录。",
+      "information_type": "OBSERVED",
+      "scope": "Jimeng Product Layer；仅描述该时点该客户端未登录状态下可见的最小进入路径。不覆盖登录之后的页面结构，也不覆盖其它客户端。",
+      "version_scope": "unknown（观察时点 2026-10-04；页面未标明版本）",
+      "evidence_refs": [
+        {
+          "source_id": "P20",
+          "support_note": "本地转录保存了“创作”导航、“对话/画布 请先登录”、“登录”入口、“生成/画布”标签与主创作输入区提示，支持该最小路径的各可见环节。"
+        }
+      ],
+      "limitations": "登录之后的具体按钮路径未在截图中显示，因此未记录为证据；不包含 iOS/Android 路径；不包含会员、积分、价格或权限条件；不表示“创作/生成/画布”等名称永久不变；来自单次未登录观察，不是完整 UI 导览。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0057",
+      "title": "Seedance 2.5 全能参考下加入参考内容的路径",
+      "domain": "参考视频/音频",
+      "knowledge_type": "PROCEDURE",
+      "statement": "在 2026-10-04 观察到的 Jimeng Web 已登录界面中，使用即梦 Seedance 2.5 的“全能参考”时，加入参考内容的路径为：进入“生成” → 选择“视频生成” → 选择“即梦 Seedance 2.5” → 选择“全能参考” → 在主输入区的“参考内容”处上传参考素材，或在输入中用 @ 引用参考内容。",
+      "learner_outcome": "在该界面中按顺序找到视频生成、即梦 Seedance 2.5 与“全能参考”，并通过“参考内容”入口加入参考素材或用 @ 引用。",
+      "information_type": "OBSERVED",
+      "scope": "Jimeng Product Layer；仅限该时点该客户端（Jimeng Web）已登录状态下“视频生成 + Seedance 2.5 + 全能参考”的界面。不覆盖其它产品模式、其它模型、其它客户端。",
+      "version_scope": "Seedance 2.5；2026-10-04 观察到的 Jimeng Web 界面",
+      "evidence_refs": [
+        {
+          "source_id": "P21",
+          "support_note": "本地转录保存了“生成”“视频生成”“即梦 Seedance 2.5”“全能参考”“参考内容”以及“输入文字或 @ 参考内容”等同屏文字，支持该路径的各可见环节。"
+        }
+      ],
+      "limitations": "不包含系统文件选择器步骤（截图未显示）；不包含素材格式、单个文件大小、时长或分项数量条件；不包含积分、会员、价格或权限条件；不表示“全能参考”在所有账号、地区或客户端均可用；来自单次观察，不证明该路径在其它版本保持不变。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0058",
+      "title": "当前参考内容界面支持的多元素组合与 @ 引用",
+      "domain": "参考视频/音频",
+      "knowledge_type": "CAPABILITY",
+      "statement": "该界面的“参考内容”说明写明可以输入文字或 @ 参考内容，并自由组合图、文、音、视频多元素；其示例同时给出 @图片1、@视频1 与 @音频1 三种引用，其中 @音频1 对应“音色参考”，@视频1 在被 @图片1 模仿其动作的示例中作为动作参考对象。",
+      "learner_outcome": "指出该界面说明涉及的参考元素类型（图、文、音、视频）与 @ 引用方式，并说出 @音频1 对应音色参考。",
+      "information_type": "OBSERVED",
+      "scope": "Jimeng Product Layer；仅限该时点该客户端已登录状态下“视频生成 + Seedance 2.5 + 全能参考”界面文字所说明的组合与引用方式。",
+      "version_scope": "Seedance 2.5；2026-10-04 观察到的 Jimeng Web 界面",
+      "evidence_refs": [
+        {
+          "source_id": "P21",
+          "support_note": "本地转录保存了“输入文字或 @ 参考内容”“自由组合图、文、音、视频多元素”以及示例“@图片1 模仿 @视频1 的动作，音色参考 @音频1”。"
+        }
+      ],
+      "limitations": "不表示三类素材拥有相同的文件格式、大小或时长条件；示例中的 @音频1 与“音色参考”**不证明存在独立的音频上传入口**——独立音频上传路径未由本截图单独验证，该状态为「未单独验证」，不等于「不支持」；不扩大为所有视觉或音频控制能力；不表示所有账号、地区或客户端均可使用该组合方式。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0059",
+      "title": "当前参考内容界面显示的参考素材总量提示",
+      "domain": "参考视频/音频",
+      "knowledge_type": "CONSTRAINT",
+      "statement": "该界面的“参考内容”处显示“上传最多50个参考素材”，作为当前“全能参考”界面下参考素材总量的提示。",
+      "learner_outcome": "说出该界面显示的参考素材总量提示为最多 50 个，并说明它是该界面的总量提示。",
+      "information_type": "OBSERVED",
+      "scope": "Jimeng Product Layer；仅限该时点该客户端已登录状态下“视频生成 + Seedance 2.5 + 全能参考”界面显示的参考素材总量提示。",
+      "version_scope": "Seedance 2.5；2026-10-04 观察到的 Jimeng Web 界面",
+      "evidence_refs": [
+        {
+          "source_id": "P21",
+          "support_note": "本地转录保存了“上传最多50个参考素材”这一界面文字。"
+        }
+      ],
+      "limitations": "该 50 是**当前产品界面**显示的总量提示，不是 Seedance 2.5 模型层的永久技术上限；不得改写为“图片最多50张”“视频最多50段”或“音频最多50条”的分项上限；不说明超出后的行为、计数方式或三类素材是否共用同一配额；不表示其它账号、地区、客户端或后续版本保持同一数值。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0060",
+      "title": "Seedream 5.0 Pro 图片修改任务的提交流程",
+      "domain": "编辑功能",
+      "knowledge_type": "PROCEDURE",
+      "statement": "在 2026-10-04 观察到的 Jimeng Web 已登录图片生成界面中，对已有图片的一次修改任务按以下顺序进行：加载已有图片、在输入框中写明修改要求（该次任务的要求为“只把人物上衣改成蓝色，其他保持不变”）、经输入框右侧的执行入口提交，由 Seedream 5.0 Pro 生成修改后的结果，然后在结果页查看结果并可重新编辑或再次生成，最后下载结果。",
+      "learner_outcome": "按该顺序说出一次图片修改任务的完整流程，并能在该界面中对已加载的图片写出修改要求、提交执行、查看结果并下载。",
+      "information_type": "OBSERVED",
+      "scope": "Jimeng Product Layer；仅限 2026-10-04 观察到的 Jimeng Web 图片生成界面与 Seedream 5.0 Pro 的一次修改任务。不代表其它产品模式、其它模型、其它客户端或所有账号。",
+      "version_scope": "Seedream 5.0 Pro；2026-10-04 观察到的 Jimeng Web 界面",
+      "evidence_refs": [
+        {
+          "source_id": "P22",
+          "support_note": "RAW A 保存了“创作”“图片生成”“Seedream 5.0 Pro”、输入框中的修改要求文字，以及截图中可见的已上传图片缩略图与输入框右侧执行入口。"
+        }
+      ],
+      "limitations": "scope 限 Jimeng Web、限 2026-10-04 截图时点、限 Seedream 5.0 Pro 图片链路；**本证据没有验证 Seedance 2.5 视频编辑**；不包含系统文件选择器步骤与素材格式/大小/时长条件；不说明提交后是否必然产生可用结果，也不说明生成耗时、额度或权限；“其他保持不变”是**用户提出的修改目标**，不是产品保证，不得据此写成“只会修改目标区域、其它一定不变”；不表示所有账号／地区／版本拥有同样 UI。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "JIM-K-0061",
+      "title": "图片修改结果的复查与输出",
+      "domain": "编辑功能",
+      "knowledge_type": "PROCEDURE",
+      "statement": "该次修改任务完成后，结果页显示修改后的图片预览，并提供“重新编辑”“再次生成”与“下载”；结果详情页同时可见“去画布编辑”“局部重绘”“智能改图”“细节修复”“扩图”“消除笔”等入口文字。",
+      "learner_outcome": "在结果页查看修改后的图片，按需选择重新编辑或再次生成，并下载结果。",
+      "information_type": "OBSERVED",
+      "scope": "Jimeng Product Layer；仅限 2026-10-04 观察到的 Jimeng Web 图片生成界面中该次修改任务的结果页与结果详情页。不代表其它产品模式、其它模型或其它客户端。",
+      "version_scope": "Seedream 5.0 Pro；2026-10-04 观察到的 Jimeng Web 界面",
+      "evidence_refs": [
+        {
+          "source_id": "P22",
+          "support_note": "RAW B 保存了“修改人物上衣为蓝色”的结果标题、结果预览说明与“重新编辑”“再次生成”；RAW C 保存了“下载”与“去画布编辑”“局部重绘”“智能改图”“细节修复”“扩图”“消除笔”等入口文字。"
+        }
+      ],
+      "limitations": "scope 限 Jimeng Web、限 2026-10-04 截图时点、限 Seedream 5.0 Pro 图片链路；**“局部重绘”“去画布编辑”“智能改图”“细节修复”“扩图”“消除笔”只被验证为结果页中的可见入口**，其内部操作步骤未被验证（LOCAL_REPAINT_SUBFLOW = NOT_VERIFIED，不是 UNSUPPORTED），本项不得写成这些子工具的完整流程；**本证据没有验证 Seedance 2.5 视频编辑**；不保证修改结果在保真度或保留要素上的一致性；不表示所有账号／地区／版本拥有同样 UI。",
+      "status": "draft"
+    }
+  ]
+}

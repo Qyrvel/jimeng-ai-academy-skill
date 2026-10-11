@@ -1,0 +1,15 @@
+{
+  "snapshot_id": "fixture-decision-pass-all",
+  "mastery_unit_id": "JCA-MU-L04",
+  "hard_prerequisites_satisfied": true,
+  "satisfied_outcomes": [
+    "JCA-M02-L02#0",
+    "JCA-M02-L02#1"
+  ],
+  "misconception_outcomes": [],
+  "evidence_submitted": true,
+  "execution_criteria_met": true,
+  "expected_decision": "PASS",
+  "expected_reason": "PASS_ALL_REQUIRED_OUTCOMES",
+  "note": "所有 required outcomes 满足且 hard prerequisite 满足。"
+}

@@ -1,0 +1,13 @@
+{
+  "map_id": "fixture-mastery-map", "course_id": "fixture-course", "status": "mastery_contract",
+  "mastery_definition": "夹具：某 unit 未覆盖其 Lesson 的全部 outcome。",
+  "decision_contract": {"decision_enum": ["PASS","RETRY","REMEDIATION","BLOCKED"], "reason_enum": ["PASS_ALL_REQUIRED_OUTCOMES","RETRY_EXECUTION_INCOMPLETE","RETRY_EVIDENCE_INCOMPLETE","REMEDIATE_OUTCOME_GAP","REMEDIATE_BOUNDARY_MISCONCEPTION","BLOCKED_BY_HARD_PREREQUISITE"], "evaluation_order": "夹具。", "no_student_state": "夹具。"},
+  "rule_definitions": {"LESSON_PASS": {"pass_rule": "夹具。"}, "LESSON_RETRY": {"retry_rule": "夹具。"}, "LESSON_REMEDIATION": {"remediation_rule": "夹具。"}},
+  "units": [
+    {"mastery_unit_id":"JCA-MU-L01","unit_type":"LESSON","lesson_ids":["JCA-M02-L01"],"required_requirement_ids":["JCA-AR-901"],"required_outcomes":["JCA-M02-L01#0"],"hard_prerequisite_units":[],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"夹具。"},
+    {"mastery_unit_id":"JCA-MU-L02","unit_type":"LESSON","lesson_ids":["JCA-M02-L02"],"required_requirement_ids":["JCA-AR-902"],"required_outcomes":["JCA-M02-L02#0","JCA-M02-L02#1"],"hard_prerequisite_units":["JCA-MU-L01"],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"夹具。"},
+    {"mastery_unit_id":"JCA-MU-L03","unit_type":"LESSON","lesson_ids":["JCA-M01-L01"],"required_requirement_ids":["JCA-AR-903"],"required_outcomes":["JCA-M01-L01#0","JCA-M01-L01#1","JCA-M01-L01#2"],"hard_prerequisite_units":[],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"夹具。"}
+  ],
+  "hard_sequence_summary": {"mastery_hard_transition_count": 1, "mastery_supporting_hard_edge_count": 1},
+  "derived": {"mastery_unit_count": 3, "lesson_mastery_unit_count": 3, "sequence_pair_mastery_unit_count": 0, "mastery_hard_transition_count": 1, "mastery_supporting_hard_edge_count": 1, "non_order_mastery_gate_misuse_count": 0}
+}

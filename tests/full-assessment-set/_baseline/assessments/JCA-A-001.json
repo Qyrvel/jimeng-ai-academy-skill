@@ -1,0 +1,59 @@
+{
+  "assessment_id": "JCA-A-001",
+  "lesson_ids": ["JCA-M02-L01", "JCA-M02-L02"],
+  "lesson_pair_reason": "SEQUENCE_PAIR",
+  "assessment_type": "PERFORM_PROCEDURE",
+  "purpose": "验证图片生成的先后步骤是否真的能被观察测出：学生要按正确顺序完成「输入提示 → 触发 → 查看 → 下载」，并能说明下载之所以在后面是流程事实而非偏好。",
+  "target_outcomes": [
+    "解释图片生成三步流程及其起点",
+    "输入文本提示并触发一次图片生成",
+    "检查生成结果",
+    "完成下载导出"
+  ],
+  "knowledge_refs": ["JIM-K-0051", "JIM-K-0052", "JIM-K-0053"],
+  "scope": "该官方产品页所述图片生成三步流程与该时点 Jimeng Web 图片生成界面；不含素材规格、提示词写法与结果质量评价。",
+  "task": "在已证实的 Jimeng Web 图片生成界面中，按正确顺序完成一次图片创作并交付：①进入「生成图像」下的「文本/图像到图像生成」；②输入一句文本提示；③点击「生成」触发；④查看生成结果；⑤点击下载导出。完成后写出两句话：你完成的三步顺序是什么；为什么「下载」不能排在「生成」之前。",
+  "expected_evidence": "①屏幕记录或产物：一次真实的生成结果与一次下载产物；②手写的三步顺序（含起点「登录后进入生成图像 → 文本/图像到图像生成」）；③一句说明「下载属于第三步、在触发生成之后」的理由陈述。",
+  "scoring_criteria": [
+    {
+      "criterion_id": "A001-C1",
+      "description": "按顺序说出三步流程并指出起点",
+      "evidence_source": "手写顺序陈述",
+      "weight": 2,
+      "pass_condition": "三步名称与顺序均正确，且起点写明为登录后进入「生成图像」下的「文本/图像到图像生成」"
+    },
+    {
+      "criterion_id": "A001-C2",
+      "description": "在界面完成一次文本提示输入并触发生成",
+      "evidence_source": "屏幕记录或操作结果",
+      "weight": 2,
+      "pass_condition": "聊天框中有输入内容，且生成了新的图片结果"
+    },
+    {
+      "criterion_id": "A001-C3",
+      "description": "找到结果预览并完成一次下载导出",
+      "evidence_source": "下载产物",
+      "weight": 2,
+      "pass_condition": "存在一次实际下载得到的文件"
+    },
+    {
+      "criterion_id": "A001-C4",
+      "description": "说明「下载」在流程中位于「触发生成」之后，并指出这是流程先后而非教学偏好",
+      "evidence_source": "手写理由陈述",
+      "weight": 2,
+      "pass_condition": "明确指出顺序来自流程本身（步骤先后），未把它说成「必须先掌握某知识」"
+    }
+  ],
+  "max_score": 8,
+  "pass_score": 6,
+  "partial_credit_policy": "允许 partial credit：每条 criterion 按 0 / 1 / 2 计分。流程顺序类 criterion 若顺序正确但起点写漏，得 1；操作类 criterion 若已进入正确位置但未完成触发，得 1。不得因最后一步下载失败而把前面的步骤判 0。",
+  "allowed_support": ["lesson notes", "course outline", "product UI"],
+  "disallowed_support": ["external web search", "unverified community tutorial", "another person's completed answer"],
+  "feedback_boundary": "评分后只可告知：哪条 criterion 未达标、对应的 Lesson（JCA-M02-L01 或 JCA-M02-L02）、以及「下载属于第三步」这一 scope/boundary 提醒。不得给出新的产品事实或推断长期掌握程度。",
+  "alignment": {
+    "completion_check_alignment": "COMPOSITE_FROM_MULTIPLE_COMPLETION_CHECKS",
+    "rationale": "本 assessment 组合了两课的 completion_check：JCA-M02-L01 的「完成一次提示输入与触发生成，并按顺序说出三步流程及其起点」与 JCA-M02-L02 的「找到结果预览、完成一次下载导出，并说出该环节位于触发生成之后」。两条证据各由一个 criterion 组承担，合起来构成一次完整流程的观察。"
+  },
+  "limitations": "只覆盖该产品页所述流程与该时点界面；不评分结果质量、不要求任何审美判断；不涉及素材规格、配额、会员或账号权限；一次评估只说明此次操作成立，不代表长期掌握。",
+  "status": "full_course"
+}

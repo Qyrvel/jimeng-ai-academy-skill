@@ -1,0 +1,74 @@
+{
+  "reviews": [
+    {
+      "edge_id": "POL-E-0001",
+      "status": "KEEP",
+      "review_reason": "DIRECT_CONSTRAINT 成立：4.1 的「未授权信息」义务限定被输入的信息类型，目标 Item 正是输入发生的那一步；约束点具体且唯一。",
+      "directness": "DIRECT",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "POL-E-0002",
+      "status": "KEEP",
+      "review_reason": "DIRECT_CONSTRAINT 成立：4.1 的权属与不侵权义务限定输入内容的来源正当性，目标是输入动作面；与 POL-E-0001 的约束点不同（信息类型 vs 权属）。",
+      "directness": "DIRECT",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "POL-E-0003",
+      "status": "KEEP",
+      "review_reason": "DIRECT_CONSTRAINT 成立：多来源素材组合是第三方权利最集中的输入形态，权属要求直接限定哪些素材可被组合；与 POL-E-0002 的目标面不同（素材来源面 vs 输入动作面）。",
+      "directness": "DIRECT",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "POL-E-0004",
+      "status": "KEEP",
+      "review_reason": "DIRECT_CONSTRAINT 成立：4.4 的禁止动作明确包含「输入」，目标是输入步骤，二者是同一类动作。",
+      "directness": "DIRECT",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "POL-E-0005",
+      "status": "KEEP",
+      "review_reason": "DIRECT_CONSTRAINT 成立：4.5 的禁止动作含「输入」；规范对象为不良内容，与 4.4 的违法违规内容属不同类别，故与 POL-E-0004 不重复。",
+      "directness": "DIRECT",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "POL-E-0006",
+      "status": "KEEP",
+      "review_reason": "DIRECT_CONSTRAINT 成立：4.6 的禁止动作含「输入」；规范对象为欺骗性与高危险性内容，与前两条类别不同。",
+      "directness": "DIRECT",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "POL-E-0007",
+      "status": "KEEP",
+      "review_reason": "DIRECT_CONSTRAINT 成立：4.7 禁止动作含「输入」，且其举例「刻意使用字符组合以逃避技术审核」直接指向文本输入的内容形式，与提示词输入同一位置。",
+      "directness": "DIRECT",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "POL-E-0008",
+      "status": "KEEP",
+      "review_reason": "KNOWLEDGE_DEPENDENCY 成立：4.2 内「平台添加标识」与「不得破坏标识」两条规则中，后者的禁止对象由前者的添加行为产生，理解后者需要前者；该依赖是理解层面的，非适用层面的条件。",
+      "directness": "DIRECT",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "POL-E-0009",
+      "status": "KEEP",
+      "review_reason": "DIRECT_CONSTRAINT 成立：4.2 约束用户对已生成内容上标识的处理，目标是产出物形成与输出处理的环节，是唯一与「输出处理」直接对应的目标面。",
+      "directness": "DIRECT",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "POL-E-0010",
+      "status": "KEEP",
+      "review_reason": "DIRECT_CONSTRAINT 成立：4.3 的义务明确覆盖「生成」动作，并附加来源标注的处理要求，直接落在产出环节。",
+      "directness": "DIRECT",
+      "curriculum_leakage": false
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "course_id": "fixture-course", "curriculum_id": "fixture-curriculum", "blueprint_id": "fixture-blueprint",
+  "version": "0.1", "status": "assembled_v1", "scope": "夹具：module_order 被重排。",
+  "module_order": ["JCA-M02", "JCA-M01"],
+  "lesson_order_by_module": {"JCA-M01": ["JCA-M01-L01"], "JCA-M02": ["JCA-M02-L01", "JCA-M02-L02"]},
+  "lesson_files": [
+    {"lesson_id": "JCA-M01-L01", "json_path": "lessons/JCA-M01-L01.json", "markdown_path": "lessons/JCA-M01-L01.md", "module_id": "JCA-M01", "role": "FOUNDATION"},
+    {"lesson_id": "JCA-M02-L01", "json_path": "lessons/JCA-M02-L01.json", "markdown_path": "lessons/JCA-M02-L01.md", "module_id": "JCA-M02", "role": "PROCEDURE"},
+    {"lesson_id": "JCA-M02-L02", "json_path": "lessons/JCA-M02-L02.json", "markdown_path": "lessons/JCA-M02-L02.md", "module_id": "JCA-M02", "role": "PROCEDURE"}
+  ],
+  "coverage_summary": {"module_count": 2, "blueprint_lesson_count": 3, "canonical_lesson_count": 3, "canonical_json_count": 3, "canonical_markdown_count": 3, "mandatory_domain_count": 0, "mapped_mandatory_domain_count": 0, "unmapped_mandatory_domain_count": 0, "missing_lesson_count": 0, "extra_lesson_count": 0},
+  "sequence_summary": {"module_hard_sequence_count": 0, "lesson_hard_sequence_count": 1, "hard_sequence_resolution_count": 1, "hard_sequence_violation_count": 0, "non_order_relation_misuse_count": 0},
+  "grounding_summary": {"grounding_pass_count": 3, "grounding_fail_count": 0, "unsupported_claim_count": 0, "scope_expansion_count": 0, "model_product_leakage_count": 0, "unlabeled_pedagogical_example_count": 0, "pedagogical_example_count": 1},
+  "role_coverage_summary": {"blueprint_role_count": 2, "canonical_role_count": 2, "missing_role_count": 0, "missing_role_set": []},
+  "assembly_metadata": {"gate": "FIXTURE", "canonical_lesson_count": 3, "canonical_json_count": 3, "canonical_markdown_count": 3, "promotion_semantic_diff_count": 0, "hard_sequence_count": 1, "hard_sequence_violation_count": 0, "unsupported_claim_count": 0, "scope_expansion_count": 0, "model_product_leakage_count": 0, "assessment_readiness": "READY"}
+}

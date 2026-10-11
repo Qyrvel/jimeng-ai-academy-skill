@@ -1,0 +1,51 @@
+# Jimeng Creator Academy V1 — Full Assessment Mapping（人类可读渲染）
+
+> 机器事实以 `full-assessment-mapping.json` 为准。本文件**不是**题库，只说明「每一课未来必须测什么、用什么证据」。
+
+Outcome 引用形式：`<lesson_id>#<0-based index into that lesson's learner_outcomes>`。
+
+| Req | Lesson(s) | Type | Outcomes | Knowledge | Alignment | Evidence Type |
+| --- | --- | --- | --- | --- | --- | --- |
+| AR-001 | M01-L01 | CLASSIFY | 3 | 6 | DIRECT | CLASSIFICATION_RESULT |
+| AR-002 | M01-L02 | IDENTIFY | 4 | 7 | DIRECT | SELECTION_OR_IDENTIFICATION |
+| AR-003 | M02-L01 | PERFORM_PROCEDURE | 2 | 2 | DIRECT | PROCEDURE_EXECUTION |
+| AR-004 | M02-L01 + M02-L02（SEQUENCE_PAIR） | PERFORM_PROCEDURE | 4 | 3 | COMPOSITE | CREATED_ARTIFACT |
+| AR-005 | M02-L03 | CLASSIFY | 2 | 5 | DIRECT | CLASSIFICATION_RESULT |
+| AR-006 | M03-L01 | EXPLAIN_BOUNDARY | 2 | 4 | DIRECT | BOUNDARY_EXPLANATION |
+| AR-007 | M03-L02 | EXPLAIN_BOUNDARY | 2 | 2 | DIRECT | BOUNDARY_EXPLANATION |
+| AR-008 | M03-L03 | EXPLAIN_BOUNDARY | 2 | 1 | DIRECT | BOUNDARY_EXPLANATION |
+| AR-009 | M04-L01 | EXPLAIN_BOUNDARY | 2 | 2 | DIRECT | BOUNDARY_EXPLANATION |
+| AR-010 | M04-L02 | PERFORM_PROCEDURE | 2 | 2 | DIRECT | PROCEDURE_EXECUTION |
+| AR-011 | M04-L03 | PERFORM_PROCEDURE | 2 | 2 | DIRECT | PROCEDURE_EXECUTION |
+| AR-012 | M05-L01 | CLASSIFY | 3 | 3 | DIRECT | CLASSIFICATION_RESULT |
+| AR-013 | M05-L02 | PERFORM_PROCEDURE | 3 | 5 | DIRECT | PROCEDURE_EXECUTION |
+| AR-014 | M05-L03 | EXPLAIN_BOUNDARY | 3 | 3 | DIRECT | BOUNDARY_EXPLANATION |
+| AR-015 | M06-L01 | EXPLAIN_BOUNDARY | 3 | 7 | DIRECT | BOUNDARY_EXPLANATION |
+| AR-016 | M06-L02 | PERFORM_PROCEDURE | 4 | 2 | DIRECT | PROCEDURE_EXECUTION |
+| AR-017 | M07-L01 | APPLY_RULE | 2 | 2 | DIRECT | RULE_APPLICATION |
+| AR-018 | M07-L02 | APPLY_RULE | 2 | 2 | DIRECT | RULE_APPLICATION |
+| AR-019 | M07-L03 | APPLY_RULE | 3 | 5 | DIRECT | RULE_APPLICATION |
+| AR-020 | M07-L04 | APPLY_RULE | 2 | 5 | DIRECT | RULE_APPLICATION |
+| AR-021 | M08-L01 | IDENTIFY | 2 | 3 | DIRECT | SELECTION_OR_IDENTIFICATION |
+| AR-022 | M08-L02 | INTEGRATED_TASK | 2 | 4 | DIRECT | INTEGRATED_WORK_PRODUCT |
+| AR-023 | M08-L03 | INTEGRATED_TASK | 3 | 6 | DIRECT | INTEGRATED_WORK_PRODUCT |
+| AR-024 | M08-L04 | INTEGRATED_TASK | 2 | 2 | DIRECT | INTEGRATED_WORK_PRODUCT |
+
+## 硬顺序上下文
+
+只有 4 个 requirement 带 hard prerequisite：
+
+```text
+AR-004（M02-L02）  ← M02-L01，支撑边 CRR2-E-0004
+AR-007（M03-L02）  ← M03-L01，支撑边 JIM-E-0004
+AR-008（M03-L03）  ← M03-L02，支撑边 JIM-E-0026
+AR-014（M05-L03）  ← M05-L01，支撑边 JIM-E-0001 与 JIM-E-0003
+```
+
+## 派生指标（由 `validate_assessment_mapping.py` 重算核对）
+
+```text
+requirement_count 24 | mapped_lesson_count 24 | unmapped_lesson_count 0
+total_learner_outcome_count 59 | mapped 59 | unmapped 0
+assessment_type_count 6 | alignment_type_count 2
+```

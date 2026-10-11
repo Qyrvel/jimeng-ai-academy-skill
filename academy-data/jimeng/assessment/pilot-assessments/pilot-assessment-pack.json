@@ -1,0 +1,40 @@
+{
+  "pack_id": "jimeng-creator-academy-v1-pilot-assessment-pack",
+  "course_id": "jimeng-creator-academy-v1",
+  "status": "pilot",
+  "assessment_order": ["JCA-A-001", "JCA-A-002", "JCA-A-003", "JCA-A-004"],
+  "assessment_files": {
+    "JCA-A-001": "JCA-A-001.json",
+    "JCA-A-002": "JCA-A-002.json",
+    "JCA-A-003": "JCA-A-003.json",
+    "JCA-A-004": "JCA-A-004.json"
+  },
+  "coverage_summary": {
+    "pilot_assessment_count": 4,
+    "assessment_type_count": 4,
+    "procedure_hard_sequence_pilot_count": 1,
+    "concept_scope_pilot_count": 1,
+    "safety_pilot_count": 1,
+    "application_integration_pilot_count": 1,
+    "assessed_lesson_count": 5,
+    "assessed_lesson_ids": ["JCA-M02-L01", "JCA-M02-L02", "JCA-M02-L03", "JCA-M07-L02", "JCA-M08-L02"],
+    "course_lesson_count": 24,
+    "assessed_lesson_ratio": "5 / 24（Pilot 有意不全覆盖）"
+  },
+  "alignment_summary": {
+    "target_outcome_ref_count": 10,
+    "scoring_criterion_count": 18,
+    "direct_alignment_count": 3,
+    "narrower_equivalent_count": 0,
+    "composite_alignment_count": 1,
+    "unrelated_alignment_count": 0,
+    "untaught_fact_count": 0,
+    "scope_expansion_count": 0,
+    "model_product_leakage_count": 0,
+    "trick_question_count": 0,
+    "assessment_hard_transition_count": 1,
+    "assessment_supporting_hard_edge_count": 1,
+    "hard_sequence_violation_count": 0
+  },
+  "notes": "JCA-A-001 是全 pack 中唯一涉及 Lesson 级 hard sequence 的 assessment（覆盖 JCA-M02-L01 → JCA-M02-L02 的 PROCEDURE_PRECEDES）。该转换由 1 条 hard edge（CRR2-E-0004）支撑；transition 计数与 edge 计数分别报告，不合并。"
+}

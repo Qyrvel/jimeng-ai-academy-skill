@@ -1,0 +1,31 @@
+{
+  "assessment_id": "JCA-A-019",
+  "lesson_ids": ["JCA-M07-L03"],
+  "lesson_pair_reason": "NOT_APPLICABLE",
+  "assessment_type": "APPLY_RULE",
+  "purpose": "测量 JCA-M07-L03 的三条 outcome：学生要对内容描述完成规则归类、指出需标注来源的情形，并说明四类禁止性规则是并列类别而非严重程度等级。",
+  "target_outcomes": ["解释内容须符合法律法规要求，以及特定信息须准确标注来源的要求", "区分违法违规、不良、欺骗性与高危险性三类禁止内容规则", "识别扰乱平台经营秩序信息规则的对象范围"],
+  "knowledge_refs": ["JIM-K-0030", "JIM-K-0031", "JIM-K-0032", "JIM-K-0033", "JIM-K-0034"],
+  "scope": "平台规则限 P14 所保存的第 4.3 节合规与来源标注要求，以及第 4.4–4.7 节的四类禁止性规则（条款级）。",
+  "task": "把下列五条内容描述逐条归入对应规则族（合规与来源标注要求 / 违法违规类 / 不良内容类 / 欺骗性与高危险性类 / 经营秩序类），并各写一句依据：①一条涉及时事的信息但没有注明来源；②一条被列举违法违规内容的章节禁止的内容；③一条被作为不良内容禁止、且其所属章节另外要求主动抵制其传播的内容；④一条含欺骗性、高危险性或危害表演者身心健康情形的内容；⑤一条刻意使用字符组合以逃避技术审核的信息。然后另写一句：这四类禁止性规则之间是什么关系？",
+  "expected_evidence": "①五条归类结果及逐条依据；②指出第①条属于「须准确标注来源」的情形；③一句说明四类规则是并列的类别，不是由轻到重的严重程度排序。",
+  "scoring_criteria": [
+    {"criterion_id": "A019-C1", "description": "归类违法违规与不良内容两类", "evidence_source": "归类结果", "weight": 2, "pass_condition": "②归违法违规类、③归不良内容类，并指出后者另含主动抵制传播的行为要求"},
+    {"criterion_id": "A019-C2", "description": "归类欺骗性与高危险性类", "evidence_source": "归类结果", "weight": 2, "pass_condition": "④归欺骗性与高危险性类"},
+    {"criterion_id": "A019-C3", "description": "归类经营秩序类", "evidence_source": "归类结果", "weight": 2, "pass_condition": "⑤归扰乱平台经营秩序类，并指出该节的对象是经营秩序"},
+    {"criterion_id": "A019-C4", "description": "指出需标注来源的情形", "evidence_source": "手写说明", "weight": 2, "pass_condition": "指出①属涉及时事、公共政策或社会事件时须准确标注信息来源的情形"},
+    {"criterion_id": "A019-C5", "description": "说明四类规则的关系", "evidence_source": "手写说明", "weight": 2, "pass_condition": "指出四类为并列类别，不是严重程度等级；且未凭想象补全条款子项清单"}
+  ],
+  "max_score": 10,
+  "pass_score": 8,
+  "partial_credit_policy": "允许 partial credit：每条 0/1/2。归类题错一项得 1、错两项及以上得 0；依据空泛得 1。不因用词与条款原文不同扣分。",
+  "allowed_support": ["lesson notes", "course outline"],
+  "disallowed_support": ["external web search", "unverified community tutorial", "another person's completed answer"],
+  "feedback_boundary": "评分后只可告知：哪条 criterion 未达标、对应 Lesson（JCA-M07-L03）、以及「四类规则并列而非等级」「条款级记录不含子项」两条 boundary 提醒。不得复述条款子项、不得判断具体内容性质。",
+  "alignment": {
+    "completion_check_alignment": "DIRECT",
+    "rationale": "JCA-M07-L03 的 completion_check 是「能对给定内容完成类别归类，指出至少一种需要标注信息来源的情形，并说明四类规则是并列的类别而不是严重程度等级」。C1/C2/C3 对归类，C4/C5 对其余两点。"
+  },
+  "limitations": "只覆盖 P14 第 4.3–4.7 节所选命题；条款级记录不含子项清单，不得据本评估复述或补全子项；不判断具体内容性质、不构成法律意见；不引入未验证的界面、阈值或审核机制细节；一次评估不代表长期掌握。",
+  "status": "full_course"
+}

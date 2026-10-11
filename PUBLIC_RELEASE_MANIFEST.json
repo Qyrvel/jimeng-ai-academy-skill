@@ -1,0 +1,2448 @@
+{
+  "release": "jimeng-ai-academy-skill-v1.0.0",
+  "generated_from": "Jimeng-AI-Academy-Skill-Frozen-20261010",
+  "frozen_skill_md_sha256": "bf89ef80eae137408147ea60158afe9e4c5d7d60211baa0de4cf9746bea3f2c5",
+  "license": "Apache-2.0 for original public-export material; third-party rights excluded",
+  "public_release_transformations": [
+    "Internal audit/forensic and machine-local execution traces omitted",
+    "Locally captured verbatim third-party evidence excerpts omitted",
+    "Sandbox probe artifacts and release-preparation-only documents omitted",
+    "Public documentation/community/license files added",
+    "Evidence-materialization test uses a synthetic public fixture"
+  ],
+  "excluded_from_public_export": [
+    "academy-data/jimeng/assessment/course-evaluation/course-evaluation-review.md",
+    "academy-data/jimeng/assessment/course-evaluation/full-course-assessment-assembly-review.md",
+    "academy-data/jimeng/assessment/course-evaluation/gate-4.7-final-acceptance-report.md",
+    "academy-data/jimeng/assessment/full-assessment-coverage-review.md",
+    "academy-data/jimeng/assessment/full-assessment-mapping-review.md",
+    "academy-data/jimeng/assessment/full-assessments/.write-tool-probe.txt",
+    "academy-data/jimeng/assessment/full-assessments/reviews/_r3b_write_probe.txt",
+    "academy-data/jimeng/assessment/full-assessments/reviews/assessment-schema-ratification.md",
+    "academy-data/jimeng/assessment/full-assessments/reviews/full-assessment-coverage-review.md",
+    "academy-data/jimeng/assessment/full-assessments/reviews/full-assessment-generation-ledger.md",
+    "academy-data/jimeng/assessment/full-assessments/reviews/full-assessment-grounding-review.md",
+    "academy-data/jimeng/assessment/full-assessments/reviews/full-assessment-scoring-review.md",
+    "academy-data/jimeng/assessment/full-assessments/reviews/full-assessment-type-review.md",
+    "academy-data/jimeng/assessment/full-assessments/reviews/gate-4.7a-codex-takeover-stop-report.md",
+    "academy-data/jimeng/assessment/full-assessments/reviews/gate-4.7a-cont6c-final-report.md",
+    "academy-data/jimeng/assessment/full-assessments/reviews/gate-4.7a-cont6c-repair-report.md",
+    "academy-data/jimeng/assessment/full-assessments/reviews/gate-4.7a-cont7-r1-assessment-content-repair-report.md",
+    "academy-data/jimeng/assessment/full-assessments/reviews/gate-4.7a-cont7-r3a-cont1-r2-contract-parser-fixture-repair-report.md",
+    "academy-data/jimeng/assessment/full-assessments/reviews/gate-4.7a-cont7-r3a-cont1-r3-mastery-binding-validator-ratification-report.md",
+    "academy-data/jimeng/assessment/full-assessments/reviews/gate-4.7a-cont7-r3a-cont2-r4-verifier-inventory-hygiene-report.md",
+    "academy-data/jimeng/assessment/full-assessments/reviews/gate-4.7a-cont7-r3a-cont2-remaining-full-set-fixtures-report.md",
+    "academy-data/jimeng/assessment/full-assessments/reviews/gate-4.7a-cont7-r3b-final-acceptance-report.md",
+    "academy-data/jimeng/assessment/full-assessments/reviews/pilot-promotion-review.md",
+    "academy-data/jimeng/assessment/mastery-contract-review.md",
+    "academy-data/jimeng/assessment/pilot-assessment-alignment.md",
+    "academy-data/jimeng/assessment/pilot-assessment-review.md",
+    "academy-data/jimeng/assessment/pilot-assessment-selection.md",
+    "academy-data/jimeng/assessment/pilot-assessments/JCA-A-001.json",
+    "academy-data/jimeng/assessment/pilot-assessments/JCA-A-001.md",
+    "academy-data/jimeng/assessment/pilot-assessments/JCA-A-002.json",
+    "academy-data/jimeng/assessment/pilot-assessments/JCA-A-002.md",
+    "academy-data/jimeng/assessment/pilot-assessments/JCA-A-003.json",
+    "academy-data/jimeng/assessment/pilot-assessments/JCA-A-003.md",
+    "academy-data/jimeng/assessment/pilot-assessments/JCA-A-004.json",
+    "academy-data/jimeng/assessment/pilot-assessments/JCA-A-004.md",
+    "academy-data/jimeng/assessment/pilot-assessments/pilot-assessment-pack.json",
+    "academy-data/jimeng/assessment/pilot-scoring-review.md",
+    "academy-data/jimeng/course/jimeng-creator-academy-v1/reviews/full-course-coverage-review.md",
+    "academy-data/jimeng/course/jimeng-creator-academy-v1/reviews/full-course-grounding-review.md",
+    "academy-data/jimeng/course/jimeng-creator-academy-v1/reviews/full-course-semantic-review.md",
+    "academy-data/jimeng/course/jimeng-creator-academy-v1/reviews/full-course-sequence-review.md",
+    "academy-data/jimeng/course/jimeng-creator-academy-v1/reviews/gate-4.4b1-canonical-lesson-completeness.md",
+    "academy-data/jimeng/course/jimeng-creator-academy-v1/reviews/gate-4.4b1-lesson-schema-ratification.md",
+    "academy-data/jimeng/course/jimeng-creator-academy-v1/reviews/gate-4.4b1-promotion-diff-review.md",
+    "academy-data/jimeng/course/jimeng-creator-academy-v1/reviews/gate-4.4b1-promotion-source-map.json",
+    "academy-data/jimeng/course/jimeng-creator-academy-v1/reviews/lesson-role-coverage-review.md",
+    "academy-data/jimeng/curriculum/curriculum-readiness-assessment.md",
+    "academy-data/jimeng/curriculum/curriculum-readiness.json",
+    "academy-data/jimeng/curriculum/g40-05-mcr04-scope-admissibility.md",
+    "academy-data/jimeng/curriculum/gate-4.0-r1-blocking-gap-closure-report.md",
+    "academy-data/jimeng/curriculum/gate-4.0-r1-evidence-closure.md",
+    "academy-data/jimeng/curriculum/gate-4.0-r1-knowledge-closure.md",
+    "academy-data/jimeng/curriculum/gate-4.0-r2-blocking-gap-closure-report.md",
+    "academy-data/jimeng/curriculum/gate-4.0-r2-evidence-closure.md",
+    "academy-data/jimeng/curriculum/gate-4.0-r2-knowledge-closure.md",
+    "academy-data/jimeng/curriculum/gate-4.0-r2-residual-gap-audit.md",
+    "academy-data/jimeng/curriculum/gate-4.0-r2-source-discovery-log.md",
+    "academy-data/jimeng/curriculum/gate-4.4-role-generalization-review.md",
+    "academy-data/jimeng/curriculum/gate-4.4-role-generalization-selection.md",
+    "academy-data/jimeng/curriculum/gate-4.4a-generation-ledger.md",
+    "academy-data/jimeng/curriculum/gate-4.4a-lesson-grounding-review.md",
+    "academy-data/jimeng/curriculum/gate-4.4a-sequence-consistency.md",
+    "academy-data/jimeng/curriculum/jca-m07-pilot-load-review.md",
+    "academy-data/jimeng/curriculum/jimeng-creator-academy-v1-blueprint-review.md",
+    "academy-data/jimeng/curriculum/jimeng-creator-academy-v1-coverage.md",
+    "academy-data/jimeng/curriculum/jimeng-creator-academy-v1-lesson-coverage.md",
+    "academy-data/jimeng/curriculum/jimeng-creator-academy-v1-lesson-order-review.md",
+    "academy-data/jimeng/curriculum/jimeng-creator-academy-v1-module-load-review.md",
+    "academy-data/jimeng/curriculum/jimeng-creator-academy-v1-order-review.md",
+    "academy-data/jimeng/curriculum/jimeng-creator-academy-v1-review.md",
+    "academy-data/jimeng/curriculum/pilot-hard-sequence-review.md",
+    "academy-data/jimeng/curriculum/pilot-lesson-grounding-review.md",
+    "academy-data/jimeng/curriculum/pilot-lesson-pack-review.md",
+    "academy-data/jimeng/curriculum/pilot-lesson-selection.md",
+    "academy-data/jimeng/curriculum/pilot-lessons/JCA-M02-L01.json",
+    "academy-data/jimeng/curriculum/pilot-lessons/JCA-M02-L01.md",
+    "academy-data/jimeng/curriculum/pilot-lessons/JCA-M02-L02.json",
+    "academy-data/jimeng/curriculum/pilot-lessons/JCA-M02-L02.md",
+    "academy-data/jimeng/curriculum/pilot-lessons/JCA-M07-L01.json",
+    "academy-data/jimeng/curriculum/pilot-lessons/JCA-M07-L01.md",
+    "academy-data/jimeng/curriculum/pilot-lessons/JCA-M07-L02.json",
+    "academy-data/jimeng/curriculum/pilot-lessons/JCA-M07-L02.md",
+    "academy-data/jimeng/curriculum/pilot-lessons/JCA-M07-L03.json",
+    "academy-data/jimeng/curriculum/pilot-lessons/JCA-M07-L03.md",
+    "academy-data/jimeng/curriculum/pilot-lessons/JCA-M07-L04.json",
+    "academy-data/jimeng/curriculum/pilot-lessons/JCA-M07-L04.md",
+    "academy-data/jimeng/curriculum/pilot-lessons/pilot-lesson-pack.json",
+    "academy-data/jimeng/curriculum/role-expansion/JCA-M01-L01.json",
+    "academy-data/jimeng/curriculum/role-expansion/JCA-M01-L01.md",
+    "academy-data/jimeng/curriculum/role-expansion/JCA-M02-L03.json",
+    "academy-data/jimeng/curriculum/role-expansion/JCA-M02-L03.md",
+    "academy-data/jimeng/curriculum/role-expansion/JCA-M05-L03.json",
+    "academy-data/jimeng/curriculum/role-expansion/JCA-M05-L03.md",
+    "academy-data/jimeng/curriculum/role-expansion/JCA-M08-L02.json",
+    "academy-data/jimeng/curriculum/role-expansion/JCA-M08-L02.md",
+    "academy-data/jimeng/curriculum/role-expansion/role-expansion-pack.json",
+    "academy-data/jimeng/graph/curriculum-leakage-validation-review.md",
+    "academy-data/jimeng/graph/curriculum-readiness-core-graph-review-r1.md",
+    "academy-data/jimeng/graph/curriculum-readiness-core-graph-review-r2.md",
+    "academy-data/jimeng/graph/graph-contract-freeze-review.md",
+    "academy-data/jimeng/graph/graph-generalization-review-r1.md",
+    "academy-data/jimeng/graph/graph-generalization-review.md",
+    "academy-data/jimeng/graph/policy-enforcement-review.md",
+    "academy-data/jimeng/graph/policy-pilot-review.md",
+    "academy-data/jimeng/graph/policy-pilot-selection.md",
+    "academy-data/jimeng/graph/seedance-graph-integrity-audit.md",
+    "academy-data/jimeng/graph/seedance-pilot-review-r1.md",
+    "academy-data/jimeng/graph/seedance-pilot-review.md",
+    "academy-data/jimeng/graph/seedance-pilot-selection.md",
+    "academy-data/jimeng/sources/materialization-registry.json",
+    "academy-data/jimeng/sources/materialized/M01.md",
+    "academy-data/jimeng/sources/materialized/M02.md",
+    "academy-data/jimeng/sources/materialized/M09.md",
+    "academy-data/jimeng/sources/materialized/M10.md",
+    "academy-data/jimeng/sources/materialized/P02.md",
+    "academy-data/jimeng/sources/materialized/P07.md",
+    "academy-data/jimeng/sources/materialized/P09.md",
+    "academy-data/jimeng/sources/materialized/P10.md",
+    "academy-data/jimeng/sources/materialized/P12.md",
+    "academy-data/jimeng/sources/materialized/P13.md",
+    "academy-data/jimeng/sources/materialized/P14.md",
+    "academy-data/jimeng/sources/materialized/P15.md",
+    "academy-data/jimeng/sources/materialized/P16.md",
+    "academy-data/jimeng/sources/materialized/P17.md",
+    "academy-data/jimeng/sources/materialized/P18.md",
+    "academy-data/jimeng/sources/materialized/P19.md",
+    "academy-data/jimeng/sources/materialized/P20.md",
+    "academy-data/jimeng/sources/materialized/P21.md",
+    "academy-data/jimeng/sources/materialized/P22.md",
+    "tests/full-assessment-set/_probe_bytes.json",
+    "tests/full-assessment-set/_probe_cr.txt",
+    "tests/full-assessment-set/_probe_crlf.txt",
+    "tests/full-assessment-set/_probe_crlf2.txt",
+    "tests/full-assessment-set/_probe_crlf3.txt",
+    "tests/full-assessment-set/_probe_crlf4.txt",
+    "tests/full-assessment-set/_probe_derive.py",
+    "tests/full-assessment-set/_probe_diag.py",
+    "tests/full-assessment-set/_probe_diff.py",
+    "tests/full-assessment-set/_probe_dsh_write_cr.txt",
+    "tests/full-assessment-set/_probe_dsh_write_cr2.txt",
+    "tests/full-assessment-set/_probe_emit.py",
+    "tests/full-assessment-set/_probe_enc.py",
+    "tests/full-assessment-set/_probe_overlay.py",
+    "tests/full-assessment-set/_probe_parser.py",
+    "tests/full-assessment-set/_probe_reconcile.py",
+    "tests/full-assessment-set/_probe_spec.py",
+    "tests/full-assessment-set/_probe_trace.py",
+    "tests/full-assessment-set/_probe_uncovered.py",
+    "tests/full-assessment-set/_probe_write_only.txt",
+    "tests/full-assessment-set/_probe_write_test.py",
+    "tests/full-assessment-set/_r3a_r1_persist_emit.py",
+    "tests/full-assessment-set/_r3a_r1_write_probe.txt",
+    "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/.probe-copy-source.txt",
+    "OPEN_SOURCE_AUDIT.md",
+    "GITHUB_PUBLISH_PLAN.md"
+  ],
+  "exported_file_count": 456,
+  "files": [
+    {
+      "path": ".agents/skills/ai-academy/SKILL.md",
+      "size": 4611,
+      "sha256": "bf89ef80eae137408147ea60158afe9e4c5d7d60211baa0de4cf9746bea3f2c5"
+    },
+    {
+      "path": ".agents/skills/ai-academy/assets/assessment.schema.json",
+      "size": 3663,
+      "sha256": "26665ad962ed8aa82de3fa64b1eaae96d4d4b9994294b8909d6928bd1fe2c93e"
+    },
+    {
+      "path": ".agents/skills/ai-academy/assets/course-assembly.schema.json",
+      "size": 6916,
+      "sha256": "d4cc9d84de316f0c8c51277994c598d87910588cf928134ab9b8b40471c637db"
+    },
+    {
+      "path": ".agents/skills/ai-academy/assets/course-evaluation.schema.json",
+      "size": 22050,
+      "sha256": "c1963cddc5f521187603c80b3e466aba267e1d2fed775eef8248ff38907b9c40"
+    },
+    {
+      "path": ".agents/skills/ai-academy/assets/curriculum-readiness.schema.json",
+      "size": 4152,
+      "sha256": "1b166e8bccf80774198e2620a87f867bc7af20fcfbc4fdad48a15db518ab1acb"
+    },
+    {
+      "path": ".agents/skills/ai-academy/assets/curriculum.schema.json",
+      "size": 4305,
+      "sha256": "8234ee21963dd28bc88d89e150824b8e1b01180fd3d0f6586b7f66c9071982b9"
+    },
+    {
+      "path": ".agents/skills/ai-academy/assets/graph-contract-baseline.json",
+      "size": 1151,
+      "sha256": "15bbf500b349b2d4c1bfc95db08eb4207427978f0b9c585166946ea37bc3ba9a"
+    },
+    {
+      "path": ".agents/skills/ai-academy/assets/knowledge-coverage.schema.json",
+      "size": 2290,
+      "sha256": "507d9662dea2f205edfebf1fa8dc4eb786d9f18da27be3e5c51dc16ed0ff574c"
+    },
+    {
+      "path": ".agents/skills/ai-academy/assets/knowledge-graph.schema.json",
+      "size": 1462,
+      "sha256": "77365d3f17582b7e7a1f0447fe3dd1a1384921f1755b3bbb75a55eaa3ae112eb"
+    },
+    {
+      "path": ".agents/skills/ai-academy/assets/knowledge-registry.schema.json",
+      "size": 1757,
+      "sha256": "afa55be2ae8e6aa68540b81e55935819ebf062bbdbaf9104aeb09a12d56d6bca"
+    },
+    {
+      "path": ".agents/skills/ai-academy/assets/lesson-blueprint.schema.json",
+      "size": 5482,
+      "sha256": "4b0c5441e8a80d6fb45dbe6254f3e20ea4479f78aaa8daa0f01ef0ec5a1b76de"
+    },
+    {
+      "path": ".agents/skills/ai-academy/assets/lesson.schema.json",
+      "size": 2946,
+      "sha256": "c4b7f1deb46a2bc25c6e789c0a1f950a0491070a30bccd644030406f9679f922"
+    },
+    {
+      "path": ".agents/skills/ai-academy/assets/mastery.schema.json",
+      "size": 4521,
+      "sha256": "f27eef1d5cf54d6d66e58abe5d1195c784be867bc35c1fa47a4d7101ab5a0ad8"
+    },
+    {
+      "path": ".agents/skills/ai-academy/assets/normalization-review.schema.json",
+      "size": 1285,
+      "sha256": "d0ea51334c3c35cd7af18e0cf6188de6adb007752a0fd46b1a2588bfe2ee7d0e"
+    },
+    {
+      "path": ".agents/skills/ai-academy/assets/source-registry.example.json",
+      "size": 2141,
+      "sha256": "0878848ca49d54df7ae2d63507ae5520b7daf3f5fa1bb669c42b338b39a46898"
+    },
+    {
+      "path": ".agents/skills/ai-academy/assets/source-registry.schema.json",
+      "size": 2336,
+      "sha256": "e129d25da7a210b27712d77d2538a9da9569b93206d388df22cf30d4f8937fdb"
+    },
+    {
+      "path": ".agents/skills/ai-academy/references/assessment-policy.md",
+      "size": 4975,
+      "sha256": "b798fc181f89b76ccddfce49456123d2b1a7e0490c735f5199c9ed7411574c76"
+    },
+    {
+      "path": ".agents/skills/ai-academy/references/course-assembly-policy.md",
+      "size": 5076,
+      "sha256": "ec7fe3e955a4b69adb5b2295fa9703b70a271bdb22aecccc73db2d4713fd40bb"
+    },
+    {
+      "path": ".agents/skills/ai-academy/references/course-evaluation-policy.md",
+      "size": 10883,
+      "sha256": "e57c633892991f10a6568c8fdbae2c1373a2662305229d5da26c903558653204"
+    },
+    {
+      "path": ".agents/skills/ai-academy/references/curriculum-policy.md",
+      "size": 6911,
+      "sha256": "57f2e142a57de21f7bbf56c6e67264bfd91743a8f19b935a7e7718ce4fe2274a"
+    },
+    {
+      "path": ".agents/skills/ai-academy/references/curriculum-readiness-policy.md",
+      "size": 5516,
+      "sha256": "766fda3e717fc0ba08489b1d25c8714e2ed628987c154840437fc09cb1fcdfdc"
+    },
+    {
+      "path": ".agents/skills/ai-academy/references/evidence-materialization-policy.md",
+      "size": 4043,
+      "sha256": "a49c2b170d59a8b9caab245530a16ebc35635d68a78ac45f8dd5d296a62f1edc"
+    },
+    {
+      "path": ".agents/skills/ai-academy/references/graph-contract-freeze.md",
+      "size": 7320,
+      "sha256": "f7a023540fbebcdf222aa5adb90a6b86074643bfabb7a4f6a8641516cd0ec8a0"
+    },
+    {
+      "path": ".agents/skills/ai-academy/references/graph-expansion-policy.md",
+      "size": 4199,
+      "sha256": "617593494426e7b83a29368039fcadc6020834c2d4cdceafabc9ba71b7154ea2"
+    },
+    {
+      "path": ".agents/skills/ai-academy/references/knowledge-coverage-policy.md",
+      "size": 7435,
+      "sha256": "0f821c41a2ebb3d4b809f38f1571f57012a1990c2aa92225ef2d79625b104ea2"
+    },
+    {
+      "path": ".agents/skills/ai-academy/references/knowledge-graph-policy.md",
+      "size": 22783,
+      "sha256": "107e531bf3e4f4e829a11a73ce6a60aa143ead640765cbfeee9d3135fcea70fa"
+    },
+    {
+      "path": ".agents/skills/ai-academy/references/knowledge-normalization-policy.md",
+      "size": 6936,
+      "sha256": "6d3be568365d975f77b764e83605e63bf9e181ce8630fb4869b00d6f360041ce"
+    },
+    {
+      "path": ".agents/skills/ai-academy/references/knowledge-policy.md",
+      "size": 7210,
+      "sha256": "ee69a5ec4334097da5c91dcf524f6095e8e75ac315f8376bc47555d3ddac854a"
+    },
+    {
+      "path": ".agents/skills/ai-academy/references/lesson-blueprint-policy.md",
+      "size": 7093,
+      "sha256": "58f7722638b7390534857c08c572a3b1c8428d0342617d8410b7c9a7ce100a97"
+    },
+    {
+      "path": ".agents/skills/ai-academy/references/lesson-policy.md",
+      "size": 5390,
+      "sha256": "8d40f62c6db658b68f86c5dc2cf0f49f7bb63e42c8a67f7ea0099cd81560bc23"
+    },
+    {
+      "path": ".agents/skills/ai-academy/references/mastery-policy.md",
+      "size": 5856,
+      "sha256": "c83d8a62e4e885a6d728f706db0b805baf08c69d6f5fe93284f988e38a332532"
+    },
+    {
+      "path": ".agents/skills/ai-academy/references/source-policy.md",
+      "size": 6984,
+      "sha256": "73afb8174f523f3516e7df0c0a87bbf8fbcfe1a0013fc73b77525f6f2268a5b5"
+    },
+    {
+      "path": ".agents/skills/ai-academy/references/source-readiness-policy.md",
+      "size": 4112,
+      "sha256": "1f3020a21e1a23d739d8a468dd2f359bf0f574ea1ec1050b42646c89cbe1e80c"
+    },
+    {
+      "path": ".agents/skills/ai-academy/scripts/check_normalization_semantic_fixture.py",
+      "size": 3929,
+      "sha256": "897079b9ea40ca1a27a86c05ce2c714fe01ddaf8e6d8289dde1be91c5efded70"
+    },
+    {
+      "path": ".agents/skills/ai-academy/scripts/evaluate_course_completion.py",
+      "size": 27619,
+      "sha256": "9bf3953c36733b6550e789e6f7017abc59c087e49bc27804456a394620edfb33"
+    },
+    {
+      "path": ".agents/skills/ai-academy/scripts/run_course_evaluation_fixtures.py",
+      "size": 21674,
+      "sha256": "62b8fee1b36eea283ee0f5129311ebbdeb9ceeede7894f84ab7a950557ece974"
+    },
+    {
+      "path": ".agents/skills/ai-academy/scripts/validate_assessment.py",
+      "size": 9273,
+      "sha256": "c8417dcad8d738284d582689cb2c3c6f23df485a57a9981a8b6b820cedaa1eee"
+    },
+    {
+      "path": ".agents/skills/ai-academy/scripts/validate_assessment_mapping.py",
+      "size": 8728,
+      "sha256": "4fc213cf1205600acbaf99e5bc36b7b28b82a646e26feae5949df1ee5c9d0c33"
+    },
+    {
+      "path": ".agents/skills/ai-academy/scripts/validate_assessment_markdown_consistency.py",
+      "size": 4381,
+      "sha256": "927ab7f655a37fb27089e8b4c35933bb05ee4678b9c02defb036532ed76a1d54"
+    },
+    {
+      "path": ".agents/skills/ai-academy/scripts/validate_backbone_completion_manifest.py",
+      "size": 8325,
+      "sha256": "7044508b613cf4bcb2597b5d06d20fe964f6b5236fac8448c2aa113eb8cb7a85"
+    },
+    {
+      "path": ".agents/skills/ai-academy/scripts/validate_course_assembly.py",
+      "size": 15751,
+      "sha256": "b386f1a979535344192bcb2c3d376b7f94a2df7884e2be294fa5f3621170bcda"
+    },
+    {
+      "path": ".agents/skills/ai-academy/scripts/validate_course_evaluation.py",
+      "size": 41173,
+      "sha256": "7afdc0f95d74356c1c54de6dbd5150c36dccb044451e2903a0376f1817504af7"
+    },
+    {
+      "path": ".agents/skills/ai-academy/scripts/validate_curriculum.py",
+      "size": 8106,
+      "sha256": "e393ff3d708b9e165c78b8a71e76d1a31db3dfca41ba652fb66cd88fb788d580"
+    },
+    {
+      "path": ".agents/skills/ai-academy/scripts/validate_curriculum_readiness.py",
+      "size": 5269,
+      "sha256": "26f8daff8c91e4f53a5250b0d0ba8f73721c0aa9f317e16f681d9e5300269361"
+    },
+    {
+      "path": ".agents/skills/ai-academy/scripts/validate_edge_review.py",
+      "size": 5182,
+      "sha256": "419ca0c7647ba7ae87ba2f54b4f78dd3b2f7b027d3488cfe7db6529f090c008f"
+    },
+    {
+      "path": ".agents/skills/ai-academy/scripts/validate_full_assessment_set.py",
+      "size": 62338,
+      "sha256": "1c66e194c9a17af22be5e4a396fe94e08f9287f082e543c741e55df504520f1d"
+    },
+    {
+      "path": ".agents/skills/ai-academy/scripts/validate_graph_contract_baseline.py",
+      "size": 4801,
+      "sha256": "01b308997ae642b888b2ee9e0f8bf272b4329e1dbfe6007426bd2a73aef1e035"
+    },
+    {
+      "path": ".agents/skills/ai-academy/scripts/validate_graph_integrity.py",
+      "size": 11425,
+      "sha256": "a497cead59e23fd27a5b87f44f3651d5615eaa8b453b770c5bb2270cc36e6d13"
+    },
+    {
+      "path": ".agents/skills/ai-academy/scripts/validate_knowledge_coverage.py",
+      "size": 12843,
+      "sha256": "3744986e616a39360c6da1c8f4b06286683662a15504d825be91942b28cabe76"
+    },
+    {
+      "path": ".agents/skills/ai-academy/scripts/validate_knowledge_graph.py",
+      "size": 14004,
+      "sha256": "2885603fcc6d179778c63a5b9f7d0d83351764b0753a788a1326e2db43226dfd"
+    },
+    {
+      "path": ".agents/skills/ai-academy/scripts/validate_knowledge_registry.py",
+      "size": 5835,
+      "sha256": "8df10cfef2a9d306396381b9226f0c354f7de4c7f999456b8a69fce8cf6e8c7b"
+    },
+    {
+      "path": ".agents/skills/ai-academy/scripts/validate_lesson.py",
+      "size": 10806,
+      "sha256": "2b2c89cd7377320711038916f861ba6958f4afc9b400b7be1aeb1929c4cf7fe1"
+    },
+    {
+      "path": ".agents/skills/ai-academy/scripts/validate_lesson_blueprints.py",
+      "size": 11259,
+      "sha256": "8fa548a77da46c7f8a5a42291ad4b90d76784096ee6e84ebe6b4c02133261371"
+    },
+    {
+      "path": ".agents/skills/ai-academy/scripts/validate_mastery.py",
+      "size": 12735,
+      "sha256": "99b50f4981a4bbba7db9c763fdcda3a7b94a63005699a4bff6bde10581dd2a24"
+    },
+    {
+      "path": ".agents/skills/ai-academy/scripts/validate_materialization_registry.py",
+      "size": 5833,
+      "sha256": "f1c3a67e5d88ffcf64f1510993b382d4babe270aec14c21e095a40ab5512911a"
+    },
+    {
+      "path": ".agents/skills/ai-academy/scripts/validate_normalization_review.py",
+      "size": 6575,
+      "sha256": "24a07cbd5024e2b3de568a125deb6b1fd0e4a6f9a73a108417eda9aad600d608"
+    },
+    {
+      "path": ".agents/skills/ai-academy/scripts/validate_source_registry.py",
+      "size": 5557,
+      "sha256": "e954d84b001efc9dfc7e48c264d9c12ded53e0739a5966d3f2ffe7361d617205"
+    },
+    {
+      "path": ".agents/skills/ai-academy/scripts/validate_targeted_ingestion_manifest.py",
+      "size": 8608,
+      "sha256": "75ad9efd06f94e1b3eeead721b2d2f6c1dc1220c2a905ef788db89e9d9d07e5c"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug.yml",
+      "size": 883,
+      "sha256": "fe1c663dd8f4505ea5bfbea23b0d42bf41ebccf893fe35c20a34b77bb60792c5"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/course-change.yml",
+      "size": 627,
+      "sha256": "4ff1a56d2cb1685c523c1556c9d3fda37dac1608660df214b00c765c542ddea0"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/source-update.yml",
+      "size": 860,
+      "sha256": "956fe7290089fe9cb9503e27e335d413c837166f014871f4d69503249a26c5ff"
+    },
+    {
+      "path": ".github/pull_request_template.md",
+      "size": 699,
+      "sha256": "40cd4515d670927bcf8cebc778acdd0b20b906915bbd3b6b4bbac3e3c7375928"
+    },
+    {
+      "path": ".gitignore",
+      "size": 450,
+      "sha256": "f937d892f7dab579c845942f29c3ccbdae7279c87db02e02ba30343670d16734"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "size": 786,
+      "sha256": "859965870b836c2100462459053ef5f55e8c6673fc957adcc0568c8bd692652a"
+    },
+    {
+      "path": "CITATION.cff",
+      "size": 424,
+      "sha256": "0ea63a464611b7f90f09040eceb8805e1eec67b5d16c9a430bb1b442918de4a6"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "size": 721,
+      "sha256": "e602a6cda63fecd7b71caa410f4d1ab6bb041fb166bdb64a890063f4cf4a9442"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "size": 2037,
+      "sha256": "f4324a83efa213926e17866b5a22974493d72789a1a622e34d471a20376746d4"
+    },
+    {
+      "path": "LICENSE",
+      "size": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "NOTICE",
+      "size": 690,
+      "sha256": "e435136468f070f3ea2cc5479bb6182b6d1e5a969938694138fff5e8b04c90d4"
+    },
+    {
+      "path": "README.md",
+      "size": 5480,
+      "sha256": "e3997cd87256f0986117bf9d125db8f0092df9399983347873c539c6d0b44fa8"
+    },
+    {
+      "path": "README.zh-CN.md",
+      "size": 4160,
+      "sha256": "8247f40f86d2c0c0a00eae67646a4feea87f4b737ac2f8134f17b0eebbe99e14"
+    },
+    {
+      "path": "ROADMAP.md",
+      "size": 891,
+      "sha256": "4816c8c9f1ad8c1311ee0fa930604c6568c0bfbd66096bbf574a75a6b91692fa"
+    },
+    {
+      "path": "SECURITY.md",
+      "size": 558,
+      "sha256": "414e8398c65ba78246909a54c3652f441c855fc8362de536267d56f5558e818a"
+    },
+    {
+      "path": "THIRD_PARTY_SOURCES.md",
+      "size": 7186,
+      "sha256": "1c2c0c403c9c9d07d7908eb2f31898b4d4f3510b040148422b47cdc9faf26a3f"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/course-evaluation/course-evaluation-canonical-snapshot.json",
+      "size": 1698,
+      "sha256": "8f708f6ec4c81b64e8c372769d172f3327a9f6f198678db5cbb9df9e4551d18d"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/course-evaluation/course-evaluation-contract.json",
+      "size": 8146,
+      "sha256": "4ce98a0c510e275743fdc38d295292187fc01030f70be3e7424a61c267eb4030"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/course-evaluation/course-evaluation-contract.md",
+      "size": 10043,
+      "sha256": "89101c9eeb6c04f04efa3428e11cfb0eab83458b3b709c94addf58fb5f028749"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessment-mapping.json",
+      "size": 17996,
+      "sha256": "b88403ae1ca2a805244620e41dad6bab08a81c07c9dce244a381cd9deaa12543"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessment-mapping.md",
+      "size": 2931,
+      "sha256": "23df534ec88b15dce93683a33c59f9b5dc9f7a1e2b24f54082b6770e3f6cc831"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessment-coverage-manifest.json",
+      "size": 11531,
+      "sha256": "288d989d692d7590345e41e34aad00924ea122be46a34d4666da9dd0147940d4"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-001.json",
+      "size": 4330,
+      "sha256": "cc2c226ec2d5ad85a1276720ce39cce8bee17cebec5e644c301f6d8765b19dba"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-001.md",
+      "size": 4021,
+      "sha256": "2768e2cd2a84d4425ae9820be66d67e7d347b1a3e3018d475c309c9d1b6a905a"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-002.json",
+      "size": 4005,
+      "sha256": "2db22d3d68b240d868e5c9b3d7d8b8db12de575d29ac63e15c6f638321496cf2"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-002.md",
+      "size": 3704,
+      "sha256": "a312314aaf1dfb488b3962cafa57421a01998bec8e2ff0e148ba3b65fb8c5550"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-003.json",
+      "size": 4333,
+      "sha256": "169c3f0329dbdae0f07eb9cfd8d1f19ba649456eef7b02d1f6460340ac385c9e"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-003.md",
+      "size": 3912,
+      "sha256": "2fbc81a997cb8173271fc048052932ed846c81b6a5719346a3e9880092aa6e54"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-004.json",
+      "size": 4115,
+      "sha256": "553fe27b814d73dc3400ff4b52330ad580a15f400d952c64c4d1246d4df0775d"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-004.md",
+      "size": 3694,
+      "sha256": "59a51a45089f0c24220171fe329df5db036cdd0e808f4a6609e3b3a5a1d6da36"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-005.json",
+      "size": 4674,
+      "sha256": "228c8a5351732d43a6f78537b297104abfd92f00eab9a3c2b83ae46ece37310a"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-005.md",
+      "size": 3775,
+      "sha256": "ae2a312c20dc6021eeb7f65f5f60f5843bbf80107632e5cc5982bdd15514e402"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-006.json",
+      "size": 4469,
+      "sha256": "583da14529159eb10f012b06b81684ddc8d3534a0819af0fc73100a58aa72cf6"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-006.md",
+      "size": 3796,
+      "sha256": "99662d4f4b6fb7e165f640300e53676687e6e16de867691d62e84e31cad3f605"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-007.json",
+      "size": 3839,
+      "sha256": "474a1b647743e5365a44dd6134e1058eb1b570932396c173f7d5f2508d7bcaef"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-007.md",
+      "size": 3185,
+      "sha256": "3e351f6fb06095a8d985e8fc7969c1d15d397616b076fb8995978fcb975abd87"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-008.json",
+      "size": 3793,
+      "sha256": "e9aeef8b85a175f9c58ddb19cdc8e3ae0c9638214bb4b45117481e013edc5552"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-008.md",
+      "size": 3179,
+      "sha256": "edee049de40a66af55a4a0d532d1004c3878e894dfd5d908d1b7cfe27ee795d1"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-009.json",
+      "size": 3486,
+      "sha256": "9491f1e9dcb6f8a34067f4e23475d9c52d253200482438eb0662897014d91469"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-009.md",
+      "size": 2881,
+      "sha256": "14dccfd897b89ec031aee5c1f100a3ed58461d616c0fd65c61adf24987313f38"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-010.json",
+      "size": 3482,
+      "sha256": "78359a075c5df4017af3e13b9e7291ee7eb4531eacde22e11b0b200f5287022f"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-010.md",
+      "size": 2932,
+      "sha256": "995e3bf37b6782f72c4474bcccd9e3ccae1748239b03c8ae685ffdeed637e590"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-011.json",
+      "size": 3666,
+      "sha256": "14471d418e1ca631995914ca0a30f3b58045fb5340c16a1290a3d3efba2c0045"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-011.md",
+      "size": 3098,
+      "sha256": "99a4074a2699546fd5172cc3338f024cb4cc9bbcaddb970c632093468d1a9e33"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-012.json",
+      "size": 3462,
+      "sha256": "7aa719fc82979f4ccc342c9c0ff996c03b2579bdd768158c00ea56efc947b024"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-012.md",
+      "size": 2933,
+      "sha256": "8ddd92f7f47efb7f429c570d009428cd9b3aa7af03bb694045273fbef73c3970"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-013.json",
+      "size": 3685,
+      "sha256": "7434540f78329891470dad1930baf2b22abd3a64b585542866e6a3d6004ace28"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-013.md",
+      "size": 3129,
+      "sha256": "af191b8ea246302388de3092d2f8249616954b826cc831b6998741db916f1d33"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-014.json",
+      "size": 4155,
+      "sha256": "9694ffcc3b6dd355fd0e804c078f2896d4a5f59aceb54542539dd5ac520c53b5"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-014.md",
+      "size": 3542,
+      "sha256": "2a80562c63bb2a079260b4f03d969c0ea800d133b72e8d6f54cdf4973be05ed0"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-015.json",
+      "size": 4333,
+      "sha256": "fe7d21fb33867b6d3907220b18d1d356559d524f091c18e876e3f570dae9c0fc"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-015.md",
+      "size": 3704,
+      "sha256": "de63023a7e092f72729e9e3b962f5e506cba66759d197a84d02d050398f35125"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-016.json",
+      "size": 4202,
+      "sha256": "e491f86de4adffcd516045cf5ee07f2f671681c81cdc02a94ded452c5d74adc9"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-016.md",
+      "size": 3617,
+      "sha256": "d849aabff9e58c474f0ed5f6ff7298b577d222a8427624c1699e0829256da41c"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-017.json",
+      "size": 4398,
+      "sha256": "d064cbed04d8479b527b64d60de07c67ac04acd468792942e08aa47d4e67f3d1"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-017.md",
+      "size": 3818,
+      "sha256": "cf14eea52cde3c37de1ca3a71e12022291cf5af7fe7c59198675a937be98deba"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-018.json",
+      "size": 5009,
+      "sha256": "a7d75aeec8745bb9bd59baecab7f2790818b71f9757253f296a3ba2d775d9a70"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-018.md",
+      "size": 4161,
+      "sha256": "cb8f7aa6039972488e6667e1c55548b6f2668aef89a42005122710c5fe6209bb"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-019.json",
+      "size": 4240,
+      "sha256": "6bbb037993eb06941c47974954e016d053d6de01c4ffbb6d22fbde2bc206fcbe"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-019.md",
+      "size": 3677,
+      "sha256": "13d74a42211698d5686ce2d0b2865e25cfe461047f62f0ab02d3e7620edb3cfa"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-020.json",
+      "size": 4148,
+      "sha256": "c0565f33d0db5e60ad67573e5e9850c8ae21c493843192e13b0e69d13dab2db8"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-020.md",
+      "size": 3550,
+      "sha256": "a11adf0a6425463e1a28aa6788f3d51bfd94fa37e3c4a103962a2b345e770bf9"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-021.json",
+      "size": 3796,
+      "sha256": "db9a2185c66e923e8666bab548c8785cffa67bb3d473638702bfc0f058d1acca"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-021.md",
+      "size": 3258,
+      "sha256": "850f5561276a5b7a58a3419bb41a161ceaeaefa329366ea5dbc42055257ddce7"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-022.json",
+      "size": 4100,
+      "sha256": "b648d1ae106f72d00aae2b7d6846451524ba0ed7a28301d2ca65de477f51ccbf"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-022.md",
+      "size": 3534,
+      "sha256": "2a9962185bfd5d0dfc0533570ddf24b302da6637bd6586afcd751eaa3729519c"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-023.json",
+      "size": 3884,
+      "sha256": "0b734d8e9f26f2a0bf7a74ffc5f94c5e2fb9f1556bd7ecf7f0843fb86741e0e5"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-023.md",
+      "size": 3309,
+      "sha256": "7fbde6d12d3e3233090b00b3a6e0a5814a38526af6d1668be273c47a9d132c0a"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/full-assessments/full-assessment-set.json",
+      "size": 10078,
+      "sha256": "b858349158126f0722b70aee8ddc75379064f9352f03f9df4e4bec709a457cdd"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/mastery-map.json",
+      "size": 12064,
+      "sha256": "ea5c461db5d3b5f82e043755c275d223b677a6caaf9ea3594555c0f639f3fe11"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/mastery-map.md",
+      "size": 3063,
+      "sha256": "75ec220e604a4774e211550d88419bf8ae98896d76f9ada890fe0fd3e9cdf958"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/pilot-assessments/JCA-A-001.json",
+      "size": 4324,
+      "sha256": "93318aaf5b6c0ddb05f182aa0363d6bd144f3bcc8256fe3fb535f04556ae5579"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/pilot-assessments/JCA-A-001.md",
+      "size": 2731,
+      "sha256": "265997560fc42f36a254f9b26b02b6af6649689bb2a651ce8336ebff99ae6feb"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/pilot-assessments/JCA-A-002.json",
+      "size": 3999,
+      "sha256": "a4a604f813bb959d41d0e6bcfaa47c77cd1b0c6442dedd086fb52262103dc207"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/pilot-assessments/JCA-A-002.md",
+      "size": 2720,
+      "sha256": "9008c7af21aed5875980f7065f65e3a9acd93cb1a17cb4d94354fe9532fa3c7a"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/pilot-assessments/JCA-A-003.json",
+      "size": 4327,
+      "sha256": "3711440bf5110a6448003e1cea541191f23683e4258857c59ac6c23a02abdeba"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/pilot-assessments/JCA-A-003.md",
+      "size": 2820,
+      "sha256": "bc987160c22d194073bd249c0c2559bbb33a97ac61f4ba2ac4e125af7de151fe"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/pilot-assessments/JCA-A-004.json",
+      "size": 4109,
+      "sha256": "c0d89cd0404c1d5a8498c22641e022954553cb231c9e854e00632463c6ec8616"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/pilot-assessments/JCA-A-004.md",
+      "size": 2838,
+      "sha256": "3e06c1500e9cb416b48416b32dd8351d46d20b9fb9c18d9f35fc53fd966ea0d3"
+    },
+    {
+      "path": "academy-data/jimeng/assessment/pilot-assessments/pilot-assessment-pack.json",
+      "size": 1636,
+      "sha256": "b4709ffe1c9123b2ad38bf118888d483c7df104e65b4386c509bbd793b275b7e"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/course-manifest.json",
+      "size": 6549,
+      "sha256": "da7c526ec5873b25c41f7dff220f720a162085ae1d58d158ca0c9738c1d48594"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/course-outline.md",
+      "size": 6571,
+      "sha256": "c9c28716a60eb86cf4220c844461e760642a743b22fd98bad19a7136a2a1cc14"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M01-L01.json",
+      "size": 5983,
+      "sha256": "b37e605f744793dbf042719658584b6addc155f33a1ff89f64b1a5b55a9c0ae1"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M01-L01.md",
+      "size": 4292,
+      "sha256": "8f0eeb154ff4c4ba63eb4e3e8df14c135b1082d55d0e8802b58274c47fe13895"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M01-L02.json",
+      "size": 5900,
+      "sha256": "ec24d06ef17fa38786e7ed2aff92c6bb18ff85cedc94536d92b24cc3411d6eee"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M01-L02.md",
+      "size": 4140,
+      "sha256": "fe3108be1acd60a5dd80493457db3adb1be49eb0dccd447b660e75ac67bac814"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M02-L01.json",
+      "size": 4340,
+      "sha256": "2463602d84c4532f2b4632e999ac9e688a45b78b430fc35877d52772aee72b3f"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M02-L01.md",
+      "size": 4192,
+      "sha256": "30f2eb1a9f9af4d647a69a4e55eb153f67f5dc9ad562cf75a843d6298c4f17c8"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M02-L02.json",
+      "size": 4101,
+      "sha256": "588c3b273be1ef3ffb02de3f0ee160c5e5dc4540e39df74ea6e74a72659b3b5b"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M02-L02.md",
+      "size": 3945,
+      "sha256": "f4b20236a8b464314116f4f86e59afdaa8e826a9767c05bc2daaa1235f1a9f61"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M02-L03.json",
+      "size": 5817,
+      "sha256": "eae886917588f0990c76cd7ad929a40ff6db0e8dae0733319616f7e0e0abccaf"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M02-L03.md",
+      "size": 4260,
+      "sha256": "2b198ab3a72b94dd2dc07b40a9c2f2ac62c7f00badbd350c1919d61274ba07f3"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M03-L01.json",
+      "size": 5032,
+      "sha256": "718570fa2ea66ed1a067052e5f9b0dc786e87d5a5a2dda353f6928ca3db6546e"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M03-L01.md",
+      "size": 3304,
+      "sha256": "df1902a5034b5adbebd10e0b06e02d5645a9ba2433c6818e3b8530d0b77785ba"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M03-L02.json",
+      "size": 4051,
+      "sha256": "04884c89c0f8ebd86e00fa4a22d3646f0b3f3a19b4591eb50c032a8dfc016846"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M03-L02.md",
+      "size": 2966,
+      "sha256": "52760f9c205714d37a1614869a90365617ebdeb4c36248fb5543825159147d7c"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M03-L03.json",
+      "size": 3564,
+      "sha256": "7903cc9f2b7d1d58659c1738b32c3fa8ff81ee69df20516ab69bfbe421a2f0fc"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M03-L03.md",
+      "size": 2825,
+      "sha256": "8cfd00b340aec13e98e66d6f7703528f6c89f60156b5ae67f5a621d911a7e2f1"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M04-L01.json",
+      "size": 3131,
+      "sha256": "68d22bb293a2d9cf79dc5a09de287146b021ebdb17f16d904660513e496f5ff3"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M04-L01.md",
+      "size": 2508,
+      "sha256": "8ac3897d67170af0bd068083fda0131ebc112592b245573236119043a51e0d36"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M04-L02.json",
+      "size": 3280,
+      "sha256": "2476e3b1909a10047900223511e5003aef819b6702eb4ba75696479ea1245ec2"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M04-L02.md",
+      "size": 2793,
+      "sha256": "cec4652606255b246c65d0faed0234866659657210255fe62882e691c12a8e6c"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M04-L03.json",
+      "size": 3103,
+      "sha256": "f28e71c7d245b6bc51c24016d48d8eac426b0f6b8f23b2894a88f490cc6a4508"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M04-L03.md",
+      "size": 2716,
+      "sha256": "f16c81bee343a5e56499bfcb925da130683929c023ed19f4c1e7afa2b98cf24f"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M05-L01.json",
+      "size": 4265,
+      "sha256": "96b50d4dd93bc29b1be6e80258e7d126fc8253363e980edc3ee63741fdb8327c"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M05-L01.md",
+      "size": 3428,
+      "sha256": "5c5a57ebd79045725f721f8c9b8fd389c16fd28b3294a496459c3b5ba6b912a1"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M05-L02.json",
+      "size": 5175,
+      "sha256": "f111a8d86fb99e35b60b2f5a265c3d035ab0d1c53983410ded2b85eae3a00e0f"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M05-L02.md",
+      "size": 4219,
+      "sha256": "a3dd87d21211cb71f8c754e15e18a800addebae616b39ae3cfe7d226de3cda98"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M05-L03.json",
+      "size": 6232,
+      "sha256": "01babcfd4a492cdbfed653e1c5572d3f8dfd97356d30f1b8e84094d661a3082a"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M05-L03.md",
+      "size": 4703,
+      "sha256": "8ce14b777beaf21b13a059620095afd54e32f8a44eda5f761b7993648ea46245"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M06-L01.json",
+      "size": 4691,
+      "sha256": "11f46e46e9055df599e8fcf27de240f4f83defe0914441f09567438be93dcff5"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M06-L01.md",
+      "size": 3636,
+      "sha256": "c4aa0c853f6d2475c28c8ccd39d147099cd67b8711ea34439efd987b90a0bea3"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M06-L02.json",
+      "size": 5081,
+      "sha256": "fe2a558a3bf9943d8f7e54279128184530f1ff22b77960e0899e2f894d493930"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M06-L02.md",
+      "size": 4073,
+      "sha256": "a63d2bbad6c3330a727db5913148bba81961384d9f08b9e5df883e8190c60957"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M07-L01.json",
+      "size": 5244,
+      "sha256": "c97ac658f6250a53f97759076ed9928c9150d20ce633a44fb590643a8ecb598b"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M07-L01.md",
+      "size": 5012,
+      "sha256": "e518100054e33f9c8a8cf6ef7c5180e94d34ad49e824ccea64fcfbd830f1f265"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M07-L02.json",
+      "size": 4303,
+      "sha256": "24ddacb2293c2dc84d8d934dd2c551d6b29c26f0356c9f88ab5847993efb883b"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M07-L02.md",
+      "size": 4157,
+      "sha256": "23ba82c47e3d0dc642671fe8f0bad9082071f1beba24112406522b05da407e78"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M07-L03.json",
+      "size": 6468,
+      "sha256": "3d8d877aa25b89d2836bb57f1693eaacbbc739313ac4b56a23a960976c5caffb"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M07-L03.md",
+      "size": 6050,
+      "sha256": "e32d4adc42308967b38b4a235dca3a7f17b00f129134703655c063c651405be6"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M07-L04.json",
+      "size": 6040,
+      "sha256": "66aeb1992e09386fa0fa7c3bf9390e482165769d3f97c73a7b906ffc16bf911d"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M07-L04.md",
+      "size": 5775,
+      "sha256": "f1a237d1341c9a7b09df161302124b701f3ef6df3a1d23b64741e2f3f2d946b4"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M08-L01.json",
+      "size": 4236,
+      "sha256": "49e548e64967ebb98e513abdf49451e009ccf14bd2335d94c0f6f565ed75b012"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M08-L01.md",
+      "size": 3426,
+      "sha256": "24144aca8c1450345cfa632a1be8de06095c873191de2c0f83fb34d8d259592b"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M08-L02.json",
+      "size": 5374,
+      "sha256": "0d432ad11ac0101aca17af9185f742ea5ccdbe6aad75865f2dab1dbfd2b9c149"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M08-L02.md",
+      "size": 4331,
+      "sha256": "0b9137f19da4a7f6933ad106b3ed16e84abe9c30ecd8ef13bf5d348abfb6d1d9"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M08-L03.json",
+      "size": 4810,
+      "sha256": "b55f8bd8b5792318109fc0d227a97952b24c9c97bc3a8bbeb32601a7ff37a65a"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M08-L03.md",
+      "size": 3811,
+      "sha256": "b688673e0ae1fca6748ea2b9a7ca8e3409f09d6932a92cd0b433ca9e0f44f761"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M08-L04.json",
+      "size": 3767,
+      "sha256": "4b809375feed774c980ca397a9aafc411bdc8ce5aa9dc061f785f9a41db92071"
+    },
+    {
+      "path": "academy-data/jimeng/course/jimeng-creator-academy-v1/lessons/JCA-M08-L04.md",
+      "size": 3284,
+      "sha256": "3b663a30d08662467a5cdbf33f012f4b0d36d7c86470951f7ca125eaff57ceeb"
+    },
+    {
+      "path": "academy-data/jimeng/curriculum/curriculum-readiness.json",
+      "size": 10927,
+      "sha256": "34cb3aa2787b549b2e5282bbcce2d7b6016ab12761a77a5125dc287a3870a7ae"
+    },
+    {
+      "path": "academy-data/jimeng/curriculum/jimeng-creator-academy-v1-blueprint.json",
+      "size": 41467,
+      "sha256": "c753c1d0ad714a5008442e0329b526f7cbf6a976a0174b67dc975794b013b412"
+    },
+    {
+      "path": "academy-data/jimeng/curriculum/jimeng-creator-academy-v1-learning-sequence.md",
+      "size": 5733,
+      "sha256": "6aadfc9e5e6bcf09b58761adedf929cb4eca5fb0598605be2f1d6d541b9bccf1"
+    },
+    {
+      "path": "academy-data/jimeng/curriculum/jimeng-creator-academy-v1.json",
+      "size": 16863,
+      "sha256": "7bd634176dda4e8c9348ce592f3ad2adb2c27aff15e7944cc4aea28f9fd81eac"
+    },
+    {
+      "path": "academy-data/jimeng/graph/curriculum-readiness-core-edge-review-r1.json",
+      "size": 485,
+      "sha256": "5869302a5fea4165fff03ee0e065e4ca1863a893f2e76131c8484ed122639020"
+    },
+    {
+      "path": "academy-data/jimeng/graph/curriculum-readiness-core-edge-review-r2.json",
+      "size": 3658,
+      "sha256": "e9e148535a6e019975f9044650c9eed9b06cf681ced007764ef2641fb69ef752"
+    },
+    {
+      "path": "academy-data/jimeng/graph/curriculum-readiness-core-graph-r1.json",
+      "size": 1326,
+      "sha256": "2407f12a6f465c56c6595d2ba3d87cb32163dfe8bc3c63a854c864f844a2fea3"
+    },
+    {
+      "path": "academy-data/jimeng/graph/curriculum-readiness-core-graph-r2.json",
+      "size": 8667,
+      "sha256": "e989832474ad4dd5592b6891a14328f93255e093a07340b8d955f57e4bc38dfd"
+    },
+    {
+      "path": "academy-data/jimeng/graph/graph-contract-inventory.md",
+      "size": 6366,
+      "sha256": "bda42b99f135ba6cebf82dd2d2c2a2e04ab389a7985ae51a1f5ec8da0343b8a0"
+    },
+    {
+      "path": "academy-data/jimeng/graph/missing-node-resolution.md",
+      "size": 8572,
+      "sha256": "985d27f22ec21e1749bdad41f8d9aff8b510994dc7ba33500939cd9537f2bf6f"
+    },
+    {
+      "path": "academy-data/jimeng/graph/policy-edge-review-r1.json",
+      "size": 8026,
+      "sha256": "42f67dd4a02b321de5eff5eee778f7216ff84de4389d4ad7aec554b665ead511"
+    },
+    {
+      "path": "academy-data/jimeng/graph/policy-edge-review.json",
+      "size": 3392,
+      "sha256": "5e98000e549516e0839d15b9de164c51092709f695447327d7ba2f33d748b40d"
+    },
+    {
+      "path": "academy-data/jimeng/graph/policy-pilot-graph-r1.json",
+      "size": 18897,
+      "sha256": "0f10793a463ba8b822f69a0127c8f699b197f8e696f5d9847671654b7029b5a0"
+    },
+    {
+      "path": "academy-data/jimeng/graph/policy-pilot-graph.json",
+      "size": 10708,
+      "sha256": "28f1d210ada603a59b1413ebed06528801ca6a4b12a986644bc58c96ff4b980c"
+    },
+    {
+      "path": "academy-data/jimeng/graph/seedance-edge-review.json",
+      "size": 7715,
+      "sha256": "86033c435b59c05b4ef4928107517ca9d5ebe8390287f3526411ca7af9b91e90"
+    },
+    {
+      "path": "academy-data/jimeng/graph/seedance-pilot-graph-r1.json",
+      "size": 19041,
+      "sha256": "66e657cb5a36d7a97837f4b55c62ec41e6544f08959f7cb2925693af94be96a3"
+    },
+    {
+      "path": "academy-data/jimeng/graph/seedance-pilot-graph-r2.json",
+      "size": 18975,
+      "sha256": "e7bd8c9cfd3b26f87b92801e26cbb35b2c6c3bdb526e1201ae7aa2431e4c7b30"
+    },
+    {
+      "path": "academy-data/jimeng/graph/seedance-pilot-graph.json",
+      "size": 15795,
+      "sha256": "5974dad38aa7655f9530fa4cf5530fff7a28e5966b121d7a553bd903081a3b44"
+    },
+    {
+      "path": "academy-data/jimeng/knowledge/backbone-completion-manifest.json",
+      "size": 459,
+      "sha256": "bc22a71ac433f8525e4af62ac3ce2e9bccd106e96d59aebddecbe1b6c8465607"
+    },
+    {
+      "path": "academy-data/jimeng/knowledge/backbone-completion-report.md",
+      "size": 14275,
+      "sha256": "a4258f6705503f5d77f6d180af5544249678d44be437402f063ad6476371296f"
+    },
+    {
+      "path": "academy-data/jimeng/knowledge/coverage-assessment-after-2.3-r1.json",
+      "size": 14096,
+      "sha256": "4198ec3ab26db1df0aac2b537584f8cf4b5ef8618657ca422d88d20dd25a3dc9"
+    },
+    {
+      "path": "academy-data/jimeng/knowledge/coverage-assessment-after-2.3-r2.json",
+      "size": 14170,
+      "sha256": "638057ead9bc964624ad0f3ace5f8274207b3a1bcaf57e3e05c22496ac6dfb1b"
+    },
+    {
+      "path": "academy-data/jimeng/knowledge/coverage-assessment-after-2.3.json",
+      "size": 14352,
+      "sha256": "3fec8091084f4f15b0f48f1c7ae520985b1b5e5471e976d643faba016f905147"
+    },
+    {
+      "path": "academy-data/jimeng/knowledge/coverage-assessment-after-3.0-r1.json",
+      "size": 13803,
+      "sha256": "a2b2b59bbc934e8e9af4c1bb4e54f086126aa74754a39782813e8129b1e231f1"
+    },
+    {
+      "path": "academy-data/jimeng/knowledge/coverage-assessment.json",
+      "size": 16294,
+      "sha256": "7d34a961be3e321d08935d4516a2aeb75f1f7b0a05345f2ec10c28c67f7b9578"
+    },
+    {
+      "path": "academy-data/jimeng/knowledge/knowledge-coverage-report-after-2.3-r1.md",
+      "size": 12083,
+      "sha256": "03bae878e939d96765817f233e350eec5aec3a2b0626b46a3a85ba968e4abb26"
+    },
+    {
+      "path": "academy-data/jimeng/knowledge/knowledge-coverage-report-after-2.3-r2.md",
+      "size": 10846,
+      "sha256": "fd67ccc8d9bcf79a318b5568209b6bf56a059dd0b432e40c4f0933fde93b525e"
+    },
+    {
+      "path": "academy-data/jimeng/knowledge/knowledge-coverage-report-after-2.3.md",
+      "size": 12456,
+      "sha256": "4174bbeb82a3f812261d205c0a46285845197eba1ff60ec41524d002f06ea547"
+    },
+    {
+      "path": "academy-data/jimeng/knowledge/knowledge-coverage-report-after-3.0-r1.md",
+      "size": 6613,
+      "sha256": "d94b7763986a4f2f7ce994c92be96e6878fd236001656f3fda24d527bfb1b040"
+    },
+    {
+      "path": "academy-data/jimeng/knowledge/knowledge-coverage-report.md",
+      "size": 18664,
+      "sha256": "a35efa6e137131adf5bcbae9da916413f493a220c07157ec081a8199a6e4dda9"
+    },
+    {
+      "path": "academy-data/jimeng/knowledge/normalization-report.md",
+      "size": 10581,
+      "sha256": "198e696ef75a8d5dbf0bfeddaddff4a4cbacdf41f523508e5e17c4f30206b831"
+    },
+    {
+      "path": "academy-data/jimeng/knowledge/normalization-review.json",
+      "size": 75086,
+      "sha256": "f650f52b8970dfb69ba4ce4bc5dcc5797467a1a356c776e38f0a02b4a26e0fe7"
+    },
+    {
+      "path": "academy-data/jimeng/knowledge/pilot-ingestion-report.md",
+      "size": 16729,
+      "sha256": "7a921cd3a314c6ffa5d6bd04e378b59ee68c907a222e66b90dee177f929dd1d4"
+    },
+    {
+      "path": "academy-data/jimeng/knowledge/pilot-knowledge-registry.json",
+      "size": 81948,
+      "sha256": "f0787629b7a7a8d0f78975904ef79d18d6085548e188471556028c623cd8ee1e"
+    },
+    {
+      "path": "academy-data/jimeng/knowledge/targeted-ingestion-manifest.json",
+      "size": 409,
+      "sha256": "b8bba96c1feda24dae4c55b52737606aa8bf742b651040313cfe053dd16ee2ce"
+    },
+    {
+      "path": "academy-data/jimeng/knowledge/targeted-ingestion-plan.md",
+      "size": 10105,
+      "sha256": "44fdaab854c2ea40da8aba61c5cfeb91ba286e3a1d698b9b70df3fc0879b74b6"
+    },
+    {
+      "path": "academy-data/jimeng/knowledge/targeted-ingestion-report.md",
+      "size": 13135,
+      "sha256": "b4954a49aeda8412b4d1b5260b7372bd6cf2187b17a74363f2fc55003fe14702"
+    },
+    {
+      "path": "academy-data/jimeng/sources/README.md",
+      "size": 1061,
+      "sha256": "e9fe450093a2818196d3d008ffb87b0406153a59c550769366c5da4a11334a1e"
+    },
+    {
+      "path": "academy-data/jimeng/sources/source-registry.json",
+      "size": 43863,
+      "sha256": "7b1ac194432771a70a37a6a7e0cd48b1d1a44ab290962d13c9427a7a173d1fe1"
+    },
+    {
+      "path": "academy-data/jimeng/sources/source-scope.md",
+      "size": 3551,
+      "sha256": "d2892185b30bf9ae21992de72a3eca4742ac10d1e94d569917e57ff8dca1ac7b"
+    },
+    {
+      "path": "docs/architecture.md",
+      "size": 1433,
+      "sha256": "f82593fd333b2da438e65a67890794cd28ef677c4adf8c3e3ec3a667aef560e5"
+    },
+    {
+      "path": "docs/course-and-assessment.md",
+      "size": 858,
+      "sha256": "e4b6a82ef641f6b8f02ac0e8fd4c63e275e7389f947799e63cc15408fee7e8a9"
+    },
+    {
+      "path": "docs/evidence-model.md",
+      "size": 1213,
+      "sha256": "97e7c43b2ceafb188b9cf9f222d51f20cda2ea3d5656a3b6734e9bae64a4ec30"
+    },
+    {
+      "path": "docs/install-codex.md",
+      "size": 1010,
+      "sha256": "a6bf0924d4a9bb754b1e53d98d91f58c42a5a409f6de45d5ce5797a14167a3f3"
+    },
+    {
+      "path": "docs/public-release-notes.md",
+      "size": 782,
+      "sha256": "a3bf84ebc43b076c946073370c67a655aceaa20658ce4cdd564eea365316d8f4"
+    },
+    {
+      "path": "scripts/run_public_smoke.py",
+      "size": 3220,
+      "sha256": "b381c082ba5655293dfab9899bc88639d73fb455b9adaf4d9ce25e1294aed623"
+    },
+    {
+      "path": "tests/assessment/invalid-assessment-status-unknown.json",
+      "size": 865,
+      "sha256": "552e6701bf21bc8b380320b35fb56086ef153c80846026288bea3bba3a76dba4"
+    },
+    {
+      "path": "tests/assessment/invalid-bad-score-total.json",
+      "size": 1024,
+      "sha256": "a4fc820660bb314435e663cbfde7fd51141e450aa17bc2a13b24e3a629121a4c"
+    },
+    {
+      "path": "tests/assessment/invalid-duplicate-criterion.json",
+      "size": 1020,
+      "sha256": "ba954172af8f794a0335af8b106544ec6ee4ae2f20c68943026da7fba7628377"
+    },
+    {
+      "path": "tests/assessment/invalid-empty-evidence.json",
+      "size": 854,
+      "sha256": "47ac4b36ef348b4aae9544da07907eb5f5036c3784f51da2ecd15b6353f5da3f"
+    },
+    {
+      "path": "tests/assessment/invalid-extra-knowledge.json",
+      "size": 934,
+      "sha256": "13f681520c936c61a8669c3d42f98a4ee34ffec14010f9f3861ab5deaf73d629"
+    },
+    {
+      "path": "tests/assessment/invalid-extra-outcome.json",
+      "size": 1039,
+      "sha256": "83c66a142e69dd12ef83bfffac0a5b4c87c4a4e97693c056fc63e0e0d41ace3f"
+    },
+    {
+      "path": "tests/assessment/invalid-pass-over-max.json",
+      "size": 1007,
+      "sha256": "8eb9aa67c476b10e709299300556da6f632dba6a7de2ca1303804acfb0931408"
+    },
+    {
+      "path": "tests/assessment/invalid-scope-expansion.json",
+      "size": 895,
+      "sha256": "aa75a12b0462b626b60ed3de3ce2aaa4eb8c1fee887fe6c532ecdaa5f189400f"
+    },
+    {
+      "path": "tests/assessment/invalid-unknown-lesson.json",
+      "size": 976,
+      "sha256": "05b805665cc2e02b652df267eb6b3932d875b0417e9475981061aebb51a40b41"
+    },
+    {
+      "path": "tests/assessment/invalid-unknown-type.json",
+      "size": 910,
+      "sha256": "fed7ae5810b57dfde87e09441e8499994e096b1b8c9468c33e3cfc4b3f6dd5e4"
+    },
+    {
+      "path": "tests/assessment/valid-assessment-status-full-course.json",
+      "size": 860,
+      "sha256": "0ae63bc3c1972008510404817ac0461cee721e002b6857158feb98e48c6569e6"
+    },
+    {
+      "path": "tests/assessment/valid-assessment-status-pilot.json",
+      "size": 848,
+      "sha256": "e24db6e2dc0279c273f05d186b5b169b5d625699e6cfd2bf7b8a68def0f55fea"
+    },
+    {
+      "path": "tests/assessment/valid-assessment.json",
+      "size": 1475,
+      "sha256": "b071d56ee852cc0cf947733b54278d96fb19d7af60367afcf78e674102d6f0be"
+    },
+    {
+      "path": "tests/assessment-markdown-consistency/invalid-criterion-description-paraphrase.json",
+      "size": 833,
+      "sha256": "a9b3f9db639fed73419b2a56e6dc69eae0a6da38d55731c1e189204716e15c02"
+    },
+    {
+      "path": "tests/assessment-markdown-consistency/invalid-criterion-description-paraphrase.md",
+      "size": 889,
+      "sha256": "c3a2aa397251fcd5cc7fc6ac3d959b51455b611f74d2d353d32e608fd93975eb"
+    },
+    {
+      "path": "tests/assessment-markdown-consistency/invalid-feedback-boundary-paraphrase.json",
+      "size": 830,
+      "sha256": "278b2edcdd88b5caa554febd43a35902afe9d57674f3f3fe6eba5cd9daabf276"
+    },
+    {
+      "path": "tests/assessment-markdown-consistency/invalid-feedback-boundary-paraphrase.md",
+      "size": 885,
+      "sha256": "757c9cc81a5eecdf12861bb8f5d27624c9299c01f0e17c5c5a5a6dd50d56cb8c"
+    },
+    {
+      "path": "tests/assessment-markdown-consistency/invalid-pass-condition-paraphrase.json",
+      "size": 830,
+      "sha256": "6e80794c714017a24fd0e600bb66794d1cdfdba0a91a62a393a1a00ba7feb426"
+    },
+    {
+      "path": "tests/assessment-markdown-consistency/invalid-pass-condition-paraphrase.md",
+      "size": 882,
+      "sha256": "a56dc539c2c2cf0111503b1d0f9f0fe1e78120105c09b3563944f02e17f776a2"
+    },
+    {
+      "path": "tests/assessment-markdown-consistency/invalid-task-paraphrase.json",
+      "size": 836,
+      "sha256": "50b4f2ecc16f9d72a93020d4adeb4cfe4895aa46d401e4794538b5ab7bf53353"
+    },
+    {
+      "path": "tests/assessment-markdown-consistency/invalid-task-paraphrase.md",
+      "size": 872,
+      "sha256": "95c6166e7323e020f9aa738481cf53ef0ec3904d95a272ec1868a241756731f8"
+    },
+    {
+      "path": "tests/assessment-markdown-consistency/valid-identical-rendering.json",
+      "size": 815,
+      "sha256": "7400491d58626a7dbcd73fc9a393958bbcab503aa67a3c0df06e869773564cdf"
+    },
+    {
+      "path": "tests/assessment-markdown-consistency/valid-identical-rendering.md",
+      "size": 856,
+      "sha256": "3c541f108a9670be6f69c82a24fdb2b54e4edaefd800753dd0a8efa930a43f7b"
+    },
+    {
+      "path": "tests/assessment-markdown-consistency/valid-quote-glyph-only.json",
+      "size": 926,
+      "sha256": "9ce018be38dabeddf4385f4a3e1d1ce32e44b78ea9c7c209a32fd06a2c39a678"
+    },
+    {
+      "path": "tests/assessment-markdown-consistency/valid-quote-glyph-only.md",
+      "size": 976,
+      "sha256": "89d4f9f2967bc949f27c77c3db4af3bb69cd08a9de9f51bf253aed01d7d62a9e"
+    },
+    {
+      "path": "tests/course-assembly/fixture-blueprint-hardseq.json",
+      "size": 3880,
+      "sha256": "1a2a3f133d9aaf9319d3c95fd5d15f65b1003af382172dfde2180c8206e0ab47"
+    },
+    {
+      "path": "tests/course-assembly/fixture-blueprint.json",
+      "size": 3799,
+      "sha256": "4b42c5b906cacdd2052f37f8edd1c68abf3b91e9a984c799d59aec76728f919e"
+    },
+    {
+      "path": "tests/course-assembly/fixture-curriculum.json",
+      "size": 1458,
+      "sha256": "88f3b62c623c0568cb25fceae26dcb626211f937e1ce405584e7ca79761a0be2"
+    },
+    {
+      "path": "tests/course-assembly/invalid-duplicate-lesson.json",
+      "size": 2290,
+      "sha256": "f7410f952e4ec81e69cb0e256a1e4135b68fa664505966f0d638caa4de47b362"
+    },
+    {
+      "path": "tests/course-assembly/invalid-extra-lesson.json",
+      "size": 2322,
+      "sha256": "f1da40aef822fa541dba1c8f9ee8a06252df3f7a6383e98a96a91896b77756f4"
+    },
+    {
+      "path": "tests/course-assembly/invalid-hard-sequence.json",
+      "size": 2160,
+      "sha256": "f7fda6d11bd9425b5a6582b264a5ffa5812d491cd61975d5277ddc115624f51f"
+    },
+    {
+      "path": "tests/course-assembly/invalid-historical-path.json",
+      "size": 2170,
+      "sha256": "35d5220d657e897fec2ee8bb61c696d41173648d2e0b815dfd8a34148d3ebed8"
+    },
+    {
+      "path": "tests/course-assembly/invalid-lesson-order.json",
+      "size": 2126,
+      "sha256": "72cd9879b5d9289d86a09686771e1b5423e7a75f9ee1f9f06082591e174b94ac"
+    },
+    {
+      "path": "tests/course-assembly/invalid-missing-file.json",
+      "size": 2129,
+      "sha256": "af3856c78f432b2ae6a783986ad65f5141cf2a601b723bc312931316e66c2644"
+    },
+    {
+      "path": "tests/course-assembly/invalid-missing-lesson.json",
+      "size": 1939,
+      "sha256": "970715b70cc5ea8dc12514d78dbc98684ef1f8832bbb7982bcb840bf43cbaa83"
+    },
+    {
+      "path": "tests/course-assembly/invalid-module-order.json",
+      "size": 2108,
+      "sha256": "884c5dc63f3cacc34ad57369847df774b842cf5238bcd554b8fe2e756b17fe2b"
+    },
+    {
+      "path": "tests/course-assembly/invalid-probe-artifact.json",
+      "size": 2142,
+      "sha256": "f30c3cf68e662f7882e503e61410b939c3c7de5f6a7f25f3614f37ef35138282"
+    },
+    {
+      "path": "tests/course-assembly/lessons/JCA-M01-L01.json",
+      "size": 5983,
+      "sha256": "b37e605f744793dbf042719658584b6addc155f33a1ff89f64b1a5b55a9c0ae1"
+    },
+    {
+      "path": "tests/course-assembly/lessons/JCA-M01-L01.md",
+      "size": 4292,
+      "sha256": "8f0eeb154ff4c4ba63eb4e3e8df14c135b1082d55d0e8802b58274c47fe13895"
+    },
+    {
+      "path": "tests/course-assembly/lessons/JCA-M02-L01.json",
+      "size": 4340,
+      "sha256": "2463602d84c4532f2b4632e999ac9e688a45b78b430fc35877d52772aee72b3f"
+    },
+    {
+      "path": "tests/course-assembly/lessons/JCA-M02-L01.md",
+      "size": 4192,
+      "sha256": "30f2eb1a9f9af4d647a69a4e55eb153f67f5dc9ad562cf75a843d6298c4f17c8"
+    },
+    {
+      "path": "tests/course-assembly/lessons/JCA-M02-L02.json",
+      "size": 4101,
+      "sha256": "588c3b273be1ef3ffb02de3f0ee160c5e5dc4540e39df74ea6e74a72659b3b5b"
+    },
+    {
+      "path": "tests/course-assembly/lessons/JCA-M02-L02.md",
+      "size": 3945,
+      "sha256": "f4b20236a8b464314116f4f86e59afdaa8e826a9767c05bc2daaa1235f1a9f61"
+    },
+    {
+      "path": "tests/course-assembly/valid-course.json",
+      "size": 2310,
+      "sha256": "7898bce04b99c1a70080015e675e80e688b4abd79a28d5c51cf9a9b69b412d77"
+    },
+    {
+      "path": "tests/course-evaluation/build_course_evaluation_fixtures.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/course-evaluation/fixture_declarations.py",
+      "size": 9180,
+      "sha256": "5578fb835dd741958fab0cb0f652cf2c16ae7e2e1840522e92c5ba7b6dd5240f"
+    },
+    {
+      "path": "tests/curriculum/invalid-duplicate-module-order.json",
+      "size": 1782,
+      "sha256": "2cc04574b5fce0bb6cab32fcaa45daa597aef13cf909d11a531ca048a10ec02d"
+    },
+    {
+      "path": "tests/curriculum/invalid-fake-graph-support.json",
+      "size": 1798,
+      "sha256": "611d808199b31908e59b2608b5928f4f880881b224b177859c54f39107b4c10a"
+    },
+    {
+      "path": "tests/curriculum/invalid-pedagogical-rationale.json",
+      "size": 1871,
+      "sha256": "c8df0093192177c28a1be9d1b05f9e5cc85a45be7e32f2d20cb242ed4c5b2dca"
+    },
+    {
+      "path": "tests/curriculum/invalid-uncovered-core-domain.json",
+      "size": 1783,
+      "sha256": "16dbf70d6b9f93fb5ca2f181d5f6b73123a8860b282d4d648d912fee9105f400"
+    },
+    {
+      "path": "tests/curriculum/invalid-unknown-knowledge.json",
+      "size": 1769,
+      "sha256": "f04b90500cdfaa72629d138e6f31350e1b9660bd66d5045fa80e05833e00528f"
+    },
+    {
+      "path": "tests/curriculum/valid-curriculum.json",
+      "size": 2510,
+      "sha256": "bb694fa6ceaea50ac7fb2f4b2ace592c9bd90179296bbfc1a5924277c936115f"
+    },
+    {
+      "path": "tests/curriculum-readiness/invalid-blocked-without-gap.json",
+      "size": 600,
+      "sha256": "cc3d4ddf33ba15a18a5973904c94963fbcbe52dd858ab329e45cadb749b18053"
+    },
+    {
+      "path": "tests/curriculum-readiness/invalid-enum.json",
+      "size": 549,
+      "sha256": "c9d312c6067b3bd36a22fce92e6a501f0e6507bb6d010c2465b9b07173a579fe"
+    },
+    {
+      "path": "tests/curriculum-readiness/invalid-gap-domain.json",
+      "size": 874,
+      "sha256": "f56779821b65e6fa8b60fa852e7fc7ce3e5344e3d5a708d553820a33e4ac1c5d"
+    },
+    {
+      "path": "tests/curriculum-readiness/invalid-ready-with-blocking-decision.json",
+      "size": 603,
+      "sha256": "e7844cd06bebc335f88669d3d3feb2f71f3944fc79f089dcaa176e0435fd06b0"
+    },
+    {
+      "path": "tests/curriculum-readiness/valid-ready.json",
+      "size": 602,
+      "sha256": "a4ad0e574a67e1fe4083da7d77f37a7801629047e4e9b27c01af3ee697bee27e"
+    },
+    {
+      "path": "tests/curriculum-readiness/valid-targeted-ingestion.json",
+      "size": 873,
+      "sha256": "4c5f54e7cf8dd38e91eddce8c09ca599c179b8f3679efe0a5d7233a83e88ccf4"
+    },
+    {
+      "path": "tests/evidence-materialization/invalid-materialization-registry.json",
+      "size": 1751,
+      "sha256": "b42183ecfc4d956bdcd1ed119f864258ff97ee3f990ff5a278439dd8725ea063"
+    },
+    {
+      "path": "tests/evidence-materialization/public-fixture/M09.md",
+      "size": 496,
+      "sha256": "1bea881af4d0ff0d45241fd5f318609f527b2bfb2309360439c7c65f05b60a05"
+    },
+    {
+      "path": "tests/evidence-materialization/valid-materialization-registry.json",
+      "size": 678,
+      "sha256": "6ccc50183f55fff9ef68991b4fa0b261ad43e125c8025b807fde0ad1635854c4"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/README.json",
+      "size": 381,
+      "sha256": "0b774b1fb9e1b9fa7ebf1a8f8761a107e63ce85d96642c2cbe0ff96fe56b215e"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-001.json",
+      "size": 4330,
+      "sha256": "cc2c226ec2d5ad85a1276720ce39cce8bee17cebec5e644c301f6d8765b19dba"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-002.json",
+      "size": 4005,
+      "sha256": "2db22d3d68b240d868e5c9b3d7d8b8db12de575d29ac63e15c6f638321496cf2"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-003.json",
+      "size": 4333,
+      "sha256": "169c3f0329dbdae0f07eb9cfd8d1f19ba649456eef7b02d1f6460340ac385c9e"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-004.json",
+      "size": 4115,
+      "sha256": "553fe27b814d73dc3400ff4b52330ad580a15f400d952c64c4d1246d4df0775d"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-005.json",
+      "size": 4593,
+      "sha256": "67cbe5118b8325008660419434b87c44917f5e4de84122210530d8ab3cfea0ad"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-006.json",
+      "size": 4469,
+      "sha256": "583da14529159eb10f012b06b81684ddc8d3534a0819af0fc73100a58aa72cf6"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-006.md",
+      "size": 3796,
+      "sha256": "99662d4f4b6fb7e165f640300e53676687e6e16de867691d62e84e31cad3f605"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-007.json",
+      "size": 3839,
+      "sha256": "474a1b647743e5365a44dd6134e1058eb1b570932396c173f7d5f2508d7bcaef"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-007.md",
+      "size": 3185,
+      "sha256": "3e351f6fb06095a8d985e8fc7969c1d15d397616b076fb8995978fcb975abd87"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-008.json",
+      "size": 3793,
+      "sha256": "e9aeef8b85a175f9c58ddb19cdc8e3ae0c9638214bb4b45117481e013edc5552"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-008.md",
+      "size": 3179,
+      "sha256": "edee049de40a66af55a4a0d532d1004c3878e894dfd5d908d1b7cfe27ee795d1"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-009.json",
+      "size": 3486,
+      "sha256": "9491f1e9dcb6f8a34067f4e23475d9c52d253200482438eb0662897014d91469"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-009.md",
+      "size": 2881,
+      "sha256": "14dccfd897b89ec031aee5c1f100a3ed58461d616c0fd65c61adf24987313f38"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-010.json",
+      "size": 3482,
+      "sha256": "78359a075c5df4017af3e13b9e7291ee7eb4531eacde22e11b0b200f5287022f"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-010.md",
+      "size": 2932,
+      "sha256": "995e3bf37b6782f72c4474bcccd9e3ccae1748239b03c8ae685ffdeed637e590"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-011.json",
+      "size": 3666,
+      "sha256": "14471d418e1ca631995914ca0a30f3b58045fb5340c16a1290a3d3efba2c0045"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-011.md",
+      "size": 3098,
+      "sha256": "99a4074a2699546fd5172cc3338f024cb4cc9bbcaddb970c632093468d1a9e33"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-012.json",
+      "size": 3462,
+      "sha256": "7aa719fc82979f4ccc342c9c0ff996c03b2579bdd768158c00ea56efc947b024"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-012.md",
+      "size": 2933,
+      "sha256": "8ddd92f7f47efb7f429c570d009428cd9b3aa7af03bb694045273fbef73c3970"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-013.json",
+      "size": 3685,
+      "sha256": "7434540f78329891470dad1930baf2b22abd3a64b585542866e6a3d6004ace28"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-013.md",
+      "size": 3129,
+      "sha256": "af191b8ea246302388de3092d2f8249616954b826cc831b6998741db916f1d33"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-014.json",
+      "size": 4155,
+      "sha256": "9694ffcc3b6dd355fd0e804c078f2896d4a5f59aceb54542539dd5ac520c53b5"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-014.md",
+      "size": 3542,
+      "sha256": "2a80562c63bb2a079260b4f03d969c0ea800d133b72e8d6f54cdf4973be05ed0"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-015.json",
+      "size": 4333,
+      "sha256": "fe7d21fb33867b6d3907220b18d1d356559d524f091c18e876e3f570dae9c0fc"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-015.md",
+      "size": 3704,
+      "sha256": "de63023a7e092f72729e9e3b962f5e506cba66759d197a84d02d050398f35125"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-016.json",
+      "size": 4202,
+      "sha256": "e491f86de4adffcd516045cf5ee07f2f671681c81cdc02a94ded452c5d74adc9"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-016.md",
+      "size": 3617,
+      "sha256": "d849aabff9e58c474f0ed5f6ff7298b577d222a8427624c1699e0829256da41c"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-017.json",
+      "size": 4398,
+      "sha256": "d064cbed04d8479b527b64d60de07c67ac04acd468792942e08aa47d4e67f3d1"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-017.md",
+      "size": 3818,
+      "sha256": "cf14eea52cde3c37de1ca3a71e12022291cf5af7fe7c59198675a937be98deba"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-019.json",
+      "size": 4240,
+      "sha256": "6bbb037993eb06941c47974954e016d053d6de01c4ffbb6d22fbde2bc206fcbe"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-019.md",
+      "size": 3677,
+      "sha256": "13d74a42211698d5686ce2d0b2865e25cfe461047f62f0ab02d3e7620edb3cfa"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-020.json",
+      "size": 4148,
+      "sha256": "c0565f33d0db5e60ad67573e5e9850c8ae21c493843192e13b0e69d13dab2db8"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-020.md",
+      "size": 3550,
+      "sha256": "a11adf0a6425463e1a28aa6788f3d51bfd94fa37e3c4a103962a2b345e770bf9"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-021.json",
+      "size": 3796,
+      "sha256": "db9a2185c66e923e8666bab548c8785cffa67bb3d473638702bfc0f058d1acca"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-021.md",
+      "size": 3258,
+      "sha256": "850f5561276a5b7a58a3419bb41a161ceaeaefa329366ea5dbc42055257ddce7"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-022.json",
+      "size": 4100,
+      "sha256": "b648d1ae106f72d00aae2b7d6846451524ba0ed7a28301d2ca65de477f51ccbf"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-022.md",
+      "size": 3534,
+      "sha256": "2a9962185bfd5d0dfc0533570ddf24b302da6637bd6586afcd751eaa3729519c"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-023.json",
+      "size": 3884,
+      "sha256": "0b734d8e9f26f2a0bf7a74ffc5f94c5e2fb9f1556bd7ecf7f0843fb86741e0e5"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/assessments/JCA-A-023.md",
+      "size": 3309,
+      "sha256": "7fbde6d12d3e3233090b00b3a6e0a5814a38526af6d1668be273c47a9d132c0a"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/baseline-fingerprint.json",
+      "size": 36619,
+      "sha256": "7906e175fa30d042873f78b936aff40873940681efd033011cbda7aec324719f"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/pilot-sources/JCA-A-001.json",
+      "size": 4324,
+      "sha256": "93318aaf5b6c0ddb05f182aa0363d6bd144f3bcc8256fe3fb535f04556ae5579"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/pilot-sources/JCA-A-002.json",
+      "size": 3999,
+      "sha256": "a4a604f813bb959d41d0e6bcfaa47c77cd1b0c6442dedd086fb52262103dc207"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/pilot-sources/JCA-A-003.json",
+      "size": 4327,
+      "sha256": "3711440bf5110a6448003e1cea541191f23683e4258857c59ac6c23a02abdeba"
+    },
+    {
+      "path": "tests/full-assessment-set/_baseline/pilot-sources/JCA-A-004.json",
+      "size": 4109,
+      "sha256": "c0d89cd0404c1d5a8498c22641e022954553cb231c9e854e00632463c6ec8616"
+    },
+    {
+      "path": "tests/full-assessment-set/_index.json",
+      "size": 9618,
+      "sha256": "0a7f6bedd7ca570d6b80445283660a196afe5c5fd0e2ea4d3ee87b23e72421fc"
+    },
+    {
+      "path": "tests/full-assessment-set/build_manifests.py",
+      "size": 14976,
+      "sha256": "b7abc08a890b931cd27eb013cb777fc45463e7ed52cc7f5bd01c17c415733071"
+    },
+    {
+      "path": "tests/full-assessment-set/generate_fixtures.py",
+      "size": 55297,
+      "sha256": "587213da0b15860c6a969ac9d74d32300397747ca17e09e26fea77e2bd1d6c44"
+    },
+    {
+      "path": "tests/full-assessment-set/hygiene-debt.json",
+      "size": 34760,
+      "sha256": "34d8939c4bc08c4a3a2df44c2b61d3afa5e1e0e5a13dc2737cfa7c284ff83509"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-bad-coverage-link/assessment-coverage-manifest.json",
+      "size": 11518,
+      "sha256": "73974d38faa50642614622a460db39642014c4fa3f112d3cb9213bc232a5277d"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-bad-coverage-link/mutation.json",
+      "size": 2777,
+      "sha256": "25fea53f45806ed89017eed2a528f9d012a275243f1c4809895f4646cdd9ec0e"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-derived-count/mutation.json",
+      "size": 2491,
+      "sha256": "0e811619b9720133f25e693b64d319b3f4830f90792da35cb527b61548634897"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-duplicate-assessment/assessment-coverage-manifest.json",
+      "size": 11852,
+      "sha256": "da4c7e2e374169a3caed0988bca1ae05d8797fd1f12e46c673d4ce5e42c731b5"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-duplicate-assessment/mutation.json",
+      "size": 2594,
+      "sha256": "81aa97ed5ab1d12dca54de5fb6e99a63be7d3d547d30903438eef1a3e24b0b30"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-json-md-semantic-mismatch/assessments/JCA-A-012.json",
+      "size": 3684,
+      "sha256": "d8f7309cb63463c81b4a9879122d1922ddf17db6321f0cff6bed3eba2b6f567c"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-json-md-semantic-mismatch/assessments/JCA-A-012.md",
+      "size": 2933,
+      "sha256": "8ddd92f7f47efb7f429c570d009428cd9b3aa7af03bb694045273fbef73c3970"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-json-md-semantic-mismatch/mutation.json",
+      "size": 2546,
+      "sha256": "3983ca93d8556ed5c378bc7b896005824be0967c7d5a703032743165a23dc269"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-missing-assessment-file/mutation.json",
+      "size": 3050,
+      "sha256": "609c328076b4f8ba90163e73c3159db36d4ba14142792a4526154225aa8dc5f2"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-missing-assessment-file/probe-full-assessment-set.json",
+      "size": 2250,
+      "sha256": "7c6ba711f322be14ec80a24599bfe138d4cb5445d80724dc015bb3de03e31825"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-missing-assessment-file/probe-mutation.json",
+      "size": 2183,
+      "sha256": "be3d06c8b4642d8599815f5ec95b0aea99b6ec0560ecfb467ff96b4ae8bb4c0f"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-nonorder-prerequisite/mutation.json",
+      "size": 2551,
+      "sha256": "39849bade9c017b32d6f65da8f2cb576207c252dfee1125c11ac3bce3020943f"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-pilot-semantic-drift/mutation.json",
+      "size": 2457,
+      "sha256": "ca80831207d38fe43c2a3a1a91564bf576cb4cf81d41bc8f445abe1a683d9181"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-pilot-semantic-drift/pilot-sources/JCA-A-001.json",
+      "size": 4384,
+      "sha256": "d82101e2c7b351c61405026d111ce1f1d2ebe122ea2382ce56d125609a9f135b"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-pilot-semantic-drift/pilot-sources/JCA-A-002.json",
+      "size": 4031,
+      "sha256": "31b2cb32d0ce4200ef623bd63bc4336571fcaf53b1f86351594ae6b98631cdfd"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-pilot-semantic-drift/pilot-sources/JCA-A-003.json",
+      "size": 4375,
+      "sha256": "d6d976ccece99025bf807469f3269d0548ec6a034b6b2546345724c82d7f02ed"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-pilot-semantic-drift/pilot-sources/JCA-A-004.json",
+      "size": 4169,
+      "sha256": "3eb90568106e11d51bcfb16e52ec9d164ca512e6cad7e87105e49d33619cd467"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-uncovered-outcome/assessments/JCA-A-004.json",
+      "size": 4122,
+      "sha256": "5829015017a6fb34983c74746e70789d383b4661ba1b41ec5f02698b914a6fd6"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-uncovered-outcome/assessments/JCA-A-004.md",
+      "size": 3548,
+      "sha256": "0ffb2fe1c2d2942c0b5017772a46cef6bc5d1e1501fe081d9610a386c96d9020"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-uncovered-outcome/mutation.json",
+      "size": 2612,
+      "sha256": "c8e30af4bbdced7be284f175f257e03ef5386450a50e6d1b3e8abf7ece1e65d4"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-uncovered-outcome/pilot-sources/JCA-A-001.json",
+      "size": 4384,
+      "sha256": "d82101e2c7b351c61405026d111ce1f1d2ebe122ea2382ce56d125609a9f135b"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-uncovered-outcome/pilot-sources/JCA-A-002.json",
+      "size": 4059,
+      "sha256": "54eb76fa8e28636822986e710d3678c5eec18698b3ad03c3079dfdf5747a5416"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-uncovered-outcome/pilot-sources/JCA-A-003.json",
+      "size": 4375,
+      "sha256": "d6d976ccece99025bf807469f3269d0548ec6a034b6b2546345724c82d7f02ed"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-uncovered-outcome/pilot-sources/JCA-A-004.json",
+      "size": 4169,
+      "sha256": "3eb90568106e11d51bcfb16e52ec9d164ca512e6cad7e87105e49d33619cd467"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-uncovered-requirement/assessments/JCA-A-023.json",
+      "size": 4128,
+      "sha256": "259010047d3432f6d51184989ce74f8c6687ad9c8d77e30341791e8b0654b3ac"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-uncovered-requirement/assessments/JCA-A-023.md",
+      "size": 3309,
+      "sha256": "7fbde6d12d3e3233090b00b3a6e0a5814a38526af6d1668be273c47a9d132c0a"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-uncovered-requirement/mutation.json",
+      "size": 3384,
+      "sha256": "dcf2f3b162963e371dc93d2c674a15abf486da665a9b236d2dcefb48e0e38b99"
+    },
+    {
+      "path": "tests/full-assessment-set/invalid-unknown-assessment/mutation.json",
+      "size": 11442,
+      "sha256": "93e80dd3ad85fe02f30fa9236239bcefabfd1a21da8b7be02dc10b1fdb7c79e0"
+    },
+    {
+      "path": "tests/full-assessment-set/run_fixtures.py",
+      "size": 9985,
+      "sha256": "870dc2ebe4040d2b54267909f9f607f7235cd098ac749e66df7dd159a4498adf"
+    },
+    {
+      "path": "tests/full-assessment-set/valid-full-set/mutation.json",
+      "size": 2480,
+      "sha256": "b0dcc068374f4aec3ab95c065dc09cdaf7504e09c79a9d82e55695a122363b31"
+    },
+    {
+      "path": "tests/full-assessment-set/verify_fixtures.py",
+      "size": 42230,
+      "sha256": "85698790c41af7df38f40ef7875fb9c799bb83d8ebeefc66504965e4f4dcd52e"
+    },
+    {
+      "path": "tests/knowledge-coverage/fixture-knowledge-registry.json",
+      "size": 2699,
+      "sha256": "139d4d1f547b6ac674217c8480e99e329ee206fac79d838d25287a87153cc534"
+    },
+    {
+      "path": "tests/knowledge-coverage/fixture-source-registry.json",
+      "size": 804,
+      "sha256": "0d5837da27c5b60e7af324ae35ed1137b136a9b4fa6dafded9467712a18f9dca"
+    },
+    {
+      "path": "tests/knowledge-coverage/invalid-coverage-assessment.json",
+      "size": 3591,
+      "sha256": "2c1da5ce223885603c98586f1cfdd5f2e8903366de9708992cda0049f0e97cd1"
+    },
+    {
+      "path": "tests/knowledge-coverage/valid-coverage-assessment.json",
+      "size": 3155,
+      "sha256": "af4f16b0f1d4b7170e799fe53a4a7c1c0dd94e0ff03e582be2532de7b4118d4c"
+    },
+    {
+      "path": "tests/knowledge-engine/invalid-knowledge-registry.json",
+      "size": 1450,
+      "sha256": "378310d5937d9e2f70e0d61a5a2d11bf70519268ea6b61cf2fc590a67ef5dd9f"
+    },
+    {
+      "path": "tests/knowledge-engine/provenance-invalid-knowledge-registry.json",
+      "size": 2489,
+      "sha256": "ac1c80782f4b80b4ff5582b2ca3f91210146af80aa0a2e738a6aa6c1436d5a02"
+    },
+    {
+      "path": "tests/knowledge-engine/valid-knowledge-registry.json",
+      "size": 848,
+      "sha256": "86b70bdd4676a5aad342d7d7c0f3bcbb54396b4cb64d4d55b3d236588a6f3348"
+    },
+    {
+      "path": "tests/knowledge-graph/conflict-knowledge-graph.json",
+      "size": 638,
+      "sha256": "5561d98f7956210ddb816bb6198e1f9e591cf12827a1378b7f5ed259937dac9c"
+    },
+    {
+      "path": "tests/knowledge-graph/fixture-normalization-review.json",
+      "size": 565,
+      "sha256": "21d7ce1285d3780090a8e236e43cb5caa5127d114b40e7ad8481e5a6a99aa6b3"
+    },
+    {
+      "path": "tests/knowledge-graph/invalid-knowledge-graph.json",
+      "size": 8137,
+      "sha256": "33f100232031e63928ff6cae22c55eb1df575359588feb382fba7e904f7e1af4"
+    },
+    {
+      "path": "tests/knowledge-graph/valid-knowledge-graph.json",
+      "size": 4461,
+      "sha256": "dddadadc3740c4109a2bcab5b64601154279d3750deec6c3e19260cf71a77e1d"
+    },
+    {
+      "path": "tests/knowledge-graph-curriculum/english-curriculum-preference-graph.json",
+      "size": 824,
+      "sha256": "19bc6fc788614f8f64df66b4871b1f66991894a390f25cc84a4e518062ee8bc6"
+    },
+    {
+      "path": "tests/knowledge-graph-curriculum/english-curriculum-preference-review.json",
+      "size": 348,
+      "sha256": "1046191cfca173c0f970d4f69bc21da85923b82fb2683a392cf3aab26e90fa81"
+    },
+    {
+      "path": "tests/knowledge-graph-curriculum/misleading-marker-graph.json",
+      "size": 805,
+      "sha256": "e5b58fa9b3ca4f30d3acbe4a6df3e28a1347dbe48e00dc66f0128b6294a7bea7"
+    },
+    {
+      "path": "tests/knowledge-graph-curriculum/misleading-marker-review.json",
+      "size": 291,
+      "sha256": "9d55a101ccf62c1110a96786dd8f0805cb4b2ca6d96c1e61a5774ef4dcacbb35"
+    },
+    {
+      "path": "tests/knowledge-graph-curriculum/negative-sentence-graph.json",
+      "size": 1153,
+      "sha256": "9ef6a3f967c7ddffa1f2efadc5a24812a831a5f977a18947e0d15f27d3e21502"
+    },
+    {
+      "path": "tests/knowledge-graph-curriculum/negative-sentence-review.json",
+      "size": 346,
+      "sha256": "0d187ca606926cb364fa596d0292bbcbce7b5c291150f04d162204dba0cbc64c"
+    },
+    {
+      "path": "tests/knowledge-graph-curriculum/real-dependency-positive-graph.json",
+      "size": 1151,
+      "sha256": "d63056fbd739d8af863bdbea29458d9326540fa731ace7c12db478de26e846ae"
+    },
+    {
+      "path": "tests/knowledge-graph-curriculum/real-dependency-positive-review.json",
+      "size": 436,
+      "sha256": "ec825f757c214bdb84b1e7c0499007069def58f3e337c8d6eeabd30ccbed2562"
+    },
+    {
+      "path": "tests/knowledge-graph-enforcement/invalid-group-broadcast.json",
+      "size": 1471,
+      "sha256": "8f6e4e60b29b9f8b43b0faff6ddc1723002d061c340fda733047fa978df81e0c"
+    },
+    {
+      "path": "tests/knowledge-graph-enforcement/invalid-pair-conflict.json",
+      "size": 1180,
+      "sha256": "7a1a4dc38d81117e6c44084ee44555011287107385b2b75df5bea9fd05eec6a0"
+    },
+    {
+      "path": "tests/knowledge-graph-enforcement/invalid-reverse.json",
+      "size": 893,
+      "sha256": "93a5000dab627abdc582c6362c6dc533ecec62f27125a64aa24c7876d1005ee5"
+    },
+    {
+      "path": "tests/knowledge-graph-enforcement/invalid-type.json",
+      "size": 639,
+      "sha256": "9a8989b2020b3075b3d48156f94a838a71b7879def5af0cd26463abff967792b"
+    },
+    {
+      "path": "tests/knowledge-graph-enforcement/valid-group-reference.json",
+      "size": 2119,
+      "sha256": "58767d760ff92d976834b0360c605c6566c9cabb7b6cea5d8b1076bcdc60edc0"
+    },
+    {
+      "path": "tests/knowledge-graph-enforcement/valid-single-enforcement.json",
+      "size": 1071,
+      "sha256": "8e940b227cf2674960762ab182659a7a69a118e5ee8737c05c84a1d0a5e7d11d"
+    },
+    {
+      "path": "tests/knowledge-graph-integrity/invalid-cross-workflow-order.json",
+      "size": 1287,
+      "sha256": "0cf107eecf9381a633f937c2968eca2dec91d62fd0b7b0b626fe921870aa082a"
+    },
+    {
+      "path": "tests/knowledge-graph-integrity/invalid-prerequisite-cycle.json",
+      "size": 854,
+      "sha256": "49a6f7660d8db83469a1763b07203586f808af8b709e412b31d61d6380a58313"
+    },
+    {
+      "path": "tests/knowledge-graph-integrity/invalid-procedure-cycle.json",
+      "size": 823,
+      "sha256": "3c8650db60706319d86cf1eef9d0114b947c7964fb8fbf32368def31edd445a1"
+    },
+    {
+      "path": "tests/knowledge-graph-integrity/invalid-stepof-cycle.json",
+      "size": 1104,
+      "sha256": "1aa792b45252005113939e339b2831b3368206e8c54b2831f434e51c157da134"
+    },
+    {
+      "path": "tests/knowledge-graph-integrity/invalid-stepof-reverse.json",
+      "size": 862,
+      "sha256": "069d045766a5375680e2614fb49e8670a56b6f072570a4625965e95378997baf"
+    },
+    {
+      "path": "tests/knowledge-graph-integrity/valid-integrity-graph.json",
+      "size": 2249,
+      "sha256": "19cd24597f5d9fde9b5c8ff6c62573d31db69c7e01ecd6adf0966ce9bce36877"
+    },
+    {
+      "path": "tests/knowledge-graph-integrity/warning-transitive-redundancy.json",
+      "size": 1459,
+      "sha256": "e4b266273daae442fe8339072afc2bccff0c9c41905e751f10c54e6427d9f06f"
+    },
+    {
+      "path": "tests/knowledge-normalization/invalid-normalization-review.json",
+      "size": 5737,
+      "sha256": "775fcebad3287402f4694dbb22a2867665de71c8d7fc991297b5396f6945ad2a"
+    },
+    {
+      "path": "tests/knowledge-normalization/semantic-fixture/actual-normalization-review.json",
+      "size": 5745,
+      "sha256": "03a7bebb9def8032d667ce6ee90d36f59067de0d29e59aec9c9b814f8e370192"
+    },
+    {
+      "path": "tests/knowledge-normalization/semantic-fixture/expected-normalization-review.json",
+      "size": 3891,
+      "sha256": "eeffd613dab7cd68b94862b31649db6ad1eddd26d06707ee99ca7af5e9b771e5"
+    },
+    {
+      "path": "tests/knowledge-normalization/semantic-fixture/fixture-knowledge-registry.json",
+      "size": 10688,
+      "sha256": "88d03b47f81981ba79225ac491f6ffd1c9a9e5d9392204f8beb90acf3d6576e1"
+    },
+    {
+      "path": "tests/knowledge-normalization/semantic-fixture/fixture-source-registry.json",
+      "size": 6041,
+      "sha256": "9cd4c6cba4b888d0f7d363c83664feda8ea2025ca23b45e6f17dfb3083550173"
+    },
+    {
+      "path": "tests/knowledge-normalization/valid-normalization-review.json",
+      "size": 2270,
+      "sha256": "bac16558ca4ca4aa95b29f2c624bd18d1523d253c36a07ad74d89dbc33639ff1"
+    },
+    {
+      "path": "tests/lesson-blueprints/fixture-curriculum.json",
+      "size": 1513,
+      "sha256": "2442be20323f69aeb4814d56a53a07b7bca606c1c30676a485c9ab7b50d21c89"
+    },
+    {
+      "path": "tests/lesson-blueprints/invalid-duplicate-lesson.json",
+      "size": 3238,
+      "sha256": "f48390ae24bd86803cc03075f453a33133c1b3ce03a38493d51f2a52c360709d"
+    },
+    {
+      "path": "tests/lesson-blueprints/invalid-fake-graph-edge.json",
+      "size": 2553,
+      "sha256": "3764bdead0abf8fae7c7d4c3ca05fd47975edee14a3b754b639868cf292401dd"
+    },
+    {
+      "path": "tests/lesson-blueprints/invalid-graph-order.json",
+      "size": 3293,
+      "sha256": "cb7f07956fba3676984a48125412e8a372738d5146fce92ebf40530408f032d9"
+    },
+    {
+      "path": "tests/lesson-blueprints/invalid-lesson-id-prefix.json",
+      "size": 2541,
+      "sha256": "999fe01fb9d292f5e52c3b30ada31147f2da2354a307b5565b0a4244aa81fa90"
+    },
+    {
+      "path": "tests/lesson-blueprints/invalid-module-coverage-gap.json",
+      "size": 2521,
+      "sha256": "88942d4581d80062a4d264852676ae5ecbc66903cba88a3644ddfd827631dfc3"
+    },
+    {
+      "path": "tests/lesson-blueprints/invalid-pedagogical-rationale.json",
+      "size": 2578,
+      "sha256": "60882ffad5641e0f809506dcb4d7b3ab77df26388d52a2ddf612bb0f173fec25"
+    },
+    {
+      "path": "tests/lesson-blueprints/invalid-unknown-knowledge.json",
+      "size": 2521,
+      "sha256": "0257462a99756b226e03c5cd962051e32c5433139baf68d606cd5eb7a4d0062b"
+    },
+    {
+      "path": "tests/lesson-blueprints/valid-blueprint.json",
+      "size": 2510,
+      "sha256": "daf4a27b8d07cbc6d3d9d70e9c360ffb948fab34b661912c28e75639b685013b"
+    },
+    {
+      "path": "tests/lessons/invalid-empty-practice.json",
+      "size": 854,
+      "sha256": "108a18003388418b097040c0eefe117a5e01f093809d3c508b6c642ec0f6ecfe"
+    },
+    {
+      "path": "tests/lessons/invalid-extra-knowledge.json",
+      "size": 922,
+      "sha256": "c2a33c9421d31ad1b2d2babf053fdd2b70d4eaffd6f41e947225dc580eedec4d"
+    },
+    {
+      "path": "tests/lessons/invalid-hard-order-pack.json",
+      "size": 725,
+      "sha256": "ca41155e2d3c5880033f81f797ad10b27b165ba8f21bd0942027ba2e2de75728"
+    },
+    {
+      "path": "tests/lessons/invalid-scope-expansion.json",
+      "size": 935,
+      "sha256": "975fcb62ec62caf352a65978137ae8d6b9685596b05042663517078f4f6bf3cd"
+    },
+    {
+      "path": "tests/lessons/invalid-teaching-point-ref.json",
+      "size": 916,
+      "sha256": "cc53734a61b913c487585a56836de48a5c051aeb69a4c3bc97765ca274a0f604"
+    },
+    {
+      "path": "tests/lessons/invalid-unknown-edge.json",
+      "size": 898,
+      "sha256": "546a634161b7301b7f6d02de13ad9787fbdc15f2772acfd348e5856eddf6c018"
+    },
+    {
+      "path": "tests/lessons/invalid-unknown-lesson-id.json",
+      "size": 879,
+      "sha256": "bfa97cc10460d4047e717752b294c0400e2c3217064c0261d58a3905e8824b85"
+    },
+    {
+      "path": "tests/lessons/invalid-unknown-status.json",
+      "size": 917,
+      "sha256": "b5358a454488fd626870a734b3c822195bc701ea6af7db86d67ba08ea7dd1bd6"
+    },
+    {
+      "path": "tests/lessons/pack-l01.json",
+      "size": 995,
+      "sha256": "d68e223cf533b4e78ab664fda2409f541d7d1842d0384667a3155472095274c3"
+    },
+    {
+      "path": "tests/lessons/pack-l02.json",
+      "size": 942,
+      "sha256": "e55d92fc9609412f04196b5a328c7954f7049dc4908cdd14e30531ca40e2ac98"
+    },
+    {
+      "path": "tests/lessons/valid-lesson-full-course.json",
+      "size": 926,
+      "sha256": "5b41339f96019c10050d250db9b45724d8e839ccc4d1575cb6aa2e115d90f830"
+    },
+    {
+      "path": "tests/lessons/valid-lesson.json",
+      "size": 938,
+      "sha256": "568a30d9d23f04e293218d96c647f33b41964b1dd9448fa10f98f35e0915f762"
+    },
+    {
+      "path": "tests/mastery/fixture-course-manifest.json",
+      "size": 2191,
+      "sha256": "0b25ccb84dfe7c1c377b294340944020bf93ac9f5adc4a0bf74ea3d2b05112af"
+    },
+    {
+      "path": "tests/mastery/fixture-mapping.json",
+      "size": 2371,
+      "sha256": "d1f73eaca4e473230839769310cc11c8133306a91b86506abd42cf87a84a00ed"
+    },
+    {
+      "path": "tests/mastery/invalid-duplicate-unit.json",
+      "size": 2054,
+      "sha256": "b33a3ffaa79c17400ba0b876a4d3532d3e177ed00685d405a424e74cb009aaaa"
+    },
+    {
+      "path": "tests/mastery/invalid-extra-hard-gate.json",
+      "size": 2169,
+      "sha256": "00618c528594f4e79a8312ede8cd6d11f2c310bb672da033d80cdfb360f142f5"
+    },
+    {
+      "path": "tests/mastery/invalid-hard-edge-transition-count-confusion.json",
+      "size": 2087,
+      "sha256": "ab3db241964d3553eee37592fa1c2d0a84dc3ffb75246fe17029cad871425168"
+    },
+    {
+      "path": "tests/mastery/invalid-missing-hard-gate.json",
+      "size": 2103,
+      "sha256": "184cac48031463e58c9e267ec52c41ffcfc9e322f380a4959cf5e2504c543ad1"
+    },
+    {
+      "path": "tests/mastery/invalid-missing-lesson-unit.json",
+      "size": 1719,
+      "sha256": "7e97ef3d03a53b89b96882eb5022f1d6f8fd805cef6257a5ed9766e74fd885be"
+    },
+    {
+      "path": "tests/mastery/invalid-uncovered-outcome.json",
+      "size": 2062,
+      "sha256": "fa28896b3fd592d43aaccb9e6ba5c570d32dfd01cfb7846ef165dce89da985d6"
+    },
+    {
+      "path": "tests/mastery/invalid-unknown-decision.json",
+      "size": 2076,
+      "sha256": "fb0dd8265d8202646bb6debb391d2dbfadb4e85747bac58619b0790426c41b12"
+    },
+    {
+      "path": "tests/mastery/invalid-unknown-requirement.json",
+      "size": 2062,
+      "sha256": "f7fdeb24a214ab1fa3a281b3589eceb5ce0cf712ebf9fa5355bc4172ea8ba8ce"
+    },
+    {
+      "path": "tests/mastery/lessons/JCA-M01-L01.json",
+      "size": 1201,
+      "sha256": "b3f7bf2f36aeb3237ce14382c4fd79c4fb05fc8b681ad0185c29dc66d2035f66"
+    },
+    {
+      "path": "tests/mastery/lessons/JCA-M02-L01.json",
+      "size": 968,
+      "sha256": "514b5c6943e8e797914b3977efb72de96e55741c23d7c551d14321d8c7a39a1e"
+    },
+    {
+      "path": "tests/mastery/lessons/JCA-M02-L02.json",
+      "size": 930,
+      "sha256": "96be2b5dcef7e76e06b4617f9c589bd01834a034dba6dc19d02330c2b9b78ca8"
+    },
+    {
+      "path": "tests/mastery/valid-mastery-map.json",
+      "size": 2573,
+      "sha256": "31895f6e23c818fdfd9e420881ced01dfae3880293ce6c59236b3e3c3d940722"
+    },
+    {
+      "path": "tests/mastery-decisions/blocked-prerequisite.json",
+      "size": 526,
+      "sha256": "b9fd6a4266ece1a366801cc9a1a8cde8de51e85ee908ff206ee38ae6aadb9733"
+    },
+    {
+      "path": "tests/mastery-decisions/pass-all.json",
+      "size": 465,
+      "sha256": "7c4dd48a29fe0d442bac58086530beab49df6c8e7bbd40a2ee32aae86ee3d334"
+    },
+    {
+      "path": "tests/mastery-decisions/remediation-outcome-gap.json",
+      "size": 492,
+      "sha256": "44db1b101556364eefea1c8dc11532fee28f204c5bdee104ad2162f27f0e2567"
+    },
+    {
+      "path": "tests/mastery-decisions/retry-execution.json",
+      "size": 442,
+      "sha256": "d14de10fb444c37614439dbb88120843e458d1722fb314e26ad63efa43fded82"
+    },
+    {
+      "path": "tests/source-engine/invalid-registry.json",
+      "size": 2101,
+      "sha256": "85d539c6fea512f8b9ceb624a12e0edd7d1b474be64d1e501bafa025622aa461"
+    },
+    {
+      "path": "tests/source-engine/semantic-invalid-registry.json",
+      "size": 4550,
+      "sha256": "b9073d230cf535f88268a85a80af54e26bfba8f0e9a946501bd9fab687c22358"
+    },
+    {
+      "path": "tests/source-engine/valid-registry.json",
+      "size": 2157,
+      "sha256": "c8c5a9549252fe9977893505b17f1c7a39f47c9d76731677cbe8b56c7de6923f"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "curriculum_id": "fixture-curriculum",
+  "track": "Fixture Track",
+  "version": "0.1",
+  "status": "skeleton",
+  "track_goal": "夹具用最小 curriculum：只提供 blueprint validator 需要的 curriculum_id 与 modules[].knowledge_refs。",
+  "entry_profile": "夹具。",
+  "exit_profile": "夹具。",
+  "scope": "夹具。",
+  "module_order": ["JCA-M01", "JCA-M02"],
+  "modules": [
+    {
+      "module_id": "JCA-M01",
+      "title": "夹具 Module 1",
+      "purpose": "夹具。",
+      "target_domain_ids": ["CRD-01"],
+      "learner_outcomes": ["夹具。"],
+      "knowledge_refs": ["JIM-K-0001", "JIM-K-0014"],
+      "graph_support_refs": [],
+      "scope": "夹具。",
+      "order_basis": "PEDAGOGICAL",
+      "order_rationale": "PEDAGOGICAL_RATIONALE: 夹具。",
+      "limitations": "夹具。",
+      "status": "skeleton"
+    },
+    {
+      "module_id": "JCA-M02",
+      "title": "夹具 Module 2",
+      "purpose": "夹具。",
+      "target_domain_ids": ["CRD-03"],
+      "learner_outcomes": ["夹具。"],
+      "knowledge_refs": ["JIM-K-0051", "JIM-K-0052", "JIM-K-0053"],
+      "graph_support_refs": [],
+      "scope": "夹具。",
+      "order_basis": "PEDAGOGICAL",
+      "order_rationale": "PEDAGOGICAL_RATIONALE: 夹具。",
+      "limitations": "夹具。",
+      "status": "skeleton"
+    }
+  ],
+  "coverage_summary": {
+    "module_count": 2,
+    "foundational_domain_count": 1,
+    "core_domain_count": 1,
+    "mapped_mandatory_count": 2,
+    "unmapped_mandatory_count": 0
+  }
+}

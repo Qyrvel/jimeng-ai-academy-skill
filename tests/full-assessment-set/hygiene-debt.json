@@ -1,0 +1,625 @@
+{
+  "artifact": "tests/full-assessment-set/hygiene-debt.json",
+  "gate": "Gate 4.7A-CONT7-R3A-CONT2-R4",
+  "role": "the one strict register of files under tests/full-assessment-set/ that are proven inert but cannot be deleted in this environment",
+  "is_ignore_list": false,
+  "read_as_business_input_by": [],
+  "read_as_inventory_proof_by": [
+    "tests/full-assessment-set/verify_fixtures.py"
+  ],
+  "admission_rule": "an entry is admitted only when the verifier can re-prove, per entry: the file exists, its sha256 and byte_size match this register, it is not a SPECS/active fixture artifact, not a baseline-fingerprint member or declared path, not a source descriptor, not a mutation-descriptor active input, and is read by neither generate_fixtures.py, run_fixtures.py nor validate_full_assessment_set.py.  A path that fails any proof is HYGIENE_DEBT_NOT_INERT; a path present in the tree but neither an active artifact nor a registered entry is UNDECLARED_ORPHAN.",
+  "classification_values": [
+    "DECLARED_INERT_HYGIENE_DEBT"
+  ],
+  "classes": {
+    "A_DECLARED_INERT_BASELINE_DEBT": {
+      "ruling": "Gate 4.7A-CONT7-R3A-CONT2-R4 section 0.1",
+      "ruled_classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "active_reference_count": 0,
+      "description": "stale pre-hybrid canonical baseline mirrors left in the shared baseline package by the design that preceded the hybrid split; not active baseline content, not a source-fingerprint member, not a SPECS member, not an _index fixture artifact"
+    },
+    "IN_TREE_DIAGNOSTIC_DEBRIS": {
+      "ruling": "Gate 4.7A-CONT7-R3A-CONT2-R4 section 10",
+      "ruled_classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "active_reference_count": 0,
+      "description": "round-local diagnostic probes and forensic write probes left inside the fixture tree"
+    }
+  },
+  "hygiene_cleanup": "DEFERRED_PERMISSION",
+  "hygiene_cleanup_note": "ordinary deletion of all five A-class files was attempted once and refused with System.UnauthorizedAccessException (RemoveFileSystemItemUnAuthorizedAccess).  No ACL, ownership or elevation change was attempted, and none is permitted.",
+  "entries": [
+    {
+      "relative_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-001.json",
+      "sha256": "cc2c226ec2d5ad85a1276720ce39cce8bee17cebec5e644c301f6d8765b19dba",
+      "byte_size": 4330,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "A_DECLARED_INERT_BASELINE_DEBT",
+      "reason": "SUPERSEDED_PRE_HYBRID_BASELINE_MIRROR: JCA-A-001 is CANONICAL_DIRECT_DECLARATION in baseline-fingerprint.json, so no fixture declares this path; it is a leftover of the pre-hybrid design in which every member was mirrored into _baseline/assessments/.  Ordinary deletion refused (access denied).",
+      "first_known_gate": "pre-Gate-4.7A-CONT7-R3A-HYBRID_SPLIT",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-002.json",
+      "sha256": "2db22d3d68b240d868e5c9b3d7d8b8db12de575d29ac63e15c6f638321496cf2",
+      "byte_size": 4005,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "A_DECLARED_INERT_BASELINE_DEBT",
+      "reason": "SUPERSEDED_PRE_HYBRID_BASELINE_MIRROR: JCA-A-002 is CANONICAL_DIRECT_DECLARATION in baseline-fingerprint.json, so no fixture declares this path; leftover of the pre-hybrid mirror design.  Ordinary deletion refused (access denied).",
+      "first_known_gate": "pre-Gate-4.7A-CONT7-R3A-HYBRID_SPLIT",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-003.json",
+      "sha256": "169c3f0329dbdae0f07eb9cfd8d1f19ba649456eef7b02d1f6460340ac385c9e",
+      "byte_size": 4333,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "A_DECLARED_INERT_BASELINE_DEBT",
+      "reason": "SUPERSEDED_PRE_HYBRID_BASELINE_MIRROR: JCA-A-003 is CANONICAL_DIRECT_DECLARATION in baseline-fingerprint.json, so no fixture declares this path; leftover of the pre-hybrid mirror design.  Ordinary deletion refused (access denied).",
+      "first_known_gate": "pre-Gate-4.7A-CONT7-R3A-HYBRID_SPLIT",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-004.json",
+      "sha256": "553fe27b814d73dc3400ff4b52330ad580a15f400d952c64c4d1246d4df0775d",
+      "byte_size": 4115,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "A_DECLARED_INERT_BASELINE_DEBT",
+      "reason": "SUPERSEDED_PRE_HYBRID_BASELINE_MIRROR: JCA-A-004 is CANONICAL_DIRECT_DECLARATION in baseline-fingerprint.json, so no fixture declares this path; leftover of the pre-hybrid mirror design.  Ordinary deletion refused (access denied).",
+      "first_known_gate": "pre-Gate-4.7A-CONT7-R3A-HYBRID_SPLIT",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-005.json",
+      "sha256": "67cbe5118b8325008660419434b87c44917f5e4de84122210530d8ab3cfea0ad",
+      "byte_size": 4593,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "A_DECLARED_INERT_BASELINE_DEBT",
+      "reason": "SUPERSEDED_PRE_HYBRID_BASELINE_MIRROR: JCA-A-005 is CANONICAL_DIRECT_DECLARATION in baseline-fingerprint.json, so no fixture declares this path; leftover of the pre-hybrid mirror design.  Ordinary deletion refused (access denied).",
+      "first_known_gate": "pre-Gate-4.7A-CONT7-R3A-HYBRID_SPLIT",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_baseline/README.json",
+      "sha256": "0b774b1fb9e1b9fa7ebf1a8f8761a107e63ce85d96642c2cbe0ff96fe56b215e",
+      "byte_size": 381,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "IN_TREE_DIAGNOSTIC_DEBRIS",
+      "reason": "SUPERSEDED_BASELINE_README_STALE_MEMBERSHIP_NOTE: the note still states that all 23 members live in the baseline package, which the hybrid split ended for the six CANONICAL_DIRECT_DECLARATION members.  No script reads it.",
+      "first_known_gate": "pre-Gate-4.7A-CONT7-R3A-HYBRID_SPLIT",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_probe_bytes.json",
+      "sha256": "e1f4635d4d7dc9281f569abdb011078dadd085b7ccf35de5ed8bc1c087edd418",
+      "byte_size": 114,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "IN_TREE_DIAGNOSTIC_DEBRIS",
+      "reason": "INERT_DIAGNOSTIC_PROBE_DEBRIS: round-local byte-encoding probe output; no fixture, runner, generator or validator reads it.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_probe_cr.txt",
+      "sha256": "787d43de7e013eba19532ab332aa462a0412d4cf71fc367b5cc6cfecadd65389",
+      "byte_size": 9,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "IN_TREE_DIAGNOSTIC_DEBRIS",
+      "reason": "INERT_DIAGNOSTIC_PROBE_DEBRIS: line-ending probe output; no fixture, runner, generator or validator reads it.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_probe_crlf.txt",
+      "sha256": "332314e35dc8c76ce2bb959acdc0aa093a19d6355e2f3c843a411b6dcfd3137c",
+      "byte_size": 12,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "IN_TREE_DIAGNOSTIC_DEBRIS",
+      "reason": "INERT_DIAGNOSTIC_PROBE_DEBRIS: line-ending probe output; no fixture, runner, generator or validator reads it.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_probe_crlf2.txt",
+      "sha256": "6b566f0af62c8cf7c1138553548ea063b86a7293a8b4b0ce15f797666d1476fc",
+      "byte_size": 11,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "IN_TREE_DIAGNOSTIC_DEBRIS",
+      "reason": "INERT_DIAGNOSTIC_PROBE_DEBRIS: line-ending probe output; no fixture, runner, generator or validator reads it.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_probe_crlf3.txt",
+      "sha256": "bd388589a52cc288dab72196d34341911332bdbb6f7bde91819ff3e5d8325e43",
+      "byte_size": 10,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "IN_TREE_DIAGNOSTIC_DEBRIS",
+      "reason": "INERT_DIAGNOSTIC_PROBE_DEBRIS: line-ending probe output; no fixture, runner, generator or validator reads it.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_probe_crlf4.txt",
+      "sha256": "2c7297ec37a96b91ad072d86893fb7c6297563dc2cf0d30bf0260f2cbc22e2a3",
+      "byte_size": 16,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "IN_TREE_DIAGNOSTIC_DEBRIS",
+      "reason": "INERT_DIAGNOSTIC_PROBE_DEBRIS: line-ending probe output; no fixture, runner, generator or validator reads it.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_probe_derive.py",
+      "sha256": "6346363a533a86845b89e6d6fc4e0f6219e0ca55fbac5793cd6fc0456a31c7cc",
+      "byte_size": 6426,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "IN_TREE_DIAGNOSTIC_DEBRIS",
+      "reason": "INERT_DIAGNOSTIC_PROBE_DEBRIS: round-local derivation probe script; imported by nothing.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_probe_diag.py",
+      "sha256": "8f041c0e644e74968742f7253874b2f2eab977eea2f72a762767e01b2f4724c5",
+      "byte_size": 3149,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "IN_TREE_DIAGNOSTIC_DEBRIS",
+      "reason": "INERT_DIAGNOSTIC_PROBE_DEBRIS: round-local diagnostic probe script; imported by nothing.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_probe_diff.py",
+      "sha256": "a6b39d343e6a068fdae05cb5856468e997abaeb127fd1a651def8210ce8b8e7f",
+      "byte_size": 860,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "IN_TREE_DIAGNOSTIC_DEBRIS",
+      "reason": "INERT_DIAGNOSTIC_PROBE_DEBRIS: round-local diff probe script; imported by nothing.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_probe_dsh_write_cr.txt",
+      "sha256": "3ef30b67e7b9fd6b53b65079bcd18f76f6bf6cbe23d36ef862ea82b0f96f7264",
+      "byte_size": 18,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "IN_TREE_DIAGNOSTIC_DEBRIS",
+      "reason": "INERT_DIAGNOSTIC_PROBE_DEBRIS: write-channel probe output; no fixture, runner, generator or validator reads it.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_probe_dsh_write_cr2.txt",
+      "sha256": "559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd",
+      "byte_size": 1,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "IN_TREE_DIAGNOSTIC_DEBRIS",
+      "reason": "INERT_DIAGNOSTIC_PROBE_DEBRIS: write-channel probe output; no fixture, runner, generator or validator reads it.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_probe_emit.py",
+      "sha256": "176d9c113c4d44cd624646c829da5f849febc0554c5634d197d965a042ffe796",
+      "byte_size": 606,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "IN_TREE_DIAGNOSTIC_DEBRIS",
+      "reason": "INERT_DIAGNOSTIC_PROBE_DEBRIS: round-local emit probe script; imported by nothing.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_probe_enc.py",
+      "sha256": "7c858650e4a70ff1df2642930b17e14bac889f1222c7c77f57de969a6cfccc7a",
+      "byte_size": 398,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "IN_TREE_DIAGNOSTIC_DEBRIS",
+      "reason": "INERT_DIAGNOSTIC_PROBE_DEBRIS: round-local encoding probe script; imported by nothing.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_probe_overlay.py",
+      "sha256": "3a0c8f7cf222d690399222794a02d20c86c7b64b3bc6104b2f99d9ced594a8ac",
+      "byte_size": 1588,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "IN_TREE_DIAGNOSTIC_DEBRIS",
+      "reason": "INERT_DIAGNOSTIC_PROBE_DEBRIS: round-local overlay probe script; imported by nothing.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_probe_parser.py",
+      "sha256": "ce5ab3e7dbca5343d8d964755fbb79a552e94bab99eb4abe360856ba85cc61c7",
+      "byte_size": 1444,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "IN_TREE_DIAGNOSTIC_DEBRIS",
+      "reason": "INERT_DIAGNOSTIC_PROBE_DEBRIS: round-local parser probe script; imported by nothing.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_probe_reconcile.py",
+      "sha256": "d67bc59546d187676b5614d1510925623d2f02051dcbdacb277106bf4285bc66",
+      "byte_size": 1315,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "IN_TREE_DIAGNOSTIC_DEBRIS",
+      "reason": "INERT_DIAGNOSTIC_PROBE_DEBRIS: round-local reconcile probe script; imported by nothing.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_probe_spec.py",
+      "sha256": "1914e56fd48763e09ced6f7f8fe60ea015dc3ae6dcaf8288eb48a4f61451212a",
+      "byte_size": 802,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "IN_TREE_DIAGNOSTIC_DEBRIS",
+      "reason": "INERT_DIAGNOSTIC_PROBE_DEBRIS: round-local SPECS probe script; imported by nothing.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_probe_trace.py",
+      "sha256": "d40ee44fad0b51e85c83b061302b14b13e003345bd2451fbf2bb9447ddc8812f",
+      "byte_size": 1631,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "IN_TREE_DIAGNOSTIC_DEBRIS",
+      "reason": "INERT_DIAGNOSTIC_PROBE_DEBRIS: round-local trace probe script; imported by nothing.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_probe_uncovered.py",
+      "sha256": "0c249eb3ab3367a00c360f5510051a2e6658081642df9edcd2bae14860413837",
+      "byte_size": 2962,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "IN_TREE_DIAGNOSTIC_DEBRIS",
+      "reason": "INERT_DIAGNOSTIC_PROBE_DEBRIS: round-local uncovered-outcome probe script; imported by nothing.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_probe_write_only.txt",
+      "sha256": "25be323556dad377abb57fe7ec8c4b99a6527f488dda28d0c9b686528659c909",
+      "byte_size": 6,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "IN_TREE_DIAGNOSTIC_DEBRIS",
+      "reason": "INERT_DIAGNOSTIC_PROBE_DEBRIS: write-channel probe output; no fixture, runner, generator or validator reads it.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_probe_write_test.py",
+      "sha256": "7b9be8e009195274db9e00d67a507af64e3dda47cf3f1fcfab125f4c4beb78b1",
+      "byte_size": 549,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "IN_TREE_DIAGNOSTIC_DEBRIS",
+      "reason": "INERT_DIAGNOSTIC_PROBE_DEBRIS: round-local write-channel probe script that only mentions a fixture pilot path as a string; imported by nothing.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_r3a_r1_persist_emit.py",
+      "sha256": "79aa06672fef35513b436ecbafd46d2e07a9a708aa8b536af7a01ac4d2f0006e",
+      "byte_size": 646,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "IN_TREE_DIAGNOSTIC_DEBRIS",
+      "reason": "INERT_R3A_R1_FORENSICS_DEBRIS: R3A-R1 persistence probe script; imported by nothing.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-R1",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/_r3a_r1_write_probe.txt",
+      "sha256": "1f407ca529fa716aeb3fa125c4283600099243d380508a384c7845b74695cc74",
+      "byte_size": 24,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "IN_TREE_DIAGNOSTIC_DEBRIS",
+      "reason": "INERT_R3A_R1_FORENSICS_DEBRIS: R3A-R1 write probe output; no fixture, runner, generator or validator reads it.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-R1",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/invalid-missing-assessment-file/probe-full-assessment-set.json",
+      "sha256": "7c6ba711f322be14ec80a24599bfe138d4cb5445d80724dc015bb3de03e31825",
+      "byte_size": 2250,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "IN_TREE_DIAGNOSTIC_DEBRIS",
+      "reason": "INERT_ROUND_PROBE_MUTATION_DEBRIS: round-local probe manifest inside a fixture folder; the fixture declares only mutation.json in its file inventory, so this copy is never consumed.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/invalid-missing-assessment-file/probe-mutation.json",
+      "sha256": "be3d06c8b4642d8599815f5ec95b0aea99b6ec0560ecfb467ff96b4ae8bb4c0f",
+      "byte_size": 2183,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "IN_TREE_DIAGNOSTIC_DEBRIS",
+      "reason": "INERT_ROUND_PROBE_MUTATION_DEBRIS: round-local probe mutation descriptor inside a fixture folder; not the fixture's declared mutation_descriptor and read by neither generator, runner nor validator.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/invalid-uncovered-outcome/pilot-sources/JCA-A-001.json",
+      "sha256": "d82101e2c7b351c61405026d111ce1f1d2ebe122ea2382ce56d125609a9f135b",
+      "byte_size": 4384,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "SUPERSEDED_FIXTURE_LOCAL_PILOT_SOURCE",
+      "reason": "SUPERSEDED_FIXTURE_LOCAL_PILOT_SOURCE: an isolated pilot-source copy left by an earlier revision of invalid-uncovered-outcome.  That fixture's SPECS file inventory declares only mutation.json plus its mutated assessment pair, its inputs declare no --pilot-sources override, and the generator emits no such path, so no baseline fingerprint, SPECS entry, source descriptor or mutation descriptor references this copy.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/invalid-uncovered-outcome/pilot-sources/JCA-A-002.json",
+      "sha256": "54eb76fa8e28636822986e710d3678c5eec18698b3ad03c3079dfdf5747a5416",
+      "byte_size": 4059,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "SUPERSEDED_FIXTURE_LOCAL_PILOT_SOURCE",
+      "reason": "SUPERSEDED_FIXTURE_LOCAL_PILOT_SOURCE: an isolated pilot-source copy left by an earlier revision of invalid-uncovered-outcome; superseded by the invalid-pilot-semantic-drift overlay that is actually declared and consumed.  No baseline fingerprint, SPECS entry, source descriptor or mutation descriptor references this copy.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/invalid-uncovered-outcome/pilot-sources/JCA-A-003.json",
+      "sha256": "d6d976ccece99025bf807469f3269d0548ec6a034b6b2546345724c82d7f02ed",
+      "byte_size": 4375,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "SUPERSEDED_FIXTURE_LOCAL_PILOT_SOURCE",
+      "reason": "SUPERSEDED_FIXTURE_LOCAL_PILOT_SOURCE: an isolated pilot-source copy left by an earlier revision of invalid-uncovered-outcome.  That fixture's SPECS file inventory declares only mutation.json plus its mutated assessment pair, its inputs declare no --pilot-sources override, and the generator emits no such path, so no baseline fingerprint, SPECS entry, source descriptor or mutation descriptor references this copy.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "tests/full-assessment-set/invalid-uncovered-outcome/pilot-sources/JCA-A-004.json",
+      "sha256": "3eb90568106e11d51bcfb16e52ec9d164ca512e6cad7e87105e49d33619cd467",
+      "byte_size": 4169,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "SUPERSEDED_FIXTURE_LOCAL_PILOT_SOURCE",
+      "reason": "SUPERSEDED_FIXTURE_LOCAL_PILOT_SOURCE: an isolated pilot-source copy left by an earlier revision of invalid-uncovered-outcome; no baseline fingerprint, SPECS entry, source descriptor or mutation descriptor references this copy.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-CONT2",
+      "active_reference_count": 0
+    }
+  ],
+  "external_hygiene_debt": [
+    {
+      "relative_path": "_r3a_r1_after_run_fixtures.txt",
+      "sha256": "cd510c1b6fa9db1eade9f788b4e33537e5aba02f1a413d9373c1516286ed7fe3",
+      "byte_size": 14381,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "EXTERNAL_R3A_R1_FORENSICS_DEBRIS",
+      "reason": "INERT_R3A_R1_FORENSICS_DEBRIS: repository-root forensic run log; outside the fixture tree and read by no fixture script.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-R1",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "_r3a_r1_baseline_run_fixtures.txt",
+      "sha256": "a8bd0ae479ddfd71fc4f49d44961fc7ee52ac4373d422293c4f784ef9ef20c64",
+      "byte_size": 13661,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "EXTERNAL_R3A_R1_FORENSICS_DEBRIS",
+      "reason": "INERT_R3A_R1_FORENSICS_DEBRIS: repository-root forensic run log; outside the fixture tree and read by no fixture script.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-R1",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "_r3a_r1_c1.txt",
+      "sha256": "cd510c1b6fa9db1eade9f788b4e33537e5aba02f1a413d9373c1516286ed7fe3",
+      "byte_size": 14381,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "EXTERNAL_R3A_R1_FORENSICS_DEBRIS",
+      "reason": "INERT_R3A_R1_FORENSICS_DEBRIS: repository-root sampling log, byte-identical to _r3a_r1_after_run_fixtures.txt; outside the fixture tree.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-R1",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "_r3a_r1_c2.txt",
+      "sha256": "656c8328bf977cad285e8d0c5c3762b1e63859f5af8fd62e71dcb5227685ad26",
+      "byte_size": 41,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "EXTERNAL_R3A_R1_FORENSICS_DEBRIS",
+      "reason": "INERT_R3A_R1_FORENSICS_DEBRIS: repository-root quiescence sampling log; outside the fixture tree.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-R1",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "_r3a_r1_c3.txt",
+      "sha256": "3c0eef0bcaea2b708a2079e52b63703c9167c7a35eb00629fdac1ded8924e484",
+      "byte_size": 785,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "EXTERNAL_R3A_R1_FORENSICS_DEBRIS",
+      "reason": "INERT_R3A_R1_FORENSICS_DEBRIS: repository-root quiescence sampling log; outside the fixture tree.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-R1",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "_r3a_r1_final_run_fixtures_verbose.txt",
+      "sha256": "a7664b12431f302c329cf86fab0ffd3cfe220a1d26fd76f511cb444b99d9d17e",
+      "byte_size": 56092,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "EXTERNAL_R3A_R1_FORENSICS_DEBRIS",
+      "reason": "INERT_R3A_R1_FORENSICS_DEBRIS: repository-root captured verbose runner output; outside the fixture tree.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-R1",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "_r3a_r1_forensic_target.py",
+      "sha256": "25473b50157e1717f9f5c3918b37e08aefd4508f26733d7b5f1771a09e732f49",
+      "byte_size": 5604,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "EXTERNAL_R3A_R1_FORENSICS_DEBRIS",
+      "reason": "INERT_R3A_R1_FORENSICS_DEBRIS: repository-root forensic probe script; imported by nothing.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-R1",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "_r3a_r1_forensic_variants.py",
+      "sha256": "5afc3c2e938d244ff7dfaff3a7452fad1a40be0d2746c08da0f90c4aa45753c7",
+      "byte_size": 6983,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "EXTERNAL_R3A_R1_FORENSICS_DEBRIS",
+      "reason": "INERT_R3A_R1_FORENSICS_DEBRIS: repository-root forensic probe script; imported by nothing.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-R1",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "_r3a_r1_make_diff.py",
+      "sha256": "9b731f922d611a42ba98ab3b815e87195556c83fa06ac3d0e925dd0c23ce6053",
+      "byte_size": 3980,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "EXTERNAL_R3A_R1_FORENSICS_DEBRIS",
+      "reason": "INERT_R3A_R1_FORENSICS_DEBRIS: repository-root diff-production script; imported by nothing.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-R1",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "_r3a_r1_materialized_set.json",
+      "sha256": "f6010ec939083a85ad57d6de66efb02df8fe20a664c639bef86d9ec40ffc0c8e",
+      "byte_size": 10126,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "EXTERNAL_R3A_R1_FORENSICS_DEBRIS",
+      "reason": "INERT_R3A_R1_FORENSICS_DEBRIS: repository-root captured materialized manifest; no fixture declares it and the runner materializes its own manifests at run time.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-R1",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "_r3a_r1_noop_mutation.json",
+      "sha256": "c26ffc5608a8659a62d281d070052553d54a0747c0612a3774f6d207db6b5c0d",
+      "byte_size": 422,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "EXTERNAL_R3A_R1_FORENSICS_DEBRIS",
+      "reason": "INERT_R3A_R1_FORENSICS_DEBRIS: repository-root no-op mutation probe descriptor; no fixture declares it.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-R1",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "_r3a_r1_old_validator.py",
+      "sha256": "2bc9846fcb999ca3586eb18f316dc6e3cde84e516db9751603cdeb894d332089",
+      "byte_size": 61513,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "EXTERNAL_R3A_R1_FORENSICS_DEBRIS",
+      "reason": "INERT_R3A_R1_FORENSICS_DEBRIS: repository-root reconstruction of a superseded validator revision; nothing imports it and the frozen validator is the one at .agents/skills/ai-academy/scripts/.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-R1",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "_r3a_r1_rebuild_old_validator.py",
+      "sha256": "5f35198d59f0d4be1279bc29f646e6ecb3d8cda2b421fb941ccc3c7775e9c1d7",
+      "byte_size": 4448,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "EXTERNAL_R3A_R1_FORENSICS_DEBRIS",
+      "reason": "INERT_R3A_R1_FORENSICS_DEBRIS: repository-root rebuild helper for the superseded validator revision; imported by nothing.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-R1",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "_r3a_r1_rootwrite_probe.txt",
+      "sha256": "2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881",
+      "byte_size": 1,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "EXTERNAL_R3A_R1_FORENSICS_DEBRIS",
+      "reason": "INERT_R3A_R1_FORENSICS_DEBRIS: repository-root write-channel probe output; read by nothing.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-R1",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "_r3a_r1_sample1.txt",
+      "sha256": "b3a588518f080d4158efabba56a40b6be31e7071f3244d6c7af1c6e6da0a6d41",
+      "byte_size": 6119,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "EXTERNAL_R3A_R1_FORENSICS_DEBRIS",
+      "reason": "INERT_R3A_R1_FORENSICS_DEBRIS: repository-root sampling log; outside the fixture tree.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-R1",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "_r3a_r1_sample2.txt",
+      "sha256": "b3a588518f080d4158efabba56a40b6be31e7071f3244d6c7af1c6e6da0a6d41",
+      "byte_size": 6119,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "EXTERNAL_R3A_R1_FORENSICS_DEBRIS",
+      "reason": "INERT_R3A_R1_FORENSICS_DEBRIS: repository-root sampling log, byte-identical to _r3a_r1_sample1.txt; outside the fixture tree.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-R1",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "_r3a_r1_sample3.txt",
+      "sha256": "ed91d4bf12f86078837b48298f29dd3232af7b6d85c050c3bccf8e760ae02b8e",
+      "byte_size": 6315,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "EXTERNAL_R3A_R1_FORENSICS_DEBRIS",
+      "reason": "INERT_R3A_R1_FORENSICS_DEBRIS: repository-root sampling log; outside the fixture tree.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-R1",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "_r3a_r1_snap_after.txt",
+      "sha256": "5608e96310959f0a14466a81b0f0afd3c3ffcee8349d5e1e2d2b716d6976b969",
+      "byte_size": 8925,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "EXTERNAL_R3A_R1_FORENSICS_DEBRIS",
+      "reason": "INERT_R3A_R1_FORENSICS_DEBRIS: repository-root tree snapshot, byte-identical to _r3a_r1_snap_before.txt; outside the fixture tree.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-R1",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "_r3a_r1_snap_before.txt",
+      "sha256": "5608e96310959f0a14466a81b0f0afd3c3ffcee8349d5e1e2d2b716d6976b969",
+      "byte_size": 8925,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "EXTERNAL_R3A_R1_FORENSICS_DEBRIS",
+      "reason": "INERT_R3A_R1_FORENSICS_DEBRIS: repository-root tree snapshot; outside the fixture tree.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-R1",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "_r3a_r1_status_report.md",
+      "sha256": "4582e97c51ee32893e7134a388ce6e25ebf24d1ce0e9cad576342d73c2d90fcd",
+      "byte_size": 15438,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "EXTERNAL_R3A_R1_FORENSICS_DEBRIS",
+      "reason": "INERT_R3A_R1_FORENSICS_DEBRIS: repository-root prior-round status report; a human record, read by no fixture script.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-R1",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "_r3a_r1_validator.diff",
+      "sha256": "b126dceba6e6e3d605e45b81a1507a0235d8c8468950d6238b713614867db290",
+      "byte_size": 3299,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "EXTERNAL_R3A_R1_FORENSICS_DEBRIS",
+      "reason": "INERT_R3A_R1_FORENSICS_DEBRIS: repository-root diff between two superseded validator revisions; read by nothing.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-R1",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "_r3a_r1_variant_new.py",
+      "sha256": "1c66e194c9a17af22be5e4a396fe94e08f9287f082e543c741e55df504520f1d",
+      "byte_size": 62338,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "EXTERNAL_R3A_R1_FORENSICS_DEBRIS",
+      "reason": "INERT_R3A_R1_FORENSICS_DEBRIS: repository-root copy of a validator revision whose bytes equal the frozen .agents/skills/ai-academy/scripts/validate_full_assessment_set.py.  It is a copy, not the frozen file: the frozen validator is untouched and remains the only one executed.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-R1",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": "_r3a_r1_variant_old.py",
+      "sha256": "1b92cbb66f885267ebe7524ec9af3b817b6f10164f05041cb77fab73857f1c44",
+      "byte_size": 62104,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "EXTERNAL_R3A_R1_FORENSICS_DEBRIS",
+      "reason": "INERT_R3A_R1_FORENSICS_DEBRIS: repository-root copy of a superseded validator revision; read by nothing.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-R1",
+      "active_reference_count": 0
+    },
+    {
+      "relative_path": ".agents/r3a_r1_forensics/ai-academy/scripts/variant_old_launcher.py",
+      "sha256": "f47c119ad6456b6f2f5363de79d9c6631d6b3da8f849c4d2ae300aef5a4d20c7",
+      "byte_size": 2806,
+      "classification": "DECLARED_INERT_HYGIENE_DEBT",
+      "class": "EXTERNAL_R3A_R1_FORENSICS_DEBRIS",
+      "reason": "INERT_R3A_R1_FORENSICS_DEBRIS: launcher inside the out-of-tree forensic sandbox .agents/r3a_r1_forensics/; not on the Skill script path and imported by nothing.",
+      "first_known_gate": "Gate 4.7A-CONT7-R3A-R1",
+      "active_reference_count": 0
+    }
+  ],
+  "external_hygiene_debt_note": "the fixture verifier inventories tests/full-assessment-set/ only and never treats the whole repository as active fixture inventory, so these entries are registered here for disclosure and are NOT admitted into the in-tree orphan audit.  Ordinary deletion of out-of-tree debris was not attempted in this round: the round's file-mutation boundary is tests/full-assessment-set/ plus the gate report, and touching repository-root files was not authorized."
+}

@@ -1,0 +1,19 @@
+{
+  "graph_id": "test-invalid-enforcement-type",
+  "scope": "Enforcement fixture: the target is NOT a POLICY item. Expected: graph validator FAIL on the type rule.",
+  "nodes": [
+    {"knowledge_id": "JIM-K-0011"},
+    {"knowledge_id": "JIM-K-0035"}
+  ],
+  "edges": [
+    {
+      "edge_id": "ENF-E-0001",
+      "from": "JIM-K-0035",
+      "relation": "ENFORCEMENT_CONTEXT_FOR",
+      "to": "JIM-K-0011",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "DIRECT_REFERENCE: target 不是 POLICY Item，应被类型规则拒绝。",
+      "limitations": "仅用于测试类型规则；不表示任何处理上下文。"
+    }
+  ]
+}

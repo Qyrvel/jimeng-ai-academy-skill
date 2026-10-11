@@ -1,0 +1,11 @@
+{
+  "reviews": [
+    {
+      "edge_id": "POL-E-0008",
+      "status": "KEEP",
+      "review_reason": "P14 §4.2 中，禁止破坏的对象是平台添加的标识；理解其对象需要添加依据。末句明确排除教学顺序，不是课程偏好。",
+      "directness": "DIRECT",
+      "curriculum_leakage": false
+    }
+  ]
+}

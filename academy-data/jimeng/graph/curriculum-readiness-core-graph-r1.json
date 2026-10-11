@@ -1,0 +1,23 @@
+{
+  "graph_id": "jimeng-curriculum-readiness-core-r1",
+  "scope": "Gate 4.0-R1 G40-06：仅把既有身份认证规则关联到既有视频生成步骤；不合并历史 Pilot，不建立教学顺序，不补隐式账号或动作节点。",
+  "nodes": [
+    {
+      "knowledge_id": "JIM-K-0029"
+    },
+    {
+      "knowledge_id": "JIM-K-0046"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "CRR1-E-0001",
+      "from": "JIM-K-0029",
+      "relation": "CONSTRAINS",
+      "to": "JIM-K-0046",
+      "epistemic_status": "INFERRED",
+      "rationale": "DIRECT_CONSTRAINT: 本地 P14 §4.3 / K0029 把真实身份认证作为生成、制作、发布的前提；本地 P10 第三步 / K0046 明确包含生成 AI 视频这一动作。将既有平台规则应用到该产品生成动作，建立规则到受约束行为的直接关系；不是因为应当先讲认证而建边。",
+      "limitations": "INFERENCE_BOUNDARY: 关系由 P14 条款动作范围与 P10 生成步骤对照推得，两个来源未相互点名。只约束 K0046 内的生成动作，不断言预览或下载独立需要认证；不推断认证界面、执行时机、账号权限或现行法律。限已保存的 P14 2025-08-25 更新/2025-09-01 生效范围及 P10 Seedance 2.5 产品页，不证明后续版本变化。"
+    }
+  ]
+}

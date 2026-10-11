@@ -1,0 +1,76 @@
+{
+  "assessment_id": "JCA-A-012",
+  "lesson_ids": [
+    "JCA-M04-L03"
+  ],
+  "lesson_pair_reason": "NOT_APPLICABLE",
+  "assessment_type": "PERFORM_PROCEDURE",
+  "purpose": "夹具缺陷：该 purpose 文本只在 JSON 中存在，Markdown 仍保留原文，用于触发 JSON/Markdown 文本保真度不一致。",
+  "target_outcomes": [
+    "输入以对象为起点、组织为短句的图片提示词",
+    "在出现歧义词时完成一次改写"
+  ],
+  "knowledge_refs": [
+    "JIM-K-0049",
+    "JIM-K-0050"
+  ],
+  "scope": "Jimeng Product Layer；官方图片提示词指南的基础表达建议（对象与短句组织、歧义修订）。",
+  "task": "写出一条图片提示词，起点为要创作的对象，整体由短句组成。然后从中指出一处可能被理解成多种意思的词，完成一次改写，并说明改写的依据。",
+  "expected_evidence": "①提示词首项为创作对象而非形容词，且由短句构成；②找出一处歧义词；③一次改写后的提示词；④一句说明依据为官方建议「避免歧义词并重新措辞」。",
+  "scoring_criteria": [
+    {
+      "criterion_id": "A012-C1",
+      "description": "提示词以对象为起点",
+      "evidence_source": "写出的提示词",
+      "weight": 2,
+      "pass_condition": "首项为要创作的对象，而非风格或形容词"
+    },
+    {
+      "criterion_id": "A012-C2",
+      "description": "提示词由短句组成",
+      "evidence_source": "写出的提示词",
+      "weight": 2,
+      "pass_condition": "整体为若干短句，而非一句长串描述"
+    },
+    {
+      "criterion_id": "A012-C3",
+      "description": "找出并改写歧义词",
+      "evidence_source": "改写后的提示词",
+      "weight": 2,
+      "pass_condition": "指出一处歧义词并完成重新措辞，而非直接删除该词"
+    },
+    {
+      "criterion_id": "A012-C4",
+      "description": "说明改写依据",
+      "evidence_source": "手写理由",
+      "weight": 2,
+      "pass_condition": "依据指向官方建议「避免歧义词并重新措辞提示」"
+    },
+    {
+      "criterion_id": "A012-C5",
+      "description": "不把建议写成公式或效果保证",
+      "evidence_source": "整体作答",
+      "weight": 2,
+      "pass_condition": "没有任何一处把该建议写成固定公式、字数要求或效果承诺"
+    }
+  ],
+  "max_score": 10,
+  "pass_score": 8,
+  "partial_credit_policy": "允许 partial credit：每条 0/1/2。起点为对象但句长偏长得 1；指出歧义词但未完成改写得 1。不因用词与官方指南不同扣分。",
+  "allowed_support": [
+    "lesson notes",
+    "course outline"
+  ],
+  "disallowed_support": [
+    "external web search",
+    "unverified community tutorial",
+    "another person's completed answer"
+  ],
+  "feedback_boundary": "评分后只可告知：哪条 criterion 未达标、对应 Lesson（JCA-M04-L03）、以及「官方建议 ≠ 效果承诺」这一 boundary 提醒。不得补充词汇表、改写示例或完整 Prompt 技法。",
+  "alignment": {
+    "completion_check_alignment": "DIRECT",
+    "rationale": "JCA-M04-L03 的 completion_check 是「能写出以对象为起点、组织为短句的图片提示词，并能找出歧义词并完成一次改写」。C1/C2 对应前半，C3 对应后半，C4/C5 对应该课的边界要求。"
+  },
+  "limitations": "只覆盖 2026-10-04 读取的官方图片提示词指南基础建议；未给出适用模型或版本；不是效果结论、不保证一次成功；不含词汇表、改写示例、完整 Prompt 技法、UI 操作或输入参数；一次评估不代表长期掌握。",
+  "status": "full_course"
+}

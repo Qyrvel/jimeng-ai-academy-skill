@@ -1,0 +1,22 @@
+{
+  "map_id": "fixture-full-assessment-mapping",
+  "course_id": "jimeng-creator-academy-v1",
+  "status": "mapping",
+  "outcome_reference_form": "<lesson_id>#<0-based index>",
+  "notes": "夹具用最小 mapping：3 个 requirement，覆盖 M02-L01、M02-L02、M01-L01。",
+  "requirements": [
+    {"requirement_id":"JCA-AR-901","lesson_ids":["JCA-M02-L01"],"assessment_type":"PERFORM_PROCEDURE","expected_evidence_type":"PROCEDURE_EXECUTION","target_outcomes":["JCA-M02-L01#0","JCA-M02-L01#1"],"knowledge_refs":["JIM-K-0051","JIM-K-0052"],"completion_check_alignment":{"lesson_id":"JCA-M02-L01","source_field":"completion_check"},"alignment_type":"DIRECT","scope":"夹具：图片生成流程与提示输入。","mastery_required":true,"hard_sequence_context":{"is_hard_successor":false,"hard_prerequisite_lesson_ids":[],"supporting_edge_ids":[]},"limitations":"夹具。"},
+    {"requirement_id":"JCA-AR-902","lesson_ids":["JCA-M02-L02"],"assessment_type":"PERFORM_PROCEDURE","expected_evidence_type":"CREATED_ARTIFACT","target_outcomes":["JCA-M02-L02#0","JCA-M02-L02#1"],"knowledge_refs":["JIM-K-0053"],"completion_check_alignment":{"lesson_id":"JCA-M02-L02","source_field":"completion_check"},"alignment_type":"DIRECT","scope":"夹具：结果查看与导出。","mastery_required":true,"hard_sequence_context":{"is_hard_successor":true,"hard_prerequisite_lesson_ids":["JCA-M02-L01"],"supporting_edge_ids":["CRR2-E-0004"]},"limitations":"夹具。"},
+    {"requirement_id":"JCA-AR-903","lesson_ids":["JCA-M01-L01"],"assessment_type":"CLASSIFY","expected_evidence_type":"CLASSIFICATION_RESULT","target_outcomes":["JCA-M01-L01#0","JCA-M01-L01#1","JCA-M01-L01#2"],"knowledge_refs":["JIM-K-0001","JIM-K-0014","JIM-K-0036","JIM-K-0038","JIM-K-0042","JIM-K-0043"],"completion_check_alignment":{"lesson_id":"JCA-M01-L01","source_field":"completion_check"},"alignment_type":"DIRECT","scope":"夹具：声明分层。","mastery_required":true,"hard_sequence_context":{"is_hard_successor":false,"hard_prerequisite_lesson_ids":[],"supporting_edge_ids":[]},"limitations":"夹具。"}
+  ],
+  "derived": {
+    "requirement_count": 3,
+    "mapped_lesson_count": 3,
+    "unmapped_lesson_count": 0,
+    "total_learner_outcome_count": 7,
+    "mapped_learner_outcome_count": 7,
+    "unmapped_learner_outcome_count": 0,
+    "assessment_type_count": 2,
+    "alignment_type_count": 1
+  }
+}

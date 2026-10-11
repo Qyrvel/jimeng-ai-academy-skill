@@ -1,0 +1,170 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AI Academy Canonical Course Package Manifest",
+  "description": "Gate 4.4B2 course assembly contract. Structural checks only; teaching truth is judged by the human reviews.",
+  "type": "object",
+  "required": [
+    "course_id",
+    "curriculum_id",
+    "blueprint_id",
+    "version",
+    "status",
+    "scope",
+    "module_order",
+    "lesson_order_by_module",
+    "lesson_files",
+    "coverage_summary",
+    "sequence_summary",
+    "grounding_summary",
+    "role_coverage_summary",
+    "assembly_metadata"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "course_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "curriculum_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "blueprint_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "version": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "status": {"type": "string", "enum": ["assembled_v1"]},
+    "scope": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "module_order": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1, "pattern": "^JCA-M[0-9]{2}$"}
+    },
+    "lesson_order_by_module": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "array",
+        "minItems": 1,
+        "items": {"type": "string", "minLength": 1, "pattern": "^JCA-M[0-9]{2}-L[0-9]{2}$"}
+      }
+    },
+    "lesson_files": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["lesson_id", "json_path", "markdown_path", "module_id", "role"],
+        "additionalProperties": false,
+        "properties": {
+          "lesson_id": {"type": "string", "minLength": 1, "pattern": "^JCA-M[0-9]{2}-L[0-9]{2}$"},
+          "json_path": {"type": "string", "minLength": 1, "pattern": "\\.json$"},
+          "markdown_path": {"type": "string", "minLength": 1, "pattern": "\\.md$"},
+          "module_id": {"type": "string", "minLength": 1, "pattern": "^JCA-M[0-9]{2}$"},
+          "role": {"type": "string", "enum": ["FOUNDATION", "CONCEPT", "PROCEDURE", "APPLICATION", "SAFETY", "INTEGRATION"]}
+        }
+      }
+    },
+    "coverage_summary": {
+      "type": "object",
+      "required": [
+        "module_count",
+        "blueprint_lesson_count",
+        "canonical_lesson_count",
+        "canonical_json_count",
+        "canonical_markdown_count",
+        "mandatory_domain_count",
+        "mapped_mandatory_domain_count",
+        "unmapped_mandatory_domain_count",
+        "missing_lesson_count",
+        "extra_lesson_count"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "module_count": {"type": "integer", "minimum": 0},
+        "blueprint_lesson_count": {"type": "integer", "minimum": 0},
+        "canonical_lesson_count": {"type": "integer", "minimum": 0},
+        "canonical_json_count": {"type": "integer", "minimum": 0},
+        "canonical_markdown_count": {"type": "integer", "minimum": 0},
+        "mandatory_domain_count": {"type": "integer", "minimum": 0},
+        "mapped_mandatory_domain_count": {"type": "integer", "minimum": 0},
+        "unmapped_mandatory_domain_count": {"type": "integer", "minimum": 0},
+        "missing_lesson_count": {"type": "integer", "minimum": 0},
+        "extra_lesson_count": {"type": "integer", "minimum": 0}
+      }
+    },
+    "sequence_summary": {
+      "type": "object",
+      "required": [
+        "module_hard_sequence_count",
+        "lesson_hard_sequence_count",
+        "hard_sequence_resolution_count",
+        "hard_sequence_violation_count",
+        "non_order_relation_misuse_count"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "module_hard_sequence_count": {"type": "integer", "minimum": 0},
+        "lesson_hard_sequence_count": {"type": "integer", "minimum": 0},
+        "hard_sequence_resolution_count": {"type": "integer", "minimum": 0},
+        "hard_sequence_violation_count": {"type": "integer", "minimum": 0},
+        "non_order_relation_misuse_count": {"type": "integer", "minimum": 0}
+      }
+    },
+    "grounding_summary": {
+      "type": "object",
+      "required": [
+        "grounding_pass_count",
+        "grounding_fail_count",
+        "unsupported_claim_count",
+        "scope_expansion_count",
+        "model_product_leakage_count",
+        "unlabeled_pedagogical_example_count",
+        "pedagogical_example_count"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "grounding_pass_count": {"type": "integer", "minimum": 0},
+        "grounding_fail_count": {"type": "integer", "minimum": 0},
+        "unsupported_claim_count": {"type": "integer", "minimum": 0},
+        "scope_expansion_count": {"type": "integer", "minimum": 0},
+        "model_product_leakage_count": {"type": "integer", "minimum": 0},
+        "unlabeled_pedagogical_example_count": {"type": "integer", "minimum": 0},
+        "pedagogical_example_count": {"type": "integer", "minimum": 0}
+      }
+    },
+    "role_coverage_summary": {
+      "type": "object",
+      "required": ["blueprint_role_count", "canonical_role_count", "missing_role_count", "missing_role_set"],
+      "additionalProperties": false,
+      "properties": {
+        "blueprint_role_count": {"type": "integer", "minimum": 0},
+        "canonical_role_count": {"type": "integer", "minimum": 0},
+        "missing_role_count": {"type": "integer", "minimum": 0},
+        "missing_role_set": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}}
+      }
+    },
+    "assembly_metadata": {
+      "type": "object",
+      "required": [
+        "gate",
+        "canonical_lesson_count",
+        "canonical_json_count",
+        "canonical_markdown_count",
+        "promotion_semantic_diff_count",
+        "hard_sequence_count",
+        "hard_sequence_violation_count",
+        "unsupported_claim_count",
+        "scope_expansion_count",
+        "model_product_leakage_count",
+        "assessment_readiness"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "gate": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "canonical_lesson_count": {"type": "integer", "minimum": 0},
+        "canonical_json_count": {"type": "integer", "minimum": 0},
+        "canonical_markdown_count": {"type": "integer", "minimum": 0},
+        "promotion_semantic_diff_count": {"type": "integer", "minimum": 0},
+        "hard_sequence_count": {"type": "integer", "minimum": 0},
+        "hard_sequence_violation_count": {"type": "integer", "minimum": 0},
+        "unsupported_claim_count": {"type": "integer", "minimum": 0},
+        "scope_expansion_count": {"type": "integer", "minimum": 0},
+        "model_product_leakage_count": {"type": "integer", "minimum": 0},
+        "assessment_readiness": {"type": "string", "enum": ["READY", "NOT_READY"]}
+      }
+    }
+  }
+}

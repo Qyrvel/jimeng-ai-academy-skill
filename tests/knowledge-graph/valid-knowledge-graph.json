@@ -1,0 +1,89 @@
+{
+  "graph_id": "test-valid-knowledge-graph",
+  "scope": "Fixture for Graph Validator unit tests. Not a real knowledge graph.",
+  "nodes": [
+    {"knowledge_id": "JIM-K-0001"},
+    {"knowledge_id": "JIM-K-0009"},
+    {"knowledge_id": "JIM-K-0010"},
+    {"knowledge_id": "JIM-K-0011"},
+    {"knowledge_id": "JIM-K-0014"},
+    {"knowledge_id": "JIM-K-0015"},
+    {"knowledge_id": "JIM-K-0023"},
+    {"knowledge_id": "JIM-K-0036"},
+    {"knowledge_id": "JIM-K-0038"}
+  ],
+  "edges": [
+    {
+      "edge_id": "TEST-E-0001",
+      "from": "JIM-K-0014",
+      "relation": "SCOPE_PARALLEL_TO",
+      "to": "JIM-K-0001",
+      "epistemic_status": "INFERRED",
+      "rationale": "Product 层音画协同与 Model 层音视频联合生成属不同层，按 Layer Preservation 保持平行。Normalization Review NR-0009 已判该 pair 为 SCOPE_PARALLEL。",
+      "limitations": "INFERENCE_BOUNDARY: 依据两项的 scope 与 NR-0009 判定；不能推出产品能力等同模型能力，也不能推出两层的效果关系。"
+    },
+    {
+      "edge_id": "TEST-E-0002",
+      "from": "JIM-K-0038",
+      "relation": "VERSION_CONTEXT_FOR",
+      "to": "JIM-K-0036",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "Seedance 2.0 的发布事实为 Seedance 2.5 发布页所记载的版本承接提供同类版本背景；两条发布事实同属发布声明这一层。",
+      "limitations": "只表示同类版本背景；不表示替代、下线或优劣关系。"
+    },
+    {
+      "edge_id": "TEST-E-0003",
+      "from": "JIM-K-0023",
+      "relation": "CONSTRAINS",
+      "to": "JIM-K-0015",
+      "epistemic_status": "INFERRED",
+      "rationale": "参考生视频的用途边界限制该能力的适用范围，两者同源同层。",
+      "limitations": "INFERENCE_BOUNDARY: 依据两项均来自同一小节的用途与能力表述；不能推出该边界的具体执行阈值。"
+    },
+    {
+      "edge_id": "TEST-E-0004",
+      "from": "JIM-K-0010",
+      "relation": "PROCEDURE_PRECEDES",
+      "to": "JIM-K-0011",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "两条均为同一产品页流程的步骤，第一步（打开工具并选择模型）明确先于第二步（上传素材并输入提示词）。",
+      "limitations": "只表示该产品页所述步骤先后；不表示教学顺序，也不表示未列出的界面跳转。"
+    },
+    {
+      "edge_id": "TEST-E-0005",
+      "from": "JIM-K-0015",
+      "relation": "PREREQUISITE_OF",
+      "to": "JIM-K-0014",
+      "epistemic_status": "INFERRED",
+      "rationale": "理解参考视频如何控制动态信息，是理解带声音视频与音画协同表述的前置知识。",
+      "limitations": "INFERENCE_BOUNDARY: 依据两条 Item 的语义与同层同版本范围；不能推出学习者据此即可执行生成操作。"
+    },
+    {
+      "edge_id": "TEST-E-0006",
+      "from": "JIM-K-0038",
+      "relation": "VERSION_VARIANT_OF",
+      "to": "JIM-K-0036",
+      "epistemic_status": "INFERRED",
+      "rationale": "VERSION_JUSTIFICATION: 两项同属「Seedance 版本发布」主题，version_scope 分别为 Seedance 2.0 与 Seedance 2.5，明确可比。",
+      "limitations": "INFERENCE_BOUNDARY: 仅表达同主题不同版本；不能推出 2.5 替代 2.0，也不能推出下线关系。"
+    },
+    {
+      "edge_id": "TEST-E-0007",
+      "from": "JIM-K-0010",
+      "relation": "STEP_OF",
+      "to": "JIM-K-0009",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "两条均为 PROCEDURE。K-0010 是产品页三步流程的第一步（进入 AI 视频工具并选择 Seedance 2.5 模型），K-0009 的 statement 明确把该流程说明为包含“打开 AI 视频生成器”等三个步骤，故该步骤属于该流程由证据直接支持。",
+      "limitations": "只表示该步骤是所述三步流程的组成部分；不表示教学顺序，也不表示步骤之外还有其它未列出的界面操作。"
+    },
+    {
+      "edge_id": "TEST-E-0008",
+      "from": "JIM-K-0011",
+      "relation": "STEP_OF",
+      "to": "JIM-K-0009",
+      "epistemic_status": "INFERRED",
+      "rationale": "两条均为 PROCEDURE，K-0011 是流程第二步，K-0009 是流程级说明。此处按 INFERRED 测试该状态分支，实际生产图中该关系标为 DOCUMENTED。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为两条 Item 的 statement 与同源 P10；不能推出该步骤的内部子步骤。"
+    }
+  ]
+}

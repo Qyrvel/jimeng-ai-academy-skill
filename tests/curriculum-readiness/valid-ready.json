@@ -1,0 +1,22 @@
+{
+  "track": "EXAMPLE: synthetic readiness test",
+  "domains": [
+    {
+      "domain_id": "CRD-01",
+      "name": "EXAMPLE foundation",
+      "criticality": "FOUNDATIONAL",
+      "target_competency": "EXAMPLE limited understanding",
+      "knowledge_support": [
+        "EXAMPLE-K-1"
+      ],
+      "graph_support": "EXAMPLE reviewed structure",
+      "known_gaps": [
+        "EXAMPLE optional illustration deferred"
+      ],
+      "status": "READY",
+      "decision": "ALLOW_CURRICULUM_DESIGN"
+    }
+  ],
+  "blocking_gaps": [],
+  "track_verdict": "READY_FOR_CURRICULUM_DESIGN"
+}

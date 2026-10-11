@@ -1,0 +1,85 @@
+{
+  "blueprint_id": "fixture-blueprint-hardseq",
+  "curriculum_id": "fixture-curriculum",
+  "version": "0.1",
+  "status": "blueprint",
+  "module_blueprints": [
+    {
+      "module_id": "JCA-M01",
+      "module_goal": "夹具：硬顺序反例专用（M02 的课序被故意颠倒）。",
+      "module_load_verdict": "COHESIVE",
+      "lesson_order": ["JCA-M01-L01"],
+      "lessons": [
+        {
+          "lesson_id": "JCA-M01-L01",
+          "module_id": "JCA-M01",
+          "title": "产品声明、模型声明与版本记录的区别",
+          "lesson_role": "FOUNDATION",
+          "purpose": "夹具。",
+          "learner_outcomes": [
+            "区分同主题下的产品层声明与模型层声明",
+            "解释版本记录只说明已保存的历史事实，不证明当前可用性",
+            "识别“模型具备该能力”不等于“该账号已开放该功能”"
+          ],
+          "knowledge_refs": ["JIM-K-0001", "JIM-K-0014", "JIM-K-0036", "JIM-K-0038", "JIM-K-0042", "JIM-K-0043"],
+          "graph_support_refs": ["JIM-E-0016", "JIM-E-0018", "JIM-E-0019"],
+          "scope": "Jimeng Product Layer 与 ByteDance Seed Model Layer 的声明分层；版本记录限已保存的发布事实。",
+          "order_basis": "PEDAGOGICAL",
+          "order_rationale": "PEDAGOGICAL_RATIONALE: 夹具。",
+          "practice_intent": "夹具。",
+          "completion_evidence": "夹具。",
+          "limitations": "夹具。",
+          "status": "blueprint"
+        }
+      ],
+      "module_completion_evidence": "夹具。",
+      "limitations": "夹具。"
+    },
+    {
+      "module_id": "JCA-M02",
+      "module_goal": "夹具：把 L02 排在 L01 之前，违反真实 CRR2-E-0004。",
+      "module_load_verdict": "COHESIVE",
+      "lesson_order": ["JCA-M02-L02", "JCA-M02-L01"],
+      "lessons": [
+        {
+          "lesson_id": "JCA-M02-L01",
+          "module_id": "JCA-M02",
+          "title": "图片生成流程与提示输入",
+          "lesson_role": "PROCEDURE",
+          "purpose": "夹具。",
+          "learner_outcomes": ["解释图片生成三步流程及其起点", "输入文本提示并触发一次图片生成"],
+          "knowledge_refs": ["JIM-K-0051", "JIM-K-0052"],
+          "graph_support_refs": ["CRR2-E-0002"],
+          "scope": "该官方产品页所述图片生成流程与 2026-10-04 观察到的 Jimeng Web 图片生成界面。",
+          "order_basis": "PEDAGOGICAL",
+          "order_rationale": "PEDAGOGICAL_RATIONALE: 夹具。",
+          "practice_intent": "夹具。",
+          "completion_evidence": "夹具。",
+          "limitations": "夹具。",
+          "status": "blueprint"
+        },
+        {
+          "lesson_id": "JCA-M02-L02",
+          "module_id": "JCA-M02",
+          "title": "查看生成结果与导出",
+          "lesson_role": "PROCEDURE",
+          "purpose": "夹具。",
+          "learner_outcomes": ["检查生成结果", "完成下载导出"],
+          "knowledge_refs": ["JIM-K-0053"],
+          "graph_support_refs": ["CRR2-E-0003", "CRR2-E-0004"],
+          "scope": "该官方产品页所述第三步“增强、定制和导出”与 2026-10-04 观察到的结果页行为。",
+          "order_basis": "GRAPH_CONSTRAINED",
+          "order_rationale": "夹具。",
+          "practice_intent": "夹具。",
+          "completion_evidence": "夹具。",
+          "limitations": "夹具。",
+          "status": "blueprint"
+        }
+      ],
+      "module_completion_evidence": "夹具。",
+      "limitations": "夹具。"
+    }
+  ],
+  "coverage_summary": {"module_count": 2, "lesson_count": 3, "mapped_module_knowledge_ref_count": 9, "unmapped_module_knowledge_ref_count": 0},
+  "sequence_summary": {"lesson_transition_count": 1, "graph_constrained_transition_count": 1, "pedagogical_transition_count": 0, "independent_transition_count": 0}
+}

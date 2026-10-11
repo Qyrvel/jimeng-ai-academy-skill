@@ -1,0 +1,26 @@
+{
+  "lesson_id": "JCA-M02-L01",
+  "module_id": "JCA-M02",
+  "title": "图片生成流程与提示输入",
+  "lesson_role": "PROCEDURE",
+  "scope": "夹具：该官方产品页所述图片生成流程与提示输入环节。",
+  "learner_outcomes": ["解释图片生成三步流程及其起点", "输入文本提示并触发一次图片生成"],
+  "knowledge_refs": ["JIM-K-0051", "JIM-K-0052"],
+  "graph_support_refs": ["CRR2-E-0002"],
+  "opening": "夹具 opening。",
+  "teaching_points": [
+    {
+      "point_id": "FIX-L01-P01",
+      "knowledge_refs": ["JIM-K-0051"],
+      "explanation": "夹具 explanation。",
+      "scope_note": "夹具 scope note。"
+    }
+  ],
+  "guided_practice": "夹具 guided practice。",
+  "independent_practice": "夹具 independent practice。",
+  "completion_check": "夹具 completion check。",
+  "boundaries_and_misconceptions": ["夹具边界。"],
+  "lesson_summary": "夹具 summary。",
+  "limitations": "夹具 limitations。",
+  "status": "pilot"
+}

@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: Jimeng AI Academy Skill
+message: "If you use or build on this project, please cite the repository and the version you used."
+type: software
+authors:
+  - name: Heks-null
+version: 1.0.0
+date-released: 2026-10-11
+license: Apache-2.0
+abstract: "An evidence-grounded Agent Skill and structured course system for systematic Jimeng/即梦 AI learning, assessment, mastery routing, and course evaluation."

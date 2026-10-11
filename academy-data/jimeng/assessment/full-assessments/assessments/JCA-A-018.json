@@ -1,0 +1,76 @@
+{
+  "assessment_id": "JCA-A-018",
+  "lesson_ids": [
+    "JCA-M07-L01"
+  ],
+  "lesson_pair_reason": "NOT_APPLICABLE",
+  "assessment_type": "APPLY_RULE",
+  "purpose": "测量 JCA-M07-L01 的两条 outcome：学生要面对一组输入情境，应用第 4.1 节的义务判断哪一项需要事先确认授权并说明依据。",
+  "target_outcomes": [
+    "识别不得输入或分享未经授权信息的要求",
+    "识别输入内容须为本人所有或已获授权、不得侵害他人权益的要求"
+  ],
+  "knowledge_refs": [
+    "JIM-K-0025",
+    "JIM-K-0026"
+  ],
+  "scope": "平台规则限 P14 所保存的即梦AI 用户服务协议第 4.1 节中与输入信息有关的命题，以及它们对输入动作的使用边界。",
+  "task": "对下列三类输入，逐项指出使用前需要核查的课内义务，并用一句话写出规则依据，不判断具体素材是否已获授权、是否侵权或是否合规：①一段包含他人手机号与公司内部编号的说明文字；②一张从网络下载的他人摄影作品；③你自己拍摄的街景照片。对③另说明：仅凭「自己拍摄」能否确定所有输入义务均已满足？最后写一句：为什么「我无法确认是否已授权」不能当作「已经授权」。",
+  "expected_evidence": "①三项需核查事项及依据：说明文字需核查未授权个人信息或保密信息的输入限制；他人摄影作品需核查本人所有或已获授权及不得侵害他人权益的要求；自拍街景仍需检查信息类型、权属与不侵权要求，不能仅凭拍摄者身份认定全部义务已满足。②一句说明无法确认授权不等于已获授权。只识别核查义务，不对具体素材作法律或授权充分性结论。",
+  "scoring_criteria": [
+    {
+      "criterion_id": "A018-C1",
+      "description": "识别说明文字需核查的信息类型义务",
+      "evidence_source": "判断结果与依据",
+      "weight": 2,
+      "pass_condition": "指出需要核查不得输入未经授权的个人信息或保密信息这一要求；不从情境描述直接认定已授权或违规。"
+    },
+    {
+      "criterion_id": "A018-C2",
+      "description": "识别他人摄影作品需核查的权属与不侵权义务",
+      "evidence_source": "判断结果与依据",
+      "weight": 2,
+      "pass_condition": "指出需要核查本人所有或已获授权且不得侵害他人权益这一要求；不从网络下载事实认定授权有效或侵权。"
+    },
+    {
+      "criterion_id": "A018-C3",
+      "description": "说明自拍情境仍需核查及其证据边界",
+      "evidence_source": "判断结果与依据",
+      "weight": 2,
+      "pass_condition": "指出仍需核查信息类型、权属与不侵权要求，且仅凭自己拍摄不能认定全部输入义务已满足；不对具体照片作权利或合规结论。"
+    },
+    {
+      "criterion_id": "A018-C4",
+      "description": "区分两类义务",
+      "evidence_source": "整体作答",
+      "weight": 2,
+      "pass_condition": "把「信息类型能不能进」与「进来的东西你有没有权利用」分开说明，未合并成一条模糊结论"
+    },
+    {
+      "criterion_id": "A018-C5",
+      "description": "不把无法确认当成已授权",
+      "evidence_source": "手写说明",
+      "weight": 2,
+      "pass_condition": "明确指出无法确认授权不等于已获授权"
+    }
+  ],
+  "max_score": 10,
+  "pass_score": 8,
+  "partial_credit_policy": "允许 partial credit：每条 criterion 独立按 0/1/2 计分。所需核查义务或边界说明正确且依据明确得 2；方向正确但依据或说明不完整得 1；未识别相应要求或给出相反结论得 0。不因用词与条款原文不同扣分。",
+  "allowed_support": [
+    "lesson notes",
+    "course outline"
+  ],
+  "disallowed_support": [
+    "external web search",
+    "unverified community tutorial",
+    "another person's completed answer"
+  ],
+  "feedback_boundary": "评分后只可告知：哪条 criterion 未达标、对应 Lesson（JCA-M07-L01）、以及「未说明 ≠ 允许」「无法确认授权 ≠ 已授权」两条 boundary 提醒。不得判断具体内容是否违规，也不得解释「未经授权」的判定标准。",
+  "alignment": {
+    "completion_check_alignment": "DIRECT",
+    "rationale": "JCA-M07-L01 的 completion_check 是「能识别所选条款的输入义务与权属要求，并能对给定输入指出至少一处需要事先确认授权的情形，同时说明依据」。C1/C2/C3 对三项判断与依据，C4/C5 对两类义务的区分与边界。"
+  },
+  "limitations": "只覆盖 P14 第 4.1 节所选命题；不判断具体内容是否违规、不解释判定标准、不提供授权取得方式；不构成完整政策或法律意见；本课不引入任何未验证的界面或功能；一次评估不代表长期掌握。",
+  "status": "full_course"
+}

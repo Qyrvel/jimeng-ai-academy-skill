@@ -1,0 +1,23 @@
+{
+  "graph_id": "test-invalid-enforcement-reverse",
+  "scope": "Semantic review fixture: rule -> enforcement. Expected machine Graph PASS and Integrity PASS; evidence-backed semantic review must REJECT (REVERSE_DIRECTION). No enforcement-role field exists; do not infer roles from keywords.",
+  "nodes": [
+    {
+      "knowledge_id": "JIM-K-0031"
+    },
+    {
+      "knowledge_id": "JIM-K-0035"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "ENF-E-0001",
+      "from": "JIM-K-0031",
+      "relation": "ENFORCEMENT_CONTEXT_FOR",
+      "to": "JIM-K-0035",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "DOCUMENTED_GROUP_REFERENCE: 故意反转 §4.4 规则与 §4.8 处理上下文。用于语义审查拒绝测试，不作为真实关系。",
+      "limitations": "仅用于测试方向规则；规则不为处理条款提供处理上下文。"
+    }
+  ]
+}

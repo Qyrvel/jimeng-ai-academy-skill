@@ -1,0 +1,33 @@
+name: Source or version update
+description: Propose a new/changed official source, observed product behavior, or version-context update.
+title: "[Source] "
+labels: [evidence]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Original source URL
+    validations:
+      required: true
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Layer
+      options: [Product, Model, API, Observed, Other]
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Evidence scope
+      description: State exactly which section/claim/state is being proposed.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Version / client / region / account context
+  - type: textarea
+    id: change
+    attributes:
+      label: What repository artifact should change?

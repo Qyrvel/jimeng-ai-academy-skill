@@ -1,0 +1,23 @@
+{
+  "graph_id": "test-negative-sentence",
+  "scope": "Gate 3.2-R2 semantic fixture; not production graph.",
+  "nodes": [
+    {
+      "knowledge_id": "JIM-K-0027"
+    },
+    {
+      "knowledge_id": "JIM-K-0028"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "POL-E-0008",
+      "from": "JIM-K-0027",
+      "relation": "PREREQUISITE_OF",
+      "to": "JIM-K-0028",
+      "epistemic_status": "INFERRED",
+      "rationale": "该 Edge 连接同一节（第4.2节）派生的两条 POLICY。前者的命题是「平台有权对 AI 内容添加标识」，后者的命题是「用户不得遮挡、涂抹、修改或删除平台添加的标识」。要理解后一条所禁止的行为对象（被添加的标识从何而来、为何存在），必须先理解前一条所确立的添加依据与添加主体。 此关系不是教学顺序。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为两条 POLICY 同属第4.2节、且后者的禁止对象由前者的添加行为产生；该依赖是理解层面的，不表示两条在适用上互为条件，也不表示第4.2节完整覆盖 AI 内容标识的全部规则。"
+    }
+  ]
+}

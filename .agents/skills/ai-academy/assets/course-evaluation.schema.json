@@ -1,0 +1,461 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ai-academy/course-evaluation.schema.json",
+  "title": "AI Academy Course Evaluation Contract",
+  "description": "Gate 4.7B course-level evaluation contract, evaluation snapshot, module evaluation result, course evaluation result and routing result. Stores rules and one-shot evaluation results only; never a learner record, never a numeric grade, never a synthetic Track level.",
+  "type": "object",
+  "definitions": {
+    "decision": {"type": "string", "enum": ["COMPLETE", "RETRY_REQUIRED", "REMEDIATION_REQUIRED", "BLOCKED"]},
+    "mastery_decision": {"type": "string", "enum": ["PASS", "RETRY", "REMEDIATION", "BLOCKED"]},
+    "lesson_id": {"type": "string", "minLength": 1, "pattern": "^JCA-M[0-9]{2}-L[0-9]{2}$"},
+    "module_id": {"type": "string", "minLength": 1, "pattern": "^JCA-M[0-9]{2}$"},
+    "mastery_unit_id": {"type": "string", "minLength": 1, "pattern": "^JCA-MU-L[0-9]{2}$"},
+    "outcome_ref": {"type": "string", "minLength": 1, "pattern": "^JCA-M[0-9]{2}-L[0-9]{2}#[0-9]+$"},
+    "non_empty_text": {"type": "string", "minLength": 1, "pattern": "\\S"},
+
+    "CourseEvaluationContract": {
+      "type": "object",
+      "required": ["contract_id", "course_id", "status", "decision_enum", "precedence",
+                   "lesson_mastery_input_contract", "module_aggregation_rule",
+                   "course_completion_rule", "hard_sequence_rule", "routing_rule",
+                   "track_completion_applicability", "invalid_snapshot_semantics",
+                   "derived_metric_policy", "no_student_state_boundary",
+                   "no_numeric_grade_boundary", "input_refs"],
+      "additionalProperties": true,
+      "properties": {
+        "contract_id": {"$ref": "#/definitions/non_empty_text"},
+        "course_id": {"type": "string", "const": "jimeng-creator-academy-v1"},
+        "status": {"type": "string", "enum": ["course_evaluation_contract"]},
+        "outcome_reference_form": {"$ref": "#/definitions/non_empty_text"},
+        "purpose": {"$ref": "#/definitions/non_empty_text"},
+        "decision_enum": {
+          "type": "array", "minItems": 4, "maxItems": 4,
+          "items": {"$ref": "#/definitions/decision"}
+        },
+        "forbidden_decisions": {"type": "array", "items": {"type": "string"}},
+        "precedence": {
+          "type": "array", "minItems": 4, "maxItems": 4,
+          "items": {"$ref": "#/definitions/decision"}
+        },
+        "lesson_mastery_input_contract": {
+          "type": "object",
+          "required": ["source", "decision_enum", "lesson_to_module_decision", "rule"],
+          "additionalProperties": false,
+          "properties": {
+            "source": {"$ref": "#/definitions/non_empty_text"},
+            "decision_enum": {
+              "type": "array", "minItems": 4, "maxItems": 4,
+              "items": {"$ref": "#/definitions/mastery_decision"}
+            },
+            "lesson_to_module_decision": {
+              "type": "object",
+              "required": ["PASS", "RETRY", "REMEDIATION", "BLOCKED"],
+              "additionalProperties": false,
+              "properties": {
+                "PASS": {"$ref": "#/definitions/decision"},
+                "RETRY": {"$ref": "#/definitions/decision"},
+                "REMEDIATION": {"$ref": "#/definitions/decision"},
+                "BLOCKED": {"$ref": "#/definitions/decision"}
+              }
+            },
+            "rule": {"$ref": "#/definitions/non_empty_text"}
+          }
+        },
+        "module_aggregation_rule": {
+          "type": "object",
+          "required": ["unit", "input", "ordered_conditions", "first_match_wins",
+                       "illegal_module_input", "illegal_module_input_rule"],
+          "additionalProperties": false,
+          "properties": {
+            "unit": {"type": "string", "const": "MODULE"},
+            "input": {"$ref": "#/definitions/non_empty_text"},
+            "ordered_conditions": {
+              "type": "array", "minItems": 4, "maxItems": 4,
+              "items": {
+                "type": "object",
+                "required": ["condition", "value", "module_status"],
+                "additionalProperties": false,
+                "properties": {
+                  "condition": {"type": "string",
+                                "enum": ["any_lesson_decision_is", "every_lesson_decision_is"]},
+                  "value": {"$ref": "#/definitions/mastery_decision"},
+                  "module_status": {"$ref": "#/definitions/decision"}
+                }
+              }
+            },
+            "first_match_wins": {"type": "boolean", "const": true},
+            "illegal_module_input": {"type": "array", "minItems": 1,
+                                     "items": {"$ref": "#/definitions/non_empty_text"}},
+            "illegal_module_input_rule": {"$ref": "#/definitions/non_empty_text"}
+          }
+        },
+        "course_completion_rule": {
+          "type": "object",
+          "required": ["unit", "complete_iff", "otherwise", "precedence",
+                       "complete_implies_empty_routing", "no_numeric_grade",
+                       "no_hidden_graduation_logic"],
+          "additionalProperties": false,
+          "properties": {
+            "unit": {"type": "string", "const": "COURSE"},
+            "complete_iff": {"type": "array", "minItems": 1,
+                             "items": {"$ref": "#/definitions/non_empty_text"}},
+            "otherwise": {"$ref": "#/definitions/non_empty_text"},
+            "precedence": {"type": "array", "minItems": 3,
+                           "items": {"$ref": "#/definitions/decision"}},
+            "complete_implies_empty_routing": {"type": "boolean", "const": true},
+            "no_numeric_grade": {"type": "boolean", "const": true},
+            "no_hidden_graduation_logic": {"$ref": "#/definitions/non_empty_text"}
+          }
+        },
+        "hard_sequence_rule": {
+          "type": "object",
+          "required": ["source", "legal_order_relations", "counts_are_recomputed", "reported",
+                       "later_unit_declared_pass_while_hard_prerequisite_not_pass",
+                       "inconsistent_snapshot_rule"],
+          "additionalProperties": false,
+          "properties": {
+            "source": {"$ref": "#/definitions/non_empty_text"},
+            "legal_order_relations": {
+              "type": "array", "minItems": 2,
+              "items": {"type": "string", "enum": ["PREREQUISITE_OF", "PROCEDURE_PRECEDES"]}
+            },
+            "counts_are_recomputed": {"type": "boolean", "const": true},
+            "reported": {"type": "array", "minItems": 1,
+                         "items": {"$ref": "#/definitions/non_empty_text"}},
+            "later_unit_declared_pass_while_hard_prerequisite_not_pass":
+              {"type": "string", "const": "INCONSISTENT_EVALUATION_SNAPSHOT"},
+            "inconsistent_snapshot_rule": {"$ref": "#/definitions/non_empty_text"}
+          }
+        },
+        "routing_rule": {
+          "type": "object",
+          "required": ["retry_targets", "remediation_targets", "blocked_targets",
+                       "blocked_by_mastery_units", "non_order_relation_rule", "lossless",
+                       "complete_rule"],
+          "additionalProperties": false,
+          "properties": {
+            "retry_targets": {"$ref": "#/definitions/non_empty_text"},
+            "remediation_targets": {"$ref": "#/definitions/non_empty_text"},
+            "blocked_targets": {"$ref": "#/definitions/non_empty_text"},
+            "blocked_by_mastery_units": {"$ref": "#/definitions/non_empty_text"},
+            "non_order_relation_rule": {"$ref": "#/definitions/non_empty_text"},
+            "lossless": {"$ref": "#/definitions/non_empty_text"},
+            "complete_rule": {"$ref": "#/definitions/non_empty_text"}
+          }
+        },
+        "track_completion_applicability": {
+          "type": "object",
+          "required": ["value", "basis", "rule"],
+          "additionalProperties": false,
+          "properties": {
+            "value": {"type": "string", "enum": ["NOT_APPLICABLE", "APPLICABLE"]},
+            "basis": {"$ref": "#/definitions/non_empty_text"},
+            "rule": {"$ref": "#/definitions/non_empty_text"}
+          }
+        },
+        "invalid_snapshot_semantics": {
+          "type": "object",
+          "required": ["codes", "rule"],
+          "additionalProperties": false,
+          "properties": {
+            "codes": {"type": "array", "minItems": 1,
+                      "items": {"$ref": "#/definitions/non_empty_text"}},
+            "rule": {"$ref": "#/definitions/non_empty_text"}
+          }
+        },
+        "derived_metric_policy": {
+          "type": "object",
+          "required": ["rule", "contract_stores_no_upstream_bulk_data"],
+          "additionalProperties": false,
+          "properties": {
+            "rule": {"$ref": "#/definitions/non_empty_text"},
+            "contract_stores_no_upstream_bulk_data": {"type": "boolean", "const": true}
+          }
+        },
+        "no_student_state_boundary": {
+          "type": "object",
+          "required": ["ephemeral_snapshot_only", "forbidden_fields", "rule"],
+          "additionalProperties": false,
+          "properties": {
+            "ephemeral_snapshot_only": {"type": "boolean", "const": true},
+            "forbidden_fields": {"type": "array", "minItems": 1,
+                                 "items": {"$ref": "#/definitions/non_empty_text"}},
+            "rule": {"$ref": "#/definitions/non_empty_text"}
+          }
+        },
+        "no_numeric_grade_boundary": {
+          "type": "object",
+          "required": ["forbidden_fields", "rule"],
+          "additionalProperties": false,
+          "properties": {
+            "forbidden_fields": {"type": "array", "minItems": 1,
+                                 "items": {"$ref": "#/definitions/non_empty_text"}},
+            "rule": {"$ref": "#/definitions/non_empty_text"}
+          }
+        },
+        "input_refs": {"type": "object", "minProperties": 1, "additionalProperties": true},
+        "recomputed_counts_policy": {"type": "object", "additionalProperties": true},
+        "governance_mandate": {"$ref": "#/definitions/GovernanceMandate"}
+      }
+    },
+
+    "GovernanceMandate": {
+      "type": "object",
+      "description": "The architecture mandate recorded with the contract: it names the governance layers this architecture sits between and what it is not responsible for. It is a declaration, not a runtime dependency.",
+      "required": ["interfaces_between", "not_responsible_for"],
+      "additionalProperties": false,
+      "properties": {
+        "interfaces_between": {"type": "array", "minItems": 2,
+                               "items": {"$ref": "#/definitions/non_empty_text"}},
+        "not_responsible_for": {"type": "array", "minItems": 1,
+                                "items": {"$ref": "#/definitions/non_empty_text"}}
+      }
+    },
+
+    "EvaluationSnapshot": {
+      "type": "object",
+      "description": "One ephemeral input to the pure course evaluation function. No student identity, no history, no attempts, no timestamps, no database key, no grade.",
+      "required": ["snapshot_id", "contract_id", "course_id", "lessons"],
+      "additionalProperties": false,
+      "properties": {
+        "snapshot_id": {"type": "string", "minLength": 1, "pattern": "^[A-Za-z0-9._:-]+$"},
+        "contract_id": {"$ref": "#/definitions/non_empty_text"},
+        "course_id": {"type": "string", "const": "jimeng-creator-academy-v1"},
+        "ephemeral": {"type": "boolean", "const": true},
+        "note": {"type": "string"},
+        "lessons": {
+          "type": "array",
+          "minItems": 1,
+          "description": "Exactly one declared decision per canonical Lesson. Missing, duplicate and extra entries are illegal snapshots, not incomplete results.",
+          "items": {"$ref": "#/definitions/SnapshotLessonResult"}
+        }
+      }
+    },
+
+    "SnapshotLessonResult": {
+      "type": "object",
+      "required": ["lesson_id", "decision"],
+      "additionalProperties": false,
+      "properties": {
+        "lesson_id": {"$ref": "#/definitions/lesson_id"},
+        "mastery_unit_id": {"$ref": "#/definitions/mastery_unit_id"},
+        "decision": {"$ref": "#/definitions/mastery_decision"},
+        "unmet_outcome_refs": {
+          "type": "array",
+          "description": "Only meaningful with decision REMEDIATION; every ref must belong to this Lesson.",
+          "items": {"$ref": "#/definitions/outcome_ref"}
+        },
+        "blocked_by_mastery_units": {
+          "type": "array",
+          "description": "Only meaningful with decision BLOCKED; every unit must be a legal hard prerequisite mastery unit of this Lesson.",
+          "items": {"$ref": "#/definitions/mastery_unit_id"}
+        }
+      }
+    },
+
+    "ModuleEvaluationResult": {
+      "type": "object",
+      "required": ["module_id", "lesson_count", "lesson_decisions", "lesson_results",
+                   "all_lessons_pass", "module_status"],
+      "additionalProperties": false,
+      "properties": {
+        "module_id": {"$ref": "#/definitions/module_id"},
+        "lesson_count": {"type": "integer", "minimum": 1},
+        "lesson_decisions": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {"$ref": "#/definitions/mastery_decision"}
+        },
+        "lesson_results": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["lesson_id", "mastery_unit_id", "decision"],
+            "additionalProperties": false,
+            "properties": {
+              "lesson_id": {"$ref": "#/definitions/lesson_id"},
+              "mastery_unit_id": {"$ref": "#/definitions/mastery_unit_id"},
+              "decision": {"$ref": "#/definitions/mastery_decision"}
+            }
+          }
+        },
+        "all_lessons_pass": {"type": "boolean"},
+        "module_status": {"$ref": "#/definitions/decision"}
+      }
+    },
+
+    "RoutingResult": {
+      "type": "object",
+      "required": ["retry_targets", "remediation_targets", "blocked_targets",
+                   "blocked_by_mastery_units"],
+      "additionalProperties": false,
+      "properties": {
+        "retry_targets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["lesson_id", "mastery_unit_id", "assessment_evidence_required"],
+            "additionalProperties": false,
+            "properties": {
+              "lesson_id": {"$ref": "#/definitions/lesson_id"},
+              "mastery_unit_id": {"$ref": "#/definitions/mastery_unit_id"},
+              "assessment_evidence_required": {"type": "boolean", "const": true}
+            }
+          }
+        },
+        "remediation_targets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["lesson_id", "mastery_unit_id", "unmet_outcome_refs",
+                         "recommended_review_scope"],
+            "additionalProperties": false,
+            "properties": {
+              "lesson_id": {"$ref": "#/definitions/lesson_id"},
+              "mastery_unit_id": {"$ref": "#/definitions/mastery_unit_id"},
+              "unmet_outcome_refs": {"type": "array", "items": {"$ref": "#/definitions/outcome_ref"}},
+              "recommended_review_scope": {"$ref": "#/definitions/non_empty_text"}
+            }
+          }
+        },
+        "blocked_targets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["lesson_id", "mastery_unit_id", "unmet_hard_prerequisite_units"],
+            "additionalProperties": false,
+            "properties": {
+              "lesson_id": {"$ref": "#/definitions/lesson_id"},
+              "mastery_unit_id": {"$ref": "#/definitions/mastery_unit_id"},
+              "unmet_hard_prerequisite_units": {"type": "array",
+                "items": {"$ref": "#/definitions/mastery_unit_id"}}
+            }
+          }
+        },
+        "blocked_by_mastery_units": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["mastery_unit_id", "lesson_id", "blocks_lesson_id"],
+            "additionalProperties": false,
+            "properties": {
+              "mastery_unit_id": {"$ref": "#/definitions/mastery_unit_id"},
+              "lesson_id": {"oneOf": [{"$ref": "#/definitions/lesson_id"}, {"type": "null"}]},
+              "blocks_lesson_id": {"$ref": "#/definitions/lesson_id"}
+            }
+          }
+        }
+      }
+    },
+
+    "HardSequenceIntegrity": {
+      "type": "object",
+      "required": ["hard_transition_count", "supporting_hard_edge_count", "hard_transitions",
+                   "satisfied_count", "violation_count", "violations", "satisfied"],
+      "additionalProperties": false,
+      "properties": {
+        "hard_transition_count": {"type": "integer", "minimum": 0},
+        "supporting_hard_edge_count": {"type": "integer", "minimum": 0},
+        "hard_transitions": {
+          "type": "object",
+          "additionalProperties": {"type": "array", "items": {"$ref": "#/definitions/lesson_id"}}
+        },
+        "satisfied_count": {"type": "integer", "minimum": 0},
+        "violation_count": {"type": "integer", "minimum": 0},
+        "violations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["lesson_id", "hard_prerequisite_lesson_id", "declared_decision",
+                         "hard_prerequisite_decision"],
+            "additionalProperties": false,
+            "properties": {
+              "lesson_id": {"$ref": "#/definitions/lesson_id"},
+              "hard_prerequisite_lesson_id": {"$ref": "#/definitions/lesson_id"},
+              "declared_decision": {"$ref": "#/definitions/mastery_decision"},
+              "hard_prerequisite_decision": {"$ref": "#/definitions/mastery_decision"}
+            }
+          }
+        },
+        "satisfied": {"type": "boolean"}
+      }
+    },
+
+    "DerivedMetrics": {
+      "type": "object",
+      "description": "Every field here is recomputed by the validator from the result's own source fields; a stored value that disagrees is a FAIL.",
+      "required": ["module_count", "complete_module_count", "lesson_count", "pass_lesson_count",
+                   "retry_lesson_count", "remediation_lesson_count", "blocked_lesson_count",
+                   "retry_target_count", "remediation_target_count", "blocked_target_count",
+                   "blocked_by_mastery_unit_count", "hard_sequence_violation_count",
+                   "student_state_field_count", "numeric_grade_field_count",
+                   "synthetic_track_entity_count"],
+      "additionalProperties": false,
+      "properties": {
+        "module_count": {"type": "integer", "minimum": 0},
+        "complete_module_count": {"type": "integer", "minimum": 0},
+        "lesson_count": {"type": "integer", "minimum": 0},
+        "pass_lesson_count": {"type": "integer", "minimum": 0},
+        "retry_lesson_count": {"type": "integer", "minimum": 0},
+        "remediation_lesson_count": {"type": "integer", "minimum": 0},
+        "blocked_lesson_count": {"type": "integer", "minimum": 0},
+        "retry_target_count": {"type": "integer", "minimum": 0},
+        "remediation_target_count": {"type": "integer", "minimum": 0},
+        "blocked_target_count": {"type": "integer", "minimum": 0},
+        "blocked_by_mastery_unit_count": {"type": "integer", "minimum": 0},
+        "hard_sequence_violation_count": {"type": "integer", "minimum": 0},
+        "student_state_field_count": {"type": "integer", "const": 0},
+        "numeric_grade_field_count": {"type": "integer", "const": 0},
+        "synthetic_track_entity_count": {"type": "integer", "const": 0}
+      }
+    },
+
+    "CourseEvaluationResult": {
+      "type": "object",
+      "required": ["evaluation_id", "contract_id", "course_id", "snapshot_id", "module_results",
+                   "module_statuses", "course_status", "hard_sequence_integrity",
+                   "track_completion_applicability", "track_results", "retry_targets",
+                   "remediation_targets", "blocked_targets", "blocked_by_mastery_units", "derived"],
+      "additionalProperties": false,
+      "properties": {
+        "evaluation_id": {"$ref": "#/definitions/non_empty_text"},
+        "contract_id": {"$ref": "#/definitions/non_empty_text"},
+        "course_id": {"type": "string", "const": "jimeng-creator-academy-v1"},
+        "snapshot_id": {"$ref": "#/definitions/non_empty_text"},
+        "module_results": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/definitions/ModuleEvaluationResult"}
+        },
+        "module_statuses": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {"$ref": "#/definitions/decision"}
+        },
+        "course_status": {"$ref": "#/definitions/decision"},
+        "hard_sequence_integrity": {"$ref": "#/definitions/HardSequenceIntegrity"},
+        "track_completion_applicability": {"type": "string", "enum": ["NOT_APPLICABLE", "APPLICABLE"]},
+        "track_results": {
+          "type": "array",
+          "description": "Must be empty while CANONICAL_TRACK_ENTITY_COUNT = 0; a synthetic Track level is forbidden.",
+          "maxItems": 0,
+          "items": {"type": "object"}
+        },
+        "retry_targets": {"type": "array"},
+        "remediation_targets": {"type": "array"},
+        "blocked_targets": {"type": "array"},
+        "blocked_by_mastery_units": {"type": "array"},
+        "derived": {"$ref": "#/definitions/DerivedMetrics"}
+      }
+    }
+  },
+
+  "properties": {
+    "contract": {"$ref": "#/definitions/CourseEvaluationContract"},
+    "snapshot": {"$ref": "#/definitions/EvaluationSnapshot"},
+    "module_result": {"$ref": "#/definitions/ModuleEvaluationResult"},
+    "course_result": {"$ref": "#/definitions/CourseEvaluationResult"},
+    "routing": {"$ref": "#/definitions/RoutingResult"}
+  }
+}

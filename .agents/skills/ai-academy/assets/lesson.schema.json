@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AI Academy Lesson",
+  "description": "Gate 4.3 lesson contract. Top-level fields are fixed by lesson-policy.md section 11. JSON Schema constrains structure only; it does not judge natural-language truth.",
+  "type": "object",
+  "required": [
+    "lesson_id",
+    "module_id",
+    "title",
+    "lesson_role",
+    "scope",
+    "learner_outcomes",
+    "knowledge_refs",
+    "graph_support_refs",
+    "opening",
+    "teaching_points",
+    "guided_practice",
+    "independent_practice",
+    "completion_check",
+    "boundaries_and_misconceptions",
+    "lesson_summary",
+    "limitations",
+    "status"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "lesson_id": {"type": "string", "minLength": 1, "pattern": "^JCA-M[0-9]{2}-L[0-9]{2}$"},
+    "module_id": {"type": "string", "minLength": 1, "pattern": "^JCA-M[0-9]{2}$"},
+    "title": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "lesson_role": {"type": "string", "enum": ["FOUNDATION", "CONCEPT", "PROCEDURE", "APPLICATION", "SAFETY", "INTEGRATION"]},
+    "scope": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "learner_outcomes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1, "pattern": "\\S"}
+    },
+    "knowledge_refs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1, "pattern": "\\S"}
+    },
+    "graph_support_refs": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1, "pattern": "\\S"}
+    },
+    "opening": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "teaching_points": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["point_id", "knowledge_refs", "explanation", "scope_note"],
+        "additionalProperties": false,
+        "properties": {
+          "point_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "knowledge_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {"type": "string", "minLength": 1, "pattern": "\\S"}
+          },
+          "explanation": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "scope_note": {"type": "string", "minLength": 1, "pattern": "\\S"}
+        }
+      }
+    },
+    "guided_practice": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "independent_practice": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "completion_check": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "boundaries_and_misconceptions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1, "pattern": "\\S"}
+    },
+    "lesson_summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "limitations": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "status": {"type": "string", "enum": ["pilot", "full_course"]}
+  }
+}

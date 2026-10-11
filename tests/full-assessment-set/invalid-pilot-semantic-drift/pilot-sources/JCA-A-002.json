@@ -1,0 +1,72 @@
+{
+  "assessment_id": "JCA-A-002",
+  "lesson_ids": [
+    "JCA-M02-L03"
+  ],
+  "lesson_pair_reason": "NOT_APPLICABLE",
+  "assessment_type": "CLASSIFY",
+  "purpose": "验证非操作型的概念知识也能被可观察证据测量：学生要把一组陈述正确归入「模型层能力声明」或「产品流程步骤」，并分别写出两个方向的「不能推出」。",
+  "target_outcomes": [
+    "区分 Seedream 模型层能力声明与图片产品流程步骤",
+    "解释产品流程证据不能证明模型能力，模型能力也不能证明产品可用"
+  ],
+  "knowledge_refs": [
+    "JIM-K-0004",
+    "JIM-K-0005",
+    "JIM-K-0006",
+    "JIM-K-0007",
+    "JIM-K-0008"
+  ],
+  "scope": "夹具缺陷：pilot 源文件的 frozen scope 与已晋升 canonical 不同，用于触发 pilot promotion 语义漂移。",
+  "task": "给下列五条陈述归类，每条标注「模型层能力声明」或「产品流程步骤」，并各写一句「它不能推出什么」：①支持生成包含较多文字的图像；②登录后进入「生成图像」下的「文本/图像到图像生成」；③支持响应空间标注进行交互编辑；④在聊天框输入文本提示后点击「生成」；⑤支持图层分离。最后另写两句：为什么产品流程证据不能证明模型能力；为什么模型能力不能证明产品可用。",
+  "expected_evidence": "①五条陈述的归类结果（①③⑤属模型层能力声明，②④属产品流程步骤）；②每条一句「不能推出什么」；③两句方向相反的边界解释。",
+  "scoring_criteria": [
+    {
+      "criterion_id": "A002-C1",
+      "description": "把三条模型层能力声明正确归类",
+      "evidence_source": "归类结果",
+      "weight": 2,
+      "pass_condition": "①③⑤ 三条均标为「模型层能力声明」"
+    },
+    {
+      "criterion_id": "A002-C2",
+      "description": "把两条产品流程步骤正确归类",
+      "evidence_source": "归类结果",
+      "weight": 2,
+      "pass_condition": "②④ 两条均标为「产品流程步骤」"
+    },
+    {
+      "criterion_id": "A002-C3",
+      "description": "写出「模型层声明不能推出产品可用」的理由",
+      "evidence_source": "手写理由",
+      "weight": 2,
+      "pass_condition": "指出模型层声明的范围说明为「不代表即梦产品已部署或开放」"
+    },
+    {
+      "criterion_id": "A002-C4",
+      "description": "写出「产品流程步骤不能推出模型能力」的理由",
+      "evidence_source": "手写理由",
+      "weight": 2,
+      "pass_condition": "指出在界面上完成某流程只说明该流程成立，不构成模型能力的证据"
+    }
+  ],
+  "max_score": 8,
+  "pass_score": 6,
+  "partial_credit_policy": "允许 partial credit：归类类 criterion 按 0 / 1 / 2 计分——五条中错 1 条得 1，错 2 条及以上得 0。理由类 criterion 若方向正确但未说明依据，得 1。不因用词与参考答案不同而扣分，只要归类结论正确。",
+  "allowed_support": [
+    "lesson notes",
+    "course outline"
+  ],
+  "disallowed_support": [
+    "external web search",
+    "unverified community tutorial",
+    "another person's completed answer"
+  ],
+  "feedback_boundary": "评分后只可告知：哪条 criterion 未达标、对应 Lesson（JCA-M02-L03）、以及「模型具备 ≠ 产品可用」这一 boundary 提醒。不得补充 Registry 之外的模型能力清单。",
+  "alignment": {
+    "completion_check_alignment": "DIRECT",
+    "rationale": "JCA-M02-L03 的 completion_check 是「能正确区分模型层能力声明与产品流程步骤，并能用一句话分别说出两个方向的『不能推出』」。本 assessment 的 C1/C2 直接对应前一半，C3/C4 直接对应后一半。"
+  },
+  "limitations": "只覆盖 Seedream 5.0 Pro 的官方模型能力说明与产品流程步骤的区分；不评分具体模型能力细节、不涉及参数或效果；一次评估不代表长期掌握。",
+  "status": "pilot"
+}

@@ -1,0 +1,33 @@
+{
+  "snapshot_id": "canonical-all-pass",
+  "contract_id": "jimeng-creator-academy-v1-course-evaluation",
+  "course_id": "jimeng-creator-academy-v1",
+  "ephemeral": true,
+  "note": "Canonical demonstration snapshot: every canonical Lesson mastery unit declared PASS against the production mastery decision contract. It is not a learner record, not a grade and not stored progress.",
+  "lessons": [
+    {"lesson_id": "JCA-M01-L01", "decision": "PASS"},
+    {"lesson_id": "JCA-M01-L02", "decision": "PASS"},
+    {"lesson_id": "JCA-M02-L01", "decision": "PASS"},
+    {"lesson_id": "JCA-M02-L02", "decision": "PASS"},
+    {"lesson_id": "JCA-M02-L03", "decision": "PASS"},
+    {"lesson_id": "JCA-M03-L01", "decision": "PASS"},
+    {"lesson_id": "JCA-M03-L02", "decision": "PASS"},
+    {"lesson_id": "JCA-M03-L03", "decision": "PASS"},
+    {"lesson_id": "JCA-M04-L01", "decision": "PASS"},
+    {"lesson_id": "JCA-M04-L02", "decision": "PASS"},
+    {"lesson_id": "JCA-M04-L03", "decision": "PASS"},
+    {"lesson_id": "JCA-M05-L01", "decision": "PASS"},
+    {"lesson_id": "JCA-M05-L02", "decision": "PASS"},
+    {"lesson_id": "JCA-M05-L03", "decision": "PASS"},
+    {"lesson_id": "JCA-M06-L01", "decision": "PASS"},
+    {"lesson_id": "JCA-M06-L02", "decision": "PASS"},
+    {"lesson_id": "JCA-M07-L01", "decision": "PASS"},
+    {"lesson_id": "JCA-M07-L02", "decision": "PASS"},
+    {"lesson_id": "JCA-M07-L03", "decision": "PASS"},
+    {"lesson_id": "JCA-M07-L04", "decision": "PASS"},
+    {"lesson_id": "JCA-M08-L01", "decision": "PASS"},
+    {"lesson_id": "JCA-M08-L02", "decision": "PASS"},
+    {"lesson_id": "JCA-M08-L03", "decision": "PASS"},
+    {"lesson_id": "JCA-M08-L04", "decision": "PASS"}
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "graph_id": "test-invalid-procedure-cycle",
+  "scope": "Integrity fixture: PROCEDURE_PRECEDES forms a 2-cycle. Expected: FAIL with PROCEDURE_ORDER_CYCLE_REVIEW.",
+  "nodes": [
+    {"knowledge_id": "JIM-K-0010"},
+    {"knowledge_id": "JIM-K-0011"}
+  ],
+  "edges": [
+    {
+      "edge_id": "POC-E-0001",
+      "from": "JIM-K-0010",
+      "relation": "PROCEDURE_PRECEDES",
+      "to": "JIM-K-0011",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "用于构造流程顺序环。",
+      "limitations": "测试用。"
+    },
+    {
+      "edge_id": "POC-E-0002",
+      "from": "JIM-K-0011",
+      "relation": "PROCEDURE_PRECEDES",
+      "to": "JIM-K-0010",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "用于构造流程顺序环，应被拒绝。",
+      "limitations": "测试用。"
+    }
+  ]
+}

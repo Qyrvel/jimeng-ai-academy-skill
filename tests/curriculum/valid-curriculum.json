@@ -1,0 +1,53 @@
+{
+  "curriculum_id": "fixture-valid-curriculum",
+  "track": "Fixture Track",
+  "version": "0.1",
+  "status": "skeleton",
+  "track_goal": "机械夹具：证明一个覆盖全部 READY FOUNDATIONAL / CORE 域的最小骨架可以通过 Validator。",
+  "entry_profile": "零基础夹具学习者。",
+  "exit_profile": "能完成夹具范围的最终能力。",
+  "scope": "夹具范围；不代表真实课程设计。",
+  "module_order": ["JCA-M01", "JCA-M02"],
+  "modules": [
+    {
+      "module_id": "JCA-M01",
+      "title": "夹具：基础认知",
+      "purpose": "夹具目的：覆盖两个 FOUNDATIONAL 域。",
+      "target_domain_ids": ["CRD-01", "CRD-02"],
+      "learner_outcomes": ["区分夹具产品声明与夹具模型声明"],
+      "knowledge_refs": ["JIM-K-0001", "JIM-K-0056"],
+      "graph_support_refs": ["CRR2-E-0005"],
+      "scope": "夹具 scope：Jimeng Product Layer。",
+      "order_basis": "PEDAGOGICAL",
+      "order_rationale": "PEDAGOGICAL_RATIONALE: 夹具先建立认知；不是知识 prerequisite。",
+      "limitations": "夹具 limitations：不代表真实课程。",
+      "status": "skeleton"
+    },
+    {
+      "module_id": "JCA-M02",
+      "title": "夹具：核心覆盖",
+      "purpose": "夹具目的：覆盖七个 CORE 域。",
+      "target_domain_ids": ["CRD-03", "CRD-04", "CRD-05", "CRD-06", "CRD-07", "CRD-08", "CRD-09"],
+      "learner_outcomes": ["完成一次夹具生成并保存"],
+      "knowledge_refs": ["JIM-K-0051", "JIM-K-0009", "JIM-K-0047", "JIM-K-0057", "JIM-K-0060", "JIM-K-0031", "JIM-K-0029"],
+      "graph_support_refs": ["CRR2-E-0002"],
+      "scope": "夹具 scope：Jimeng Product Layer / Seedance 2.5 / Seedream 5.0 Pro。",
+      "order_basis": "PEDAGOGICAL",
+      "order_rationale": "PEDAGOGICAL_RATIONALE: 夹具安排在认知之后；不是知识 prerequisite。",
+      "limitations": "夹具 limitations：无真实教学含义。",
+      "status": "skeleton"
+    }
+  ],
+  "deferred_domains": [
+    {"domain_id": "CRD-11", "disposition": "deferred_dynamic", "reason": "夹具：动态信息不纳入稳定骨架。"},
+    {"domain_id": "CRD-12", "disposition": "deferred_optional", "reason": "夹具：可选范围延后。"},
+    {"domain_id": "CRD-13", "disposition": "out_of_scope", "reason": "夹具：不属于本 Track。"}
+  ],
+  "coverage_summary": {
+    "module_count": 2,
+    "foundational_domain_count": 2,
+    "core_domain_count": 7,
+    "mapped_mandatory_count": 9,
+    "unmapped_mandatory_count": 0
+  }
+}

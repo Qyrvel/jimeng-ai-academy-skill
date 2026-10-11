@@ -1,0 +1,92 @@
+{
+  "track": "AI Academy fixture track for Coverage Validator unit tests",
+  "assessment_date": "2026-10-03",
+  "domains": [
+    {
+      "domain": "Fixture Unknown Id Domain",
+      "criticality": "CORE",
+      "source_ingestion_decision": "ALLOW_INGESTION",
+      "knowledge_item_ids": ["FIXC-K-0001", "FIXC-K-9999"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "含不存在的 knowledge_id，应被 REFERENCE 检查拒绝。",
+      "known_gap": "用于测试引用检查。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "Fixture Missing With Items Domain",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": ["FIXC-K-0002"],
+      "coverage_status": "MISSING",
+      "coverage_rationale": "MISSING 却带有 Item，违反 RULE 1，应被拒绝。",
+      "known_gap": "用于测试 RULE 1。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "Fixture Covered Without Items Domain",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": [],
+      "coverage_status": "COVERED",
+      "coverage_rationale": "COVERED 却没有 Item，违反 RULE 2，应被拒绝。",
+      "known_gap": "用于测试 RULE 2。",
+      "next_action": "GRAPH_PILOT_ELIGIBLE"
+    },
+    {
+      "domain": "Fixture Deferred With Ingestion Domain",
+      "criticality": "DYNAMIC",
+      "source_ingestion_decision": "ALLOW_INGESTION",
+      "knowledge_item_ids": [],
+      "coverage_status": "DEFERRED",
+      "coverage_rationale": "DEFERRED 搭配 ALLOW_INGESTION，违反 RULE 3，应被拒绝。",
+      "known_gap": "用于测试 RULE 3。",
+      "next_action": "DEFER"
+    },
+    {
+      "domain": "Fixture Not Applicable With Graph Domain",
+      "criticality": "OUT_OF_SCOPE",
+      "source_ingestion_decision": "NOT_APPLICABLE",
+      "knowledge_item_ids": [],
+      "coverage_status": "NOT_APPLICABLE",
+      "coverage_rationale": "NOT_APPLICABLE 却要求 GRAPH_PILOT_ELIGIBLE，违反 RULE 4，应被拒绝。",
+      "known_gap": "用于测试 RULE 4。",
+      "next_action": "GRAPH_PILOT_ELIGIBLE"
+    },
+    {
+      "domain": "Fixture Defer With Graph Domain",
+      "criticality": "DYNAMIC",
+      "source_ingestion_decision": "DEFER",
+      "knowledge_item_ids": [],
+      "coverage_status": "DEFERRED",
+      "coverage_rationale": "DEFER 搭配 GRAPH_PILOT_ELIGIBLE，违反 RULE 6，应被拒绝。",
+      "known_gap": "用于测试 RULE 6。",
+      "next_action": "GRAPH_PILOT_ELIGIBLE"
+    },
+    {
+      "domain": "Fixture Illegal Status Domain",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": [],
+      "coverage_status": "MOSTLY_COVERED",
+      "coverage_rationale": "coverage_status 不在枚举内，应被拒绝。",
+      "known_gap": "用于测试 coverage_status 枚举。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "Fixture Rule 7 Empty Rationale Domain",
+      "criticality": "CORE",
+      "source_ingestion_decision": "ALLOW_INGESTION",
+      "knowledge_item_ids": [],
+      "coverage_status": "MISSING",
+      "coverage_rationale": "   ",
+      "known_gap": "用于测试 RULE 7 的说明非空要求。",
+      "next_action": "RETURN_TO_SOURCE"
+    }
+  ],
+  "item_accounting": {
+    "registry_total": 99,
+    "mapped_item_ids": ["FIXC-K-0001", "FIXC-K-0002", "FIXC-K-9001"],
+    "unmapped_item_ids": ["FIXC-K-0002", "FIXC-K-0003"]
+  },
+  "overall_recommendation": "NEEDS_TARGETED_INGESTION"
+}

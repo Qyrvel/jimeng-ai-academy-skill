@@ -1,0 +1,259 @@
+{
+  "artifact": "tests/full-assessment-set/_baseline/baseline-fingerprint.json",
+  "baseline_root": "tests/full-assessment-set/_baseline",
+  "shared": true,
+  "design": "HYBRID_DECLARATIVE_BASELINE",
+  "purpose": "one shared immutable fixture-local baseline every full-set fixture declares its assessment references into",
+  "legal_source_modes": ["LOCAL_BYTE_EXACT_COPY", "CANONICAL_DIRECT_DECLARATION"],
+  "source_mode_split_rule": "a canonical member pair is LOCAL_BYTE_EXACT_COPY only when both of its siblings' bytes are reproducible exactly by the current write channel; every other member is CANONICAL_DIRECT_DECLARATION",
+  "assessment_member_count": 23,
+  "assessment_file_count": 46,
+  "local_byte_exact_copy_count": 17,
+  "canonical_direct_declaration_count": 6,
+  "local_byte_exact_file_count": 34,
+  "canonical_direct_file_count": 12,
+  "canonical_source_dir": "academy-data/jimeng/assessment/full-assessments/assessments",
+  "pilot_source_dir": "academy-data/jimeng/assessment/pilot-assessments",
+  "declared_path_rule": "each fixture declares every member's assessment_files path; a LOCAL_BYTE_EXACT_COPY member is declared at the shared _baseline/assessments/ mirror, a CANONICAL_DIRECT_DECLARATION member at the exact frozen canonical source path, and a member the fixture shadows at the fixture-local pair it persists",
+  "missing_file_target_rule": "the first eligible LOCAL_BYTE_EXACT_COPY member in canonical assessment order",
+  "missing_file_target_id": "JCA-A-006",
+  "mirror_rule": "a canonical member pair is mirrored verbatim into _baseline/assessments/ only when both siblings' bytes are reproducible exactly by this file toolchain; a pair that cannot be reproduced exactly is never mirrored, and its fixtures declare the canonical source path itself",
+  "entries": [
+    {
+      "assessment_id": "JCA-A-001",
+      "source_mode": "CANONICAL_DIRECT_DECLARATION",
+      "declared_json_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-001.json",
+      "declared_markdown_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-001.md",
+      "files": [
+        {"suffix": ".json", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-001.json", "canonical_sha256": "cc2c226ec2d5ad85a1276720ce39cce8bee17cebec5e644c301f6d8765b19dba", "canonical_byte_size": 4330, "canonical_contains_cr": false, "declared_authority": "canonical_source", "declared_sha256": "cc2c226ec2d5ad85a1276720ce39cce8bee17cebec5e644c301f6d8765b19dba", "declared_byte_size": 4330, "declared_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-001.json", "declared_byte_identical": true},
+        {"suffix": ".md", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-001.md", "canonical_sha256": "2768e2cd2a84d4425ae9820be66d67e7d347b1a3e3018d475c309c9d1b6a905a", "canonical_byte_size": 4021, "canonical_contains_cr": true, "declared_authority": "canonical_source", "declared_sha256": "2768e2cd2a84d4425ae9820be66d67e7d347b1a3e3018d475c309c9d1b6a905a", "declared_byte_size": 4021, "declared_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-001.md", "declared_byte_identical": true}
+      ]
+    },
+    {
+      "assessment_id": "JCA-A-002",
+      "source_mode": "CANONICAL_DIRECT_DECLARATION",
+      "declared_json_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-002.json",
+      "declared_markdown_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-002.md",
+      "files": [
+        {"suffix": ".json", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-002.json", "canonical_sha256": "2db22d3d68b240d868e5c9b3d7d8b8db12de575d29ac63e15c6f638321496cf2", "canonical_byte_size": 4005, "canonical_contains_cr": false, "declared_authority": "canonical_source", "declared_sha256": "2db22d3d68b240d868e5c9b3d7d8b8db12de575d29ac63e15c6f638321496cf2", "declared_byte_size": 4005, "declared_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-002.json", "declared_byte_identical": true},
+        {"suffix": ".md", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-002.md", "canonical_sha256": "a312314aaf1dfb488b3962cafa57421a01998bec8e2ff0e148ba3b65fb8c5550", "canonical_byte_size": 3704, "canonical_contains_cr": true, "declared_authority": "canonical_source", "declared_sha256": "a312314aaf1dfb488b3962cafa57421a01998bec8e2ff0e148ba3b65fb8c5550", "declared_byte_size": 3704, "declared_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-002.md", "declared_byte_identical": true}
+      ]
+    },
+    {
+      "assessment_id": "JCA-A-003",
+      "source_mode": "CANONICAL_DIRECT_DECLARATION",
+      "declared_json_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-003.json",
+      "declared_markdown_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-003.md",
+      "files": [
+        {"suffix": ".json", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-003.json", "canonical_sha256": "169c3f0329dbdae0f07eb9cfd8d1f19ba649456eef7b02d1f6460340ac385c9e", "canonical_byte_size": 4333, "canonical_contains_cr": false, "declared_authority": "canonical_source", "declared_sha256": "169c3f0329dbdae0f07eb9cfd8d1f19ba649456eef7b02d1f6460340ac385c9e", "declared_byte_size": 4333, "declared_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-003.json", "declared_byte_identical": true},
+        {"suffix": ".md", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-003.md", "canonical_sha256": "2fbc81a997cb8173271fc048052932ed846c81b6a5719346a3e9880092aa6e54", "canonical_byte_size": 3912, "canonical_contains_cr": true, "declared_authority": "canonical_source", "declared_sha256": "2fbc81a997cb8173271fc048052932ed846c81b6a5719346a3e9880092aa6e54", "declared_byte_size": 3912, "declared_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-003.md", "declared_byte_identical": true}
+      ]
+    },
+    {
+      "assessment_id": "JCA-A-004",
+      "source_mode": "CANONICAL_DIRECT_DECLARATION",
+      "declared_json_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-004.json",
+      "declared_markdown_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-004.md",
+      "files": [
+        {"suffix": ".json", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-004.json", "canonical_sha256": "553fe27b814d73dc3400ff4b52330ad580a15f400d952c64c4d1246d4df0775d", "canonical_byte_size": 4115, "canonical_contains_cr": false, "declared_authority": "canonical_source", "declared_sha256": "553fe27b814d73dc3400ff4b52330ad580a15f400d952c64c4d1246d4df0775d", "declared_byte_size": 4115, "declared_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-004.json", "declared_byte_identical": true},
+        {"suffix": ".md", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-004.md", "canonical_sha256": "59a51a45089f0c24220171fe329df5db036cdd0e808f4a6609e3b3a5a1d6da36", "canonical_byte_size": 3694, "canonical_contains_cr": true, "declared_authority": "canonical_source", "declared_sha256": "59a51a45089f0c24220171fe329df5db036cdd0e808f4a6609e3b3a5a1d6da36", "declared_byte_size": 3694, "declared_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-004.md", "declared_byte_identical": true}
+      ]
+    },
+    {
+      "assessment_id": "JCA-A-005",
+      "source_mode": "CANONICAL_DIRECT_DECLARATION",
+      "declared_json_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-005.json",
+      "declared_markdown_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-005.md",
+      "files": [
+        {"suffix": ".json", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-005.json", "canonical_sha256": "228c8a5351732d43a6f78537b297104abfd92f00eab9a3c2b83ae46ece37310a", "canonical_byte_size": 4674, "canonical_contains_cr": true, "declared_authority": "canonical_source", "declared_sha256": "228c8a5351732d43a6f78537b297104abfd92f00eab9a3c2b83ae46ece37310a", "declared_byte_size": 4674, "declared_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-005.json", "declared_byte_identical": true},
+        {"suffix": ".md", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-005.md", "canonical_sha256": "ae2a312c20dc6021eeb7f65f5f60f5843bbf80107632e5cc5982bdd15514e402", "canonical_byte_size": 3775, "canonical_contains_cr": true, "declared_authority": "canonical_source", "declared_sha256": "ae2a312c20dc6021eeb7f65f5f60f5843bbf80107632e5cc5982bdd15514e402", "declared_byte_size": 3775, "declared_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-005.md", "declared_byte_identical": true}
+      ]
+    },
+    {
+      "assessment_id": "JCA-A-006",
+      "source_mode": "LOCAL_BYTE_EXACT_COPY",
+      "declared_json_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-006.json",
+      "declared_markdown_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-006.md",
+      "files": [
+        {"suffix": ".json", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-006.json", "canonical_sha256": "583da14529159eb10f012b06b81684ddc8d3534a0819af0fc73100a58aa72cf6", "canonical_byte_size": 4469, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "583da14529159eb10f012b06b81684ddc8d3534a0819af0fc73100a58aa72cf6", "declared_byte_size": 4469, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-006.json", "declared_byte_identical": true},
+        {"suffix": ".md", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-006.md", "canonical_sha256": "99662d4f4b6fb7e165f640300e53676687e6e16de867691d62e84e31cad3f605", "canonical_byte_size": 3796, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "99662d4f4b6fb7e165f640300e53676687e6e16de867691d62e84e31cad3f605", "declared_byte_size": 3796, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-006.md", "declared_byte_identical": true}
+      ]
+    },
+    {
+      "assessment_id": "JCA-A-007",
+      "source_mode": "LOCAL_BYTE_EXACT_COPY",
+      "declared_json_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-007.json",
+      "declared_markdown_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-007.md",
+      "files": [
+        {"suffix": ".json", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-007.json", "canonical_sha256": "474a1b647743e5365a44dd6134e1058eb1b570932396c173f7d5f2508d7bcaef", "canonical_byte_size": 3839, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "474a1b647743e5365a44dd6134e1058eb1b570932396c173f7d5f2508d7bcaef", "declared_byte_size": 3839, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-007.json", "declared_byte_identical": true},
+        {"suffix": ".md", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-007.md", "canonical_sha256": "3e351f6fb06095a8d985e8fc7969c1d15d397616b076fb8995978fcb975abd87", "canonical_byte_size": 3185, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "3e351f6fb06095a8d985e8fc7969c1d15d397616b076fb8995978fcb975abd87", "declared_byte_size": 3185, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-007.md", "declared_byte_identical": true}
+      ]
+    },
+    {
+      "assessment_id": "JCA-A-008",
+      "source_mode": "LOCAL_BYTE_EXACT_COPY",
+      "declared_json_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-008.json",
+      "declared_markdown_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-008.md",
+      "files": [
+        {"suffix": ".json", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-008.json", "canonical_sha256": "e9aeef8b85a175f9c58ddb19cdc8e3ae0c9638214bb4b45117481e013edc5552", "canonical_byte_size": 3793, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "e9aeef8b85a175f9c58ddb19cdc8e3ae0c9638214bb4b45117481e013edc5552", "declared_byte_size": 3793, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-008.json", "declared_byte_identical": true},
+        {"suffix": ".md", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-008.md", "canonical_sha256": "edee049de40a66af55a4a0d532d1004c3878e894dfd5d908d1b7cfe27ee795d1", "canonical_byte_size": 3179, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "edee049de40a66af55a4a0d532d1004c3878e894dfd5d908d1b7cfe27ee795d1", "declared_byte_size": 3179, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-008.md", "declared_byte_identical": true}
+      ]
+    },
+    {
+      "assessment_id": "JCA-A-009",
+      "source_mode": "LOCAL_BYTE_EXACT_COPY",
+      "declared_json_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-009.json",
+      "declared_markdown_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-009.md",
+      "files": [
+        {"suffix": ".json", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-009.json", "canonical_sha256": "9491f1e9dcb6f8a34067f4e23475d9c52d253200482438eb0662897014d91469", "canonical_byte_size": 3486, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "9491f1e9dcb6f8a34067f4e23475d9c52d253200482438eb0662897014d91469", "declared_byte_size": 3486, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-009.json", "declared_byte_identical": true},
+        {"suffix": ".md", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-009.md", "canonical_sha256": "14dccfd897b89ec031aee5c1f100a3ed58461d616c0fd65c61adf24987313f38", "canonical_byte_size": 2881, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "14dccfd897b89ec031aee5c1f100a3ed58461d616c0fd65c61adf24987313f38", "declared_byte_size": 2881, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-009.md", "declared_byte_identical": true}
+      ]
+    },
+    {
+      "assessment_id": "JCA-A-010",
+      "source_mode": "LOCAL_BYTE_EXACT_COPY",
+      "declared_json_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-010.json",
+      "declared_markdown_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-010.md",
+      "files": [
+        {"suffix": ".json", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-010.json", "canonical_sha256": "78359a075c5df4017af3e13b9e7291ee7eb4531eacde22e11b0b200f5287022f", "canonical_byte_size": 3482, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "78359a075c5df4017af3e13b9e7291ee7eb4531eacde22e11b0b200f5287022f", "declared_byte_size": 3482, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-010.json", "declared_byte_identical": true},
+        {"suffix": ".md", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-010.md", "canonical_sha256": "995e3bf37b6782f72c4474bcccd9e3ccae1748239b03c8ae685ffdeed637e590", "canonical_byte_size": 2932, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "995e3bf37b6782f72c4474bcccd9e3ccae1748239b03c8ae685ffdeed637e590", "declared_byte_size": 2932, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-010.md", "declared_byte_identical": true}
+      ]
+    },
+    {
+      "assessment_id": "JCA-A-011",
+      "source_mode": "LOCAL_BYTE_EXACT_COPY",
+      "declared_json_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-011.json",
+      "declared_markdown_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-011.md",
+      "files": [
+        {"suffix": ".json", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-011.json", "canonical_sha256": "14471d418e1ca631995914ca0a30f3b58045fb5340c16a1290a3d3efba2c0045", "canonical_byte_size": 3666, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "14471d418e1ca631995914ca0a30f3b58045fb5340c16a1290a3d3efba2c0045", "declared_byte_size": 3666, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-011.json", "declared_byte_identical": true},
+        {"suffix": ".md", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-011.md", "canonical_sha256": "99a4074a2699546fd5172cc3338f024cb4cc9bbcaddb970c632093468d1a9e33", "canonical_byte_size": 3098, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "99a4074a2699546fd5172cc3338f024cb4cc9bbcaddb970c632093468d1a9e33", "declared_byte_size": 3098, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-011.md", "declared_byte_identical": true}
+      ]
+    },
+    {
+      "assessment_id": "JCA-A-012",
+      "source_mode": "LOCAL_BYTE_EXACT_COPY",
+      "declared_json_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-012.json",
+      "declared_markdown_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-012.md",
+      "files": [
+        {"suffix": ".json", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-012.json", "canonical_sha256": "7aa719fc82979f4ccc342c9c0ff996c03b2579bdd768158c00ea56efc947b024", "canonical_byte_size": 3462, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "7aa719fc82979f4ccc342c9c0ff996c03b2579bdd768158c00ea56efc947b024", "declared_byte_size": 3462, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-012.json", "declared_byte_identical": true},
+        {"suffix": ".md", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-012.md", "canonical_sha256": "8ddd92f7f47efb7f429c570d009428cd9b3aa7af03bb694045273fbef73c3970", "canonical_byte_size": 2933, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "8ddd92f7f47efb7f429c570d009428cd9b3aa7af03bb694045273fbef73c3970", "declared_byte_size": 2933, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-012.md", "declared_byte_identical": true}
+      ]
+    },
+    {
+      "assessment_id": "JCA-A-013",
+      "source_mode": "LOCAL_BYTE_EXACT_COPY",
+      "declared_json_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-013.json",
+      "declared_markdown_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-013.md",
+      "files": [
+        {"suffix": ".json", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-013.json", "canonical_sha256": "7434540f78329891470dad1930baf2b22abd3a64b585542866e6a3d6004ace28", "canonical_byte_size": 3685, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "7434540f78329891470dad1930baf2b22abd3a64b585542866e6a3d6004ace28", "declared_byte_size": 3685, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-013.json", "declared_byte_identical": true},
+        {"suffix": ".md", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-013.md", "canonical_sha256": "af191b8ea246302388de3092d2f8249616954b826cc831b6998741db916f1d33", "canonical_byte_size": 3129, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "af191b8ea246302388de3092d2f8249616954b826cc831b6998741db916f1d33", "declared_byte_size": 3129, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-013.md", "declared_byte_identical": true}
+      ]
+    },
+    {
+      "assessment_id": "JCA-A-014",
+      "source_mode": "LOCAL_BYTE_EXACT_COPY",
+      "declared_json_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-014.json",
+      "declared_markdown_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-014.md",
+      "files": [
+        {"suffix": ".json", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-014.json", "canonical_sha256": "9694ffcc3b6dd355fd0e804c078f2896d4a5f59aceb54542539dd5ac520c53b5", "canonical_byte_size": 4155, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "9694ffcc3b6dd355fd0e804c078f2896d4a5f59aceb54542539dd5ac520c53b5", "declared_byte_size": 4155, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-014.json", "declared_byte_identical": true},
+        {"suffix": ".md", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-014.md", "canonical_sha256": "2a80562c63bb2a079260b4f03d969c0ea800d133b72e8d6f54cdf4973be05ed0", "canonical_byte_size": 3542, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "2a80562c63bb2a079260b4f03d969c0ea800d133b72e8d6f54cdf4973be05ed0", "declared_byte_size": 3542, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-014.md", "declared_byte_identical": true}
+      ]
+    },
+    {
+      "assessment_id": "JCA-A-015",
+      "source_mode": "LOCAL_BYTE_EXACT_COPY",
+      "declared_json_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-015.json",
+      "declared_markdown_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-015.md",
+      "files": [
+        {"suffix": ".json", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-015.json", "canonical_sha256": "fe7d21fb33867b6d3907220b18d1d356559d524f091c18e876e3f570dae9c0fc", "canonical_byte_size": 4333, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "fe7d21fb33867b6d3907220b18d1d356559d524f091c18e876e3f570dae9c0fc", "declared_byte_size": 4333, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-015.json", "declared_byte_identical": true},
+        {"suffix": ".md", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-015.md", "canonical_sha256": "de63023a7e092f72729e9e3b962f5e506cba66759d197a84d02d050398f35125", "canonical_byte_size": 3704, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "de63023a7e092f72729e9e3b962f5e506cba66759d197a84d02d050398f35125", "declared_byte_size": 3704, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-015.md", "declared_byte_identical": true}
+      ]
+    },
+    {
+      "assessment_id": "JCA-A-016",
+      "source_mode": "LOCAL_BYTE_EXACT_COPY",
+      "declared_json_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-016.json",
+      "declared_markdown_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-016.md",
+      "files": [
+        {"suffix": ".json", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-016.json", "canonical_sha256": "e491f86de4adffcd516045cf5ee07f2f671681c81cdc02a94ded452c5d74adc9", "canonical_byte_size": 4202, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "e491f86de4adffcd516045cf5ee07f2f671681c81cdc02a94ded452c5d74adc9", "declared_byte_size": 4202, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-016.json", "declared_byte_identical": true},
+        {"suffix": ".md", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-016.md", "canonical_sha256": "d849aabff9e58c474f0ed5f6ff7298b577d222a8427624c1699e0829256da41c", "canonical_byte_size": 3617, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "d849aabff9e58c474f0ed5f6ff7298b577d222a8427624c1699e0829256da41c", "declared_byte_size": 3617, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-016.md", "declared_byte_identical": true}
+      ]
+    },
+    {
+      "assessment_id": "JCA-A-017",
+      "source_mode": "LOCAL_BYTE_EXACT_COPY",
+      "declared_json_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-017.json",
+      "declared_markdown_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-017.md",
+      "files": [
+        {"suffix": ".json", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-017.json", "canonical_sha256": "d064cbed04d8479b527b64d60de07c67ac04acd468792942e08aa47d4e67f3d1", "canonical_byte_size": 4398, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "d064cbed04d8479b527b64d60de07c67ac04acd468792942e08aa47d4e67f3d1", "declared_byte_size": 4398, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-017.json", "declared_byte_identical": true},
+        {"suffix": ".md", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-017.md", "canonical_sha256": "cf14eea52cde3c37de1ca3a71e12022291cf5af7fe7c59198675a937be98deba", "canonical_byte_size": 3818, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "cf14eea52cde3c37de1ca3a71e12022291cf5af7fe7c59198675a937be98deba", "declared_byte_size": 3818, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-017.md", "declared_byte_identical": true}
+      ]
+    },
+    {
+      "assessment_id": "JCA-A-018",
+      "source_mode": "CANONICAL_DIRECT_DECLARATION",
+      "declared_json_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-018.json",
+      "declared_markdown_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-018.md",
+      "files": [
+        {"suffix": ".json", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-018.json", "canonical_sha256": "a7d75aeec8745bb9bd59baecab7f2790818b71f9757253f296a3ba2d775d9a70", "canonical_byte_size": 5009, "canonical_contains_cr": true, "declared_authority": "canonical_source", "declared_sha256": "a7d75aeec8745bb9bd59baecab7f2790818b71f9757253f296a3ba2d775d9a70", "declared_byte_size": 5009, "declared_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-018.json", "declared_byte_identical": true},
+        {"suffix": ".md", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-018.md", "canonical_sha256": "cb8f7aa6039972488e6667e1c55548b6f2668aef89a42005122710c5fe6209bb", "canonical_byte_size": 4161, "canonical_contains_cr": true, "declared_authority": "canonical_source", "declared_sha256": "cb8f7aa6039972488e6667e1c55548b6f2668aef89a42005122710c5fe6209bb", "declared_byte_size": 4161, "declared_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-018.md", "declared_byte_identical": true}
+      ]
+    },
+    {
+      "assessment_id": "JCA-A-019",
+      "source_mode": "LOCAL_BYTE_EXACT_COPY",
+      "declared_json_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-019.json",
+      "declared_markdown_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-019.md",
+      "files": [
+        {"suffix": ".json", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-019.json", "canonical_sha256": "6bbb037993eb06941c47974954e016d053d6de01c4ffbb6d22fbde2bc206fcbe", "canonical_byte_size": 4240, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "6bbb037993eb06941c47974954e016d053d6de01c4ffbb6d22fbde2bc206fcbe", "declared_byte_size": 4240, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-019.json", "declared_byte_identical": true},
+        {"suffix": ".md", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-019.md", "canonical_sha256": "13d74a42211698d5686ce2d0b2865e25cfe461047f62f0ab02d3e7620edb3cfa", "canonical_byte_size": 3677, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "13d74a42211698d5686ce2d0b2865e25cfe461047f62f0ab02d3e7620edb3cfa", "declared_byte_size": 3677, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-019.md", "declared_byte_identical": true}
+      ]
+    },
+    {
+      "assessment_id": "JCA-A-020",
+      "source_mode": "LOCAL_BYTE_EXACT_COPY",
+      "declared_json_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-020.json",
+      "declared_markdown_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-020.md",
+      "files": [
+        {"suffix": ".json", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-020.json", "canonical_sha256": "c0565f33d0db5e60ad67573e5e9850c8ae21c493843192e13b0e69d13dab2db8", "canonical_byte_size": 4148, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "c0565f33d0db5e60ad67573e5e9850c8ae21c493843192e13b0e69d13dab2db8", "declared_byte_size": 4148, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-020.json", "declared_byte_identical": true},
+        {"suffix": ".md", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-020.md", "canonical_sha256": "a11adf0a6425463e1a28aa6788f3d51bfd94fa37e3c4a103962a2b345e770bf9", "canonical_byte_size": 3550, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "a11adf0a6425463e1a28aa6788f3d51bfd94fa37e3c4a103962a2b345e770bf9", "declared_byte_size": 3550, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-020.md", "declared_byte_identical": true}
+      ]
+    },
+    {
+      "assessment_id": "JCA-A-021",
+      "source_mode": "LOCAL_BYTE_EXACT_COPY",
+      "declared_json_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-021.json",
+      "declared_markdown_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-021.md",
+      "files": [
+        {"suffix": ".json", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-021.json", "canonical_sha256": "db9a2185c66e923e8666bab548c8785cffa67bb3d473638702bfc0f058d1acca", "canonical_byte_size": 3796, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "db9a2185c66e923e8666bab548c8785cffa67bb3d473638702bfc0f058d1acca", "declared_byte_size": 3796, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-021.json", "declared_byte_identical": true},
+        {"suffix": ".md", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-021.md", "canonical_sha256": "850f5561276a5b7a58a3419bb41a161ceaeaefa329366ea5dbc42055257ddce7", "canonical_byte_size": 3258, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "850f5561276a5b7a58a3419bb41a161ceaeaefa329366ea5dbc42055257ddce7", "declared_byte_size": 3258, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-021.md", "declared_byte_identical": true}
+      ]
+    },
+    {
+      "assessment_id": "JCA-A-022",
+      "source_mode": "LOCAL_BYTE_EXACT_COPY",
+      "declared_json_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-022.json",
+      "declared_markdown_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-022.md",
+      "files": [
+        {"suffix": ".json", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-022.json", "canonical_sha256": "b648d1ae106f72d00aae2b7d6846451524ba0ed7a28301d2ca65de477f51ccbf", "canonical_byte_size": 4100, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "b648d1ae106f72d00aae2b7d6846451524ba0ed7a28301d2ca65de477f51ccbf", "declared_byte_size": 4100, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-022.json", "declared_byte_identical": true},
+        {"suffix": ".md", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-022.md", "canonical_sha256": "2a9962185bfd5d0dfc0533570ddf24b302da6637bd6586afcd751eaa3729519c", "canonical_byte_size": 3534, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "2a9962185bfd5d0dfc0533570ddf24b302da6637bd6586afcd751eaa3729519c", "declared_byte_size": 3534, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-022.md", "declared_byte_identical": true}
+      ]
+    },
+    {
+      "assessment_id": "JCA-A-023",
+      "source_mode": "LOCAL_BYTE_EXACT_COPY",
+      "declared_json_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-023.json",
+      "declared_markdown_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-023.md",
+      "files": [
+        {"suffix": ".json", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-023.json", "canonical_sha256": "0b734d8e9f26f2a0bf7a74ffc5f94c5e2fb9f1556bd7ecf7f0843fb86741e0e5", "canonical_byte_size": 3884, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "0b734d8e9f26f2a0bf7a74ffc5f94c5e2fb9f1556bd7ecf7f0843fb86741e0e5", "declared_byte_size": 3884, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-023.json", "declared_byte_identical": true},
+        {"suffix": ".md", "canonical_path": "academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-023.md", "canonical_sha256": "7fbde6d12d3e3233090b00b3a6e0a5814a38526af6d1668be273c47a9d132c0a", "canonical_byte_size": 3309, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "7fbde6d12d3e3233090b00b3a6e0a5814a38526af6d1668be273c47a9d132c0a", "declared_byte_size": 3309, "declared_path": "tests/full-assessment-set/_baseline/assessments/JCA-A-023.md", "declared_byte_identical": true}
+      ]
+    }
+  ],
+  "pilot_sources": [
+    {"assessment_id": "JCA-A-001", "source_mode": "LOCAL_BYTE_EXACT_COPY", "canonical_path": "academy-data/jimeng/assessment/pilot-assessments/JCA-A-001.json", "canonical_sha256": "93318aaf5b6c0ddb05f182aa0363d6bd144f3bcc8256fe3fb535f04556ae5579", "canonical_byte_size": 4324, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "93318aaf5b6c0ddb05f182aa0363d6bd144f3bcc8256fe3fb535f04556ae5579", "declared_byte_size": 4324, "declared_path": "tests/full-assessment-set/_baseline/pilot-sources/JCA-A-001.json", "declared_byte_identical": true},
+    {"assessment_id": "JCA-A-002", "source_mode": "LOCAL_BYTE_EXACT_COPY", "canonical_path": "academy-data/jimeng/assessment/pilot-assessments/JCA-A-002.json", "canonical_sha256": "a4a604f813bb959d41d0e6bcfaa47c77cd1b0c6442dedd086fb52262103dc207", "canonical_byte_size": 3999, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "a4a604f813bb959d41d0e6bcfaa47c77cd1b0c6442dedd086fb52262103dc207", "declared_byte_size": 3999, "declared_path": "tests/full-assessment-set/_baseline/pilot-sources/JCA-A-002.json", "declared_byte_identical": true},
+    {"assessment_id": "JCA-A-003", "source_mode": "LOCAL_BYTE_EXACT_COPY", "canonical_path": "academy-data/jimeng/assessment/pilot-assessments/JCA-A-003.json", "canonical_sha256": "3711440bf5110a6448003e1cea541191f23683e4258857c59ac6c23a02abdeba", "canonical_byte_size": 4327, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "3711440bf5110a6448003e1cea541191f23683e4258857c59ac6c23a02abdeba", "declared_byte_size": 4327, "declared_path": "tests/full-assessment-set/_baseline/pilot-sources/JCA-A-003.json", "declared_byte_identical": true},
+    {"assessment_id": "JCA-A-004", "source_mode": "LOCAL_BYTE_EXACT_COPY", "canonical_path": "academy-data/jimeng/assessment/pilot-assessments/JCA-A-004.json", "canonical_sha256": "c0d89cd0404c1d5a8498c22641e022954553cb231c9e854e00632463c6ec8616", "canonical_byte_size": 4109, "canonical_contains_cr": false, "declared_authority": "_baseline_mirror", "declared_sha256": "c0d89cd0404c1d5a8498c22641e022954553cb231c9e854e00632463c6ec8616", "declared_byte_size": 4109, "declared_path": "tests/full-assessment-set/_baseline/pilot-sources/JCA-A-004.json", "declared_byte_identical": true}
+  ]
+}

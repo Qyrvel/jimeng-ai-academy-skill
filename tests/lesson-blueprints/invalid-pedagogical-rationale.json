@@ -1,0 +1,74 @@
+{
+  "blueprint_id": "fixture-invalid-pedagogical-rationale",
+  "curriculum_id": "fixture-curriculum",
+  "version": "0.1",
+  "status": "blueprint",
+  "module_blueprints": [
+    {
+      "module_id": "JCA-M01",
+      "module_goal": "夹具目标 1。",
+      "module_load_verdict": "COHESIVE",
+      "lesson_order": ["JCA-M01-L01"],
+      "lessons": [
+        {
+          "lesson_id": "JCA-M01-L01",
+          "module_id": "JCA-M01",
+          "title": "夹具课 1",
+          "lesson_role": "FOUNDATION",
+          "purpose": "夹具目的。",
+          "learner_outcomes": ["区分夹具声明。"],
+          "knowledge_refs": ["JIM-K-0001", "JIM-K-0014"],
+          "graph_support_refs": [],
+          "scope": "夹具 scope。",
+          "order_basis": "PEDAGOGICAL",
+          "order_rationale": "PEDAGOGICAL_RATIONALE: 夹具理由。",
+          "practice_intent": "夹具练习。",
+          "completion_evidence": "夹具证据。",
+          "limitations": "夹具 limitations。",
+          "status": "blueprint"
+        }
+      ],
+      "module_completion_evidence": "夹具模块证据。",
+      "limitations": "夹具 limitations。"
+    },
+    {
+      "module_id": "JCA-M02",
+      "module_goal": "夹具目标 2：故意漏掉 PEDAGOGICAL_RATIONALE: 标记。",
+      "module_load_verdict": "COHESIVE",
+      "lesson_order": ["JCA-M02-L01"],
+      "lessons": [
+        {
+          "lesson_id": "JCA-M02-L01",
+          "module_id": "JCA-M02",
+          "title": "夹具课 2",
+          "lesson_role": "PROCEDURE",
+          "purpose": "夹具目的。",
+          "learner_outcomes": ["完成夹具生成。"],
+          "knowledge_refs": ["JIM-K-0051", "JIM-K-0052", "JIM-K-0053"],
+          "graph_support_refs": [],
+          "scope": "夹具 scope。",
+          "order_basis": "PEDAGOGICAL",
+          "order_rationale": "这一课排在后面是因为课程这样安排更顺手。",
+          "practice_intent": "夹具练习。",
+          "completion_evidence": "夹具证据。",
+          "limitations": "夹具 limitations。",
+          "status": "blueprint"
+        }
+      ],
+      "module_completion_evidence": "夹具模块证据。",
+      "limitations": "夹具 limitations。"
+    }
+  ],
+  "coverage_summary": {
+    "module_count": 2,
+    "lesson_count": 2,
+    "mapped_module_knowledge_ref_count": 5,
+    "unmapped_module_knowledge_ref_count": 0
+  },
+  "sequence_summary": {
+    "lesson_transition_count": 0,
+    "graph_constrained_transition_count": 0,
+    "pedagogical_transition_count": 0,
+    "independent_transition_count": 0
+  }
+}

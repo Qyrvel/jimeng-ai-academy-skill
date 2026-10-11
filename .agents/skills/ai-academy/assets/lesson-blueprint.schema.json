@@ -1,0 +1,136 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AI Academy Lesson Blueprint",
+  "description": "Gate 4.2 minimal lesson blueprint contract. Root, module blueprint and lesson fields are fixed by lesson-blueprint-policy.md; no extra ontology fields.",
+  "type": "object",
+  "required": [
+    "blueprint_id",
+    "curriculum_id",
+    "version",
+    "status",
+    "module_blueprints",
+    "coverage_summary",
+    "sequence_summary"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "blueprint_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "curriculum_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "version": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "status": {"type": "string", "enum": ["blueprint"]},
+    "module_blueprints": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "module_id",
+          "module_goal",
+          "module_load_verdict",
+          "lesson_order",
+          "lessons",
+          "module_completion_evidence",
+          "limitations"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "module_id": {"type": "string", "minLength": 1, "pattern": "^JCA-M[0-9]{2}$"},
+          "module_goal": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "module_load_verdict": {"type": "string", "enum": ["COHESIVE", "HEAVY_BUT_COHESIVE", "OVERLOADED"]},
+          "lesson_order": {
+            "type": "array",
+            "minItems": 1,
+            "items": {"type": "string", "minLength": 1, "pattern": "\\S"}
+          },
+          "lessons": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "lesson_id",
+                "module_id",
+                "title",
+                "lesson_role",
+                "purpose",
+                "learner_outcomes",
+                "knowledge_refs",
+                "graph_support_refs",
+                "scope",
+                "order_basis",
+                "order_rationale",
+                "practice_intent",
+                "completion_evidence",
+                "limitations",
+                "status"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "lesson_id": {"type": "string", "minLength": 1, "pattern": "^JCA-M[0-9]{2}-L[0-9]{2}$"},
+                "module_id": {"type": "string", "minLength": 1, "pattern": "^JCA-M[0-9]{2}$"},
+                "title": {"type": "string", "minLength": 1, "pattern": "\\S"},
+                "lesson_role": {"type": "string", "enum": ["FOUNDATION", "CONCEPT", "PROCEDURE", "APPLICATION", "SAFETY", "INTEGRATION"]},
+                "purpose": {"type": "string", "minLength": 1, "pattern": "\\S"},
+                "learner_outcomes": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {"type": "string", "minLength": 1, "pattern": "\\S"}
+                },
+                "knowledge_refs": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {"type": "string", "minLength": 1, "pattern": "\\S"}
+                },
+                "graph_support_refs": {
+                  "type": "array",
+                  "items": {"type": "string", "minLength": 1, "pattern": "\\S"}
+                },
+                "scope": {"type": "string", "minLength": 1, "pattern": "\\S"},
+                "order_basis": {"type": "string", "enum": ["GRAPH_CONSTRAINED", "PEDAGOGICAL", "INDEPENDENT"]},
+                "order_rationale": {"type": "string", "minLength": 1, "pattern": "\\S"},
+                "practice_intent": {"type": "string", "minLength": 1, "pattern": "\\S"},
+                "completion_evidence": {"type": "string", "minLength": 1, "pattern": "\\S"},
+                "limitations": {"type": "string", "minLength": 1, "pattern": "\\S"},
+                "status": {"type": "string", "enum": ["blueprint"]}
+              }
+            }
+          },
+          "module_completion_evidence": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "limitations": {"type": "string", "minLength": 1, "pattern": "\\S"}
+        }
+      }
+    },
+    "coverage_summary": {
+      "type": "object",
+      "required": [
+        "module_count",
+        "lesson_count",
+        "mapped_module_knowledge_ref_count",
+        "unmapped_module_knowledge_ref_count"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "module_count": {"type": "integer", "minimum": 1},
+        "lesson_count": {"type": "integer", "minimum": 1},
+        "mapped_module_knowledge_ref_count": {"type": "integer", "minimum": 0},
+        "unmapped_module_knowledge_ref_count": {"type": "integer", "minimum": 0}
+      }
+    },
+    "sequence_summary": {
+      "type": "object",
+      "required": [
+        "lesson_transition_count",
+        "graph_constrained_transition_count",
+        "pedagogical_transition_count",
+        "independent_transition_count"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "lesson_transition_count": {"type": "integer", "minimum": 0},
+        "graph_constrained_transition_count": {"type": "integer", "minimum": 0},
+        "pedagogical_transition_count": {"type": "integer", "minimum": 0},
+        "independent_transition_count": {"type": "integer", "minimum": 0}
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "course_id": "jimeng-creator-academy-v1",
+  "curriculum_id": "jimeng-creator-academy-v1",
+  "blueprint_id": "jimeng-creator-academy-v1-blueprint",
+  "version": "1.0",
+  "status": "assembled_v1",
+  "scope": "面向零基础普通创作者的即梦创作入门课程包：Jimeng Web 客户端、Seedance 2.5 与 Seedream 5.0 Pro 产品层可见行为、以及 P14 所保存平台规则第 4.1–4.8 节所选命题。不覆盖其它客户端、账号/地区差异、完整模型菜单、API 接入、专业影视流程、评估与学习状态体系。",
+  "module_order": ["JCA-M01", "JCA-M02", "JCA-M03", "JCA-M04", "JCA-M05", "JCA-M06", "JCA-M07", "JCA-M08"],
+  "lesson_order_by_module": {
+    "JCA-M01": ["JCA-M01-L01", "JCA-M01-L02"],
+    "JCA-M02": ["JCA-M02-L01", "JCA-M02-L02", "JCA-M02-L03"],
+    "JCA-M03": ["JCA-M03-L01", "JCA-M03-L02", "JCA-M03-L03"],
+    "JCA-M04": ["JCA-M04-L01", "JCA-M04-L02", "JCA-M04-L03"],
+    "JCA-M05": ["JCA-M05-L01", "JCA-M05-L02", "JCA-M05-L03"],
+    "JCA-M06": ["JCA-M06-L01", "JCA-M06-L02"],
+    "JCA-M07": ["JCA-M07-L01", "JCA-M07-L02", "JCA-M07-L03", "JCA-M07-L04"],
+    "JCA-M08": ["JCA-M08-L01", "JCA-M08-L02", "JCA-M08-L03", "JCA-M08-L04"]
+  },
+  "lesson_files": [
+    {"lesson_id": "JCA-M01-L01", "json_path": "lessons/JCA-M01-L01.json", "markdown_path": "lessons/JCA-M01-L01.md", "module_id": "JCA-M01", "role": "FOUNDATION"},
+    {"lesson_id": "JCA-M01-L02", "json_path": "lessons/JCA-M01-L02.json", "markdown_path": "lessons/JCA-M01-L02.md", "module_id": "JCA-M01", "role": "FOUNDATION"},
+    {"lesson_id": "JCA-M02-L01", "json_path": "lessons/JCA-M02-L01.json", "markdown_path": "lessons/JCA-M02-L01.md", "module_id": "JCA-M02", "role": "PROCEDURE"},
+    {"lesson_id": "JCA-M02-L02", "json_path": "lessons/JCA-M02-L02.json", "markdown_path": "lessons/JCA-M02-L02.md", "module_id": "JCA-M02", "role": "PROCEDURE"},
+    {"lesson_id": "JCA-M02-L03", "json_path": "lessons/JCA-M02-L03.json", "markdown_path": "lessons/JCA-M02-L03.md", "module_id": "JCA-M02", "role": "CONCEPT"},
+    {"lesson_id": "JCA-M03-L01", "json_path": "lessons/JCA-M03-L01.json", "markdown_path": "lessons/JCA-M03-L01.md", "module_id": "JCA-M03", "role": "PROCEDURE"},
+    {"lesson_id": "JCA-M03-L02", "json_path": "lessons/JCA-M03-L02.json", "markdown_path": "lessons/JCA-M03-L02.md", "module_id": "JCA-M03", "role": "PROCEDURE"},
+    {"lesson_id": "JCA-M03-L03", "json_path": "lessons/JCA-M03-L03.json", "markdown_path": "lessons/JCA-M03-L03.md", "module_id": "JCA-M03", "role": "PROCEDURE"},
+    {"lesson_id": "JCA-M04-L01", "json_path": "lessons/JCA-M04-L01.json", "markdown_path": "lessons/JCA-M04-L01.md", "module_id": "JCA-M04", "role": "CONCEPT"},
+    {"lesson_id": "JCA-M04-L02", "json_path": "lessons/JCA-M04-L02.json", "markdown_path": "lessons/JCA-M04-L02.md", "module_id": "JCA-M04", "role": "PROCEDURE"},
+    {"lesson_id": "JCA-M04-L03", "json_path": "lessons/JCA-M04-L03.json", "markdown_path": "lessons/JCA-M04-L03.md", "module_id": "JCA-M04", "role": "PROCEDURE"},
+    {"lesson_id": "JCA-M05-L01", "json_path": "lessons/JCA-M05-L01.json", "markdown_path": "lessons/JCA-M05-L01.md", "module_id": "JCA-M05", "role": "CONCEPT"},
+    {"lesson_id": "JCA-M05-L02", "json_path": "lessons/JCA-M05-L02.json", "markdown_path": "lessons/JCA-M05-L02.md", "module_id": "JCA-M05", "role": "PROCEDURE"},
+    {"lesson_id": "JCA-M05-L03", "json_path": "lessons/JCA-M05-L03.json", "markdown_path": "lessons/JCA-M05-L03.md", "module_id": "JCA-M05", "role": "APPLICATION"},
+    {"lesson_id": "JCA-M06-L01", "json_path": "lessons/JCA-M06-L01.json", "markdown_path": "lessons/JCA-M06-L01.md", "module_id": "JCA-M06", "role": "CONCEPT"},
+    {"lesson_id": "JCA-M06-L02", "json_path": "lessons/JCA-M06-L02.json", "markdown_path": "lessons/JCA-M06-L02.md", "module_id": "JCA-M06", "role": "PROCEDURE"},
+    {"lesson_id": "JCA-M07-L01", "json_path": "lessons/JCA-M07-L01.json", "markdown_path": "lessons/JCA-M07-L01.md", "module_id": "JCA-M07", "role": "SAFETY"},
+    {"lesson_id": "JCA-M07-L02", "json_path": "lessons/JCA-M07-L02.json", "markdown_path": "lessons/JCA-M07-L02.md", "module_id": "JCA-M07", "role": "SAFETY"},
+    {"lesson_id": "JCA-M07-L03", "json_path": "lessons/JCA-M07-L03.json", "markdown_path": "lessons/JCA-M07-L03.md", "module_id": "JCA-M07", "role": "SAFETY"},
+    {"lesson_id": "JCA-M07-L04", "json_path": "lessons/JCA-M07-L04.json", "markdown_path": "lessons/JCA-M07-L04.md", "module_id": "JCA-M07", "role": "SAFETY"},
+    {"lesson_id": "JCA-M08-L01", "json_path": "lessons/JCA-M08-L01.json", "markdown_path": "lessons/JCA-M08-L01.md", "module_id": "JCA-M08", "role": "INTEGRATION"},
+    {"lesson_id": "JCA-M08-L02", "json_path": "lessons/JCA-M08-L02.json", "markdown_path": "lessons/JCA-M08-L02.md", "module_id": "JCA-M08", "role": "INTEGRATION"},
+    {"lesson_id": "JCA-M08-L03", "json_path": "lessons/JCA-M08-L03.json", "markdown_path": "lessons/JCA-M08-L03.md", "module_id": "JCA-M08", "role": "INTEGRATION"},
+    {"lesson_id": "JCA-M08-L04", "json_path": "lessons/JCA-M08-L04.json", "markdown_path": "lessons/JCA-M08-L04.md", "module_id": "JCA-M08", "role": "INTEGRATION"}
+  ],
+  "coverage_summary": {
+    "module_count": 8,
+    "blueprint_lesson_count": 24,
+    "canonical_lesson_count": 24,
+    "canonical_json_count": 24,
+    "canonical_markdown_count": 24,
+    "mandatory_domain_count": 9,
+    "mapped_mandatory_domain_count": 9,
+    "unmapped_mandatory_domain_count": 0,
+    "missing_lesson_count": 0,
+    "extra_lesson_count": 0
+  },
+  "sequence_summary": {
+    "module_hard_sequence_count": 0,
+    "lesson_hard_sequence_count": 4,
+    "hard_sequence_resolution_count": 5,
+    "hard_sequence_violation_count": 0,
+    "non_order_relation_misuse_count": 0
+  },
+  "grounding_summary": {
+    "grounding_pass_count": 24,
+    "grounding_fail_count": 0,
+    "unsupported_claim_count": 0,
+    "scope_expansion_count": 0,
+    "model_product_leakage_count": 0,
+    "unlabeled_pedagogical_example_count": 0,
+    "pedagogical_example_count": 23
+  },
+  "role_coverage_summary": {
+    "blueprint_role_count": 6,
+    "canonical_role_count": 6,
+    "missing_role_count": 0,
+    "missing_role_set": []
+  },
+  "assembly_metadata": {
+    "gate": "GATE_4_4B2",
+    "canonical_lesson_count": 24,
+    "canonical_json_count": 24,
+    "canonical_markdown_count": 24,
+    "promotion_semantic_diff_count": 0,
+    "hard_sequence_count": 4,
+    "hard_sequence_violation_count": 0,
+    "unsupported_claim_count": 0,
+    "scope_expansion_count": 0,
+    "model_product_leakage_count": 0,
+    "assessment_readiness": "READY"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "reviews": [
+    {
+      "review_id": "NR-FIX-0001",
+      "item_ids": ["JIM-K-0001", "JIM-K-0014"],
+      "relation": "CONFLICT_CANDIDATE",
+      "decision": "NEEDS_REVIEW",
+      "normalized_label": "冲突安全测试用",
+      "rationale": "本文件只为测试 Graph Validator 的冲突安全规则（CONFLICT_CANDIDATE 的 pair 不得进入图）而构造，不代表任何真实判定。",
+      "scope_check": "测试夹具。",
+      "version_check": "测试夹具。",
+      "provenance_check": "测试夹具；不引用真实证据。"
+    }
+  ]
+}

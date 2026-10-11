@@ -1,0 +1,1004 @@
+{
+  "reviews": [
+    {
+      "review_id": "NR-0001",
+      "item_ids": [
+        "JIM-K-0009",
+        "JIM-K-0001"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "生成流程",
+      "rationale": "JIM-K-0009 描述即梦产品页的三步视频生成流程及其产物；JIM-K-0001 描述 Seed 官方对 Seedance 2.5 的生成模态定位。statement 一为产品操作流程、一为模型模态，knowledge_type 分别为 PROCEDURE 与 CAPABILITY，语义不同，不是同一知识。",
+      "scope_check": "JIM-K-0009 为 Jimeng Product Layer，JIM-K-0001 为 ByteDance Seed Model Layer。两项属于不同层，但内容本身也完全不同：流程步骤与模态定位之间没有共享知识，因此判 DISTINCT 而非 SCOPE_PARALLEL。",
+      "version_check": "JIM-K-0009 的 version_scope 为「Seedance 2.5；2026-10-03 公开产品页」，JIM-K-0001 为「Seedance 2.5」。产品页覆盖的是同版本的产品说明，版本不冲突；但版本相近不改变语义不同的结论。",
+      "provenance_check": "JIM-K-0009 引用 P10，JIM-K-0001 引用 M09，来源层不同且各自完整。保持独立不需要移动或复制任何证据引用。"
+    },
+    {
+      "review_id": "NR-0002",
+      "item_ids": [
+        "JIM-K-0010",
+        "JIM-K-0001"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "模型选择",
+      "rationale": "JIM-K-0010 描述产品流程第一步中进入工具并选择 Seedance 2.5 模型这一操作步骤；JIM-K-0001 描述模型层的音视频联合生成定位。两者仅共同出现版本名 Seedance 2.5，没有共享知识内容。",
+      "scope_check": "JIM-K-0010 为 Jimeng Product Layer，JIM-K-0001 为 ByteDance Seed Model Layer；内容层与主题均不同，判 DISTINCT。产品页提到模型名不等于陈述模型能力。",
+      "version_check": "两项 version_scope 均涉及 Seedance 2.5，但一为产品页日期版本、一为模型版本，不能因版本名相同而视为同一知识。",
+      "provenance_check": "JIM-K-0010 引用 P10，JIM-K-0001 引用 M09；证据独立，无需迁移。"
+    },
+    {
+      "review_id": "NR-0003",
+      "item_ids": [
+        "JIM-K-0011",
+        "JIM-K-0001"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "提示词输入",
+      "rationale": "JIM-K-0011 描述产品流程第二步可上传参考图片或视频并用提示词描述主体、动作、镜头和视觉风格；JIM-K-0001 描述模型的音视频联合生成定位。两者无共享知识。",
+      "scope_check": "JIM-K-0011 为 Jimeng Product Layer 的流程步骤，JIM-K-0001 为 ByteDance Seed Model Layer 的模态定位；层与内容均不同，判 DISTINCT。",
+      "version_check": "两项均涉及 Seedance 2.5，产品与模型版本名一致但适用对象不同；版本不构成重复依据。",
+      "provenance_check": "JIM-K-0011 引用 P10，JIM-K-0001 引用 M09；证据独立。"
+    },
+    {
+      "review_id": "NR-0004",
+      "item_ids": [
+        "JIM-K-0009",
+        "JIM-K-0011"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "生成流程",
+      "rationale": "两项同为 Jimeng Product Layer、同为 PROCEDURE、同为 Seedance 2.5 产品页，且共享同一步骤主题：JIM-K-0009 整体复述三步流程并含产物，JIM-K-0011 只描述第二步的输入类型与提示词要素。存在共享信息，但 JIM-K-0009 另有完整流程与产物、JIM-K-0011 另有输入类型与四类描述要素，任一方都有独立知识，不能直接合并。",
+      "scope_check": "scope 完全相同：均为 Jimeng Product Layer、即梦 Seedance 2.5 公开产品页流程说明。同层同范围下仍需比较 statement，结论是部分重叠而非重复。",
+      "version_check": "version_scope 完全相同：「Seedance 2.5；2026-10-03 公开产品页」。版本相同，故重复判定只能取决于语义，而语义显示为部分重叠。",
+      "provenance_check": "两项均引用 P10 且各自指向不同段落（JIM-K-0009 指向三步与开篇产物句，JIM-K-0011 指向第二步正文）。来源相同不等于知识相同；将来若合并必须同时保留两条 support_note 所指的不同段落，本轮不合并。"
+    },
+    {
+      "review_id": "NR-0005",
+      "item_ids": [
+        "JIM-K-0009",
+        "JIM-K-0010"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "生成流程",
+      "rationale": "JIM-K-0010 的第一步（进入工具并选择模型）是 JIM-K-0009 三步流程的组成步骤，两者共享“第一步”这一信息；但 JIM-K-0009 还包含第二、三步与产物，JIM-K-0010 还包含入口与模型选择的具体表述，双方各有独立内容。",
+      "scope_check": "scope 相同，均为 Jimeng Product Layer 的 Seedance 2.5 公开产品页流程说明。整体与局部的关系属于部分重叠，不构成重复。",
+      "version_check": "version_scope 相同，均为「Seedance 2.5；2026-10-03 公开产品页」。",
+      "provenance_check": "两项均引用 P10 的不同句：JIM-K-0009 指向三步与开篇，JIM-K-0010 指向第一步正文。合并将需要保留两条 support_note；本轮保持独立，证据不动。"
+    },
+    {
+      "review_id": "NR-0006",
+      "item_ids": [
+        "JIM-K-0012",
+        "JIM-K-0013"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "多模态参考",
+      "rationale": "两项均源自 P12 同一句 FAQ 答复，主题同为 Seedance 2.5 的生成输入：JIM-K-0012 覆盖文字提示词与图片视觉参考两种基础输入，JIM-K-0013 覆盖脚本、视频、音频和风格素材的组合创作。共享“输入方式”主题，但各自保留不同素材类型这一独立知识。",
+      "scope_check": "scope 相同，均为 Jimeng Product Layer 的 Seedance 2.5 公开产品页说明。同层同版本下按 statement 语义判为部分重叠。",
+      "version_check": "version_scope 相同，均为「Seedance 2.5；2026-10-03 公开产品页」。",
+      "provenance_check": "两项均引用 P12 的同一条答复，分别对应前半句与后半句。若将来合并必须保留同段两个不同片段的 support_note；本轮两者独立，且 JIM-K-0012 的 limitations 已显式声明多模态部分另立 Item。"
+    },
+    {
+      "review_id": "NR-0007",
+      "item_ids": [
+        "JIM-K-0012",
+        "JIM-K-0014",
+        "JIM-K-0015"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "参考视频控制",
+      "rationale": "三项同为 Jimeng Product Layer、同版本、同源自 P12 的产品能力说明，主题都是 Seedance 2.5 的生成输入与产物能力：文字/图片输入、带声音视频与音画协同、参考视频控制复杂动作。三者共享“产品页声明的生成能力”这一上位主题，但素材类型、产物特征与用途各不相同，任一方都有独立知识。",
+      "scope_check": "scope 相同，均为 Jimeng Product Layer 的 Seedance 2.5 公开产品页说明，均为 CAPABILITY。不涉及跨层，故不判 SCOPE_PARALLEL。",
+      "version_check": "version_scope 相同，均为「Seedance 2.5；2026-10-03 公开产品页」。",
+      "provenance_check": "三项均引用 P12，分别对应不同小节或 FAQ 条目（文字/图片答句、带声音视频答复、参考生视频小节）。合并会压缩三处不同证据片段，故保持独立；本轮不修改任何 evidence_refs。"
+    },
+    {
+      "review_id": "NR-0008",
+      "item_ids": [
+        "JIM-K-0015",
+        "JIM-K-0002"
+      ],
+      "relation": "SCOPE_PARALLEL",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "参考视频控制",
+      "rationale": "两项主题均为 Seedance 2.5 的参考视频，但知识层不同：JIM-K-0015 陈述即梦产品页声明参考视频可传达运镜速度、人物轨迹、动作调度与多人互动；JIM-K-0002 陈述 Seed 官方模型说明把参考视频构图列为模型可理解的信息。产品提供该能力与模型具备该能力不是同一个知识实体。",
+      "scope_check": "scope 分别为 Jimeng Product Layer 与 ByteDance Seed Model Layer，属于不同层，按 Layer Preservation 必须保持平行，不得合并。两项 limitations 亦已各自记录分层关系。",
+      "version_check": "version_scope 分别为「Seedance 2.5；2026-10-03 公开产品页」与「Seedance 2.5」。产品页版本不能与模型说明版本互相替代，产品未部署结论不可由模型说明推出。",
+      "provenance_check": "JIM-K-0015 引用 P12，JIM-K-0002 引用 M09，证据层不同且各自完整。合并会造成跨层证据混用，故禁止；本轮不修改引用。"
+    },
+    {
+      "review_id": "NR-0009",
+      "item_ids": [
+        "JIM-K-0014",
+        "JIM-K-0001"
+      ],
+      "relation": "SCOPE_PARALLEL",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "音画协同",
+      "rationale": "两项主题均涉及 Seedance 2.5 的音视频关系：JIM-K-0014 陈述产品页声明可生成带声音视频并支持音画协同创作；JIM-K-0001 陈述 Seed 官方将该版本描述为音视频联合生成模型。产品层功能声明与模型层模态定位属于不同知识实体。",
+      "scope_check": "scope 分别为 Jimeng Product Layer 与 ByteDance Seed Model Layer；虽同涉音视频，仍属不同层，保持平行。",
+      "version_check": "version_scope 分别为 Seedance 2.5 产品页与 Seedance 2.5 模型说明，版本名相同但适用对象不同，不可互相替代。",
+      "provenance_check": "JIM-K-0014 引用 P12，JIM-K-0001 引用 M09；跨层证据不得混用。JIM-K-0014 的 limitations 已声明产品层音画协同声明不等于模型技术细节。"
+    },
+    {
+      "review_id": "NR-0010",
+      "item_ids": [
+        "JIM-K-0016",
+        "JIM-K-0003",
+        "JIM-K-0005",
+        "JIM-K-0006",
+        "JIM-K-0007"
+      ],
+      "relation": "SCOPE_PARALLEL",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "局部编辑",
+      "rationale": "五项主题均为编辑能力：JIM-K-0016 陈述即梦产品页的局部编辑说明（只修改局部、无需重新生成整段视频并保留原有构图、光影、音频、动作与时间线连续性）；JIM-K-0003/0005/0006/0007 分别陈述 Seed 官方模型说明列出的绿幕编辑、空间标注引导、草图引导与图层分离。产品层编辑用途与模型层编辑能力不是同一个知识实体。",
+      "scope_check": "JIM-K-0016 为 Jimeng Product Layer；其余四项为 ByteDance Seed Model Layer。跨层相似主题必须保持平行，不因都涉及编辑而合并。模型层四项之间的关系见 NR-0011。",
+      "version_check": "JIM-K-0016 为 Seedance 2.5 公开产品页；模型层四项为 Seedream 5.0 Pro。产品版本与模型分支不可比较，更不能据此推出即梦已部署同名分支。",
+      "provenance_check": "JIM-K-0016 引用 P13，模型层四项引用 M10，证据层不同且各自完整。JIM-K-0016 的 limitations 已逐项声明与模型层编辑能力分别记录。"
+    },
+    {
+      "review_id": "NR-0011",
+      "item_ids": [
+        "JIM-K-0005",
+        "JIM-K-0006"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "空间标注与草图引导",
+      "rationale": "两项同为 ByteDance Seed Model Layer、同为 Seedream 5.0 Pro、同为 CAPABILITY，且共享 M10 的 Interactive Editing 说明段，但 statement 分别描述空间标注引导与草图引导两种不同的编辑引导方式，是可独立识别与引用的不同能力。共享证据段不等于同一知识。",
+      "scope_check": "scope 完全相同，均为 ByteDance Seed Model Layer 的 Seedream 5.0 Pro 模型说明。同层同版本，区分依据是 statement 的语义差异。",
+      "version_check": "version_scope 完全相同，均为 Seedream 5.0 Pro。",
+      "provenance_check": "两项均引用 M10 的同一说明段，但 support_note 指向段内不同要素（spatial annotations 与 sketch-based guidance）。合并会丢失两种引导方式的区分，故保持独立；本轮不修改引用。"
+    },
+    {
+      "review_id": "NR-0012",
+      "item_ids": [
+        "JIM-K-0004",
+        "JIM-K-0008"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "文字密集与多语言生成",
+      "rationale": "两项同为 ByteDance Seed Model Layer、同为 Seedream 5.0 Pro、同为 CAPABILITY，但 statement 分别描述文字密集图像生成与多语言图像生成两种不同能力；domain 亦分别为 Seedream 与其他 Seedream 主题，彼此不构成同一知识。",
+      "scope_check": "scope 完全相同，均为 ByteDance Seed Model Layer 的 Seedream 5.0 Pro 模型说明。同层同版本，区分依据是 statement 的语义差异。",
+      "version_check": "version_scope 完全相同，均为 Seedream 5.0 Pro。",
+      "provenance_check": "两项均引用 M10，但 support_note 指向不同说明段（High-Density Infographics 与 Native Multilingual Generation）。两项 limitations 各自保留不同边界，不得合并。"
+    },
+    {
+      "review_id": "NR-0013",
+      "item_ids": [
+        "JIM-K-0025",
+        "JIM-K-0026"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "输入内容义务",
+      "rationale": "两项同为协议第4.1节派生的 POLICY、同 scope 同版本，但义务内容不同：JIM-K-0025 针对「不得输入、分享未经授权的个人信息与保密信息」，JIM-K-0026 针对「输入内容须合法、权属正当且不侵害他人权益」。可在不同场景独立适用与引用，不是同一规则。",
+      "scope_check": "scope 与 version_scope 完全相同（Jimeng Product Layer；2025-08-25 更新及 2025-09-01 生效），同层同版本，区分依据是 statement 的义务差异。",
+      "version_check": "两者 version_scope 相同，均为协议该次更新与生效范围；不存在版本差异。",
+      "provenance_check": "两项均引用 P14 第4.1节，但 support_note 指向该节不同句子。合并会丢失两类不同义务的区分，故保持独立。"
+    },
+    {
+      "review_id": "NR-0014",
+      "item_ids": [
+        "JIM-K-0027",
+        "JIM-K-0028"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "AI内容标识",
+      "rationale": "两项同为协议第4.2节派生的 POLICY，但一项规定平台有权依法添加 AI 内容标识，另一项禁止用户遮挡、涂抹、修改或删除该标识；一为标识添加规则、一为对标识的禁止性义务，可独立学习与引用。",
+      "scope_check": "scope 与 version_scope 相同，同层同版本；区分依据是 statement 的规则方向不同。",
+      "version_check": "两者 version_scope 相同。",
+      "provenance_check": "两项均引用 P14 第4.2节的不同句子；不得因同节派生而合并。"
+    },
+    {
+      "review_id": "NR-0015",
+      "item_ids": [
+        "JIM-K-0029",
+        "JIM-K-0030"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "内容发布前提与合规",
+      "rationale": "两项同为协议第4.3节派生的 POLICY，但一项把真实身份信息认证作为使用生成与发布功能的前提，另一项要求内容合法并在涉及时事、公共政策、社会事件时标注来源；一为前置条件、一为内容义务。",
+      "scope_check": "scope 与 version_scope 相同，同层同版本；区分依据是 statement 的义务类型不同。",
+      "version_check": "两者 version_scope 相同。",
+      "provenance_check": "两项均引用 P14 第4.3节的不同句子；保持独立。"
+    },
+    {
+      "review_id": "NR-0016",
+      "item_ids": [
+        "JIM-K-0031",
+        "JIM-K-0032",
+        "JIM-K-0033"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "禁止内容分类",
+      "rationale": "三项同为协议派生的 POLICY、同 scope 同版本，句式同构（都以「禁止输入、生成、制作、复制、发布、传播该节列举的内容」表述），但规范对象不同：JIM-K-0031 规范违法违规内容（4.4，十二类）、JIM-K-0032 规范不良内容（4.5，十一项）、JIM-K-0033 规范欺骗性与高危险性、危害身心健康内容（4.6，四类）。三者属于三个独立的 POLICY 命题，模板同构不构成重复。按 `knowledge-policy.md` 的 `## Addendum — Enumerated Policy Atomicity`（Gate 2.3-R1 后新增），这种「一条款 + 共享 actor/action/modality/condition 的枚举子项、且子项无独立例外或独立处罚」的形态允许以条款级 POLICY Item 表达，因此三条按节保留是符合合同的粒度。",
+      "scope_check": "scope 与 version_scope 完全相同，同层同版本；不存在跨层因素，故不是 SCOPE_PARALLEL。",
+      "version_check": "三者 version_scope 相同，均为协议该次更新与生效范围；不存在版本差异，故不是 VERSION_VARIANT。",
+      "provenance_check": "三项分别引用 P14 的第 4.4/4.5/4.6 节，证据各自完整且指向不同小节的清单。若将来合并会丢失三个规范对象的区分；本轮保持独立，不修改任何 evidence_refs。"
+    },
+    {
+      "review_id": "NR-0017",
+      "item_ids": [
+        "JIM-K-0034",
+        "JIM-K-0035"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "平台秩序与处置",
+      "rationale": "两项同为协议派生的 POLICY，但一项（第4.7节）禁止扰乱平台经营秩序的信息，另一项（第4.8节）陈述平台在认为用户违规时的处理措施与追责权；一为对用户行为的禁止、一为平台处置权，不是同一知识。",
+      "scope_check": "scope 与 version_scope 相同；区分依据是 statement 的主体与内容不同（用户义务 vs 平台权利）。",
+      "version_check": "两者 version_scope 相同。",
+      "provenance_check": "分别引用 P14 第4.7节与第4.8节；证据完整，保持独立。"
+    },
+    {
+      "review_id": "NR-0018",
+      "item_ids": [
+        "JIM-K-0024",
+        "JIM-K-0009"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "生成流程",
+      "rationale": "Gate 2.3 新增项复核。两项同 scope、同 version_scope、同 in Product Layer，且都描述同一条三步生成流程：JIM-K-0009 作为流程整体（含产物），JIM-K-0024 只描述流程的三步结构。共享同一流程信息，但 JIM-K-0009 明确包含「产物为可下载的 AI 视频」，JIM-K-0024 只覆盖结构，双方各有侧重。",
+      "scope_check": "scope 与 version_scope 完全相同，同层同版本；重叠来自同一产品页的同一流程。",
+      "version_check": "两者 version_scope 相同（Seedance 2.5；2026-10-03 公开产品页），不存在版本差异。",
+      "provenance_check": "两项均引用 P10；JIM-K-0009 指向三步标题与开篇产物句，JIM-K-0024 指向三个步骤小标题。若将来合并必须同时保留 product 与结构两侧的 support_note；本轮不合并，不改 evidence_refs。"
+    },
+    {
+      "review_id": "NR-0019",
+      "item_ids": [
+        "JIM-K-0017",
+        "JIM-K-0023"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "参考生视频",
+      "rationale": "Gate 2.3 新增项复核。两项均由 P12 的「参考生视频」小节派生：JIM-K-0017 说明参考生视频这一方式的产品概念（以上传参考视频为特征），JIM-K-0023 说明该方式的用途边界（限于传达动态信息）。概念与范围均取自同段文字：JIM-K-0017 含「方式定义」这一独立信息，JIM-K-0023 含「用途限制」这一独立信息，彼此不能替代。",
+      "scope_check": "scope 与 version_scope 完全相同，同层同版本；重叠来自同一小节文字，不是跨层关系。",
+      "version_check": "两者 version_scope 相同，不存在版本差异。",
+      "provenance_check": "两项均引用 P12 的同一小节，support_note 分别指向标题与正文所列信息；不得因来源相同而合并。"
+    },
+    {
+      "review_id": "NR-0020",
+      "item_ids": [
+        "JIM-K-0022",
+        "JIM-K-0023"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "参考素材作用边界",
+      "rationale": "Gate 2.3 新增项复核。两项同为 CONSTRAINT、同 scope 同版本：JIM-K-0022 界定参考视频与参考图片共同的作用位置（参照与控制，不扩展到改变结果的其他内容），JIM-K-0023 界定参考视频的用途范围（限于动态信息，并列出四类）。共同部分是「参考素材只作参照」这一边界，但 JIM-K-0022 覆盖两类素材的作用位置，JIM-K-0023 覆盖参考视频的用途内容，各自保留独立边界。",
+      "scope_check": "scope 与 version_scope 完全相同；两项均为 Product Layer 的适用范围说明，不存在跨层。",
+      "version_check": "两者 version_scope 相同，不存在版本差异。",
+      "provenance_check": "两项均引用 P12（JIM-K-0022 另涉 FAQ 图片答句）。合并会丢失两类素材与参考视频用途之间的区分；本轮保持独立，不改 evidence_refs。"
+    },
+    {
+      "review_id": "NR-0021",
+      "item_ids": [
+        "JIM-K-0019",
+        "JIM-K-0021"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "局部编辑",
+      "rationale": "Gate 2.3 新增项复核。两项均由 P13 的「局部编辑」小节派生：JIM-K-0019 说明该功能的产品概念（只改局部、不重新生成整段），JIM-K-0021 说明该功能的修改与保留边界（修改对象限于替换错误物体或优化人物细节，并保留原有构图、光影、音频、动作与时间线连续性）。概念与范围各自独立，可分别学习与引用。",
+      "scope_check": "scope 与 version_scope 完全相同；两项均为 Product Layer，不涉及模型层编辑能力。",
+      "version_check": "两者 version_scope 相同，不存在版本差异。",
+      "provenance_check": "两项均引用 P13，support_note 分别指向标题与正文；不得因同源而合并，也不得与模型层编辑能力项（JIM-K-0003/0005/0006/0007）混合。"
+    },
+    {
+      "review_id": "NR-0022",
+      "item_ids": [
+        "JIM-K-0018",
+        "JIM-K-0012"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "文字与图片输入",
+      "rationale": "Gate 2.3 新增项复核。两项均由 P12 同一句 FAQ 答复派生：JIM-K-0018 是 CONCEPT，区分文生视频与图生视频两种方式；JIM-K-0012 是 CAPABILITY，陈述该版本支持文字提示词与图片视觉参考两种输入。前者回答「这两个方式各是什么」，后者回答「支持哪些输入方式」，知识类型与命题均不同，但共享同一句证据。",
+      "scope_check": "scope 与 version_scope 完全相同，同层同版本；不是跨层关系。",
+      "version_check": "两者 version_scope 相同，不存在版本差异。",
+      "provenance_check": "两项均引用 P12 的同一答复句。保留两者可分别支持「概念区分」与「能力支持」两类引用；本轮不合并。"
+    },
+    {
+      "review_id": "NR-0023",
+      "item_ids": [
+        "JIM-K-0020",
+        "JIM-K-0011"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "提示词输入",
+      "rationale": "Gate 2.3 新增项复核。两项均涉及 P10 流程第二步：JIM-K-0020 是 CONCEPT，说明提示词在流程中承担描述作用并列出四类要素；JIM-K-0011 是 PROCEDURE，把「上传素材与输入提示词」作为一步骤并同时包含素材输入类型。JIM-K-0020 聚焦提示词角色，JIM-K-0011 覆盖该步骤的两类输入动作，各有独立内容。",
+      "scope_check": "scope 与 version_scope 完全相同，同层同版本。",
+      "version_check": "两者 version_scope 相同，不存在版本差异。",
+      "provenance_check": "两项均引用 P10 第二步正文。合并会把「提示词角色」与「步骤动作」压成一个命题，故保持独立；本轮不改 evidence_refs。"
+    },
+    {
+      "review_id": "NR-0024",
+      "item_ids": [
+        "JIM-K-0036",
+        "JIM-K-0037"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "Seedance 版本背景",
+      "rationale": "Gate 2.3-R1 新增项复核。两项同为 Model Layer、同 version 依据、同引用 M01 的 VERSION_CONTEXT，但知识内容不同：JIM-K-0036 记录该版本的正式发布日期与发布方对其定位（新一代视频创作模型）；JIM-K-0037 记录该版本与 Seedance 2.0 的承接关系及共同架构。一为时间与定位事实，一为版本间关系，可分别引用。",
+      "scope_check": "scope 与 version_scope 依据相同（ByteDance Seed Model Layer；2026-07-31 发布页），同层同来源；区分依据是 statement 的事实类型不同。",
+      "version_check": "两项均以同一发布页为依据；JIM-K-0037 的 version_scope 另含 Seedance 2.0，属于该关系的必要组成，不构成版本差异型重叠。",
+      "provenance_check": "两项均引用 M01 的开篇段。合并会把「发布日期」与「版本承接」压成一条，故保持独立；本轮不修改任何 evidence_refs。"
+    },
+    {
+      "review_id": "NR-0025",
+      "item_ids": [
+        "JIM-K-0038",
+        "JIM-K-0039"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "Seedance 2.0 版本背景",
+      "rationale": "Gate 2.3-R1 新增项复核。两项同为 Model Layer、同引用 M02 的 VERSION_CONTEXT，但内容不同：JIM-K-0038 记录 2.0 的正式发布日期与版本定位；JIM-K-0039 记录该版本的架构特征与开篇列出的输入类型。一为时间与定位事实，一为架构与输入描述，可分别引用。",
+      "scope_check": "scope 与 version_scope 依据相同（ByteDance Seed Model Layer；2026-02-12 发布页），同层同来源；区分依据是 statement 的事实类型不同。",
+      "version_check": "两项均以同一发布页为依据，version_scope 同为 Seedance 2.0，不存在版本差异型重叠。",
+      "provenance_check": "两项均引用 M02 的不同句（日期行与开篇/架构句）。保持独立，不改 evidence_refs。"
+    },
+    {
+      "review_id": "NR-0026",
+      "item_ids": [
+        "JIM-K-0038",
+        "JIM-K-0040"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "Seedance 2.0 版本背景",
+      "rationale": "Gate 2.3-R1 新增项复核。两项同引用 M02，但一项记录 2.0 自身的发布日期与定位，另一项记录 2.0 与 1.5 版本的承接与比较关系；后者涉及另一个版本，命题对象不同。",
+      "scope_check": "同层同来源；JIM-K-0040 的 version_scope 另含「1.5 版本」，属该关系的必要组成，不构成版本差异型重叠。",
+      "version_check": "依据同一发布页；两项主题不同（单版本事实 vs 跨版本关系），不属 VERSION_VARIANT。",
+      "provenance_check": "两项均引用 M02 的开篇段；保持独立，不改 evidence_refs。"
+    },
+    {
+      "review_id": "NR-0027",
+      "item_ids": [
+        "JIM-K-0039",
+        "JIM-K-0041"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "统一多模态架构",
+      "rationale": "Gate 2.3-R1 新增项复核。两项都涉及「统一的多模态音频视频联合生成架构」这一事实：JIM-K-0039 只描述 2.0 采用该架构及其输入类型；JIM-K-0041 记录该架构在 2.0 与 2.5 之间的延续，并同时引用 M02 与 M01。共享同一架构事实，但 JIM-K-0039 另有输入类型这一独立内容，JIM-K-0041 另有跨版本延续这一独立内容。",
+      "scope_check": "两项同为 Model Layer；JIM-K-0041 属于同一层的跨版本事实，不涉及 Product 或 API，故不是 SCOPE_PARALLEL。",
+      "version_check": "JIM-K-0039 的 version_scope 为 Seedance 2.0；JIM-K-0041 覆盖 2.0 与 2.5，属于该延续事实的必要组成，不构成版本变体式重叠。",
+      "provenance_check": "JIM-K-0039 引用 M02；JIM-K-0041 引用 M02 与 M01。若将来合并必须保留两份来源与各自 support_note；本轮保持独立，不修改引用。"
+    },
+    {
+      "review_id": "NR-0028",
+      "item_ids": [
+        "JIM-K-0037",
+        "JIM-K-0041"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "统一多模态架构",
+      "rationale": "Gate 2.3-R1 新增项复核。两项均由 M01 的开篇句派生并涉及 2.0 与 2.5 的架构关系：JIM-K-0037 陈述「2.5 延续了 2.0 的架构、2.0 已发布」；JIM-K-0041 把 2.0 一侧的架构表述也纳入，由两份发布页共同支持架构延续这一事实。共享「延续」这一核心，但 JIM-K-0037 只依据 M01，JIM-K-0041 的依据面更宽（M02 + M01），两者证据范围不同。",
+      "scope_check": "两项同为 Model Layer，同层同主题；重叠来自同一句官方表述，不是跨层。",
+      "version_check": "两项均涉及 2.0 与 2.5；不存在版本差异型重叠，因为两者都明确覆盖两个版本。",
+      "provenance_check": "JIM-K-0037 引用 M01；JIM-K-0041 引用 M02 与 M01。合并会把「单一发布页的承接表述」与「两份发布页共同支持的事实」压成一条并模糊证据面，故保持独立；本轮不修改引用。"
+    },
+    {
+      "review_id": "NR-0029",
+      "item_ids": [
+        "JIM-K-0042",
+        "JIM-K-0036"
+      ],
+      "relation": "SCOPE_PARALLEL",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "Seedance 2.5 版本背景",
+      "rationale": "Gate 2.3-R2 新增项复核。两项同为 VERSION_CONTEXT、同为 Seedance 2.5、同源于同一官方发布页（2026-07-31），但知识层不同：JIM-K-0042 陈述产品部署事实（该版本已上线即梦 AI，Product Layer，引用 P16）；JIM-K-0036 陈述模型发布事实（该版本于 2026-07-31 正式发布及其定位，Model Layer，引用 M01）。模型发布不等于产品上线，不得合并。",
+      "scope_check": "scope 分别为 Jimeng Product Layer 与 ByteDance Seed Model Layer，属于不同层，按 Layer Preservation 必须保持平行。",
+      "version_check": "两项都覆盖 Seedance 2.5 与 2026-07-31 这一发布时点；版本相同，因此区分依据是层次而非版本。",
+      "provenance_check": "JIM-K-0042 引用 P16（产品部署句单元），JIM-K-0036 引用 M01（模型发布单元）。两者由同一官方页面按不同 Evidence Scope 拆出，证据层不同且各自完整；合并会造成跨层证据混用，故禁止。"
+    },
+    {
+      "review_id": "NR-0030",
+      "item_ids": [
+        "JIM-K-0043",
+        "JIM-K-0038"
+      ],
+      "relation": "SCOPE_PARALLEL",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "Seedance 2.0 版本背景",
+      "rationale": "Gate 2.3-R2 新增项复核。两项同为 VERSION_CONTEXT、同为 Seedance 2.0、同源于同一官方发布页（2026-02-12），但知识层不同：JIM-K-0043 陈述产品部署事实（该版本已上线即梦 AI，Product Layer，引用 P17）；JIM-K-0038 陈述模型发布事实（该版本于 2026-02-12 正式发布及其定位，Model Layer，引用 M02）。",
+      "scope_check": "scope 分别为 Jimeng Product Layer 与 ByteDance Seed Model Layer，属于不同层，必须保持平行。",
+      "version_check": "两项都覆盖 Seedance 2.0 与 2026-02-12 这一发布时点；版本相同，区分依据是层次。",
+      "provenance_check": "JIM-K-0043 引用 P17，JIM-K-0038 引用 M02；同页不同 Evidence Scope，证据层不同且各自完整，禁止合并。"
+    },
+    {
+      "review_id": "NR-0031",
+      "item_ids": [
+        "JIM-K-0042",
+        "JIM-K-0043"
+      ],
+      "relation": "VERSION_VARIANT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "即梦 AI 上线声明",
+      "rationale": "Gate 2.3-R2 新增项复核。两项同为 Product Layer、同为 VERSION_CONTEXT、同属「即梦 AI 上线声明」主题，且句式结构一致，但分别规范不同版本：JIM-K-0042 为 Seedance 2.5（2026-07-31），JIM-K-0043 为 Seedance 2.0（2026-02-12）。同主题不同明确版本，不得合并。",
+      "scope_check": "scope 相同，均为 Jimeng Product Layer；层不构成区分依据，版本才是。",
+      "version_check": "version_scope 明确不同（Seedance 2.5 与 Seedance 2.0，对应 2026-07-31 与 2026-02-12 两次发布页陈述）；不同明确版本默认保留为不同 Item，即使句式相同也不得互相覆盖或合并。",
+      "provenance_check": "分别引用 P16 与 P17，各自证据完整且版本对应；本轮不修改引用。"
+    },
+    {
+      "review_id": "NR-0032",
+      "item_ids": [
+        "JIM-K-0042",
+        "JIM-K-0041"
+      ],
+      "relation": "SCOPE_PARALLEL",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "Seedance 架构与部署",
+      "rationale": "Gate 2.3-R2 新增项复核。两项均涉及 Seedance 2.5（且都以 M01 所在页面为源头之一），但知识层不同：JIM-K-0042 是产品部署声明（Seedance 2.5 已上线即梦 AI，Product Layer，引用 P16）；JIM-K-0041 是模型架构延续事实（2.0 采用、2.5 延续统一多模态架构，Model Layer，引用 M02 与 M01）。",
+      "scope_check": "scope 分别为 Jimeng Product Layer 与 ByteDance Seed Model Layer，属于不同层，必须保持平行。",
+      "version_check": "JIM-K-0042 只覆盖 2.5；JIM-K-0041 覆盖 2.0 与 2.5。版本范围与层次均不同，两者都不是对方的替代表述。",
+      "provenance_check": "JIM-K-0042 引用 P16，JIM-K-0041 引用 M02 与 M01；证据层不同且各自完整，不得合并。"
+    },
+    {
+      "review_id": "NR-0033",
+      "item_ids": [
+        "JIM-K-0044",
+        "JIM-K-0042"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "产品版本记录",
+      "rationale": "Gate 2.3-R2 追加项复核。两项同为 Product Layer 的 VERSION_CONTEXT，但知识内容不同：JIM-K-0044 记录 iOS 应用版本 2.3.0 这一产品版本条目的存在与页面显示日期；JIM-K-0042 记录 Seedance 2.5 在即梦 AI 的上线声明。一为产品自身版本记录、一为模型部署声明，无共享知识。",
+      "scope_check": "虽同为 Jimeng Product Layer，但内容本身不同：应用版本条目与模型上线声明之间没有共享命题，因此判 DISTINCT 而非 SCOPE_PARALLEL。",
+      "version_check": "version_scope 不同且不可比较：iOS 中国区 App 2.3.0 与「Seedance 2.5；2026-07-31 所述部署状态」属于不同版本对象（应用版本 vs 模型版本），不得互相替代。",
+      "provenance_check": "JIM-K-0044 引用 P09（App Store 版本历史），JIM-K-0042 引用 P16（Seed 发布页）；来源不同且各自完整，无需迁移。"
+    },
+    {
+      "review_id": "NR-0034",
+      "item_ids": [
+        "JIM-K-0044",
+        "JIM-K-0045"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "即梦 iOS 2.3.0",
+      "rationale": "Gate 2.3-R2 追加项复核。两项同为 iOS 2.3.0 条目派生、同 scope 同版本、同引用 P09，但命题不同：JIM-K-0044 记录该版本条目存在及其页面显示日期（版本沿革事实）；JIM-K-0045 复述该条目的更新说明文字（该版本记载了什么内容）。前者不含更新说明内容，后者不含版本号与日期，两者不可互相替代。",
+      "scope_check": "scope 与 version_scope 完全相同（Jimeng Product Layer；iOS 中国区 App 2.3.0），同层同版本；区分依据是 statement 的事实类型不同。",
+      "version_check": "两者 version_scope 相同，不存在版本差异，故不是 VERSION_VARIANT。",
+      "provenance_check": "两项均引用 P09 的同一版本条目，但 support_note 分别指向版本号与日期行、更新说明句。保持独立可分别支持「版本存在」与「更新内容」两类引用；本轮不修改引用。"
+    },
+    {
+      "review_id": "NR-0035",
+      "item_ids": [
+        "JIM-K-0045",
+        "JIM-K-0039"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "Seedance 2.0 相关记录",
+      "rationale": "Gate 2.3-R2 追加项复核。两项都提到 Seedance 2.0，但知识层与内容均不同：JIM-K-0045 是产品层事实——即梦 iOS 2.3.0 更新说明记载上线了 Seedance 2.0 fast 模型；JIM-K-0039 是模型层事实——Seed 官方发布页记载 Seedance 2.0 采用统一的多模态音频视频联合生成架构并支持文字、图片、音频、视频和标签输入。更新说明提到模型名不等于陈述模型架构。",
+      "scope_check": "scope 分别为 Jimeng Product Layer 与 ByteDance Seed Model Layer；且内容不同（产品版本更新说明 vs 模型架构描述），故判 DISTINCT 而非 SCOPE_PARALLEL。",
+      "version_check": "version_scope 不同：iOS 中国区 App 2.3.0 与「Seedance 2.0；2026-02-12 发布页」。应用版本与模型版本不可比较，也不得互相替代。",
+      "provenance_check": "JIM-K-0045 引用 P09，JIM-K-0039 引用 M02；证据层不同且各自完整。特别地，本复核不把「fast」与 M02 所述 Seedance 2.0 视为同一对象，也不推断两者关系。"
+    },
+    {
+      "review_id": "NR-0036",
+      "item_ids": [
+        "JIM-K-0046",
+        "JIM-K-0009"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "生成流程",
+      "rationale": "Gate 3.0-R1 新增项复核。两项同 scope、同 version_scope、同 knowledge_type（PROCEDURE），同源自 P10 三步流程：JIM-K-0009 是流程级 Item，说明该页把视频生成说明为三个步骤并给出产物（可下载的 AI 视频）；JIM-K-0046 是第三步 Item，只说明该步的动作与结果。共享「第三步＝生成、预览并保存」这一信息，但 JIM-K-0009 另有完整三步与产物、JIM-K-0046 另有该步内部的检查与调整动作，双方都有独立知识，不能直接合并。**不是 EXACT_DUPLICATE**：两者的 granularity 与命题范围不同。",
+      "scope_check": "scope 与 version_scope 完全相同，同层同版本；重叠来自同一产品页的同一流程，不是跨层关系。",
+      "version_check": "version_scope 相同，均为「Seedance 2.5；2026-10-03 公开产品页」；不存在版本差异，故不是 VERSION_VARIANT。",
+      "provenance_check": "两项均引用 P10（同一页面，同一 Evidence Unit）。将来若合并必须同时保留流程级与步骤级两条 support_note；本轮保持独立，不修改 evidence_refs。"
+    },
+    {
+      "review_id": "NR-0037",
+      "item_ids": [
+        "JIM-K-0046",
+        "JIM-K-0010"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "生成流程步骤",
+      "rationale": "Gate 3.0-R1 新增项复核。两项同为 PROCEDURE、同 scope 同版本、同为同一三步流程中的步骤项，但规范的是**不同步骤**：JIM-K-0010 是第一步（进入 AI 视频工具并选择 Seedance 2.5 模型），JIM-K-0046 是第三步（生成、预览并保存）。内容不重叠，属于同一流程下的两个独立步骤知识。",
+      "scope_check": "scope 与 version_scope 完全相同，同层同版本；同属一个流程但步骤不同，故判 DISTINCT 而非 PARTIAL_OVERLAP。",
+      "version_check": "version_scope 相同；不存在版本差异。",
+      "provenance_check": "两项均引用 P10，support_note 分别指向第一步与第三步小标题及正文。保持独立。"
+    },
+    {
+      "review_id": "NR-0038",
+      "item_ids": [
+        "JIM-K-0046",
+        "JIM-K-0011"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "生成流程步骤",
+      "rationale": "Gate 3.0-R1 新增项复核。两项同为 PROCEDURE、同 scope 同版本、同为同一三步流程中的步骤项，但规范的是**不同步骤**：JIM-K-0011 是第二步（上传素材并输入提示词，含四类描述要素），JIM-K-0046 是第三步（生成、预览并保存）。内容不重叠。",
+      "scope_check": "scope 与 version_scope 完全相同，同层同版本；步骤不同，判 DISTINCT。",
+      "version_check": "version_scope 相同；不存在版本差异。",
+      "provenance_check": "两项均引用 P10，support_note 分别指向第二步与第三步小标题及正文。保持独立。"
+    },
+    {
+      "review_id": "NR-0039",
+      "item_ids": [
+        "JIM-K-0047",
+        "JIM-K-0011",
+        "JIM-K-0020"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "基础提示词表达与调整",
+      "rationale": "同涉提示词要素；新项表达通用 FAQ 的组织方法，旧项是 Seedance 2.5 特定流程第二步与提示词角色。保留方法和流程职责差异，不合并。",
+      "scope_check": "逐项核对 statement：保留 Product 指导、既有 Product 流程及 Model 能力范围；无范围混并。",
+      "version_check": "新增 P07/P18 指导的版本 unknown，不假定与旧 Seedance 2.5 或 Seedream 5.0 Pro 同版，不认定版本替代。",
+      "provenance_check": "新增 JIM-K-0047/0048 来自 accepted P07，0049/0050 来自 accepted P18；均有实际本地材料；原项证据不变。"
+    },
+    {
+      "review_id": "NR-0040",
+      "item_ids": [
+        "JIM-K-0048",
+        "JIM-K-0046"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "基础提示词表达与调整",
+      "rationale": "旧项包含检查与必要调整但没有说明如何修订；新项给出主体不清楚时的具体描述修订条件。不重复第三步整体，不拆改旧项。",
+      "scope_check": "逐项核对 statement：保留 Product 指导、既有 Product 流程及 Model 能力范围；无范围混并。",
+      "version_check": "新增 P07/P18 指导的版本 unknown，不假定与旧 Seedance 2.5 或 Seedream 5.0 Pro 同版，不认定版本替代。",
+      "provenance_check": "新增 JIM-K-0047/0048 来自 accepted P07，0049/0050 来自 accepted P18；均有实际本地材料；原项证据不变。"
+    },
+    {
+      "review_id": "NR-0041",
+      "item_ids": [
+        "JIM-K-0049",
+        "JIM-K-0004",
+        "JIM-K-0008"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "基础提示词表达与调整",
+      "rationale": "图片表达组织方法不同于 Seedream 文字密集/多语言生成能力；产品指导与模型能力不得互换或合并。",
+      "scope_check": "逐项核对 statement：保留 Product 指导、既有 Product 流程及 Model 能力范围；无范围混并。",
+      "version_check": "新增 P07/P18 指导的版本 unknown，不假定与旧 Seedance 2.5 或 Seedream 5.0 Pro 同版，不认定版本替代。",
+      "provenance_check": "新增 JIM-K-0047/0048 来自 accepted P07，0049/0050 来自 accepted P18；均有实际本地材料；原项证据不变。"
+    },
+    {
+      "review_id": "NR-0042",
+      "item_ids": [
+        "JIM-K-0050",
+        "JIM-K-0049"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "基础提示词表达与调整",
+      "rationale": "歧义修订与初始组织是独立命题，虽同源同范围但并非完全重复。",
+      "scope_check": "逐项核对 statement：保留 Product 指导、既有 Product 流程及 Model 能力范围；无范围混并。",
+      "version_check": "新增 P07/P18 指导的版本 unknown，不假定与旧 Seedance 2.5 或 Seedream 5.0 Pro 同版，不认定版本替代。",
+      "provenance_check": "新增 JIM-K-0047/0048 来自 accepted P07，0049/0050 来自 accepted P18；均有实际本地材料；原项证据不变。"
+    },
+    {
+      "review_id": "NR-0043",
+      "item_ids": [
+        "JIM-K-0047",
+        "JIM-K-0049"
+      ],
+      "relation": "SCOPE_PARALLEL",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "基础提示词表达与调整",
+      "rationale": "视频与图片的基础组织指导处于不同产品指导范围，主题平行而非同一模型版本变体；保留各自来源。",
+      "scope_check": "逐项核对 statement：保留 Product 指导、既有 Product 流程及 Model 能力范围；无范围混并。",
+      "version_check": "新增 P07/P18 指导的版本 unknown，不假定与旧 Seedance 2.5 或 Seedream 5.0 Pro 同版，不认定版本替代。",
+      "provenance_check": "新增 JIM-K-0047/0048 来自 accepted P07，0049/0050 来自 accepted P18；均有实际本地材料；原项证据不变。"
+    },
+    {
+      "review_id": "NR-0044",
+      "item_ids": [
+        "JIM-K-0048",
+        "JIM-K-0050"
+      ],
+      "relation": "SCOPE_PARALLEL",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "基础提示词表达与调整",
+      "rationale": "两种提示修订建议的触发条件不同：主体表达不清楚与词义歧义；视频/图片范围分别保留，不合成统一效果规律。",
+      "scope_check": "逐项核对 statement：保留 Product 指导、既有 Product 流程及 Model 能力范围；无范围混并。",
+      "version_check": "新增 P07/P18 指导的版本 unknown，不假定与旧 Seedance 2.5 或 Seedream 5.0 Pro 同版，不认定版本替代。",
+      "provenance_check": "新增 JIM-K-0047/0048 来自 accepted P07，0049/0050 来自 accepted P18；均有实际本地材料；原项证据不变。"
+    },
+    {
+      "review_id": "NR-0045",
+      "item_ids": [
+        "JIM-K-0051",
+        "JIM-K-0009"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "产品生成流程",
+      "rationale": "两项是不同媒介的产品流程：一为图片生成三步流程，一为视频生成三步流程。除同属“产品页用步骤描述流程”这一形式外，无共享陈述内容，也不互为版本或替代。",
+      "scope_check": "逐项核对 statement：两项均为 Product Layer 流程说明，各自保留其媒介与步骤；未把图片流程与视频流程合并。",
+      "version_check": "新增 P19 的版本为 unknown；不假定与 P10 的 Seedance 2.5 产品页同版，不认定版本替代或先后。",
+      "provenance_check": "新增 JIM-K-0051 来自 accepted P19（MANUAL_CAPTURE）；原项 JIM-K-0009 证据与版本不变。"
+    },
+    {
+      "review_id": "NR-0046",
+      "item_ids": [
+        "JIM-K-0051",
+        "JIM-K-0004",
+        "JIM-K-0005",
+        "JIM-K-0006",
+        "JIM-K-0007",
+        "JIM-K-0008"
+      ],
+      "relation": "SCOPE_PARALLEL",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "图片生成：产品流程与模型能力",
+      "rationale": "主题同为图片生成，但分层不同：JIM-K-0051 是该官方产品页所述的产品操作流程，其余五项是 Seedream Model Layer 的能力声明。产品流程步骤不能证明模型能力，模型能力也不能证明产品可操作，故保持平行而不得合并。",
+      "scope_check": "逐项核对 statement：Product 流程保留为产品范围，Model 能力保留为模型范围；不发生 Model→Product 的可用性外推。",
+      "version_check": "P19 版本 unknown，Seedream 项分别有其自身版本范围；不假定两者同版，不认定图片产品流程绑定某一 Seedream 版本。",
+      "provenance_check": "新增 JIM-K-0051 来自 accepted P19；其余五项证据未变。"
+    },
+    {
+      "review_id": "NR-0047",
+      "item_ids": [
+        "JIM-K-0052",
+        "JIM-K-0011"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "生成流程中的输入步骤",
+      "rationale": "两项都包含“向系统输入提示”这一动作，因此存在重叠；但各自还有独立知识：JIM-K-0011 是视频流程中上传素材并描述四类要素的步骤，JIM-K-0052 是图片流程中输入提示并单击“生成”触发生成的步骤。保留差异，不合并为通用输入步骤。",
+      "scope_check": "逐项核对 statement：两项均为 Product Layer 流程步骤，各自保留其媒介、素材范围与触发动作；未把视频素材输入与图片文本输入混并。",
+      "version_check": "P19 版本 unknown，P10 为 Seedance 2.5 产品页；不假定同版，不认定版本替代。",
+      "provenance_check": "新增 JIM-K-0052 来自 accepted P19；JIM-K-0011 证据不变。"
+    },
+    {
+      "review_id": "NR-0048",
+      "item_ids": [
+        "JIM-K-0053",
+        "JIM-K-0046"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "生成结果的查看与导出",
+      "rationale": "两项都包含“查看生成结果并导出”这一环节，因此存在重叠；但各自还有独立知识：JIM-K-0046 是视频流程第三步的生成、预览并保存，JIM-K-0053 是图片流程第三步的修复／展开／删除调整、下载与转画布。保留媒介与动作差异，不合并。",
+      "scope_check": "逐项核对 statement：两项均为 Product Layer 流程步骤；未把图片结果处理与视频结果处理合并为同一流程。",
+      "version_check": "P19 版本 unknown，P10 为 Seedance 2.5 产品页；不假定同版，不认定版本替代。",
+      "provenance_check": "新增 JIM-K-0053 来自 accepted P19；JIM-K-0046 证据不变。"
+    },
+    {
+      "review_id": "NR-0049",
+      "item_ids": [
+        "JIM-K-0053",
+        "JIM-K-0016",
+        "JIM-K-0019",
+        "JIM-K-0021"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "编辑相关能力与流程",
+      "rationale": "JIM-K-0053 是图片流程中“调整与导出”这一产品步骤，涉及的修复／展开／删除与“画布”均取自该页流程描述；其余三项是视频局部编辑的能力、概念与保留边界，来自 P13。主题相近但媒介、功能与证据来源都不同，不合并、也不互相补充。",
+      "scope_check": "逐项核对 statement：图片步骤保留为流程知识，视频编辑三项保留为能力／概念／边界；未把图片调整声明当作视频局部编辑的证据，也未反向拼接。",
+      "version_check": "P19 版本 unknown，P13 项属 Seedance 2.5 产品页范围；不假定同版，不认定版本替代。",
+      "provenance_check": "新增 JIM-K-0053 来自 accepted P19；JIM-K-0016/0019/0021 证据不变。"
+    },
+    {
+      "review_id": "NR-0050",
+      "item_ids": [
+        "JIM-K-0052",
+        "JIM-K-0049"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "图片提示词：表达方法与流程步骤",
+      "rationale": "两项都涉及图片提示词，因此存在重叠；但性质不同：JIM-K-0049 是提示词的表达方法（先交代对象、组织为短句），JIM-K-0052 是流程中在何处输入提示并触发生成。方法不等于步骤，保留独立。",
+      "scope_check": "逐项核对 statement：两项均为 Product Layer 且均来自官方页面，但一项为表达指导、一项为流程说明；未把建议方法写成流程要求。",
+      "version_check": "P18 与 P19 的版本均为 unknown；不假定两者同版，也不假定与当前 UI 同版。",
+      "provenance_check": "新增 JIM-K-0052 来自 accepted P19；JIM-K-0049 来自 accepted P18，证据未变。"
+    },
+    {
+      "review_id": "NR-0051",
+      "item_ids": [
+        "JIM-K-0051",
+        "JIM-K-0052",
+        "JIM-K-0053"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "图片生成流程与其步骤",
+      "rationale": "同一流程的整体说明与两个步骤条目之间存在包含关系，因此重叠，但原子性要求保留：整体条目承载流程全貌与起点，步骤条目承载各自的输入／触发与调整／导出动作。按政策保持独立，不合并为单条。",
+      "scope_check": "逐项核对 statement：三项均为同一官方页的 Product Layer 流程内容，各自范围互不越界；无 Model 能力混入。",
+      "version_check": "三项同源 P19，版本同为 unknown；不因同源而假定版本已知，也不据此推断版本替代。",
+      "provenance_check": "三项均来自 accepted P19，且有实际本地 MANUAL_CAPTURE 材料；无内容伪造。"
+    },
+    {
+      "review_id": "NR-0052",
+      "item_ids": [
+        "JIM-K-0052",
+        "JIM-K-0053"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "图片生成流程的相邻步骤",
+      "rationale": "两项是同一流程中相邻但内容不同的步骤：输入提示并触发生成，与查看结果、调整并导出。动作、对象与产物均不同，不构成重叠。",
+      "scope_check": "逐项核对 statement：两项均为 Product Layer 流程步骤，各自保留其动作范围。",
+      "version_check": "两项同源 P19，版本 unknown；不假定步骤之外还有未写明的官方步骤。",
+      "provenance_check": "两项均来自 accepted P19，有实际本地材料。"
+    },
+    {
+      "review_id": "NR-0053",
+      "item_ids": [
+        "JIM-K-0054",
+        "JIM-K-0055",
+        "JIM-K-0056",
+        "JIM-K-0044",
+        "JIM-K-0045"
+      ],
+      "relation": "SCOPE_PARALLEL",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "产品入口与客户端范围",
+      "rationale": "三项新增知识是 Jimeng Web 未登录状态下的入口与准入观察；两项既有项是 App Store 官方版本历史中 iOS 2.3.0 的项目页与更新说明记载。二者客户端不同、证据性质不同（观察 vs 官方记载），必须平行保留，不得用历史 App 记录补当前 Web 流程，也不得由 Web 观察推出 App 界面。",
+      "scope_check": "逐项核对 statement：Web 观察限于 Jimeng Web 与观察时点；App 项限于 App Store 官方版本历史所述范围；未发生客户端互相替代或范围混并。",
+      "version_check": "新增 P20 版本为 unknown（观察时点 2026-10-04）；App 项为其自身版本范围（iOS 2.3.0）。不假定两者同版，不认定版本替代或对应关系。",
+      "provenance_check": "新增 JIM-K-0054/0055/0056 来自 accepted P20（MANUAL_CAPTURE 观察，OBSERVED）；JIM-K-0044/0045 证据与版本范围不变。"
+    },
+    {
+      "review_id": "NR-0054",
+      "item_ids": [
+        "JIM-K-0055",
+        "JIM-K-0029"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "使用前的准入条件",
+      "rationale": "两项都属于“使用产品前的准入要求”，因此存在重叠；但各自独立：JIM-K-0029 是协议要求按规定完成真实身份信息认证后才能生成、制作、发布内容；JIM-K-0055 是 Web 未登录状态下“对话”“画布”区域显示“请先登录”的观察。登录状态与真实身份信息认证是不同要求，触发范围也不同，故保留独立，不得互相推导或替代。",
+      "scope_check": "逐项核对 statement：JIM-K-0055 限 Jimeng Web 该时点该状态下的两个区域；JIM-K-0029 限协议第4.3节的生成/制作/发布动作；未把“请先登录”扩大为整个平台全部功能，也未把认证要求缩小为登录。",
+      "version_check": "P20 版本 unknown，P14 为 2025-08-25 更新/2025-09-01 生效范围；不假定同版，不认定版本替代。",
+      "provenance_check": "新增 JIM-K-0055 来自 accepted P20（OBSERVED）；JIM-K-0029 来自 accepted P14，证据不变。"
+    },
+    {
+      "review_id": "NR-0055",
+      "item_ids": [
+        "JIM-K-0056",
+        "JIM-K-0009",
+        "JIM-K-0051"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "产品入口与生成流程",
+      "rationale": "三项都是 Product Layer 的 PROCEDURE，但主题不同：JIM-K-0056 描述如何进入创作区域并完成准入；JIM-K-0009 与 JIM-K-0051 分别描述视频与图片的生成三步流程。入口路径不是生成流程的步骤，二者无共享陈述内容。",
+      "scope_check": "逐项核对 statement：入口路径限于该时点 Web 可见环节；视频与图片流程各自保留其媒介与步骤；未把入口步骤并入生成流程，也未用流程替代入口。",
+      "version_check": "P20 版本 unknown，P10/P19 各自版本范围不变；不假定同版，不认定版本替代。",
+      "provenance_check": "新增 JIM-K-0056 来自 accepted P20（OBSERVED）；JIM-K-0009/0051 证据不变。"
+    },
+    {
+      "review_id": "NR-0056",
+      "item_ids": [
+        "JIM-K-0054",
+        "JIM-K-0056"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "Web 创作入口：存在状态与进入路径",
+      "rationale": "两项同源于同一次观察且主题同为 Web 创作入口，因此重叠；但知识形态与用途不同：JIM-K-0054 陈述该时点存在哪些区域与入口（概念），JIM-K-0056 陈述按什么顺序进入并完成准入（流程）。原子性要求保留独立，不合并为单条。",
+      "scope_check": "逐项核对 statement：概念项只陈述存在与可见文字，流程项只陈述顺序；两者均未越界到登录后页面或其它客户端。",
+      "version_check": "两项同源 P20，版本同为 unknown；不因同源而假定版本已知。",
+      "provenance_check": "两项均来自 accepted P20（OBSERVED），有实际本地 MANUAL_CAPTURE 材料。"
+    },
+    {
+      "review_id": "NR-0057",
+      "item_ids": [
+        "JIM-K-0055",
+        "JIM-K-0056"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "Web 创作入口与准入条件",
+      "rationale": "进入路径中包含“需要先登录”这一环节，故与准入提示项重叠；但各自独立：JIM-K-0055 只陈述未登录状态下两个区域的提示与登录入口存在，JIM-K-0056 陈述完整进入顺序。条件与流程职责不同，保留独立。",
+      "scope_check": "逐项核对 statement：条件项不做流程断言，流程项不把提示扩大为平台级要求；无范围混并。",
+      "version_check": "两项同源 P20，版本 unknown；不假定该提示与路径在其他版本保持。",
+      "provenance_check": "两项均来自 accepted P20（OBSERVED），有实际本地材料。"
+    },
+    {
+      "review_id": "NR-0058",
+      "item_ids": [
+        "JIM-K-0054",
+        "JIM-K-0055"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "Web 创作首页：存在与准入",
+      "rationale": "一项陈述该时点创作首页存在哪些区域与入口，另一项陈述未登录时两个区域显示“请先登录”这一准入现象。命题对象与用途不同，不构成重叠，也不得由此推出“所有区域都需登录”。",
+      "scope_check": "逐项核对 statement：概念项不含准入判断，条件项不含入口完整性判断；未互相扩张。",
+      "version_check": "两项同源 P20，版本 unknown；不假定后续版本行为相同。",
+      "provenance_check": "两项均来自 accepted P20（OBSERVED），有实际本地材料。"
+    },
+    {
+      "review_id": "NR-0059",
+      "item_ids": [
+        "JIM-K-0057",
+        "JIM-K-0058",
+        "JIM-K-0059",
+        "JIM-K-0001",
+        "JIM-K-0002"
+      ],
+      "relation": "SCOPE_PARALLEL",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "参考输入：产品界面与模型能力",
+      "rationale": "主题同为 Seedance 2.5 的多模态参考输入，但分层不同：三项新增项是该时点 Jimeng Web 界面所显示的入口路径、组合方式与总量提示（Product Layer，OBSERVED）；两项既有项是 Seed 官方对模型层音视频联合定位与参考视频构图信息的说明（Model Layer，DOCUMENTED）。产品界面条件不能证明模型能力，模型声明也不能证明产品可操作，故保持平行不得合并。",
+      "scope_check": "逐项核对 statement：Product 界面观察保留为产品范围，Model 能力保留为模型范围；未发生 Model→Product 的可用性外推，也未把界面总量提示写成模型规格。",
+      "version_check": "P21 版本范围为 Seedance 2.5 + 2026-10-04 观察界面；Model 项各自版本范围不变；不假定同版，不认定版本替代。",
+      "provenance_check": "新增 JIM-K-0057/0058/0059 来自 accepted P21（MANUAL_CAPTURE，OBSERVED）；JIM-K-0001/0002 证据与版本范围不变。"
+    },
+    {
+      "review_id": "NR-0060",
+      "item_ids": [
+        "JIM-K-0057",
+        "JIM-K-0011"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "视频流程中的素材输入",
+      "rationale": "两项都涉及视频生成中的素材输入，因此重叠；但各自独立：JIM-K-0011 来自官方产品页流程说明，把上传素材与输入提示词列为三步流程中的同一步骤；JIM-K-0057 来自界面观察，描述“视频生成 → Seedance 2.5 → 全能参考 → 参考内容 → 上传/@”这一具体入口路径。流程步骤职责与界面入口路径不同，保留独立。",
+      "scope_check": "逐项核对 statement：一项为产品页流程步骤，一项为界面入口观察；两者范围未混并，未用界面路径替代流程说明，也未用流程说明替代入口路径。",
+      "version_check": "P10 为 Seedance 2.5 公开产品页，P21 为 2026-10-04 观察界面；不假定两者描述完全一致或同版。",
+      "provenance_check": "新增 JIM-K-0057 来自 accepted P21（OBSERVED）；JIM-K-0011 来自 accepted P10，证据不变。"
+    },
+    {
+      "review_id": "NR-0061",
+      "item_ids": [
+        "JIM-K-0058",
+        "JIM-K-0013",
+        "JIM-K-0014"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "多模态素材组合与音频参与",
+      "rationale": "三项都涉及把多种素材（含音频）组合进视频创作，因此重叠；但各自独立：JIM-K-0013 是产品页对可组合脚本、视频、音频和风格素材的说明；JIM-K-0014 是产品页对音画协同创作方式的说明；JIM-K-0058 是界面观察到的“输入文字或 @ 参考内容”与图/文/音/视频 @ 引用方式。三者的证据形态与所述动作层次不同，保留独立。",
+      "scope_check": "逐项核对 statement：三项均为 Product Layer，但两项来自产品页说明、一项来自界面观察；未把界面 @ 引用方式写成产品页所述的同一种组合机制。",
+      "version_check": "P12 与 P21 版本范围不同（后者为 2026-10-04 观察界面）；不假定同版，不认定版本替代。",
+      "provenance_check": "新增 JIM-K-0058 来自 accepted P21（OBSERVED）；JIM-K-0013/0014 来自 accepted P12，证据不变。"
+    },
+    {
+      "review_id": "NR-0062",
+      "item_ids": [
+        "JIM-K-0058",
+        "JIM-K-0059",
+        "JIM-K-0015",
+        "JIM-K-0017",
+        "JIM-K-0022",
+        "JIM-K-0023"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "参考素材的用途、边界与输入条件",
+      "rationale": "主题同为参考素材，因此重叠；但两类知识分工不同：四项既有项陈述参考视频/图片的用途（动态信息）、方式概念与使用边界（参照位置、用途范围）；两项新增项陈述界面上的组合与 @ 引用方式，以及参考素材总量提示。用途与边界不等于输入路径与条件，两者互为独立知识，保留不合并。",
+      "scope_check": "逐项核对 statement：既有项保留其“用途/概念/边界”范围，新增项保留其“界面组合方式与总量提示”范围；未把用途写成条件，也未把总量提示写成用途边界。",
+      "version_check": "P12 与 P21 版本范围不同；不假定同版，不认定版本替代。",
+      "provenance_check": "新增 JIM-K-0058/0059 来自 accepted P21（OBSERVED）；四项既有项来自 accepted P12，证据不变。"
+    },
+    {
+      "review_id": "NR-0063",
+      "item_ids": [
+        "JIM-K-0057",
+        "JIM-K-0058"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "参考内容：入口路径与组合方式",
+      "rationale": "两项同源于同一次界面观察且主题同为“参考内容”，因此重叠；但知识形态不同：JIM-K-0057 陈述按什么顺序进入并找到入口（流程），JIM-K-0058 陈述该界面说明涉及哪些参考元素与引用方式（能力）。原子性要求保留独立。",
+      "scope_check": "逐项核对 statement：流程项不做能力断言，能力项不做顺序断言；两者均未越界到截图外内容。",
+      "version_check": "两项同源 P21，版本范围相同；不因同源而假定后续版本保持。",
+      "provenance_check": "两项均来自 accepted P21（OBSERVED），有实际本地 MANUAL_CAPTURE 材料。"
+    },
+    {
+      "review_id": "NR-0064",
+      "item_ids": [
+        "JIM-K-0059",
+        "JIM-K-0057"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "参考输入路径与总量提示",
+      "rationale": "一项陈述加入参考内容的界面路径，另一项陈述该界面显示的参考素材总量提示。命题对象与用途不同（流程 vs 条件数值），不构成重叠；也不得由总量提示推出路径步骤，或反之。",
+      "scope_check": "逐项核对 statement：路径项不含数量条件，条件项不含步骤顺序；未互相扩张。",
+      "version_check": "两项同源 P21，版本范围相同；不假定该数值与路径在其它版本保持。",
+      "provenance_check": "两项均来自 accepted P21（OBSERVED），有实际本地材料。"
+    },
+    {
+      "review_id": "NR-0065",
+      "item_ids": [
+        "JIM-K-0060",
+        "JIM-K-0061",
+        "JIM-K-0003",
+        "JIM-K-0005",
+        "JIM-K-0006",
+        "JIM-K-0007"
+      ],
+      "relation": "SCOPE_PARALLEL",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "图片编辑：产品流程与模型能力",
+      "rationale": "主题同为图片编辑，但分层不同：JIM-K-0060/0061 是 2026-10-04 在 Jimeng Web 界面上观察到的一次图片修改任务流程与结果页行为（Product Layer，OBSERVED）；K-0003/0005/0006/0007 是模型层编辑能力声明（Model Layer，DOCUMENTED）。尤其需要区分的是：JIM-K-0061 只陈述结果页**存在**“局部重绘”等入口（入口存在事实），而 K-0005/0006/0007 陈述的是模型层编辑能力——入口存在既不等于该能力已被验证，也不等于其操作流程已被验证，两者不得合并。产品流程不得写成模型能力，模型能力也不得写成产品可操作。",
+      "scope_check": "逐项核对 statement：Product 流程与结果页行为保留为产品范围，Model 能力保留为模型范围；未发生 Model→Product 或 Product→Model 的互推，也未把“入口存在”升级为“能力已验证”。",
+      "version_check": "P22 版本范围为 Seedream 5.0 Pro + 2026-10-04 观察界面；Model 项各自版本范围不变；不假定同版，不认定版本替代。",
+      "provenance_check": "新增 JIM-K-0060/0061 来自 accepted P22（MANUAL_CAPTURE，OBSERVED）；K-0003/0005/0006/0007 证据与版本范围不变。"
+    },
+    {
+      "review_id": "NR-0066",
+      "item_ids": [
+        "JIM-K-0060",
+        "JIM-K-0061",
+        "JIM-K-0016",
+        "JIM-K-0019",
+        "JIM-K-0021"
+      ],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "图片编辑与视频局部编辑",
+      "rationale": "两组知识都涉及“局部编辑”，但媒介与产品路径不同：JIM-K-0060/0061 是 Seedream 5.0 Pro 图片修改任务的流程与结果页；JIM-K-0016/0019/0021 是 Seedance 2.5 视频局部编辑的能力、概念与保留边界（来自 P13）。二者无共享陈述内容，不得混层或互相替代；本轮证据也未验证视频编辑，故不得据此写出视频局部编辑流程。",
+      "scope_check": "逐项核对 statement：图片链路保留为 Seedream 图片任务范围，视频三项保留为 Seedance 视频范围；未发生媒介互换，未把图片流程当作视频编辑证据，也未反向拼接。",
+      "version_check": "P22 为 Seedream 5.0 Pro + 2026-10-04 观察界面；P13 项属 Seedance 2.5 产品页范围；不假定同版，不认定版本替代。",
+      "provenance_check": "新增 JIM-K-0060/0061 来自 accepted P22（OBSERVED）；K-0016/0019/0021 证据不变。"
+    },
+    {
+      "review_id": "NR-0067",
+      "item_ids": [
+        "JIM-K-0060",
+        "JIM-K-0051",
+        "JIM-K-0052"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "图片生成与图片修改任务",
+      "rationale": "两项都发生在 Jimeng Web 图片链路中，且共享“输入内容 → 执行 → 产出结果”这一形状，因此重叠；但各自独立：JIM-K-0051/0052 是官方产品页所述从文本生成图片的三步流程与提示输入；JIM-K-0060 是界面观察到的一次**针对已有图片的修改任务**提交过程。任务目的与输入对象不同（新建生成 vs 修改已有作品），不得合并为同一流程。",
+      "scope_check": "逐项核对 statement：产品页流程保留其文档来源与范围，界面修改任务保留其界面观察范围；未用修改任务替代生成流程，也未把生成流程写成修改任务模板。",
+      "version_check": "P19 版本 unknown，P22 为 Seedream 5.0 Pro + 2026-10-04 观察界面；不假定同版，不认定版本替代。",
+      "provenance_check": "新增 JIM-K-0060 来自 accepted P22（OBSERVED）；JIM-K-0051/0052 来自 accepted P19，证据不变。"
+    },
+    {
+      "review_id": "NR-0068",
+      "item_ids": [
+        "JIM-K-0061",
+        "JIM-K-0053"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "结果复查与导出",
+      "rationale": "两项都描述“查看结果并导出”这一环节，因此重叠；但各自独立：JIM-K-0053 是图片生成流程第三步的修复／展开／删除调整、下载与转“画布”（来自产品页文档）；JIM-K-0061 是修改任务结果页的预览、“重新编辑／再次生成”、下载与详情页入口（来自界面观察）。来源性质与所属任务不同，保留独立。",
+      "scope_check": "逐项核对 statement：文档来源项与界面观察项各自保留其范围与证据性质；未把入口文字当作操作步骤，也未把文档步骤当作界面事实。",
+      "version_check": "P19 版本 unknown，P22 为 Seedream 5.0 Pro + 2026-10-04 观察界面；不假定同版，不认定版本替代。",
+      "provenance_check": "新增 JIM-K-0061 来自 accepted P22（OBSERVED）；JIM-K-0053 来自 accepted P19，证据不变。"
+    },
+    {
+      "review_id": "NR-0069",
+      "item_ids": [
+        "JIM-K-0060",
+        "JIM-K-0061"
+      ],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "图片修改任务与其结果阶段",
+      "rationale": "两项同源同一次任务且主题相接（一个描述提交修改任务，一个描述结果页复查与输出），因此重叠；但知识形态与用途不同：前者是输入与提交动作，后者是结果查看、再编辑与下载。原子性要求保留独立，不合并为单条。",
+      "scope_check": "逐项核对 statement：提交项不做结果页断言，结果项不做提交动作断言；两者均未越界到截图外内容或子工具内部步骤。",
+      "version_check": "两项同源 P22，版本范围相同；不因同源而假定后续版本保持。",
+      "provenance_check": "两项均来自 accepted P22（OBSERVED），有实际本地 MANUAL_CAPTURE 材料。"
+    }
+  ]
+}

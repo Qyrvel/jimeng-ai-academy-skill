@@ -1,0 +1,26 @@
+name: Course or assessment change
+description: Propose a lesson, curriculum, assessment, mastery, or course-evaluation change.
+title: "[Course] "
+labels: [curriculum]
+body:
+  - type: input
+    id: ids
+    attributes:
+      label: Affected IDs
+      description: Example JCA-M04-L02, JCA-A-011, JCA-MU-L12.
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence / knowledge refs
+  - type: textarea
+    id: tests
+    attributes:
+      label: Validation plan

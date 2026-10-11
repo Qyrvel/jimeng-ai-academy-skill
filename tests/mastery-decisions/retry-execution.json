@@ -1,0 +1,12 @@
+{
+  "snapshot_id": "fixture-decision-retry-execution",
+  "mastery_unit_id": "JCA-MU-L02",
+  "hard_prerequisites_satisfied": true,
+  "satisfied_outcomes": [],
+  "misconception_outcomes": [],
+  "evidence_submitted": true,
+  "execution_criteria_met": false,
+  "expected_decision": "RETRY",
+  "expected_reason": "RETRY_EXECUTION_INCOMPLETE",
+  "note": "概念/边界无误解、证据已提交，但 procedure execution 未达标 → RETRY。"
+}

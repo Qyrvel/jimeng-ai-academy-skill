@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Academy Normalization Review",
+  "type": "object",
+  "required": ["reviews"],
+  "additionalProperties": false,
+  "properties": {
+    "reviews": {"type": "array", "items": {"$ref": "#/$defs/review"}}
+  },
+  "$defs": {
+    "text": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "review": {
+      "type": "object",
+      "required": ["review_id", "item_ids", "relation", "decision", "normalized_label", "rationale", "scope_check", "version_check", "provenance_check"],
+      "additionalProperties": false,
+      "properties": {
+        "review_id": {"$ref": "#/$defs/text"},
+        "item_ids": {"type": "array", "minItems": 2, "items": {"$ref": "#/$defs/text"}},
+        "relation": {"type": "string", "enum": ["DISTINCT", "EXACT_DUPLICATE", "PARTIAL_OVERLAP", "VERSION_VARIANT", "SCOPE_PARALLEL", "CONFLICT_CANDIDATE"]},
+        "decision": {"type": "string", "enum": ["KEEP_SEPARATE", "MERGE_CANDIDATE", "NEEDS_REVIEW"]},
+        "normalized_label": {"$ref": "#/$defs/text"},
+        "rationale": {"$ref": "#/$defs/text"},
+        "scope_check": {"$ref": "#/$defs/text"},
+        "version_check": {"$ref": "#/$defs/text"},
+        "provenance_check": {"$ref": "#/$defs/text"}
+      }
+    }
+  }
+}

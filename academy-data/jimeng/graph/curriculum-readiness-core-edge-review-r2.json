@@ -1,0 +1,53 @@
+{
+  "reviews": [
+    {
+      "edge_id": "CRR1-E-0001",
+      "status": "KEEP",
+      "review_reason": "R1 已验证的 G40-06 closure，R2 逐字携带、未修改。P14 §4.3 明列生成行为；K0046 包含实际视频生成动作。跨来源映射标记 INFERRED，直接作用到生成这一子动作，保留版本与适用限制。规则→动作方向正确，无中间知识依赖或教学偏好；不将认证扩展到浏览入口或全部步骤。",
+      "directness": "DIRECT",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "CRR2-E-0002",
+      "status": "KEEP",
+      "review_reason": "DOCUMENTED 成立：K-0051 与 K-0052 同源 P19，该页以步骤小标题把三步骤列出，K-0052 的 statement 明说自身是该流程中输入提示并触发的动作。归属无需推断。K-0052 覆盖第1–2步为一个阶段一事已写入其 statement 与 limitations，故本边不主张它等同于单独一个官方步骤。",
+      "directness": "DIRECT",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "CRR2-E-0003",
+      "status": "KEEP",
+      "review_reason": "DOCUMENTED 成立：K-0053 对应该页第3步“增强、定制和导出”，其 statement 明说使用修复、展开、删除调整、下载与转画布。归属由步骤小标题直接支持，无需推断。",
+      "directness": "DIRECT",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "CRR2-E-0004",
+      "status": "KEEP",
+      "review_reason": "DOCUMENTED 成立：该页以“第2步／第3步”给出先后；两条 STEP_OF 父节点同为 JIM-K-0051，满足同一 workflow 内顺序要求，无需 CROSS_WORKFLOW_ORDER_JUSTIFICATION。属流程事实而非教学顺序。",
+      "directness": "DIRECT",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "CRR2-E-0005",
+      "status": "KEEP",
+      "review_reason": "DIRECT_CONSTRAINT 成立：K-0055 限定的就是“对话/画布”两个区域的准入条件，K-0056 的路径包含使用这两个区域的环节，约束点具体且可解释，不是“同属平台”式宽泛关联。标 INFERRED 是因为“条件约束流程环节”属把条件应用到流程的推论，观察文字未以关系句式表述；limitations 已写明该边界，且明确本边不是 PREREQUISITE_OF、不含教学顺序。",
+      "directness": "DIRECT",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "CRR2-E-0006",
+      "status": "KEEP",
+      "review_reason": "DIRECT_CONSTRAINT 成立：K-0059 限定的正是“参考内容”处上传／@ 引用动作的总量条件，K-0057 的路径包含该动作，约束点具体且落在同一界面的同一环节，不是“同属平台”式宽泛关联。标 INFERRED 是因为“总量提示约束输入环节”属把界面条件应用到流程的推论；limitations 已写明不把 50 升级为模型层上限、不解释为分项上限、本边不是 PREREQUISITE_OF。",
+      "directness": "DIRECT",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "CRR2-E-0007",
+      "status": "KEEP",
+      "review_reason": "DOCUMENTED 成立：K-0060 与 K-0061 同源 P22 的同一次任务，K-0060 把该任务说明为完整流程，K-0061 明说自身是该任务完成后结果页的预览、重新编辑／再次生成与下载，即结果阶段。归属由两条 statement 与同批次截图（RAW B／C）直接支持，无需推断；limitations 已写明不表示结果页入口的内部步骤已被验证，因此本边不把“入口存在”升级为“子流程已验证”。",
+      "directness": "DIRECT",
+      "curriculum_leakage": false
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "assessment_id": "JCA-A-015",
+  "lesson_ids": ["JCA-M05-L03"],
+  "lesson_pair_reason": "NOT_APPLICABLE",
+  "assessment_type": "EXPLAIN_BOUNDARY",
+  "purpose": "测量 JCA-M05-L03 的三条 outcome：学生要说明参考视频的用途、参考素材的参照位置与作用范围，并说明独立音频上传路径的验证状态。",
+  "target_outcomes": ["解释参考视频用于传达动态信息", "解释参考图片与参考视频处于参照位置、其作用范围不扩展到其他内容", "解释独立音频上传路径未由现有证据单独验证，并不假定该入口存在"],
+  "knowledge_refs": ["JIM-K-0015", "JIM-K-0022", "JIM-K-0023"],
+  "scope": "Jimeng Product Layer；即梦 Seedance 2.5 产品页对参考视频与参考图片的用途与作用边界说明，以及音频参考的验证状态。",
+  "task": "说明参考视频在产品页中被限定的用途，并写出它典型传达的四类动态信息。然后说明参考图片与参考视频在产品页中的作用位置，以及该作用范围是否扩展到改变生成结果的其他内容。最后回答：能否把「参考视频不适合控制画面风格」写成「产品禁止用参考视频控制风格」？说明理由。",
+  "expected_evidence": "①参考视频用于传达动态信息（运镜速度、人物轨迹、动作调度、多人互动）；②说明两类参考素材处于参照与控制位置、作用范围不扩展到其他内容；③一句说明作用范围描述不等于禁止其他用法；④一句说明独立音频上传路径未被单独验证、不等于不支持。",
+  "scoring_criteria": [
+    {"criterion_id": "A015-C1", "description": "说明参考视频的用途", "evidence_source": "手写说明", "weight": 2, "pass_condition": "写出其用于传达动态信息，并完整列出运镜速度、人物轨迹、动作调度、多人互动四项，四项均须出现"},
+    {"criterion_id": "A015-C2", "description": "说明参考素材的参照位置", "evidence_source": "手写说明", "weight": 2, "pass_condition": "指出参考图片与参考视频处于参照与控制位置"},
+    {"criterion_id": "A015-C3", "description": "说明作用范围不扩展", "evidence_source": "手写说明", "weight": 2, "pass_condition": "指出该作用范围未扩展到改变生成结果的其他内容"},
+    {"criterion_id": "A015-C4", "description": "区分作用范围与禁止", "evidence_source": "书面回答", "weight": 2, "pass_condition": "指出「产品页未说明非动态用途」不等于「产品禁止」，不能写成禁止性规定"},
+    {"criterion_id": "A015-C5", "description": "音频路径的验证状态", "evidence_source": "手写说明", "weight": 2, "pass_condition": "写出独立音频上传路径未被单独验证，且明确不等于不支持"}
+  ],
+  "max_score": 10,
+  "pass_score": 8,
+  "partial_credit_policy": "允许 partial credit：每条 0/1/2。四类动态信息漏一项得 1、漏两项及以上得 0；说明类抓住要点但未区分两种状态得 1。不因用词不同扣分。",
+  "allowed_support": ["lesson notes", "course outline"],
+  "disallowed_support": ["external web search", "unverified community tutorial", "another person's completed answer"],
+  "feedback_boundary": "评分后只可告知：哪条 criterion 未达标、对应 Lesson（JCA-M05-L03）、以及「作用范围描述 ≠ 禁止性规定」「未验证 ≠ 不支持」两条 boundary 提醒。不得补充素材时长、格式、数量与动作迁移精度。",
+  "alignment": {
+    "completion_check_alignment": "DIRECT",
+    "rationale": "JCA-M05-L03 的 completion_check 是「能解释参考视频用于传达动态信息、参考素材处于参照与控制位置且作用范围不扩展到其他内容，并能说明独立音频上传路径未被现有证据单独验证（而不是不支持）」。C1/C2/C3 与 C4/C5 分别对应这三段。"
+  },
+  "limitations": "只覆盖即梦 Seedance 2.5 产品页对参考用途与作用范围的说明；不代表底层模型完整能力，也不代表所有账号、地区或设备端已开放相同能力；不说明素材时长、格式、数量、动作迁移精度，也不说明与文字提示词的优先级；本课不含界面操作步骤；一次评估不代表长期掌握。",
+  "status": "full_course"
+}

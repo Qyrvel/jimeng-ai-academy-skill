@@ -1,0 +1,104 @@
+{
+  "graph_id": "jimeng-curriculum-readiness-core-r2",
+  "scope": "Gate 4.0-R2。PHASE A：G40-02 由 P19（MANUAL_CAPTURE，DOCUMENTED）闭合；G40-01 由 P20（MANUAL_CAPTURE，OBSERVED 观察）闭合；G40-04 由 P21（MANUAL_CAPTURE，OBSERVED 观察）闭合。PHASE B 新增 JIM-K-0051/0052/0053（图片生成流程）、JIM-K-0054/0055/0056（Web 创作入口与准入）与 JIM-K-0057/0058/0059（全能参考的参考内容输入路径、组合方式与总量提示）。本图据此做最小扩展：保留 R1 已验证的 G40-06 closure，加入图片生成流程的步骤归属与先后、Web 未登录准入条件对其入口流程的直接约束，以及参考素材总量提示对参考输入路径的直接约束。G40-05 仍 EVIDENCE_BLOCKED，未为其建立任何结构。只使用 Frozen v1 关系（CONSTRAINS、STEP_OF、PROCEDURE_PRECEDES），未新增 relation，未合并历史 Pilot，不建立教学顺序，不补隐式账号或动作节点，不是 Full Jimeng Graph。",
+  "nodes": [
+    {
+      "knowledge_id": "JIM-K-0029"
+    },
+    {
+      "knowledge_id": "JIM-K-0046"
+    },
+    {
+      "knowledge_id": "JIM-K-0051"
+    },
+    {
+      "knowledge_id": "JIM-K-0052"
+    },
+    {
+      "knowledge_id": "JIM-K-0053"
+    },
+    {
+      "knowledge_id": "JIM-K-0055"
+    },
+    {
+      "knowledge_id": "JIM-K-0056"
+    },
+    {
+      "knowledge_id": "JIM-K-0057"
+    },
+    {
+      "knowledge_id": "JIM-K-0059"
+    },
+    {
+      "knowledge_id": "JIM-K-0060"
+    },
+    {
+      "knowledge_id": "JIM-K-0061"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "CRR1-E-0001",
+      "from": "JIM-K-0029",
+      "relation": "CONSTRAINS",
+      "to": "JIM-K-0046",
+      "epistemic_status": "INFERRED",
+      "rationale": "DIRECT_CONSTRAINT: 本地 P14 §4.3 / K0029 把真实身份认证作为生成、制作、发布的前提；本地 P10 第三步 / K0046 明确包含生成 AI 视频这一动作。将既有平台规则应用到该产品生成动作，建立规则到受约束行为的直接关系；不是因为应当先讲认证而建边。",
+      "limitations": "INFERENCE_BOUNDARY: 关系由 P14 条款动作范围与 P10 生成步骤对照推得，两个来源未相互点名。只约束 K0046 内的生成动作，不断言预览或下载独立需要认证；不推断认证界面、执行时机、账号权限或现行法律。限已保存的 P14 2025-08-25 更新/2025-09-01 生效范围及 P10 Seedance 2.5 产品页，不证明后续版本变化。"
+    },
+    {
+      "edge_id": "CRR2-E-0002",
+      "from": "JIM-K-0052",
+      "relation": "STEP_OF",
+      "to": "JIM-K-0051",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "两条均为 PROCEDURE，同源自同一官方产品页（P19）。K-0051 的 statement 明说该页把从文本生成图像说明为三个步骤；K-0052 的 statement 明说其内容是在聊天框输入文本提示并单击“生成”触发图片生成，对应该页的第1步与第2步。故“该条目是那个 workflow 的步骤组成”由两条 statement 与该页的步骤小标题共同直接支持。K-0052 覆盖该页第1–2步为一个阶段，其 statement 与 limitations 均已写明这一点。",
+      "limitations": "只表示该阶段属于该页所述三步流程；不表示它等同于单独一个官方步骤，不表示教学顺序，也不表示界面实现与文字完全一致。"
+    },
+    {
+      "edge_id": "CRR2-E-0003",
+      "from": "JIM-K-0053",
+      "relation": "STEP_OF",
+      "to": "JIM-K-0051",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "两条均为 PROCEDURE，同源自同一官方产品页（P19）。K-0051 的 statement 明说该页把从文本生成图像说明为三个步骤，其中第三步为“增强定制和导出”；K-0053 的 statement 明说其内容是使用修复、展开和删除调整图像、点击下载按钮、并可转到“画布”继续编辑，对应该页的第3步。故归属关系由两条 statement 与该页的“第3步：增强、定制和导出”小标题直接支持。",
+      "limitations": "只表示该步骤属于该页所述三步流程；不表示该页之后还有官方未写明的步骤，不表示“画布”属于同一步骤内的子动作层级。"
+    },
+    {
+      "edge_id": "CRR2-E-0004",
+      "from": "JIM-K-0052",
+      "relation": "PROCEDURE_PRECEDES",
+      "to": "JIM-K-0053",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "两条均为 PROCEDURE，且均为该官方产品页同一条三步流程中的步骤：K-0052 对应该页第1–2步（输入提示并触发生成），K-0053 对应该页第3步（增强、定制和导出）。该页以“第2步／第3步”的小标题明确给出该先后，且两条的 STEP_OF 父节点同为 JIM-K-0051，属同一 workflow 内顺序。",
+      "limitations": "只表示该官方页所述的步骤先后；不表示教学顺序，不含界面跳转与等待细节，也不说明生成失败或反复调整时的重试路径。"
+    },
+    {
+      "edge_id": "CRR2-E-0005",
+      "from": "JIM-K-0055",
+      "relation": "CONSTRAINS",
+      "to": "JIM-K-0056",
+      "epistemic_status": "INFERRED",
+      "rationale": "DIRECT_CONSTRAINT: K-0055 是 CONSTRAINT，陈述在 2026-10-04 观察到的 Jimeng Web 未登录创作首页上“对话”与“画布”区域显示“请先登录”并存在“登录”入口。K-0056 是同一观察下的 PROCEDURE，其进入路径中明确包含“若要使用当前的‘对话’或‘画布’区域，则页面提示需要先登录 → 通过‘登录’入口完成准入”这一环节。二者的直接约束点在于：K-0055 限定的正是访问这两个区域的准入条件，而 K-0056 描述的路径中包含使用这两个区域的动作，因此该条件直接限定该路径中对应环节的可执行性。",
+      "limitations": "INFERENCE_BOUNDARY: 两项同源于同一次未登录状态观察，但“该准入条件约束该入口流程的对应环节”是把条件应用到流程的推论，观察文字本身未以关系句式表述。只约束 K-0056 中涉及“对话/画布”的环节，不表示整个平台全部功能都需要登录，也不表示未登录时无法使用其它任何功能；不把本边当作教学顺序或“必须先学登录”，本边不是 PREREQUISITE_OF。"
+    },
+    {
+      "edge_id": "CRR2-E-0006",
+      "from": "JIM-K-0059",
+      "relation": "CONSTRAINS",
+      "to": "JIM-K-0057",
+      "epistemic_status": "INFERRED",
+      "rationale": "DIRECT_CONSTRAINT: K-0059 是 CONSTRAINT，陈述该界面在“参考内容”处显示“上传最多50个参考素材”这一参考素材总量提示。K-0057 是同一观察下的 PROCEDURE，其路径的最后环节正是“在主输入区的‘参考内容’处上传参考素材，或在输入中用 @ 引用参考内容”。二者的直接约束点在于：K-0059 限定的正是这一上传／引用动作的总量条件，而 K-0057 描述的路径包含该动作，因此该条件直接限定该路径对应环节的可执行范围。",
+      "limitations": "INFERENCE_BOUNDARY: 两项同源于同一次已登录界面观察，但“该总量提示约束该输入环节”是把界面条件应用到流程的推论，观察文字未以关系句式表述。只约束 K-0057 中的上传／@ 引用环节；不把 50 升级为模型层技术上限，不解释为分项上限，不表示超出后的行为；不表示三类素材共用同一配额；本边不是 PREREQUISITE_OF，不含教学顺序。"
+    },
+    {
+      "edge_id": "CRR2-E-0007",
+      "from": "JIM-K-0061",
+      "relation": "STEP_OF",
+      "to": "JIM-K-0060",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "两条均为 PROCEDURE，同源自同一次图片修改任务的界面观察（P22）。K-0060 的 statement 把该任务说明为一条完整流程（加载已有图片 → 写明修改要求 → 提交 → 生成结果 → 结果页查看并重新编辑或再次生成 → 下载）；K-0061 的 statement 明说其内容是该任务完成后结果页显示的结果预览、“重新编辑”“再次生成”与“下载”，以及结果详情页可见的入口文字，即该流程的结果阶段。故“该条目是那个 workflow 的结果阶段组成”由两条 statement 与同批次截图（RAW B／C）共同直接支持。",
+      "limitations": "只表示该结果阶段属于该次图片修改任务的流程；不表示教学顺序，不表示结果页入口的内部操作步骤已被验证（“局部重绘”等子工具的流程仍为 NOT_VERIFIED），也不表示界面实现与文字完全一致。"
+    }
+  ]
+}

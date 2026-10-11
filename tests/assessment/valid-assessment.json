@@ -1,0 +1,16 @@
+{
+"assessment_id":"JCA-A-901","lesson_ids":["JCA-M02-L03"],"lesson_pair_reason":"NOT_APPLICABLE",
+"assessment_type":"CLASSIFY","purpose":"夹具 purpose。",
+"target_outcomes":["区分 Seedream 模型层能力声明与图片产品流程步骤","解释产品流程证据不能证明模型能力，模型能力也不能证明产品可用"],
+"knowledge_refs":["JIM-K-0004","JIM-K-0005","JIM-K-0006","JIM-K-0007","JIM-K-0008"],
+"scope":"夹具 scope：Seedream 能力声明与本 Track 产品流程的边界。",
+"task":"夹具 task：给五条陈述归类并写出不能推出什么。",
+"expected_evidence":"夹具 evidence：归类结果与两句边界解释。",
+"scoring_criteria":[{"criterion_id":"FIX-C1","description":"夹具 criterion 1。","evidence_source":"归类结果","weight":2,"pass_condition":"归类正确。"},{"criterion_id":"FIX-C2","description":"夹具 criterion 2。","evidence_source":"手写理由","weight":2,"pass_condition":"理由方向正确。"}],
+"max_score":4,"pass_score":4,
+"partial_credit_policy":"夹具：按 0/1/2 计分，允许 partial credit。",
+"allowed_support":["lesson notes","course outline"],"disallowed_support":["external web search","another person's completed answer"],
+"feedback_boundary":"夹具：只告知未达标 criterion 与对应 Lesson。",
+"alignment":{"completion_check_alignment":"DIRECT","rationale":"夹具：直接对应 Lesson completion_check。"},
+"limitations":"夹具 limitations。","status":"pilot"
+}

@@ -1,0 +1,23 @@
+{
+  "graph_id": "test-misleading-marker",
+  "scope": "Gate 3.2-R2 semantic fixture; not production graph.",
+  "nodes": [
+    {
+      "knowledge_id": "JIM-K-0027"
+    },
+    {
+      "knowledge_id": "JIM-K-0028"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "POL-E-0008",
+      "from": "JIM-K-0027",
+      "relation": "PREREQUISITE_OF",
+      "to": "JIM-K-0028",
+      "epistemic_status": "INFERRED",
+      "rationale": "KNOWLEDGE_DEPENDENCY: 只是为了课程结构，建议先学 A。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为两条 POLICY 同属第4.2节、且后者的禁止对象由前者的添加行为产生；该依赖是理解层面的，不表示两条在适用上互为条件，也不表示第4.2节完整覆盖 AI 内容标识的全部规则。"
+    }
+  ]
+}

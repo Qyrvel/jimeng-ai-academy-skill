@@ -1,0 +1,14 @@
+{
+  "gate": "2.3",
+  "new_item_ids": ["JIM-K-0017", "JIM-K-0018", "JIM-K-0019", "JIM-K-0020", "JIM-K-0021", "JIM-K-0022", "JIM-K-0023", "JIM-K-0024"],
+  "source_ids_used": ["P10", "P12", "P13"],
+  "materialized_source_ids_used": ["P10", "P12", "P13"],
+  "knowledge_type_counts": {
+    "CONCEPT": 4,
+    "CAPABILITY": 0,
+    "PROCEDURE": 1,
+    "CONSTRAINT": 3,
+    "POLICY": 0,
+    "VERSION_CONTEXT": 0
+  }
+}

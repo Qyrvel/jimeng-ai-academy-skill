@@ -1,0 +1,232 @@
+{
+  "track": "Jimeng Creator Academy V1",
+  "assessment_date": "2026-10-03",
+  "domains": [
+    {
+      "domain": "即梦产品基础结构",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": ["JIM-K-0009", "JIM-K-0012"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "仅 JIM-K-0009（产品页三步生成流程）与 JIM-K-0012（文字与图片输入方式）属于产品整体结构层。二者覆盖的是视频生成的入口流程与基础输入方式，不能代表产品模块划分、画布与工作台关系、图/视频/编辑/分享之间的结构。数量不是判定依据：两项均为生成流程侧知识，缺少结构类知识，故为 PARTIAL。",
+      "known_gap": "缺少产品模块与功能关系类知识：工作台与画布的关系、图生与视频生成模块的边界、分享与项目管理等结构。Readiness 已把完整模块与权限图列为缺口。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "网页端",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": ["JIM-K-0009", "JIM-K-0010"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "JIM-K-0009 与 JIM-K-0010 记录的是公开产品页上的流程与入口选择步骤，属于网页端明示流程。两项覆盖流程骨架，但没有界面结构、导航关系与账号相关的界面差异，因此不足以代表网页端领域。",
+      "known_gap": "缺少网页端界面结构与入口关系类知识；P11 仍为 candidate，当前 UI、灰度与账号权限未核验，Readiness 明确排除按钮布局与实时规格。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "App",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": [],
+      "coverage_status": "MISSING",
+      "coverage_rationale": "当前 16 个 Item 没有任何一项以 App 为适用对象：P04/P09（iOS 版本记录）与 P15（开发者功能简介）均未形成 Knowledge Item。Readiness 对 App 为 LIMITED_INGESTION，故该缺口属于知识抽取未完成，而不是来源不允许。",
+      "known_gap": "缺少 App 侧知识：中国区 iOS 基础功能概述与 2.3.5/2.3.0 版本条目均未落成 Item。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "Seedance",
+      "criticality": "CORE",
+      "source_ingestion_decision": "ALLOW_INGESTION",
+      "knowledge_item_ids": ["JIM-K-0001", "JIM-K-0002", "JIM-K-0003", "JIM-K-0009", "JIM-K-0010", "JIM-K-0012", "JIM-K-0013", "JIM-K-0014", "JIM-K-0015"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "该领域在 Model Layer 有 3 项彼此独立的模型说明（JIM-K-0001 音视频联合生成定位、JIM-K-0002 参考视频信息理解、JIM-K-0003 绿幕编辑），在 Product Layer 有 6 项产品页声明（流程、入口与模型选择、文字与图片输入、多模态素材组合、带声音视频与音画协同、参考视频控制复杂动作）。knowledge_type 同时包含 CAPABILITY 与 PROCEDURE，statement 覆盖不同子知识，scope 与 version_scope 边界清楚。但 Readiness 所列实测与账号级开放情况未核验，故不是 COVERED。数量并非判定依据：即便 9 项中任一单独存在也不构成覆盖，此处依据的是 Model 与 Product 两侧能力均可辨认且不互相冒充。",
+      "known_gap": "缺少实测与账号级开放情况类知识；产品页所述能力与具体模型版本的部署映射仍未核验（unresolved C3）。",
+      "next_action": "GRAPH_PILOT_ELIGIBLE"
+    },
+    {
+      "domain": "Seedream",
+      "criticality": "CORE",
+      "source_ingestion_decision": "ALLOW_INGESTION",
+      "knowledge_item_ids": ["JIM-K-0004", "JIM-K-0005", "JIM-K-0006", "JIM-K-0007", "JIM-K-0008"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "5 项全部来自 Seedream 5.0 Pro 官方模型说明的 Interactive Editing 与生成能力段落：文字密集生成、空间标注引导、草图引导、图层分离、多语言生成。它们彼此独立、可分别引用，且 limitations 各自保留边界。但全部为 Model Layer 的 CAPABILITY，没有任何产品层或结构类知识，因此不能判为 COVERED。",
+      "known_gap": "缺少 Seedream 在产品层的知识（即梦产品分支映射未核验；Readiness 明确模型说明不能替代产品分支操作），且 knowledge_type 全部为 CAPABILITY。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "图片生成",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": ["JIM-K-0004", "JIM-K-0005", "JIM-K-0006", "JIM-K-0007", "JIM-K-0008"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "上述 5 项均为模型层说明，可辨认模型具备的生成与编辑能力，但没有一项描述即梦产品端的图片生成流程、输入输出或界面。Readiness 明确要求产品概述与模型说明分开且排除精确限制，当前只有模型一侧，故为 PARTIAL。",
+      "known_gap": "缺少产品层图片生成知识：产品端流程、输入输出规格与模型对应关系；Readiness 已把产品输入输出规格与模型对应关系列为缺口。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "视频生成",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": ["JIM-K-0009", "JIM-K-0012", "JIM-K-0013", "JIM-K-0014", "JIM-K-0015"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "5 项覆盖产品页公开的视频生成流程、输入方式、多模态素材组合、带声音视频与参考视频用途，属于 Readiness 许可的公开流程与版本化描述。但没有任何 Model Layer 的 Seedance 视频生成能力项被映射到本领域（JIM-K-0001 属模态定位，未计入），也没有输出参数、时长、分辨率与队列类知识，故为 PARTIAL。",
+      "known_gap": "缺少输出与运行规格类知识（实际可选时长、分辨率、队列），Readiness 已列为缺口；产品层与模型层在本领域的对应关系未核验。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "参考图",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": ["JIM-K-0011"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "仅 JIM-K-0011（流程第二步可添加参考图片并描述四类提示词要素）直接属于本领域。它说明参考图片作为输入被明示支持，但没有覆盖参考图在新版画布等场景下的用途差异，也没有任何文件规格知识，故为 PARTIAL。",
+      "known_gap": "缺少参考图的产品层能力项与文件规格（格式、尺寸、数量）；Readiness 已把文件规格与账号限额列为缺口并排除录入上限。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "参考视频/音频",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": ["JIM-K-0014", "JIM-K-0015"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "JIM-K-0015 覆盖参考视频的产品层用途（控制复杂动作的四类动态信息），JIM-K-0014 覆盖带声音视频与音画协同的产品层声明。两项分别对参考视频与音频一侧提供了可辨认的知识，但都没有上传参数与格式，且模型层对该领域的对应能力项未被映射，故为 PARTIAL。",
+      "known_gap": "缺少音频独立上传、格式、时长与数量类知识；Readiness 已把音频独立上传、格式和数量列为未核验缺口。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "模型选择",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": ["JIM-K-0010"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "只有 JIM-K-0010 涉及模型选择，且它仅记录流程第一步“进入工具并选择 Seedance 2.5 模型”这一明示步骤，并已在 limitations 中声明不说明是否为默认模型或其他可选模型。单一且边界极窄的 Item 不能代表模型选择领域，故为 PARTIAL 而非 COVERED。",
+      "known_gap": "缺少完整模型列表、默认项、可选分支与地域权限类知识；Readiness 已把全模型列表、默认项、地域权限列为缺口并规定不建完整选择表。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "Prompt",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": ["JIM-K-0011"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "只有 JIM-K-0011 直接属于本领域，记录提示词需描述主体、动作、镜头和视觉风格四类要素。它没有给出提示词结构、字数、语法或示例，也没有图片专项与完整模型指南，故为 PARTIAL。",
+      "known_gap": "缺少提示词结构与方法类知识；图片专项与完整模型指南缺失，A07（Prompt Guide）仍为 candidate。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "编辑功能",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": ["JIM-K-0005", "JIM-K-0006", "JIM-K-0007", "JIM-K-0016"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "产品层有 JIM-K-0016（局部编辑用途与保留要素），模型层有 3 项可独立引用的编辑能力（空间标注引导、草图引导、图层分离）。两层分开记录且 scope 边界清楚，但没有任何操作步骤或限制条件类知识，全部为 CAPABILITY，故为 PARTIAL；本领域与 Seedance 不同，不列入 Graph Pilot 候选，因为产品层与模型层分属不同模型分支（Seedance 2.5 与 Seedream 5.0 Pro），关系的语义基础比其他领域更弱。",
+      "known_gap": "缺少编辑操作入口、选区方式与参数类知识（PROCEDURE）与限制类知识（CONSTRAINT）；新旧画布 UI 与精确操作缺失（unresolved C1）。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "平台内容规则",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": [],
+      "coverage_status": "MISSING",
+      "coverage_rationale": "当前没有任何 Item 陈述用户行为规范或内容规则。P14（协议第 4 节用户行为规范）为 accepted 且 Readiness 为 LIMITED_INGESTION，因此该缺口属于知识抽取未完成，而不是来源不足。",
+      "known_gap": "缺少行为规范与内容规则类知识（POLICY 类型完全为 0）；专项公约、审核阈值与最新变更未全审。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "产品版本历史",
+      "criticality": "SUPPORTING",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": [],
+      "coverage_status": "MISSING",
+      "coverage_rationale": "P04 与 P09 为 accepted 的 iOS 版本记录条目，但没有形成任何 Knowledge Item，因此该领域当前覆盖为空。它是 SUPPORTING 而非 CORE，缺失不阻止核心领域入库。",
+      "known_gap": "缺少 iOS 2.3.5 与 2.3.0 版本条目类知识；网页端与 Android 版本史亦缺失。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "模型版本历史",
+      "criticality": "SUPPORTING",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": ["JIM-K-0001", "JIM-K-0002", "JIM-K-0003", "JIM-K-0004", "JIM-K-0005", "JIM-K-0006", "JIM-K-0007", "JIM-K-0008"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "8 项模型层 Item 都带明确 version_scope（Seedance 2.5 与 Seedream 5.0 Pro），可作为版本化知识的载体；但它们都是单个版本的能力声明，不是版本沿革知识：没有任何 Item 记录 M01–M08 所列的发布、报告元数据或分支替代关系。故为 PARTIAL。",
+      "known_gap": "缺少版本沿革类知识（VERSION_CONTEXT）：2.0/1.5 pro/1.0 与 5.0 Lite/4.5/4.0 的发布与分支关系均未落成 Item；完整分支替代与下线记录缺失。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "会员",
+      "criticality": "DYNAMIC",
+      "source_ingestion_decision": "DEFER",
+      "knowledge_item_ids": [],
+      "coverage_status": "DEFERRED",
+      "coverage_rationale": "Readiness 判定为 DEFER（P05/P08 均为 candidate，渠道、权益与生效时间未对齐），本阶段不应要求 Knowledge Engine 覆盖。",
+      "known_gap": "会员权益、渠道与生效时间未核验；保留在 Source Engine。",
+      "next_action": "DEFER"
+    },
+    {
+      "domain": "积分",
+      "criticality": "DYNAMIC",
+      "source_ingestion_decision": "DEFER",
+      "knowledge_item_ids": [],
+      "coverage_status": "DEFERRED",
+      "coverage_rationale": "Readiness 判定为 DEFER（消耗、有效期与失败退款规则未知），本阶段不应要求 Knowledge Engine 覆盖。",
+      "known_gap": "积分消耗、有效期与失败退款规则未知；保留在 Source Engine。",
+      "next_action": "DEFER"
+    },
+    {
+      "domain": "实时价格",
+      "criticality": "DYNAMIC",
+      "source_ingestion_decision": "DEFER",
+      "knowledge_item_ids": [],
+      "coverage_status": "DEFERRED",
+      "coverage_rationale": "Readiness 判定为 DEFER（实时结算与促销未核验），本阶段不应要求 Knowledge Engine 覆盖。",
+      "known_gap": "实时结算与促销有效范围未核验；保留在 Source Engine。",
+      "next_action": "DEFER"
+    },
+    {
+      "domain": "Volcano / Ark API",
+      "criticality": "OPTIONAL",
+      "source_ingestion_decision": "DEFER",
+      "knowledge_item_ids": [],
+      "coverage_status": "DEFERRED",
+      "coverage_rationale": "Readiness 判定为 DEFER（A01–A07 全部为 candidate，可读正文与版本核查不足），本阶段不应要求 Knowledge Engine 覆盖。",
+      "known_gap": "API 正文与版本未完成审核；API 参数不得外推为产品参数。",
+      "next_action": "DEFER"
+    },
+    {
+      "domain": "API 服务状态",
+      "criticality": "OUT_OF_SCOPE",
+      "source_ingestion_decision": "NOT_APPLICABLE",
+      "knowledge_item_ids": [],
+      "coverage_status": "NOT_APPLICABLE",
+      "coverage_rationale": "Readiness 判定为 NOT_APPLICABLE：不属于当前 Creator Track。",
+      "known_gap": "无；不纳入本 Track。",
+      "next_action": "NOT_APPLICABLE"
+    },
+    {
+      "domain": "社区经验",
+      "criticality": "OPTIONAL",
+      "source_ingestion_decision": "DEFER",
+      "knowledge_item_ids": [],
+      "coverage_status": "DEFERRED",
+      "coverage_rationale": "Readiness 判定为 DEFER（O01/O02 为 candidate，身份、条件与可靠性不足），本阶段不应要求 Knowledge Engine 覆盖。",
+      "known_gap": "社区身份与复现条件不足；与官方内容分开保存。",
+      "next_action": "DEFER"
+    },
+    {
+      "domain": "可复现实验",
+      "criticality": "OPTIONAL",
+      "source_ingestion_decision": "DEFER",
+      "knowledge_item_ids": [],
+      "coverage_status": "DEFERRED",
+      "coverage_rationale": "Readiness 判定为 DEFER：无合格实验记录。当前 16 项全部为 DOCUMENTED，没有任何 OBSERVED Item，本阶段不应要求 Knowledge Engine 覆盖。",
+      "known_gap": "缺输入、步骤、版本与结果记录；LAB 仅为扩展标签。",
+      "next_action": "DEFER"
+    }
+  ],
+  "item_accounting": {
+    "registry_total": 16,
+    "mapped_item_ids": ["JIM-K-0001", "JIM-K-0002", "JIM-K-0003", "JIM-K-0004", "JIM-K-0005", "JIM-K-0006", "JIM-K-0007", "JIM-K-0008", "JIM-K-0009", "JIM-K-0010", "JIM-K-0011", "JIM-K-0012", "JIM-K-0013", "JIM-K-0014", "JIM-K-0015", "JIM-K-0016"],
+    "unmapped_item_ids": []
+  },
+  "overall_recommendation": "NEEDS_TARGETED_INGESTION"
+}

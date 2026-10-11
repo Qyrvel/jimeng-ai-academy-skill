@@ -1,0 +1,38 @@
+{
+  "graph_id": "test-warning-transitive-redundancy",
+  "scope": "Integrity fixture: PREREQUISITE_OF contains A->B, B->C and A->C. Expected: PASS with a POTENTIAL_TRANSITIVE_REDUNDANCY warning (never FAIL).",
+  "nodes": [
+    {"knowledge_id": "JIM-K-0015"},
+    {"knowledge_id": "JIM-K-0017"},
+    {"knowledge_id": "JIM-K-0023"}
+  ],
+  "edges": [
+    {
+      "edge_id": "TRA-E-0001",
+      "from": "JIM-K-0017",
+      "relation": "PREREQUISITE_OF",
+      "to": "JIM-K-0015",
+      "epistemic_status": "INFERRED",
+      "rationale": "KNOWLEDGE_DEPENDENCY: 方式概念先于该方式下的能力说明。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为两条 Item 的 statement；不能推出执行保证。"
+    },
+    {
+      "edge_id": "TRA-E-0002",
+      "from": "JIM-K-0015",
+      "relation": "PREREQUISITE_OF",
+      "to": "JIM-K-0023",
+      "epistemic_status": "INFERRED",
+      "rationale": "KNOWLEDGE_DEPENDENCY: 能力说明先于其用途边界。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为两条 Item 的 statement；不能推出执行阈值。"
+    },
+    {
+      "edge_id": "TRA-E-0003",
+      "from": "JIM-K-0017",
+      "relation": "PREREQUISITE_OF",
+      "to": "JIM-K-0023",
+      "epistemic_status": "INFERRED",
+      "rationale": "KNOWLEDGE_DEPENDENCY: 方式概念先于该方式的用途边界。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为两条 Item 的 statement；不能推出执行阈值。"
+    }
+  ]
+}

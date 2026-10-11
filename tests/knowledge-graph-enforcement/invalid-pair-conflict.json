@@ -1,0 +1,28 @@
+{
+  "graph_id": "test-invalid-enforcement-pair-conflict",
+  "scope": "Enforcement fixture: the same pair carries ENFORCEMENT_CONTEXT_FOR and VERSION_VARIANT_OF. Expected: graph validator PASS (the VV edge carries its justification marker), integrity validator FAIL on the hard pair-conflict rule.",
+  "nodes": [
+    {"knowledge_id": "JIM-K-0031"},
+    {"knowledge_id": "JIM-K-0035"}
+  ],
+  "edges": [
+    {
+      "edge_id": "ENF-E-0001",
+      "from": "JIM-K-0035",
+      "relation": "ENFORCEMENT_CONTEXT_FOR",
+      "to": "JIM-K-0031",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "DIRECT_REFERENCE: 与下一条 VERSION_VARIANT_OF 构成同一 pair 的硬冲突，应被拒绝。",
+      "limitations": "仅用于测试 pair 硬冲突。"
+    },
+    {
+      "edge_id": "ENF-E-0002",
+      "from": "JIM-K-0035",
+      "relation": "VERSION_VARIANT_OF",
+      "to": "JIM-K-0031",
+      "epistemic_status": "INFERRED",
+      "rationale": "VERSION_JUSTIFICATION: 用于让本条自身通过归一化支撑检查，从而把失败隔离到 pair 硬冲突规则。",
+      "limitations": "INFERENCE_BOUNDARY: 仅用于测试；不表示任何版本关系。"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AI Academy Curriculum Skeleton",
+  "description": "Gate 4.1 minimal curriculum skeleton contract. Root fields are fixed by curriculum-policy.md section 7; module fields are fixed by the same section. No extra ontology fields.",
+  "type": "object",
+  "required": [
+    "curriculum_id",
+    "track",
+    "version",
+    "status",
+    "track_goal",
+    "entry_profile",
+    "exit_profile",
+    "scope",
+    "module_order",
+    "modules",
+    "deferred_domains",
+    "coverage_summary"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "curriculum_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "track": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "version": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "status": {"type": "string", "enum": ["skeleton"]},
+    "track_goal": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "entry_profile": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "exit_profile": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "scope": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "module_order": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1, "pattern": "\\S"}
+    },
+    "modules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "module_id",
+          "title",
+          "purpose",
+          "target_domain_ids",
+          "learner_outcomes",
+          "knowledge_refs",
+          "graph_support_refs",
+          "scope",
+          "order_basis",
+          "order_rationale",
+          "limitations",
+          "status"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "module_id": {"type": "string", "minLength": 1, "pattern": "^JCA-M[0-9]{2}$"},
+          "title": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "purpose": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "target_domain_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": {"type": "string", "minLength": 1, "pattern": "\\S"}
+          },
+          "learner_outcomes": {
+            "type": "array",
+            "minItems": 1,
+            "items": {"type": "string", "minLength": 1, "pattern": "\\S"}
+          },
+          "knowledge_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {"type": "string", "minLength": 1, "pattern": "\\S"}
+          },
+          "graph_support_refs": {
+            "type": "array",
+            "items": {"type": "string", "minLength": 1, "pattern": "\\S"}
+          },
+          "scope": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "order_basis": {"type": "string", "enum": ["GRAPH_CONSTRAINED", "PEDAGOGICAL", "INDEPENDENT"]},
+          "order_rationale": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "limitations": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "status": {"type": "string", "enum": ["skeleton"]}
+        }
+      }
+    },
+    "deferred_domains": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["domain_id", "disposition"],
+        "additionalProperties": false,
+        "properties": {
+          "domain_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "disposition": {"type": "string", "enum": ["deferred_dynamic", "deferred_optional", "future_extension", "out_of_scope"]},
+          "reason": {"type": "string", "minLength": 1, "pattern": "\\S"}
+        }
+      }
+    },
+    "coverage_summary": {
+      "type": "object",
+      "required": [
+        "module_count",
+        "foundational_domain_count",
+        "core_domain_count",
+        "mapped_mandatory_count",
+        "unmapped_mandatory_count"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "module_count": {"type": "integer", "minimum": 1},
+        "foundational_domain_count": {"type": "integer", "minimum": 0},
+        "core_domain_count": {"type": "integer", "minimum": 0},
+        "mapped_mandatory_count": {"type": "integer", "minimum": 0},
+        "unmapped_mandatory_count": {"type": "integer", "minimum": 0}
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "assessment_id": "JCA-A-016",
+  "lesson_ids": ["JCA-M06-L01"],
+  "lesson_pair_reason": "NOT_APPLICABLE",
+  "assessment_type": "EXPLAIN_BOUNDARY",
+  "purpose": "测量 JCA-M06-L01 的三条 outcome：学生要解释局部编辑的概念与保留边界，并区分模型层编辑能力与产品层编辑功能。",
+  "target_outcomes": ["解释局部编辑只修改局部、无需重新生成整段视频的产品说明", "解释修改与保留边界要求（保留原有构图、光影、音频、动作与时间线连续性）", "区分模型层编辑能力与产品层编辑功能"],
+  "knowledge_refs": ["JIM-K-0016", "JIM-K-0019", "JIM-K-0021", "JIM-K-0003", "JIM-K-0005", "JIM-K-0006", "JIM-K-0007"],
+  "scope": "Jimeng Product Layer 的“局部编辑”能力与保留边界；同时标注 ByteDance Seed Model Layer 的编辑能力属模型层。",
+  "task": "用自己的话解释「局部编辑」指什么，并写出该产品页给出的修改对象范围与需要保留的五项要素。然后把下列四项归入产品层或模型层：局部编辑、绿幕编辑、空间标注引导的交互编辑、图层分离。最后回答：模型层列出「图层分离」，能不能说明界面上有图层功能？说明理由。",
+  "expected_evidence": "①一句说明局部编辑只修改局部、不重新生成整段视频；②修改对象范围（替换错误物体、优化人物细节）与五项保留要素（构图、光影、音频、动作、时间线连续性）；③四项归类结果（局部编辑属产品层，其余三项属模型层）；④一句说明模型层能力声明不代表即梦产品已部署或开放。",
+  "scoring_criteria": [
+    {"criterion_id": "A016-C1", "description": "解释局部编辑的概念", "evidence_source": "手写说明", "weight": 2, "pass_condition": "写出只修改局部、无需重新生成整段视频"},
+    {"criterion_id": "A016-C2", "description": "写出修改对象范围", "evidence_source": "手写说明", "weight": 2, "pass_condition": "写出替换错误物体与优化人物细节两项"},
+    {"criterion_id": "A016-C3", "description": "写出五项保留要素", "evidence_source": "手写说明", "weight": 2, "pass_condition": "构图、光影、音频、动作、时间线连续性五项齐全"},
+    {"criterion_id": "A016-C4", "description": "区分产品层与模型层编辑能力", "evidence_source": "归类结果", "weight": 2, "pass_condition": "局部编辑归产品层；绿幕编辑、空间标注、图层分离归模型层"},
+    {"criterion_id": "A016-C5", "description": "不把保留边界当作实测保证", "evidence_source": "整体作答", "weight": 2, "pass_condition": "指出保留边界是适用范围而非每次编辑都成立的保证，且未把模型层能力当成界面现有功能"}
+  ],
+  "max_score": 10,
+  "pass_score": 8,
+  "partial_credit_policy": "允许 partial credit：每条 0/1/2。五项保留要素漏一项得 1、漏两项及以上得 0；归类题错一项得 1、错两项及以上得 0。不因用词不同扣分。",
+  "allowed_support": ["lesson notes", "course outline"],
+  "disallowed_support": ["external web search", "unverified community tutorial", "another person's completed answer"],
+  "feedback_boundary": "评分后只可告知：哪条 criterion 未达标、对应 Lesson（JCA-M06-L01）、以及「适用范围边界 ≠ 实测保证」「模型层声明 ≠ 产品已部署」两条 boundary 提醒。不得补充操作入口、选区方式与可编辑范围。",
+  "alignment": {
+    "completion_check_alignment": "DIRECT",
+    "rationale": "JCA-M06-L01 的 completion_check 是「能解释『只改局部、不重新生成整段』并说出修改对象范围与五项保留要素，且能区分产品层编辑功能与模型层编辑能力」。C1/C2/C3 对应前半，C4/C5 对应区分要求与边界。"
+  },
+  "limitations": "只覆盖该产品页对局部编辑的说明与模型层官方能力声明；不含操作入口、选区方式、参数、可编辑范围与实测保留一致性；不推导产品端部署状态；本课不含视频编辑的实测证据；一次评估不代表长期掌握。",
+  "status": "full_course"
+}

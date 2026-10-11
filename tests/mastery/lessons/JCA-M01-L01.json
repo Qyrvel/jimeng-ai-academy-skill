@@ -1,0 +1,16 @@
+{
+  "lesson_id": "JCA-M01-L01",
+  "module_id": "JCA-M01",
+  "title": "产品声明、模型声明与版本记录的区别",
+  "lesson_role": "FOUNDATION",
+  "scope": "Jimeng Product Layer 与 ByteDance Seed Model Layer 的声明分层；版本记录限已保存的发布事实。",
+  "learner_outcomes": ["区分同主题下的产品层声明与模型层声明", "解释版本记录只说明已保存的历史事实，不证明当前可用性", "识别“模型具备该能力”不等于“该账号已开放该功能”"],
+  "knowledge_refs": ["JIM-K-0001", "JIM-K-0014", "JIM-K-0036", "JIM-K-0038", "JIM-K-0042", "JIM-K-0043"],
+  "graph_support_refs": ["JIM-E-0016", "JIM-E-0018", "JIM-E-0019"],
+  "opening": "夹具。",
+  "teaching_points": [{"point_id": "FIX-P01", "knowledge_refs": ["JIM-K-0001"], "explanation": "夹具。", "scope_note": "夹具。"}],
+  "guided_practice": "夹具。", "independent_practice": "夹具。",
+  "completion_check": "学生能对给定声明完成层次标注，并为每层至少写出一条“不能推出”的结论。",
+  "boundaries_and_misconceptions": ["夹具。"], "lesson_summary": "夹具。", "limitations": "夹具。",
+  "status": "full_course"
+}

@@ -1,0 +1,265 @@
+{
+  "graph_id": "jimeng-seedance-pilot-v1-r2",
+  "scope": "Gate 3.1 audit revision of the Seedance-centered bounded subgraph. NO_EDGE_CORRECTION_REQUIRED: the Gate 3.1 integrity audit found no cycle, no pair conflict, no curriculum leakage and no redundant prerequisite, so the node set and edge set are identical to jimeng-seedance-pilot-v1-r1. No node or edge was added, removed or altered. Still not a curriculum and still not a claim of full Jimeng coverage.",
+  "nodes": [
+    {"knowledge_id": "JIM-K-0001"},
+    {"knowledge_id": "JIM-K-0002"},
+    {"knowledge_id": "JIM-K-0003"},
+    {"knowledge_id": "JIM-K-0009"},
+    {"knowledge_id": "JIM-K-0010"},
+    {"knowledge_id": "JIM-K-0011"},
+    {"knowledge_id": "JIM-K-0013"},
+    {"knowledge_id": "JIM-K-0014"},
+    {"knowledge_id": "JIM-K-0015"},
+    {"knowledge_id": "JIM-K-0017"},
+    {"knowledge_id": "JIM-K-0018"},
+    {"knowledge_id": "JIM-K-0019"},
+    {"knowledge_id": "JIM-K-0021"},
+    {"knowledge_id": "JIM-K-0022"},
+    {"knowledge_id": "JIM-K-0023"},
+    {"knowledge_id": "JIM-K-0036"},
+    {"knowledge_id": "JIM-K-0037"},
+    {"knowledge_id": "JIM-K-0038"},
+    {"knowledge_id": "JIM-K-0039"},
+    {"knowledge_id": "JIM-K-0041"},
+    {"knowledge_id": "JIM-K-0042"},
+    {"knowledge_id": "JIM-K-0043"},
+    {"knowledge_id": "JIM-K-0046"}
+  ],
+  "edges": [
+    {
+      "edge_id": "JIM-E-0001",
+      "from": "JIM-K-0017",
+      "relation": "PREREQUISITE_OF",
+      "to": "JIM-K-0015",
+      "epistemic_status": "INFERRED",
+      "rationale": "JIM-K-0017 说明“参考生视频”是该产品页中的一类生成方式并以上传参考视频为特征；JIM-K-0015 说明参考视频用于传达运镜速度、人物轨迹、动作调度与多人互动。不理解参考生视频这一方式是什么，就难以理解参考视频在该方式中承担的控制作用。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为两条 Item 的 statement 与同一 P12 小节范围；不能推出学习者据此即可执行参考视频生成，也不能推出参考视频的实际控制精度。"
+    },
+    {
+      "edge_id": "JIM-E-0002",
+      "from": "JIM-K-0018",
+      "relation": "PREREQUISITE_OF",
+      "to": "JIM-K-0013",
+      "epistemic_status": "INFERRED",
+      "rationale": "JIM-K-0018 区分文字输入与图片视觉参考两种方式；JIM-K-0013 说明可组合脚本、视频、音频与风格素材进行多模态创作。理解两种基础输入方式是理解“多类型素材可组合”的前提。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为 P12 同一 FAQ 答句的前后两部分；不能推出各素材类型的数量上限、格式或组合优先级。"
+    },
+    {
+      "edge_id": "JIM-E-0003",
+      "from": "JIM-K-0017",
+      "relation": "PREREQUISITE_OF",
+      "to": "JIM-K-0023",
+      "epistemic_status": "INFERRED",
+      "rationale": "JIM-K-0023 把参考生视频的用途限定在动态信息方面。要理解该用途边界，先要理解参考生视频这一方式本身。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为 K-0017 的方式定义与 K-0023 的用途范围；不能推出边界之外是否被禁止，也不能推出执行阈值。"
+    },
+    {
+      "edge_id": "JIM-E-0004",
+      "from": "JIM-K-0010",
+      "relation": "PROCEDURE_PRECEDES",
+      "to": "JIM-K-0011",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "两条均为即梦 Seedance 2.5 公开产品页同一条三步流程中的步骤：K-0010 是第一步（进入 AI 视频工具并选择 Seedance 2.5 模型），K-0011 是第二步（上传素材并输入提示词）。产品页以“第一步/第二步”明确给出该先后。",
+      "limitations": "只表示该产品页所述步骤先后；不表示教学顺序，不含界面跳转细节，也不说明步骤之间是否存在其它未列出的操作。"
+    },
+    {
+      "edge_id": "JIM-E-0005",
+      "from": "JIM-K-0021",
+      "relation": "CONSTRAINS",
+      "to": "JIM-K-0019",
+      "epistemic_status": "INFERRED",
+      "rationale": "K-0021 是 Product Layer 的 CONSTRAINT，限定局部编辑可修改的对象范围（替换错误物体或优化人物细节）并要求保留原有构图、光影、音频、动作与时间线连续性；K-0019 是同一功能的 Product Layer 概念。该约束直接界定这个概念在实际使用中的范围。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为两条 Item 同源自 P13 同一小节；该约束是适用范围边界而非实测保证，不能推出保留要素在每次编辑中都一致。"
+    },
+    {
+      "edge_id": "JIM-E-0006",
+      "from": "JIM-K-0022",
+      "relation": "CONSTRAINS",
+      "to": "JIM-K-0017",
+      "epistemic_status": "INFERRED",
+      "rationale": "K-0022 是 CONSTRAINT，界定参考视频与参考图片处于参照与控制位置、其作用范围不扩展到改变生成结果的其他内容；K-0017 描述参考生视频这一方式。该边界直接限定该方式中参考素材的作用范围。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为 K-0022 的作用范围表述与 K-0017 的方式定义，两者同属 Product Layer 且同源自 P12；不能推出参考素材与其它输入是否互斥或可否同时使用。"
+    },
+    {
+      "edge_id": "JIM-E-0007",
+      "from": "JIM-K-0022",
+      "relation": "CONSTRAINS",
+      "to": "JIM-K-0013",
+      "epistemic_status": "INFERRED",
+      "rationale": "K-0013 说明可组合脚本、视频、音频与风格素材；K-0022 界定参考视频与参考图片在生成中仅处于参照与控制位置。该边界限定组合创作中输入素材的作用范围。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为两条 Item 均涉及输入素材的角色，且同属 Product Layer；不能推出脚本、音频、风格素材是否同样只起参照作用，也不能推出组合时的优先级规则。"
+    },
+    {
+      "edge_id": "JIM-E-0008",
+      "from": "JIM-K-0023",
+      "relation": "CONSTRAINS",
+      "to": "JIM-K-0015",
+      "epistemic_status": "INFERRED",
+      "rationale": "K-0023 把参考生视频的用途限定在动态信息方面（运镜速度、人物轨迹、动作调度、多人互动与补足动态细节）；K-0015 陈述参考视频可传达这四类动态信息并补足文字难以描述的细节。该约束与能力说明出自同一条目，直接限定其适用范围。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为两条 Item 同源自 P12 的“参考生视频”小节；不能推出参考视频可否用于画面风格或人物外观等非动态用途。"
+    },
+    {
+      "edge_id": "JIM-E-0009",
+      "from": "JIM-K-0036",
+      "relation": "VERSION_CONTEXT_FOR",
+      "to": "JIM-K-0001",
+      "epistemic_status": "INFERRED",
+      "rationale": "K-0036 记载 Seedance 2.5 于 2026-07-31 正式发布；K-0001 是 Seedance 2.5 的音视频联合生成定位。该发布事实为理解这一 2.5 能力声明提供明确版本背景。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为两条 Item 的 version_scope 均为 Seedance 2.5；模型发布不等于产品部署，不能推出即梦端已开放该能力，也不表示版本替代。"
+    },
+    {
+      "edge_id": "JIM-E-0010",
+      "from": "JIM-K-0036",
+      "relation": "VERSION_CONTEXT_FOR",
+      "to": "JIM-K-0002",
+      "epistemic_status": "INFERRED",
+      "rationale": "K-0036 是 Seedance 2.5 的发布事实；K-0002 是 Seedance 2.5 对参考视频信息的模型层说明。发布事实为该能力说明提供版本背景。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为两条 Item 同属 Seedance 2.5 且同属 Model Layer；不能推出产品端参考上传能力或账号权限。"
+    },
+    {
+      "edge_id": "JIM-E-0011",
+      "from": "JIM-K-0036",
+      "relation": "VERSION_CONTEXT_FOR",
+      "to": "JIM-K-0003",
+      "epistemic_status": "INFERRED",
+      "rationale": "K-0036 是 Seedance 2.5 的发布事实；K-0003 是 Seedance 2.5 的绿幕编辑能力说明。发布事实为该能力说明提供版本背景。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为两条 Item 同属 Seedance 2.5 且同属 Model Layer；不能把模型编辑能力写成产品端可用功能。"
+    },
+    {
+      "edge_id": "JIM-E-0012",
+      "from": "JIM-K-0038",
+      "relation": "VERSION_CONTEXT_FOR",
+      "to": "JIM-K-0039",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "K-0038 与 K-0039 出自同一份 Seedance 2.0 官方发布页：该页先给出发布日期与发布声明，随后在同一发布语境中给出“采用统一的多模态音频视频联合生成架构，支持文字、图片、音频、视频和标签输入”。发布声明本身就是该架构与输入说明的版本背景，故该关系由证据直接支持。",
+      "limitations": "只表示同一发布页内的发布事实与架构说明之间的版本背景关系；不表示架构细节由发布日期推出，也不表示该版本在即梦端开放。"
+    },
+    {
+      "edge_id": "JIM-E-0013",
+      "from": "JIM-K-0037",
+      "relation": "VERSION_CONTEXT_FOR",
+      "to": "JIM-K-0036",
+      "epistemic_status": "INFERRED",
+      "rationale": "K-0037 记载 Seedance 2.5 延续 Seedance 2.0 统一的多模态视频联合生成架构，并提到 2.0 已经发布；K-0036 记载 2.5 的发布日期与版本定位。版本承接事实为理解该版本的发布定位提供背景。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为两条 Item 同源自 2026-07-31 发布页；不能推出 2.5 替代 2.0 或 2.0 已下线。"
+    },
+    {
+      "edge_id": "JIM-E-0014",
+      "from": "JIM-K-0042",
+      "relation": "VERSION_CONTEXT_FOR",
+      "to": "JIM-K-0009",
+      "epistemic_status": "INFERRED",
+      "rationale": "K-0042 记载官方发布页在 2026-07-31 声明 Seedance 2.5 已上线即梦 AI；K-0009 是该产品页公开的三步生成流程。产品侧部署声明为理解该版本的产品侧流程说明提供版本背景。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为两者同为 Jimeng Product Layer 且 version_scope 均指向 Seedance 2.5；部署声明不代表所有账号、地区或设备端均已开放，也不代表当前时点仍保持该状态。"
+    },
+    {
+      "edge_id": "JIM-E-0015",
+      "from": "JIM-K-0015",
+      "relation": "SCOPE_PARALLEL_TO",
+      "to": "JIM-K-0002",
+      "epistemic_status": "INFERRED",
+      "rationale": "K-0015 陈述产品页声明参考视频可传达运镜速度、人物轨迹、动作调度与多人互动；K-0002 陈述模型官方说明把参考视频构图列为可理解的信息。主题同为参考视频，但分属 Product Layer 与 Model Layer，必须保持平行。Normalization Review NR-0008 已判该 pair 为 SCOPE_PARALLEL。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为两项 scope 分层与 NR-0008 判定；不能推出产品能力等同模型能力，也不能由模型说明推出产品已部署。"
+    },
+    {
+      "edge_id": "JIM-E-0016",
+      "from": "JIM-K-0014",
+      "relation": "SCOPE_PARALLEL_TO",
+      "to": "JIM-K-0001",
+      "epistemic_status": "INFERRED",
+      "rationale": "K-0014 是产品页关于可生成带声音视频与音画协同创作的说明；K-0001 是模型官方关于音视频联合生成的定位。主题相近但分属 Product Layer 与 Model Layer，必须保持平行。Normalization Review NR-0009 已判该 pair 为 SCOPE_PARALLEL。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为两项 scope 分层与 NR-0009 判定；不能推出产品层音画协同声明等同模型技术细节。"
+    },
+    {
+      "edge_id": "JIM-E-0017",
+      "from": "JIM-K-0019",
+      "relation": "SCOPE_PARALLEL_TO",
+      "to": "JIM-K-0003",
+      "epistemic_status": "INFERRED",
+      "rationale": "NORMALIZATION_JUSTIFICATION: 两项主题均为编辑能力——K-0019 是即梦产品页的“局部编辑”概念（只修改局部、不重新生成整段），K-0003 是模型官方说明列出的绿幕编辑能力；分属 Product Layer 与 Model Layer，按 Layer Preservation 必须保持平行。Normalization Review 中编辑主题的跨层对照记录在 NR-0010（该条以能力项 JIM-K-0016 代表产品层编辑能力），本条以概念项 JIM-K-0019 表达同一层间关系，理由与 NR-0010 一致：产品层编辑用途与模型层编辑能力是不同知识实体。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为两项 scope 分层、NR-0010 的同类判定与编辑主题的层间差异；不能推出局部编辑由绿幕编辑实现，也不能推出产品已部署该模型能力。"
+    },
+    {
+      "edge_id": "JIM-E-0018",
+      "from": "JIM-K-0042",
+      "relation": "SCOPE_PARALLEL_TO",
+      "to": "JIM-K-0036",
+      "epistemic_status": "INFERRED",
+      "rationale": "K-0042 是 Seedance 2.5 在即梦 AI 上线的产品部署声明（Product Layer）；K-0036 是 Seedance 2.5 正式发布的模型发布事实（Model Layer）。两者都涉及同一版本与同一发布时点，但层次不同，不得合并。Normalization Review NR-0029 已判该 pair 为 SCOPE_PARALLEL。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为两项 scope 分层与 NR-0029 判定；模型发布不等于产品上线，反之产品上线声明也不证明模型范围。"
+    },
+    {
+      "edge_id": "JIM-E-0019",
+      "from": "JIM-K-0043",
+      "relation": "SCOPE_PARALLEL_TO",
+      "to": "JIM-K-0038",
+      "epistemic_status": "INFERRED",
+      "rationale": "K-0043 是 Seedance 2.0 在即梦 AI 上线的产品部署声明（Product Layer）；K-0038 是 Seedance 2.0 正式发布的模型发布事实（Model Layer）。同版本同发布时点、层次不同。Normalization Review NR-0030 已判该 pair 为 SCOPE_PARALLEL。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为两项 scope 分层与 NR-0030 判定；不能互相替代，也不能由其中一项推出另一项的适用范围。"
+    },
+    {
+      "edge_id": "JIM-E-0020",
+      "from": "JIM-K-0042",
+      "relation": "SCOPE_PARALLEL_TO",
+      "to": "JIM-K-0041",
+      "epistemic_status": "INFERRED",
+      "rationale": "K-0042 是产品层部署声明（2.5 已上线即梦 AI）；K-0041 是模型层架构延续事实（2.0 采用、2.5 延续统一多模态架构）。主题相近但层次不同。Normalization Review NR-0032 已判该 pair 为 SCOPE_PARALLEL。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为两项 scope 分层与 NR-0032 判定；不能由部署声明推出架构范围，也不能由架构延续推出产品可用性。"
+    },
+    {
+      "edge_id": "JIM-E-0021",
+      "from": "JIM-K-0042",
+      "relation": "VERSION_VARIANT_OF",
+      "to": "JIM-K-0043",
+      "epistemic_status": "INFERRED",
+      "rationale": "两项同为 Product Layer 的“即梦 AI 上线声明”，句式一致，但分别对应 Seedance 2.5（2026-07-31）与 Seedance 2.0（2026-02-12）。同主题不同明确版本。Normalization Review NR-0031 已判该 pair 为 VERSION_VARIANT。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为两项 version_scope 明确不同与 NR-0031 判定；该关系仅表示同主题不同版本，不得解释为 replaces、supersedes 或 deprecated_by。"
+    },
+    {
+      "edge_id": "JIM-E-0022",
+      "from": "JIM-K-0036",
+      "relation": "VERSION_VARIANT_OF",
+      "to": "JIM-K-0038",
+      "epistemic_status": "INFERRED",
+      "rationale": "VERSION_JUSTIFICATION: 两项同属 Model Layer 的“Seedance 正式发布”主题，version_scope 分别为 Seedance 2.5（2026-07-31 发布页）与 Seedance 2.0（2026-02-12 发布页），明确可比；Normalization Review 未对该 pair 单独立条，但两项的版本范围与主题一致性足以支持版本变体判定。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为两项均为同层发布事实且版本明确不同；不得解释为 2.5 替代 2.0、2.0 已下线，也不得据此推断版本优劣。"
+    },
+    {
+      "edge_id": "JIM-E-0023",
+      "from": "JIM-K-0010",
+      "relation": "STEP_OF",
+      "to": "JIM-K-0009",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "两条均为 PROCEDURE。K-0010 的 statement 明说它是“生成流程的第一步是进入即梦的AI视频工具并选择Seedance 2.5模型”；K-0009 的 statement 明说该产品页“把视频生成说明为三个步骤：打开 AI 视频生成器、上传素材并输入提示词、生成预览并保存”。K-0009 所列第一步与 K-0010 所述步骤一致，故「该 Item 是那个 Workflow 的明确步骤组成」由两条 statement 与 P10 共同直接支持。",
+      "limitations": "只表示该步骤属于该产品页所述三步流程；不表示教学顺序，不表示该流程之外还有其它官方步骤，也不表示界面实现与文字完全一致。"
+    },
+    {
+      "edge_id": "JIM-E-0024",
+      "from": "JIM-K-0011",
+      "relation": "STEP_OF",
+      "to": "JIM-K-0009",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "两条均为 PROCEDURE。K-0011 的 statement 明说该产品页“把上传素材与输入提示词列为同一步骤”；K-0009 的三步列举中明确包含“上传素材并输入提示词”。该步骤的措辞在两条 statement 中一致，故归属关系由证据直接支持。",
+      "limitations": "只表示该步骤属于该产品页所述三步流程；K-0011 自身未编号，本 Edge 不主张它是第几步以外的额外信息，也不表示步骤内部子动作的层级。"
+    },
+    {
+      "edge_id": "JIM-E-0025",
+      "from": "JIM-K-0046",
+      "relation": "STEP_OF",
+      "to": "JIM-K-0009",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "两条均为 PROCEDURE。K-0046 的 statement 明说它是该产品页“生成流程的第三步”并以“生成、预览并保存”为内容；K-0009 的三步列举中明确包含“生成预览并保存”。故归属关系由两条 statement 与 P10 的“第三步 / 生成、预览并保存”小标题直接支持。",
+      "limitations": "只表示该步骤属于该产品页所述三步流程；K-0046 表示该步骤整体，本 Edge 不主张把「生成 / 检查 / 调整 / 下载」当作独立官方步骤。"
+    },
+    {
+      "edge_id": "JIM-E-0026",
+      "from": "JIM-K-0011",
+      "relation": "PROCEDURE_PRECEDES",
+      "to": "JIM-K-0046",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "两条均为 PROCEDURE，且均为即梦 Seedance 2.5 公开产品页同一条三步流程中的步骤：K-0011 是第二步（上传素材并输入提示词），K-0046 是第三步（生成、预览并保存）。产品页以“第二步 / 第三步”明确给出该先后。该 Edge 补上了 Gate 3.0 只能表达 1→2 而无法表达 2→3 的缺口。",
+      "limitations": "只表示该产品页所述步骤先后；不表示教学顺序，不含步骤间的界面跳转与等待细节，也不说明失败时的重试路径。"
+    }
+  ]
+}

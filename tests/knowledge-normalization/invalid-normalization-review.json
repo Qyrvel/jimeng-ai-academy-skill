@@ -1,0 +1,137 @@
+{
+  "reviews": [
+    {
+      "review_id": "NR-B-0001",
+      "item_ids": ["JIM-K-0001", "JIM-K-9999"],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "生成模态",
+      "rationale": "item_ids 引用了不存在的 knowledge_id，应被 REFERENCE 检查拒绝。",
+      "scope_check": "用于测试引用检查。",
+      "version_check": "用于测试引用检查。",
+      "provenance_check": "用于测试引用检查。"
+    },
+    {
+      "review_id": "NR-B-0001",
+      "item_ids": ["JIM-K-0002", "JIM-K-0003"],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "重复编号",
+      "rationale": "review_id 与上一条重复，应被拒绝。",
+      "scope_check": "用于测试 review_id 唯一性。",
+      "version_check": "用于测试 review_id 唯一性。",
+      "provenance_check": "用于测试 review_id 唯一性。"
+    },
+    {
+      "review_id": "NR-B-0002",
+      "item_ids": ["JIM-K-0004"],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "单项",
+      "rationale": "item_ids 少于 2 个，应被拒绝。",
+      "scope_check": "用于测试 item_ids 最小长度。",
+      "version_check": "用于测试 item_ids 最小长度。",
+      "provenance_check": "用于测试 item_ids 最小长度。"
+    },
+    {
+      "review_id": "NR-B-0003",
+      "item_ids": ["JIM-K-0005", "JIM-K-0005"],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "自比较",
+      "rationale": "item_ids 内部重复，应被拒绝。",
+      "scope_check": "用于测试 item_ids 去重。",
+      "version_check": "用于测试 item_ids 去重。",
+      "provenance_check": "用于测试 item_ids 去重。"
+    },
+    {
+      "review_id": "NR-B-0004",
+      "item_ids": ["JIM-K-0006", "JIM-K-0007"],
+      "relation": "SEMANTIC_TWIN",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "非法关系",
+      "rationale": "relation 不在允许枚举内，应被拒绝。",
+      "scope_check": "用于测试 relation 枚举。",
+      "version_check": "用于测试 relation 枚举。",
+      "provenance_check": "用于测试 relation 枚举。"
+    },
+    {
+      "review_id": "NR-B-0005",
+      "item_ids": ["JIM-K-0008", "JIM-K-0009"],
+      "relation": "DISTINCT",
+      "decision": "DELETE_ONE",
+      "normalized_label": "非法决策",
+      "rationale": "decision 不在允许枚举内，应被拒绝。",
+      "scope_check": "用于测试 decision 枚举。",
+      "version_check": "用于测试 decision 枚举。",
+      "provenance_check": "用于测试 decision 枚举。"
+    },
+    {
+      "review_id": "NR-B-0006",
+      "item_ids": ["JIM-K-0010", "JIM-K-0011"],
+      "relation": "SCOPE_PARALLEL",
+      "decision": "MERGE_CANDIDATE",
+      "normalized_label": "跨层误合并",
+      "rationale": "SCOPE_PARALLEL 搭配 MERGE_CANDIDATE 违反合同，应被拒绝。",
+      "scope_check": "用于测试 SCOPE_PARALLEL 的决策约束。",
+      "version_check": "用于测试 SCOPE_PARALLEL 的决策约束。",
+      "provenance_check": "用于测试 SCOPE_PARALLEL 的决策约束。"
+    },
+    {
+      "review_id": "NR-B-0007",
+      "item_ids": ["JIM-K-0012", "JIM-K-0013"],
+      "relation": "VERSION_VARIANT",
+      "decision": "MERGE_CANDIDATE",
+      "normalized_label": "跨版本误合并",
+      "rationale": "VERSION_VARIANT 搭配 MERGE_CANDIDATE 违反合同，应被拒绝。",
+      "scope_check": "用于测试 VERSION_VARIANT 的决策约束。",
+      "version_check": "用于测试 VERSION_VARIANT 的决策约束。",
+      "provenance_check": "用于测试 VERSION_VARIANT 的决策约束。"
+    },
+    {
+      "review_id": "NR-B-0008",
+      "item_ids": ["JIM-K-0014", "JIM-K-0015"],
+      "relation": "CONFLICT_CANDIDATE",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "冲突静默消解",
+      "rationale": "CONFLICT_CANDIDATE 搭配 KEEP_SEPARATE 违反合同，应被拒绝；冲突不得被静默消解。",
+      "scope_check": "用于测试 CONFLICT_CANDIDATE 的决策约束。",
+      "version_check": "用于测试 CONFLICT_CANDIDATE 的决策约束。",
+      "provenance_check": "用于测试 CONFLICT_CANDIDATE 的决策约束。"
+    },
+    {
+      "review_id": "NR-B-0009",
+      "item_ids": ["JIM-K-0016", "JIM-K-0010"],
+      "relation": "DISTINCT",
+      "decision": "MERGE_CANDIDATE",
+      "normalized_label": "关系与决策矛盾",
+      "rationale": "DISTINCT 与 MERGE_CANDIDATE 自相矛盾，应被拒绝。",
+      "scope_check": "用于测试 DISTINCT 的决策约束。",
+      "version_check": "用于测试 DISTINCT 的决策约束。",
+      "provenance_check": "用于测试 DISTINCT 的决策约束。"
+    },
+    {
+      "review_id": "NR-B-0010",
+      "item_ids": ["JIM-K-0001", "JIM-K-0002"],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "   ",
+      "rationale": "normalized_label 为空白，应被拒绝。",
+      "scope_check": "用于测试文本字段非空。",
+      "version_check": "用于测试文本字段非空。",
+      "provenance_check": "用于测试文本字段非空。"
+    },
+    {
+      "review_id": "NR-B-0011",
+      "item_ids": ["JIM-K-0003", "JIM-K-0004"],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "多余字段",
+      "rationale": "包含未定义字段，应被拒绝。",
+      "scope_check": "用于测试未定义字段拒绝。",
+      "version_check": "用于测试未定义字段拒绝。",
+      "provenance_check": "用于测试未定义字段拒绝。",
+      "merge_action": "MERGE_NOW"
+    }
+  ]
+}

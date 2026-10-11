@@ -1,0 +1,19 @@
+{
+  "graph_id": "test-conflict-safety",
+  "scope": "Fixture proving that a CONFLICT_CANDIDATE pair may not receive a graph edge.",
+  "nodes": [
+    {"knowledge_id": "JIM-K-0001"},
+    {"knowledge_id": "JIM-K-0014"}
+  ],
+  "edges": [
+    {
+      "edge_id": "CONF-E-0001",
+      "from": "JIM-K-0014",
+      "relation": "SCOPE_PARALLEL_TO",
+      "to": "JIM-K-0001",
+      "epistemic_status": "INFERRED",
+      "rationale": "NORMALIZATION_JUSTIFICATION: 本条已写出归一化理由，故只应触发冲突安全规则。",
+      "limitations": "INFERENCE_BOUNDARY: 用于测试 CONFLICT_CANDIDATE 的 pair 不得进入图。"
+    }
+  ]
+}

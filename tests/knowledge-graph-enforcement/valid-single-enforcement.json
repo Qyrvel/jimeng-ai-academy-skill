@@ -1,0 +1,23 @@
+{
+  "graph_id": "test-valid-single-enforcement",
+  "scope": "Enforcement fixture: a single ENFORCEMENT_CONTEXT_FOR edge from an enforcement POLICY to one rule POLICY. Expected: graph validator PASS, integrity validator PASS.",
+  "nodes": [
+    {
+      "knowledge_id": "JIM-K-0031"
+    },
+    {
+      "knowledge_id": "JIM-K-0035"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "ENF-E-0001",
+      "from": "JIM-K-0035",
+      "relation": "ENFORCEMENT_CONTEXT_FOR",
+      "to": "JIM-K-0031",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "DOCUMENTED_GROUP_REFERENCE: P14 §4.8 的“违反或可能违反上述约定”向前引用同节用户行为规范；target 对应 §4.4 的禁止输入等十二类内容规则，是该集合中的一项。单边样本仍以组引用为依据，不能推出违反必然触发处理。",
+      "limitations": "只表示官方文本把处理措施与该规则联系起来；不表示违反该规则一定导致处理，不表示自动处罚或法律责任，也不构成法律意见。"
+    }
+  ]
+}

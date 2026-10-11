@@ -1,0 +1,186 @@
+{
+  "reviews": [
+    {
+      "edge_id": "JIM-E-0001",
+      "status": "KEEP",
+      "review_reason": "知识依赖成立：参考生视频的方式定义先于该方式下参考视频的控制作用说明；移除 from 后 to 失去所属语境。directness 为 DIRECT——图中不存在 A→B→C 的传递链。",
+      "directness": "DIRECT",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "JIM-E-0002",
+      "status": "KEEP",
+      "review_reason": "知识依赖成立：两种基础输入方式的概念先于“多类型素材可组合”的理解；无传递链，属直接依赖。",
+      "directness": "DIRECT",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "JIM-E-0003",
+      "status": "KEEP",
+      "review_reason": "知识依赖成立：要理解“参考生视频的用途边界”，先要理解参考生视频这一方式本身；无传递链，属直接依赖。",
+      "directness": "DIRECT",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "JIM-E-0004",
+      "status": "KEEP",
+      "review_reason": "流程顺序由产品页以“第一步/第二步”直接给出，属流程事实而非教学顺序。",
+      "directness": "NOT_APPLICABLE",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "JIM-E-0005",
+      "status": "KEEP",
+      "review_reason": "同层同源的适用范围边界限定该概念的使用范围；limitations 已声明是边界而非实测保证。",
+      "directness": "NOT_APPLICABLE",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "JIM-E-0006",
+      "status": "KEEP",
+      "review_reason": "参考素材作用边界直接限定参考生视频这一方式中素材的作用范围。",
+      "directness": "NOT_APPLICABLE",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "JIM-E-0007",
+      "status": "KEEP",
+      "review_reason": "保留但确认为本图较弱的 CONSTRAINS：K-0022 明说参考视频与参考图片的边界，未说明脚本、音频与风格素材是否同样只作参照。该弱点已写入 limitations，故不改 relation 也不删除。",
+      "directness": "NOT_APPLICABLE",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "JIM-E-0008",
+      "status": "KEEP",
+      "review_reason": "用途边界与能力说明出自同一小节，直接限定该能力的适用范围。",
+      "directness": "NOT_APPLICABLE",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "JIM-E-0009",
+      "status": "KEEP",
+      "review_reason": "2.5 发布事实与 2.5 模型能力声明同层同版本，提供版本背景；boundary 已声明模型发布不等于产品部署。",
+      "directness": "NOT_APPLICABLE",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "JIM-E-0010",
+      "status": "KEEP",
+      "review_reason": "同上，为参考视频信息理解这一 2.5 模型能力提供版本背景。",
+      "directness": "NOT_APPLICABLE",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "JIM-E-0011",
+      "status": "KEEP",
+      "review_reason": "同上，为绿幕编辑这一 2.5 模型能力提供版本背景；boundary 已声明不得写成产品端可用功能。",
+      "directness": "NOT_APPLICABLE",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "JIM-E-0012",
+      "status": "KEEP",
+      "review_reason": "DOCUMENTED 成立：发布声明与架构说明出自同一份发布页的同一发布语境，关系本身由证据直接支持。",
+      "directness": "NOT_APPLICABLE",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "JIM-E-0013",
+      "status": "KEEP",
+      "review_reason": "保留但确认信息重叠度不高：版本承接事实为 2.5 发布定位提供背景。保留理由是它让版本骨架内部的承接与发布之间形成可读路径，且 boundary 已声明不推出替代。",
+      "directness": "NOT_APPLICABLE",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "JIM-E-0014",
+      "status": "KEEP",
+      "review_reason": "保留但确认为本图边界最紧的一条：产品部署声明为同版本产品页流程提供背景。limitations 已明确部署声明不代表账号/地区/端开放，也不代表当前状态，故不得被读成可用性保证。",
+      "directness": "NOT_APPLICABLE",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "JIM-E-0015",
+      "status": "KEEP",
+      "review_reason": "跨层平行有 NR-0008 支撑；boundary 已声明不能推出产品能力等同模型能力。",
+      "directness": "NOT_APPLICABLE",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "JIM-E-0016",
+      "status": "KEEP",
+      "review_reason": "跨层平行有 NR-0009 支撑；boundary 已声明不能推出产品声明等同模型技术细节。",
+      "directness": "NOT_APPLICABLE",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "JIM-E-0017",
+      "status": "KEEP",
+      "review_reason": "跨层平行以 NORMALIZATION_JUSTIFICATION 显式说明为何用概念项而非 NR-0010 的能力项表达同一层间关系。",
+      "directness": "NOT_APPLICABLE",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "JIM-E-0018",
+      "status": "KEEP",
+      "review_reason": "跨层平行有 NR-0029 支撑；模型发布与产品上线是两个不同知识实体。",
+      "directness": "NOT_APPLICABLE",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "JIM-E-0019",
+      "status": "KEEP",
+      "review_reason": "跨层平行有 NR-0030 支撑；两项不可互相替代。",
+      "directness": "NOT_APPLICABLE",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "JIM-E-0020",
+      "status": "KEEP",
+      "review_reason": "跨层平行有 NR-0032 支撑；部署声明与架构延续互不推导。",
+      "directness": "NOT_APPLICABLE",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "JIM-E-0021",
+      "status": "KEEP",
+      "review_reason": "同主题不同版本，有 NR-0031 支撑；boundary 已禁止解释为 replaces / supersedes / deprecated_by。",
+      "directness": "NOT_APPLICABLE",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "JIM-E-0022",
+      "status": "KEEP",
+      "review_reason": "同主题不同版本，以 VERSION_JUSTIFICATION 说明归一化未单独立条的原因；boundary 已禁止替代与下线推断。",
+      "directness": "NOT_APPLICABLE",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "JIM-E-0023",
+      "status": "KEEP",
+      "review_reason": "DOCUMENTED 成立：K-0010 自称第一步，K-0009 明列该步，归属无需推断。",
+      "directness": "NOT_APPLICABLE",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "JIM-E-0024",
+      "status": "KEEP",
+      "review_reason": "DOCUMENTED 保留：K-0011 未编号但自称“列为同一步骤”，K-0009 的三步列举逐字包含该步措辞，且 P10 自身以“第二步”标注，故归属可由证据直接得到。",
+      "directness": "NOT_APPLICABLE",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "JIM-E-0025",
+      "status": "KEEP",
+      "review_reason": "DOCUMENTED 成立：K-0046 自称第三步，K-0009 明列“生成预览并保存”。",
+      "directness": "NOT_APPLICABLE",
+      "curriculum_leakage": false
+    },
+    {
+      "edge_id": "JIM-E-0026",
+      "status": "KEEP",
+      "review_reason": "DOCUMENTED 成立：产品页以“第二步/第三步”给出先后；与 JIM-E-0004、三条 STEP_OF 共同构成同一 workflow 内的自洽顺序。",
+      "directness": "NOT_APPLICABLE",
+      "curriculum_leakage": false
+    }
+  ]
+}

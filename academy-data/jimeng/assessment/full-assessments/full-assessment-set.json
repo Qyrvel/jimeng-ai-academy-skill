@@ -1,0 +1,391 @@
+{
+  "set_id": "jimeng-creator-academy-v1-full-assessment-set",
+  "course_id": "jimeng-creator-academy-v1",
+  "status": "full_course",
+  "lesson_order_basis": "course-manifest.lesson_order_by_module",
+  "assessment_order_rule": "min(course lesson position of lesson_ids), then assessment_id ascending",
+  "assessment_order_tie_break": "assessments sharing the earliest canonical lesson are ordered by assessment_id ascending",
+  "assessment_order": [
+    "JCA-A-005",
+    "JCA-A-006",
+    "JCA-A-001",
+    "JCA-A-002",
+    "JCA-A-007",
+    "JCA-A-008",
+    "JCA-A-009",
+    "JCA-A-010",
+    "JCA-A-011",
+    "JCA-A-012",
+    "JCA-A-013",
+    "JCA-A-014",
+    "JCA-A-015",
+    "JCA-A-016",
+    "JCA-A-017",
+    "JCA-A-018",
+    "JCA-A-003",
+    "JCA-A-019",
+    "JCA-A-020",
+    "JCA-A-021",
+    "JCA-A-004",
+    "JCA-A-022",
+    "JCA-A-023"
+  ],
+  "assessment_files": {
+    "JCA-A-005": "assessments/JCA-A-005.json",
+    "JCA-A-006": "assessments/JCA-A-006.json",
+    "JCA-A-001": "assessments/JCA-A-001.json",
+    "JCA-A-002": "assessments/JCA-A-002.json",
+    "JCA-A-007": "assessments/JCA-A-007.json",
+    "JCA-A-008": "assessments/JCA-A-008.json",
+    "JCA-A-009": "assessments/JCA-A-009.json",
+    "JCA-A-010": "assessments/JCA-A-010.json",
+    "JCA-A-011": "assessments/JCA-A-011.json",
+    "JCA-A-012": "assessments/JCA-A-012.json",
+    "JCA-A-013": "assessments/JCA-A-013.json",
+    "JCA-A-014": "assessments/JCA-A-014.json",
+    "JCA-A-015": "assessments/JCA-A-015.json",
+    "JCA-A-016": "assessments/JCA-A-016.json",
+    "JCA-A-017": "assessments/JCA-A-017.json",
+    "JCA-A-018": "assessments/JCA-A-018.json",
+    "JCA-A-003": "assessments/JCA-A-003.json",
+    "JCA-A-019": "assessments/JCA-A-019.json",
+    "JCA-A-020": "assessments/JCA-A-020.json",
+    "JCA-A-021": "assessments/JCA-A-021.json",
+    "JCA-A-004": "assessments/JCA-A-004.json",
+    "JCA-A-022": "assessments/JCA-A-022.json",
+    "JCA-A-023": "assessments/JCA-A-023.json"
+  },
+  "coverage_manifest": "assessment-coverage-manifest.json",
+  "assessments": [
+    {
+      "assessment_id": "JCA-A-005",
+      "file": "assessments/JCA-A-005.json",
+      "requirement_ids": [
+        "JCA-AR-001"
+      ],
+      "lesson_ids": [
+        "JCA-M01-L01"
+      ],
+      "assessment_type": "CLASSIFY",
+      "alignment_type": "DIRECT",
+      "status": "full_course"
+    },
+    {
+      "assessment_id": "JCA-A-006",
+      "file": "assessments/JCA-A-006.json",
+      "requirement_ids": [
+        "JCA-AR-002"
+      ],
+      "lesson_ids": [
+        "JCA-M01-L02"
+      ],
+      "assessment_type": "IDENTIFY",
+      "alignment_type": "DIRECT",
+      "status": "full_course"
+    },
+    {
+      "assessment_id": "JCA-A-001",
+      "file": "assessments/JCA-A-001.json",
+      "requirement_ids": [
+        "JCA-AR-003",
+        "JCA-AR-004"
+      ],
+      "lesson_ids": [
+        "JCA-M02-L01",
+        "JCA-M02-L02"
+      ],
+      "assessment_type": "PERFORM_PROCEDURE",
+      "alignment_type": "COMPOSITE_FROM_MULTIPLE_COMPLETION_CHECKS",
+      "status": "full_course"
+    },
+    {
+      "assessment_id": "JCA-A-002",
+      "file": "assessments/JCA-A-002.json",
+      "requirement_ids": [
+        "JCA-AR-005"
+      ],
+      "lesson_ids": [
+        "JCA-M02-L03"
+      ],
+      "assessment_type": "CLASSIFY",
+      "alignment_type": "DIRECT",
+      "status": "full_course"
+    },
+    {
+      "assessment_id": "JCA-A-007",
+      "file": "assessments/JCA-A-007.json",
+      "requirement_ids": [
+        "JCA-AR-006"
+      ],
+      "lesson_ids": [
+        "JCA-M03-L01"
+      ],
+      "assessment_type": "EXPLAIN_BOUNDARY",
+      "alignment_type": "DIRECT",
+      "status": "full_course"
+    },
+    {
+      "assessment_id": "JCA-A-008",
+      "file": "assessments/JCA-A-008.json",
+      "requirement_ids": [
+        "JCA-AR-007"
+      ],
+      "lesson_ids": [
+        "JCA-M03-L02"
+      ],
+      "assessment_type": "EXPLAIN_BOUNDARY",
+      "alignment_type": "DIRECT",
+      "status": "full_course"
+    },
+    {
+      "assessment_id": "JCA-A-009",
+      "file": "assessments/JCA-A-009.json",
+      "requirement_ids": [
+        "JCA-AR-008"
+      ],
+      "lesson_ids": [
+        "JCA-M03-L03"
+      ],
+      "assessment_type": "EXPLAIN_BOUNDARY",
+      "alignment_type": "DIRECT",
+      "status": "full_course"
+    },
+    {
+      "assessment_id": "JCA-A-010",
+      "file": "assessments/JCA-A-010.json",
+      "requirement_ids": [
+        "JCA-AR-009"
+      ],
+      "lesson_ids": [
+        "JCA-M04-L01"
+      ],
+      "assessment_type": "EXPLAIN_BOUNDARY",
+      "alignment_type": "DIRECT",
+      "status": "full_course"
+    },
+    {
+      "assessment_id": "JCA-A-011",
+      "file": "assessments/JCA-A-011.json",
+      "requirement_ids": [
+        "JCA-AR-010"
+      ],
+      "lesson_ids": [
+        "JCA-M04-L02"
+      ],
+      "assessment_type": "PERFORM_PROCEDURE",
+      "alignment_type": "DIRECT",
+      "status": "full_course"
+    },
+    {
+      "assessment_id": "JCA-A-012",
+      "file": "assessments/JCA-A-012.json",
+      "requirement_ids": [
+        "JCA-AR-011"
+      ],
+      "lesson_ids": [
+        "JCA-M04-L03"
+      ],
+      "assessment_type": "PERFORM_PROCEDURE",
+      "alignment_type": "DIRECT",
+      "status": "full_course"
+    },
+    {
+      "assessment_id": "JCA-A-013",
+      "file": "assessments/JCA-A-013.json",
+      "requirement_ids": [
+        "JCA-AR-012"
+      ],
+      "lesson_ids": [
+        "JCA-M05-L01"
+      ],
+      "assessment_type": "CLASSIFY",
+      "alignment_type": "DIRECT",
+      "status": "full_course"
+    },
+    {
+      "assessment_id": "JCA-A-014",
+      "file": "assessments/JCA-A-014.json",
+      "requirement_ids": [
+        "JCA-AR-013"
+      ],
+      "lesson_ids": [
+        "JCA-M05-L02"
+      ],
+      "assessment_type": "PERFORM_PROCEDURE",
+      "alignment_type": "DIRECT",
+      "status": "full_course"
+    },
+    {
+      "assessment_id": "JCA-A-015",
+      "file": "assessments/JCA-A-015.json",
+      "requirement_ids": [
+        "JCA-AR-014"
+      ],
+      "lesson_ids": [
+        "JCA-M05-L03"
+      ],
+      "assessment_type": "EXPLAIN_BOUNDARY",
+      "alignment_type": "DIRECT",
+      "status": "full_course"
+    },
+    {
+      "assessment_id": "JCA-A-016",
+      "file": "assessments/JCA-A-016.json",
+      "requirement_ids": [
+        "JCA-AR-015"
+      ],
+      "lesson_ids": [
+        "JCA-M06-L01"
+      ],
+      "assessment_type": "EXPLAIN_BOUNDARY",
+      "alignment_type": "DIRECT",
+      "status": "full_course"
+    },
+    {
+      "assessment_id": "JCA-A-017",
+      "file": "assessments/JCA-A-017.json",
+      "requirement_ids": [
+        "JCA-AR-016"
+      ],
+      "lesson_ids": [
+        "JCA-M06-L02"
+      ],
+      "assessment_type": "PERFORM_PROCEDURE",
+      "alignment_type": "DIRECT",
+      "status": "full_course"
+    },
+    {
+      "assessment_id": "JCA-A-018",
+      "file": "assessments/JCA-A-018.json",
+      "requirement_ids": [
+        "JCA-AR-017"
+      ],
+      "lesson_ids": [
+        "JCA-M07-L01"
+      ],
+      "assessment_type": "APPLY_RULE",
+      "alignment_type": "DIRECT",
+      "status": "full_course"
+    },
+    {
+      "assessment_id": "JCA-A-003",
+      "file": "assessments/JCA-A-003.json",
+      "requirement_ids": [
+        "JCA-AR-018"
+      ],
+      "lesson_ids": [
+        "JCA-M07-L02"
+      ],
+      "assessment_type": "APPLY_RULE",
+      "alignment_type": "DIRECT",
+      "status": "full_course"
+    },
+    {
+      "assessment_id": "JCA-A-019",
+      "file": "assessments/JCA-A-019.json",
+      "requirement_ids": [
+        "JCA-AR-019"
+      ],
+      "lesson_ids": [
+        "JCA-M07-L03"
+      ],
+      "assessment_type": "APPLY_RULE",
+      "alignment_type": "DIRECT",
+      "status": "full_course"
+    },
+    {
+      "assessment_id": "JCA-A-020",
+      "file": "assessments/JCA-A-020.json",
+      "requirement_ids": [
+        "JCA-AR-020"
+      ],
+      "lesson_ids": [
+        "JCA-M07-L04"
+      ],
+      "assessment_type": "APPLY_RULE",
+      "alignment_type": "DIRECT",
+      "status": "full_course"
+    },
+    {
+      "assessment_id": "JCA-A-021",
+      "file": "assessments/JCA-A-021.json",
+      "requirement_ids": [
+        "JCA-AR-021"
+      ],
+      "lesson_ids": [
+        "JCA-M08-L01"
+      ],
+      "assessment_type": "IDENTIFY",
+      "alignment_type": "DIRECT",
+      "status": "full_course"
+    },
+    {
+      "assessment_id": "JCA-A-004",
+      "file": "assessments/JCA-A-004.json",
+      "requirement_ids": [
+        "JCA-AR-022"
+      ],
+      "lesson_ids": [
+        "JCA-M08-L02"
+      ],
+      "assessment_type": "INTEGRATED_TASK",
+      "alignment_type": "DIRECT",
+      "status": "full_course"
+    },
+    {
+      "assessment_id": "JCA-A-022",
+      "file": "assessments/JCA-A-022.json",
+      "requirement_ids": [
+        "JCA-AR-023"
+      ],
+      "lesson_ids": [
+        "JCA-M08-L03"
+      ],
+      "assessment_type": "INTEGRATED_TASK",
+      "alignment_type": "DIRECT",
+      "status": "full_course"
+    },
+    {
+      "assessment_id": "JCA-A-023",
+      "file": "assessments/JCA-A-023.json",
+      "requirement_ids": [
+        "JCA-AR-024"
+      ],
+      "lesson_ids": [
+        "JCA-M08-L04"
+      ],
+      "assessment_type": "INTEGRATED_TASK",
+      "alignment_type": "DIRECT",
+      "status": "full_course"
+    }
+  ],
+  "coverage_summary": {
+    "assessment_count": 23,
+    "covered_lesson_count": 24,
+    "canonical_lesson_count": 24,
+    "covered_required_requirement_count": 24,
+    "covered_learner_outcome_count": 59
+  },
+  "metrics": {
+    "requirement_count": 24,
+    "required_requirement_count": 24,
+    "total_learner_outcome_count": 59,
+    "multi_lesson_assessment_count": 1,
+    "pilot_source_assessment_count": 4,
+    "derived_metric_mismatch_count": 0,
+    "non_order_assessment_prerequisite_misuse_count": 0,
+    "pilot_promotion_semantic_diff_count": 0
+  },
+  "assessment_type_distribution": {
+    "APPLY_RULE": 4,
+    "CLASSIFY": 3,
+    "EXPLAIN_BOUNDARY": 6,
+    "IDENTIFY": 2,
+    "INTEGRATED_TASK": 3,
+    "PERFORM_PROCEDURE": 5
+  },
+  "alignment_type_distribution": {
+    "COMPOSITE_FROM_MULTIPLE_COMPLETION_CHECKS": 1,
+    "DIRECT": 22
+  }
+}

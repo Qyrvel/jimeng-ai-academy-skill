@@ -1,0 +1,232 @@
+{
+  "track": "Jimeng Creator Academy V1",
+  "assessment_date": "2026-10-03",
+  "domains": [
+    {
+      "domain": "即梦产品基础结构",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": ["JIM-K-0009", "JIM-K-0012"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "Gate 2.3-R1 只补 POLICY，未触及本领域。仍只有 JIM-K-0009（三步生成流程）与 JIM-K-0012（文字与图片输入方式）；P01/P02 材料化仍 BLOCKED，无法定义产品结构概念。",
+      "known_gap": "缺少产品模块与功能关系类知识（工作台与画布关系、图与视频模块边界、分享与项目管理）；需要 P01/P02 正文。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "网页端",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": ["JIM-K-0009", "JIM-K-0010"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "Gate 2.3-R1 未触及本领域。仍为流程与入口两项，没有界面结构类知识。",
+      "known_gap": "缺少网页端界面结构与入口关系；P11 仍为 candidate。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "App",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": [],
+      "coverage_status": "MISSING",
+      "coverage_rationale": "仍无任何 App 侧 Item。Gate 2.3-R1 未获得 P04/P09/P15 正文（用户只提供 P14），因此无法建立 App 知识。缺口性质：Readiness 为 LIMITED_INGESTION，但证据当前不可读。",
+      "known_gap": "缺少 iOS 基础功能概述与 2.3.5/2.3.0 版本条目；需要 P04/P09/P15 正文。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "Seedance",
+      "criticality": "CORE",
+      "source_ingestion_decision": "ALLOW_INGESTION",
+      "knowledge_item_ids": ["JIM-K-0001", "JIM-K-0002", "JIM-K-0003", "JIM-K-0009", "JIM-K-0010", "JIM-K-0012", "JIM-K-0013", "JIM-K-0014", "JIM-K-0015", "JIM-K-0017", "JIM-K-0023"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "本领域含 Model Layer 3 项与 Product Layer 8 项，并已含 CONCEPT 与 CONSTRAINT。Gate 2.3-R1 的 VERSION_CONTEXT 两项（JIM-K-0036/0037）按其 Model Layer scope 只映射到「模型版本历史」，未强行计入本领域。仍缺实测知识，故维持 PARTIAL。",
+      "known_gap": "缺实测与账号级开放情况类知识；unresolved C3 仍限制跨层等价结论。",
+      "next_action": "GRAPH_PILOT_ELIGIBLE"
+    },
+    {
+      "domain": "Seedream",
+      "criticality": "CORE",
+      "source_ingestion_decision": "ALLOW_INGESTION",
+      "knowledge_item_ids": ["JIM-K-0004", "JIM-K-0005", "JIM-K-0006", "JIM-K-0007", "JIM-K-0008"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "Gate 2.3-R1 未触及本领域（§7 明确不为其扩大来源）。5 项仍全部为 Model Layer CAPABILITY，产品层证据缺失。",
+      "known_gap": "缺产品层知识与分支映射；knowledge_type 全部为 CAPABILITY。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "图片生成",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": ["JIM-K-0004", "JIM-K-0005", "JIM-K-0006", "JIM-K-0007", "JIM-K-0008"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "Gate 2.3-R1 未触及本领域。仍只有 Seedream 模型层一侧，缺产品端流程与输入输出知识。",
+      "known_gap": "缺产品层图片生成知识；需要 P02/P07 正文。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "视频生成",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": ["JIM-K-0009", "JIM-K-0012", "JIM-K-0013", "JIM-K-0014", "JIM-K-0015", "JIM-K-0018", "JIM-K-0024"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "Gate 2.3-R1 未触及本领域。仍含 CONCEPT 与 PROCEDURE，但无 Model Layer 对照项、无输出与运行规格，故维持 PARTIAL。",
+      "known_gap": "缺输出与运行规格（时长、分辨率、队列）与模型层对照项。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "参考图",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": ["JIM-K-0011"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "Gate 2.3-R1 未触及本领域。仍只有 JIM-K-0011 一项流程侧知识。",
+      "known_gap": "缺参考图专项能力项与文件规格；Readiness 明确排除录入上限。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "参考视频/音频",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": ["JIM-K-0014", "JIM-K-0015", "JIM-K-0017", "JIM-K-0022", "JIM-K-0023"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "Gate 2.3-R1 未触及本领域。仍含 CONCEPT 与 CONSTRAINT 共 5 项，但音频一侧只有产品页声明，且无模型层对照项，故维持 PARTIAL 而非 COVERED。",
+      "known_gap": "缺音频独立上传、格式、时长与数量类知识；缺模型层参考视频能力项。",
+      "next_action": "GRAPH_PILOT_ELIGIBLE"
+    },
+    {
+      "domain": "模型选择",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": ["JIM-K-0010"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "Gate 2.3-R1 未触及本领域。证据仍只有 P10 第一步一句，不足以定义模型选择概念。",
+      "known_gap": "缺完整模型列表、默认项、可选分支与地域权限；Readiness 规定不建完整选择表。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "Prompt",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": ["JIM-K-0011", "JIM-K-0020"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "Gate 2.3-R1 未触及本领域。仍为「流程项 + 概念项」两项，提示词结构与方法类知识缺失（P07 仍 BLOCKED）。",
+      "known_gap": "缺提示词结构、字数与方法类知识；A07 仍为 candidate。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "编辑功能",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": ["JIM-K-0005", "JIM-K-0006", "JIM-K-0007", "JIM-K-0016", "JIM-K-0019", "JIM-K-0021"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "Gate 2.3-R1 未触及本领域。仍含 CONCEPT 与 CONSTRAINT，但没有任何 PROCEDURE 类操作知识，且产品层与模型层分属不同模型分支，故维持 PARTIAL 且不列入 Graph Pilot 候选。",
+      "known_gap": "缺编辑操作入口、选区方式与参数类知识；unresolved C1 仍影响画布 UI。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "平台内容规则",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": ["JIM-K-0025", "JIM-K-0026", "JIM-K-0027", "JIM-K-0028", "JIM-K-0029", "JIM-K-0030", "JIM-K-0031", "JIM-K-0032", "JIM-K-0033", "JIM-K-0034", "JIM-K-0035"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "Gate 2.3-R1 的核心变化：由 MISSING 变为 PARTIAL。用户提供 P14 第 4.1–4.8 节正文后，建立 11 项 POLICY（未授权信息、权属与不侵权、AI 内容标识添加、禁止破坏标识、真实身份认证前提、内容合规与特定信息标注来源、4.4 违法违规内容、4.5 不良内容、4.6 欺骗性与高危险性内容、4.7 扰乱经营秩序信息、4.8 平台处理权），按节分别立项且各为一条规则。未判 COVERED：第 4.8 节提到的《社区自律公约》未纳入材料，专项规则、执行阈值与后续版本变动均未核验，且 4.4/4.5/4.6 的子项未逐条原子化（以节为粒度，limitations 已注明以材料原文为准）。",
+      "known_gap": "缺少《“即梦AI”社区自律公约》及其他专项规则；缺执行阈值与处置流程类知识；本轮只覆盖第 4.1–4.8 节。",
+      "next_action": "GRAPH_PILOT_ELIGIBLE"
+    },
+    {
+      "domain": "产品版本历史",
+      "criticality": "SUPPORTING",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": [],
+      "coverage_status": "MISSING",
+      "coverage_rationale": "仍为 MISSING。Gate 2.3-R1 未获得 P04/P09 正文（用户本轮仅提供 P14），因此无法建立任何 VERSION_CONTEXT Item。缺口性质为证据当前不可读，非 Readiness 不允许。",
+      "known_gap": "缺少 iOS 2.3.5 与 2.3.0 版本条目；需要 P04/P09 正文。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "模型版本历史",
+      "criticality": "SUPPORTING",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": ["JIM-K-0001", "JIM-K-0002", "JIM-K-0003", "JIM-K-0004", "JIM-K-0005", "JIM-K-0006", "JIM-K-0007", "JIM-K-0008", "JIM-K-0036", "JIM-K-0037", "JIM-K-0038", "JIM-K-0039", "JIM-K-0040", "JIM-K-0041"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "Gate 2.3-R1 为本领域补入 6 项 VERSION_CONTEXT：JIM-K-0036/0037（Seedance 2.5 于 2026-07-31 发布、延续 2.0 的架构）与 JIM-K-0038/0039/0040/0041（Seedance 2.0 于 2026-02-12 发布、采用统一多模态音频视频联合生成架构并支持文字/图片/音频/视频/标签输入、与 1.5 版本的承接比较、以及该架构在 2.0 与 2.5 之间的延续）。加上原有 8 项带明确 version_scope 的能力项，本领域已具备可讨论的版本沿革结构（2.5 / 2.0 / 1.5 三个版本与架构延续关系）。仍未判 COVERED：覆盖只在 Seedance 一侧，Seedream 全部分支（5.0 Pro/Lite、4.5、4.0）与 Seedance 1.0 的沿革仍缺失，M03–M08 均未材料化。",
+      "known_gap": "缺 Seedance 1.0 与 Seedream 各分支的版本沿革；M02 已材料化，M03–M08 仍需正文。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "会员",
+      "criticality": "DYNAMIC",
+      "source_ingestion_decision": "DEFER",
+      "knowledge_item_ids": [],
+      "coverage_status": "DEFERRED",
+      "coverage_rationale": "Readiness 仍为 DEFER（P05/P08 均为 candidate），本阶段不应要求 Knowledge Engine 覆盖。",
+      "known_gap": "会员权益、渠道与生效时间未核验；保留在 Source Engine。",
+      "next_action": "DEFER"
+    },
+    {
+      "domain": "积分",
+      "criticality": "DYNAMIC",
+      "source_ingestion_decision": "DEFER",
+      "knowledge_item_ids": [],
+      "coverage_status": "DEFERRED",
+      "coverage_rationale": "Readiness 仍为 DEFER（消耗、有效期与失败退款规则未知）。",
+      "known_gap": "积分消耗、有效期与失败退款规则未知；保留在 Source Engine。",
+      "next_action": "DEFER"
+    },
+    {
+      "domain": "实时价格",
+      "criticality": "DYNAMIC",
+      "source_ingestion_decision": "DEFER",
+      "knowledge_item_ids": [],
+      "coverage_status": "DEFERRED",
+      "coverage_rationale": "Readiness 仍为 DEFER（实时结算与促销未核验）。",
+      "known_gap": "实时结算与促销有效范围未核验；保留在 Source Engine。",
+      "next_action": "DEFER"
+    },
+    {
+      "domain": "Volcano / Ark API",
+      "criticality": "OPTIONAL",
+      "source_ingestion_decision": "DEFER",
+      "knowledge_item_ids": [],
+      "coverage_status": "DEFERRED",
+      "coverage_rationale": "Readiness 仍为 DEFER（A01–A07 全部为 candidate）。Gate 2.3-R1 未使用任何 API 来源。",
+      "known_gap": "API 正文与版本未完成审核；API 参数不得外推为产品参数。",
+      "next_action": "DEFER"
+    },
+    {
+      "domain": "API 服务状态",
+      "criticality": "OUT_OF_SCOPE",
+      "source_ingestion_decision": "NOT_APPLICABLE",
+      "knowledge_item_ids": [],
+      "coverage_status": "NOT_APPLICABLE",
+      "coverage_rationale": "不属于当前 Creator Track。",
+      "known_gap": "无；不纳入本 Track。",
+      "next_action": "NOT_APPLICABLE"
+    },
+    {
+      "domain": "社区经验",
+      "criticality": "OPTIONAL",
+      "source_ingestion_decision": "DEFER",
+      "knowledge_item_ids": [],
+      "coverage_status": "DEFERRED",
+      "coverage_rationale": "Readiness 仍为 DEFER（O01/O02 为 candidate）。Gate 2.3-R1 未使用任何社区来源。",
+      "known_gap": "社区身份与复现条件不足；与官方内容分开保存。",
+      "next_action": "DEFER"
+    },
+    {
+      "domain": "可复现实验",
+      "criticality": "OPTIONAL",
+      "source_ingestion_decision": "DEFER",
+      "knowledge_item_ids": [],
+      "coverage_status": "DEFERRED",
+      "coverage_rationale": "Readiness 仍为 DEFER：无合格实验记录。35 项中仍无任何 OBSERVED Item。",
+      "known_gap": "缺输入、步骤、版本与结果记录；LAB 仅为扩展标签。",
+      "next_action": "DEFER"
+    }
+  ],
+  "item_accounting": {
+    "registry_total": 41,
+    "mapped_item_ids": ["JIM-K-0001", "JIM-K-0002", "JIM-K-0003", "JIM-K-0004", "JIM-K-0005", "JIM-K-0006", "JIM-K-0007", "JIM-K-0008", "JIM-K-0009", "JIM-K-0010", "JIM-K-0011", "JIM-K-0012", "JIM-K-0013", "JIM-K-0014", "JIM-K-0015", "JIM-K-0016", "JIM-K-0017", "JIM-K-0018", "JIM-K-0019", "JIM-K-0020", "JIM-K-0021", "JIM-K-0022", "JIM-K-0023", "JIM-K-0024", "JIM-K-0025", "JIM-K-0026", "JIM-K-0027", "JIM-K-0028", "JIM-K-0029", "JIM-K-0030", "JIM-K-0031", "JIM-K-0032", "JIM-K-0033", "JIM-K-0034", "JIM-K-0035", "JIM-K-0036", "JIM-K-0037", "JIM-K-0038", "JIM-K-0039", "JIM-K-0040", "JIM-K-0041"],
+    "unmapped_item_ids": []
+  },
+  "overall_recommendation": "NEEDS_TARGETED_INGESTION"
+}

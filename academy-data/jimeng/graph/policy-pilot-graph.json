@@ -1,0 +1,111 @@
+{
+  "graph_id": "jimeng-policy-pilot-v1",
+  "scope": "Second bounded graph pilot: Platform Policy / Content Rules. 13 real Knowledge Items from the Jimeng AI user agreement section 4.1-4.8 (10 POLICY) plus 3 Product Layer items that the rules directly bound (the content-input step, the multimodal material-combination capability, and the generate/preview/save step). Every CONSTRAINS edge carries a DIRECT_CONSTRAINT rationale. No new knowledge, no new relation type, no abstract node. Not a curriculum and not a claim of full platform-policy coverage.",
+  "nodes": [
+    {"knowledge_id": "JIM-K-0011"},
+    {"knowledge_id": "JIM-K-0013"},
+    {"knowledge_id": "JIM-K-0025"},
+    {"knowledge_id": "JIM-K-0026"},
+    {"knowledge_id": "JIM-K-0027"},
+    {"knowledge_id": "JIM-K-0028"},
+    {"knowledge_id": "JIM-K-0030"},
+    {"knowledge_id": "JIM-K-0031"},
+    {"knowledge_id": "JIM-K-0032"},
+    {"knowledge_id": "JIM-K-0033"},
+    {"knowledge_id": "JIM-K-0034"},
+    {"knowledge_id": "JIM-K-0035"},
+    {"knowledge_id": "JIM-K-0046"}
+  ],
+  "edges": [
+    {
+      "edge_id": "POL-E-0001",
+      "from": "JIM-K-0025",
+      "relation": "CONSTRAINS",
+      "to": "JIM-K-0011",
+      "epistemic_status": "INFERRED",
+      "rationale": "DIRECT_CONSTRAINT: 该 Policy（第4.1节）规定用户不得输入、分享未经授权的个人信息、保密信息及未经授权的其他类型信息。Target Item 表达的是产品流程中「上传素材并输入提示词」这一动作，即用户向系统提供内容的那一步。二者的直接约束点在于：该条款限定的正是**被输入的信息类型**，而该步骤就是输入发生的位置；条款禁止的输入行为与该步骤描述的动作是同一类动作。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为该条款的禁止对象与目标 Item 的输入动作，两者同属 Product Layer、同属平台内使用行为；只表达「该规则约束该输入行为」，不判断任何具体内容是否违规，也不解释「未经授权」的判定标准，不构成法律意见。"
+    },
+    {
+      "edge_id": "POL-E-0002",
+      "from": "JIM-K-0026",
+      "relation": "CONSTRAINS",
+      "to": "JIM-K-0011",
+      "epistemic_status": "INFERRED",
+      "rationale": "DIRECT_CONSTRAINT: 该 Policy（第4.1节）要求用户确保输入内容为本人所有或已获得合法授权，且不得侵害他人的著作权、肖像权等权益。Target Item 表达的是「上传素材并输入提示词」这一输入步骤。二者的直接约束点在于：该条款限定的正是**输入内容的权属与来源正当性**，而该步骤是素材与提示词进入系统的位置。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为该条款对输入内容的权属要求与目标 Item 的输入动作；只表达「该规则约束该输入行为」，不判断具体素材的权利状态，不提供授权取得方式，也不构成法律意见。"
+    },
+    {
+      "edge_id": "POL-E-0003",
+      "from": "JIM-K-0026",
+      "relation": "CONSTRAINS",
+      "to": "JIM-K-0013",
+      "epistemic_status": "INFERRED",
+      "rationale": "DIRECT_CONSTRAINT: 该 Policy（第4.1节）要求输入内容为本人所有或已获授权、不得侵害他人权益。Target Item 表达「组合脚本、视频、音频和风格素材完成多模态创作」，即用户把**多来源素材**一并投入创作。二者的直接约束点在于：多来源素材正是第三方权利最集中的输入形态，该条款的权属要求直接限定哪些素材可以被组合使用。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为该条款的权属要求与目标 Item 的多素材组合动作；只表达「该规则约束该素材组合行为」，不判断具体素材是否侵权，不解释合理使用等情形，也不构成法律意见。"
+    },
+    {
+      "edge_id": "POL-E-0004",
+      "from": "JIM-K-0031",
+      "relation": "CONSTRAINS",
+      "to": "JIM-K-0011",
+      "epistemic_status": "INFERRED",
+      "rationale": "DIRECT_CONSTRAINT: 该 Policy（第4.4节）禁止用户输入、生成、制作、复制、发布、传播该节列举的十二类内容（条款级 Item，不复述子项）。Target Item 表达「上传素材并输入提示词」这一输入步骤，且该步骤位于产品生成流程之内。二者的直接约束点在于：该条款的禁止范围明确包含**输入**这一类动作，而该步骤正是输入动作。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为该条款所列禁止动作（含「输入」）与目标 Item 的输入动作；只表达「该规则约束该输入行为」，不复述十二类内容、不判断具体内容，也不就任何内容作出法律性质结论。"
+    },
+    {
+      "edge_id": "POL-E-0005",
+      "from": "JIM-K-0032",
+      "relation": "CONSTRAINS",
+      "to": "JIM-K-0011",
+      "epistemic_status": "INFERRED",
+      "rationale": "DIRECT_CONSTRAINT: 该 Policy（第4.5节）禁止用户输入、生成、制作、复制、发布、传播该节列举的十一项不良内容，并要求主动抵制其传播（条款级 Item，不复述子项）。Target Item 表达「上传素材并输入提示词」这一输入步骤。二者的直接约束点在于：该条款的禁止范围明确包含**输入**，而该步骤正是输入动作；其规范对象是「不良内容」，与第4.4节的「违法违规内容」是不同类别。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为该条款所列禁止动作（含「输入」）与目标 Item 的输入动作；只表达「该规则约束该输入行为」，不复述十一项内容、不判断具体内容，也不构成法律意见。"
+    },
+    {
+      "edge_id": "POL-E-0006",
+      "from": "JIM-K-0033",
+      "relation": "CONSTRAINS",
+      "to": "JIM-K-0011",
+      "epistemic_status": "INFERRED",
+      "rationale": "DIRECT_CONSTRAINT: 该 Policy（第4.6节）禁止用户输入、生成、制作、复制、发布、传播含有欺骗性、高危险性、危害表演者自身或他人身心健康的内容，该节并列四类具体情形（条款级 Item）。Target Item 表达「上传素材并输入提示词」这一输入步骤。二者的直接约束点在于：该条款的禁止范围明确包含**输入**，而该步骤正是输入动作；其规范对象是「欺骗性与高危险性内容」，与前两条的类别不同。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为该条款所列禁止动作（含「输入」）与目标 Item 的输入动作；只表达「该规则约束该输入行为」，不复述四类情形、不判断具体内容，也不构成法律意见。"
+    },
+    {
+      "edge_id": "POL-E-0007",
+      "from": "JIM-K-0034",
+      "relation": "CONSTRAINS",
+      "to": "JIM-K-0011",
+      "epistemic_status": "INFERRED",
+      "rationale": "DIRECT_CONSTRAINT: 该 Policy（第4.7节）禁止用户输入、生成、制作、复制、发布、传播扰乱平台经营秩序的信息，并举例包括垃圾信息、商业招揽信息、过度营销信息、与所评论内容无关联的信息，以及刻意使用字符组合逃避技术审核的信息。Target Item 表达「上传素材并输入提示词」这一输入步骤。二者的直接约束点在于：该条款的禁止范围明确包含**输入**，且「刻意使用字符组合以逃避技术审核」这一举例直接指向**文本输入的内容形式**，与提示词输入是同一位置。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为该条款所列禁止动作（含「输入」）与其对字符组合的举例与目标 Item 的输入动作；只表达「该规则约束该输入行为」，不判断具体信息是否扰乱秩序，也不解释技术审核机制。"
+    },
+    {
+      "edge_id": "POL-E-0008",
+      "from": "JIM-K-0027",
+      "relation": "PREREQUISITE_OF",
+      "to": "JIM-K-0028",
+      "epistemic_status": "INFERRED",
+      "rationale": "KNOWLEDGE_DEPENDENCY: 该 Edge 连接同一节（第4.2节）派生的两条 POLICY。前者的命题是「平台有权对 AI 内容添加标识」，后者的命题是「用户不得遮挡、涂抹、修改或删除平台添加的标识」。要理解后一条所禁止的行为对象（被添加的标识从何而来、为何存在），必须先理解前一条所确立的添加依据与添加主体。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为两条 POLICY 同属第4.2节、且后者的禁止对象由前者的添加行为产生；该依赖是理解层面的，不表示两条在适用上互为条件，也不表示第4.2节完整覆盖 AI 内容标识的全部规则。"
+    },
+    {
+      "edge_id": "POL-E-0009",
+      "from": "JIM-K-0028",
+      "relation": "CONSTRAINS",
+      "to": "JIM-K-0046",
+      "epistemic_status": "INFERRED",
+      "rationale": "DIRECT_CONSTRAINT: 该 Policy（第4.2节）禁止用户以任何方式遮挡、涂抹、修改或删除平台对 AI 内容添加的标识。Target Item 表达生成流程的第三步「生成、预览并保存」：生成 AI 视频、检查效果并完成必要调整、然后下载成片，即**产出物的形成与输出处理**。二者的直接约束点在于：该条款约束的是用户对已生成 AI 内容上的标识所施加的处理，而该步骤正是产出物形成并进入后续处理的环节。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为该条款对标识处理的禁止与目标 Item 的产出/输出处理动作；只表达「该规则约束该输出处理行为」，不判断具体标识形式与技术实现，也不表示平台一定对该步骤的任何输出添加标识。"
+    },
+    {
+      "edge_id": "POL-E-0010",
+      "from": "JIM-K-0030",
+      "relation": "CONSTRAINS",
+      "to": "JIM-K-0046",
+      "epistemic_status": "INFERRED",
+      "rationale": "DIRECT_CONSTRAINT: 该 Policy（第4.3节）要求用户保证所输入、生成、发布或传播的信息内容符合法律法规要求，并在涉及时事、公共政策、社会事件等信息时准确标注信息来源。Target Item 表达「生成、预览并保存」这一产出环节。二者的直接约束点在于：该条款的义务明确覆盖**生成**这一动作，并对特定题材的内容附加「标注信息来源」的处理要求，因此直接约束该步骤产出内容在来源标注上的处理。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为该条款所列义务动作（含「生成」与来源标注要求）与目标 Item 的产出动作；只表达「该规则约束该产出环节的来源标注处理」，不判断具体内容是否属于该条款所指题材，不规定标注格式，也不构成法律意见。"
+    }
+  ]
+}

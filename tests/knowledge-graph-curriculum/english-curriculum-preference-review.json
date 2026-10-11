@@ -1,0 +1,11 @@
+{
+  "reviews": [
+    {
+      "edge_id": "POL-E-0008",
+      "status": "REMOVE",
+      "review_reason": "理由仅为课程应先教 A 再教 B，未提供知识依赖依据；即使原 pair 可有真实依赖，此 fixture 所提交的理由仍不可接受。",
+      "directness": "DIRECT",
+      "curriculum_leakage": true
+    }
+  ]
+}

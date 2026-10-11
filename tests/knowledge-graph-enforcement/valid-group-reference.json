@@ -1,0 +1,39 @@
+{
+  "graph_id": "test-valid-group-reference",
+  "scope": "Enforcement fixture: one enforcement POLICY fans out to three rule POLICY items, each rationale carrying DOCUMENTED_GROUP_REFERENCE. Expected: graph validator PASS, integrity validator PASS.",
+  "nodes": [
+    {"knowledge_id": "JIM-K-0031"},
+    {"knowledge_id": "JIM-K-0032"},
+    {"knowledge_id": "JIM-K-0033"},
+    {"knowledge_id": "JIM-K-0035"}
+  ],
+  "edges": [
+    {
+      "edge_id": "ENF-E-0001",
+      "from": "JIM-K-0035",
+      "relation": "ENFORCEMENT_CONTEXT_FOR",
+      "to": "JIM-K-0031",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "DOCUMENTED_GROUP_REFERENCE: 证据使用「违反或可能违反上述约定」这一组引用；本 target 对应第4.4节，位于该组引用的枚举范围内；不能推出违反该规则一定触发处理。",
+      "limitations": "只表示处理条款覆盖该规则；不表示一定处罚、自动处罚或法律责任，也不构成法律意见。"
+    },
+    {
+      "edge_id": "ENF-E-0002",
+      "from": "JIM-K-0035",
+      "relation": "ENFORCEMENT_CONTEXT_FOR",
+      "to": "JIM-K-0032",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "DOCUMENTED_GROUP_REFERENCE: 证据使用「违反或可能违反上述约定」这一组引用；本 target 对应第4.5节，位于该组引用的枚举范围内；不能推出违反该规则一定触发处理。",
+      "limitations": "只表示处理条款覆盖该规则；不表示一定处罚、自动处罚或法律责任，也不构成法律意见。"
+    },
+    {
+      "edge_id": "ENF-E-0003",
+      "from": "JIM-K-0035",
+      "relation": "ENFORCEMENT_CONTEXT_FOR",
+      "to": "JIM-K-0033",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "DOCUMENTED_GROUP_REFERENCE: 证据使用「违反或可能违反上述约定」这一组引用；本 target 对应第4.6节，位于该组引用的枚举范围内；不能推出违反该规则一定触发处理。",
+      "limitations": "只表示处理条款覆盖该规则；不表示一定处罚、自动处罚或法律责任，也不构成法律意见。"
+    }
+  ]
+}

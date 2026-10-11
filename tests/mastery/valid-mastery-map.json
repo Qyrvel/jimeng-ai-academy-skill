@@ -1,0 +1,36 @@
+{
+  "map_id": "fixture-mastery-map",
+  "course_id": "jimeng-creator-academy-v1",
+  "status": "mastery_contract",
+  "outcome_reference_form": "<lesson_id>#<0-based index>",
+  "mastery_definition": "夹具：全部 required outcome 产生满足 requirement 的可观察证据。",
+  "decision_contract": {
+    "decision_enum": ["PASS", "RETRY", "REMEDIATION", "BLOCKED"],
+    "reason_enum": ["PASS_ALL_REQUIRED_OUTCOMES", "RETRY_EXECUTION_INCOMPLETE", "RETRY_EVIDENCE_INCOMPLETE", "REMEDIATE_OUTCOME_GAP", "REMEDIATE_BOUNDARY_MISCONCEPTION", "BLOCKED_BY_HARD_PREREQUISITE"],
+    "evaluation_order": "夹具：①BLOCKED ②PASS ③REMEDIATE_BOUNDARY ④RETRY_EVIDENCE ⑤RETRY_EXECUTION ⑥REMEDIATE_OUTCOME_GAP。",
+    "no_student_state": "夹具：只定义判定规则，不存储学生状态。"
+  },
+  "rule_definitions": {
+    "LESSON_PASS": {"pass_rule": "夹具 pass rule。"},
+    "LESSON_RETRY": {"retry_rule": "夹具 retry rule。"},
+    "LESSON_REMEDIATION": {"remediation_rule": "夹具 remediation rule。"}
+  },
+  "units": [
+    {"mastery_unit_id":"JCA-MU-L01","unit_type":"LESSON","lesson_ids":["JCA-M02-L01"],"required_requirement_ids":["JCA-AR-901"],"required_outcomes":["JCA-M02-L01#0","JCA-M02-L01#1"],"hard_prerequisite_units":[],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"夹具。"},
+    {"mastery_unit_id":"JCA-MU-L02","unit_type":"LESSON","lesson_ids":["JCA-M02-L02"],"required_requirement_ids":["JCA-AR-902"],"required_outcomes":["JCA-M02-L02#0","JCA-M02-L02#1"],"hard_prerequisite_units":["JCA-MU-L01"],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"夹具：1 个 gate 由 1 条 hard edge（CRR2-E-0004）支撑。"},
+    {"mastery_unit_id":"JCA-MU-L03","unit_type":"LESSON","lesson_ids":["JCA-M01-L01"],"required_requirement_ids":["JCA-AR-903"],"required_outcomes":["JCA-M01-L01#0","JCA-M01-L01#1","JCA-M01-L01#2"],"hard_prerequisite_units":[],"pass_rule":"LESSON_PASS","retry_rule":"LESSON_RETRY","remediation_rule":"LESSON_REMEDIATION","limitations":"夹具。"}
+  ],
+  "hard_sequence_summary": {
+    "mastery_hard_transition_count": 1,
+    "mastery_supporting_hard_edge_count": 1,
+    "note": "夹具：仅覆盖 M02-L01 → M02-L02 一个 gate。"
+  },
+  "derived": {
+    "mastery_unit_count": 3,
+    "lesson_mastery_unit_count": 3,
+    "sequence_pair_mastery_unit_count": 0,
+    "mastery_hard_transition_count": 1,
+    "mastery_supporting_hard_edge_count": 1,
+    "non_order_mastery_gate_misuse_count": 0
+  }
+}

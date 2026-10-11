@@ -1,0 +1,72 @@
+{
+  "fixture": "invalid-uncovered-requirement",
+  "base_set_manifest": "academy-data/jimeng/assessment/full-assessments/full-assessment-set.json",
+  "base_coverage_manifest": "academy-data/jimeng/assessment/full-assessments/assessment-coverage-manifest.json",
+  "coverage_manifest": "academy-data/jimeng/assessment/full-assessments/assessment-coverage-manifest.json",
+  "set_manifest": {
+    "delete_assessment": "JCA-A-023",
+    "set": {
+      "coverage_manifest": "academy-data/jimeng/assessment/full-assessments/assessment-coverage-manifest.json",
+      "coverage_summary": {
+        "assessment_count": 22,
+        "covered_lesson_count": 23,
+        "canonical_lesson_count": 24,
+        "covered_required_requirement_count": 23,
+        "covered_learner_outcome_count": 57
+      },
+      "assessment_type_distribution": {
+        "APPLY_RULE": 4,
+        "CLASSIFY": 3,
+        "EXPLAIN_BOUNDARY": 6,
+        "IDENTIFY": 2,
+        "INTEGRATED_TASK": 2,
+        "PERFORM_PROCEDURE": 5
+      },
+      "alignment_type_distribution": {
+        "COMPOSITE_FROM_MULTIPLE_COMPLETION_CHECKS": 1,
+        "DIRECT": 21
+      },
+      "assessment_files": {
+        "JCA-A-001": "../../../academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-001.json",
+        "JCA-A-002": "../../../academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-002.json",
+        "JCA-A-003": "../../../academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-003.json",
+        "JCA-A-004": "../../../academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-004.json",
+        "JCA-A-005": "../../../academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-005.json",
+        "JCA-A-006": "../_baseline/assessments/JCA-A-006.json",
+        "JCA-A-007": "../_baseline/assessments/JCA-A-007.json",
+        "JCA-A-008": "../_baseline/assessments/JCA-A-008.json",
+        "JCA-A-009": "../_baseline/assessments/JCA-A-009.json",
+        "JCA-A-010": "../_baseline/assessments/JCA-A-010.json",
+        "JCA-A-011": "../_baseline/assessments/JCA-A-011.json",
+        "JCA-A-012": "../_baseline/assessments/JCA-A-012.json",
+        "JCA-A-013": "../_baseline/assessments/JCA-A-013.json",
+        "JCA-A-014": "../_baseline/assessments/JCA-A-014.json",
+        "JCA-A-015": "../_baseline/assessments/JCA-A-015.json",
+        "JCA-A-016": "../_baseline/assessments/JCA-A-016.json",
+        "JCA-A-017": "../_baseline/assessments/JCA-A-017.json",
+        "JCA-A-018": "../../../academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-018.json",
+        "JCA-A-019": "../_baseline/assessments/JCA-A-019.json",
+        "JCA-A-020": "../_baseline/assessments/JCA-A-020.json",
+        "JCA-A-021": "../_baseline/assessments/JCA-A-021.json",
+        "JCA-A-022": "../_baseline/assessments/JCA-A-022.json"
+      }
+    }
+  },
+  "note": "JCA-A-023 is withdrawn, so mastery-required requirement JCA-AR-024 has no carrier",
+  "declared_member_count": 22,
+  "declared_source_mode_counts": {
+    "LOCAL_BYTE_EXACT_COPY": 16,
+    "CANONICAL_DIRECT_DECLARATION": 6,
+    "FIXTURE_LOCAL_SHADOW": 0,
+    "WITHDRAWN_FROM_MEMBERSHIP": 1
+  },
+  "withdrawn_assessment_ids": [
+    "JCA-A-023"
+  ],
+  "companion_codes": [
+    "CANONICAL_MEMBERSHIP_IDENTITY_SET",
+    "COVERAGE_MANIFEST_FIDELITY",
+    "DERIVED_METRIC_RECOMPUTATION",
+    "LEARNER_OUTCOME_COVERAGE_IDENTITY_SET"
+  ]
+}

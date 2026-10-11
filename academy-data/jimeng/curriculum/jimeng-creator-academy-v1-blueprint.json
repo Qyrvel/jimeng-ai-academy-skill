@@ -1,0 +1,620 @@
+{
+  "blueprint_id": "jimeng-creator-academy-v1-blueprint",
+  "curriculum_id": "jimeng-creator-academy-v1",
+  "version": "0.1",
+  "status": "blueprint",
+  "module_blueprints": [
+    {
+      "module_id": "JCA-M01",
+      "module_goal": "在动手之前建立环境认知：区分产品、模型与版本记录的不同声明来源，并在明确支持的客户端识别创作入口与必要准入条件。",
+      "module_load_verdict": "HEAVY_BUT_COHESIVE",
+      "lesson_order": ["JCA-M01-L01", "JCA-M01-L02"],
+      "lessons": [
+        {
+          "lesson_id": "JCA-M01-L01",
+          "module_id": "JCA-M01",
+          "title": "产品声明、模型声明与版本记录的区别",
+          "lesson_role": "FOUNDATION",
+          "purpose": "让学习者能区分产品层声明、模型层声明与版本记录，并不由模型能力推断账号已开放。",
+          "learner_outcomes": [
+            "区分同主题下的产品层声明与模型层声明",
+            "解释版本记录只说明已保存的历史事实，不证明当前可用性",
+            "识别“模型具备该能力”不等于“该账号已开放该功能”"
+          ],
+          "knowledge_refs": [
+            "JIM-K-0001",
+            "JIM-K-0014",
+            "JIM-K-0036",
+            "JIM-K-0038",
+            "JIM-K-0042",
+            "JIM-K-0043"
+          ],
+          "graph_support_refs": ["JIM-E-0016", "JIM-E-0018", "JIM-E-0019"],
+          "scope": "Jimeng Product Layer 与 ByteDance Seed Model Layer 的声明分层；版本记录限已保存的发布事实。",
+          "order_basis": "PEDAGOGICAL",
+          "order_rationale": "PEDAGOGICAL_RATIONALE: 作为整个 Track 的第一课，先建立“谁在什么层说了什么”的判断习惯，后续所有能力声明都能被正确归位；这是教学起点选择，不是知识 prerequisite。",
+          "practice_intent": "给出一组同主题的声明，让学习者标注它属于产品层、模型层还是版本记录，并说明能否据此判断当前可用。",
+          "completion_evidence": "学习者能对给定声明完成层次标注，并指出至少一处“不能由模型能力推断产品可用”的例子。",
+          "limitations": "本课只建立判断习惯；不提供完整模型菜单、不判断某账号当前是否开放任何具体功能。",
+          "status": "blueprint"
+        },
+        {
+          "lesson_id": "JCA-M01-L02",
+          "module_id": "JCA-M01",
+          "title": "创作入口、准入条件与客户端范围",
+          "lesson_role": "FOUNDATION",
+          "purpose": "让学习者能在 Jimeng Web 定位创作入口，说明未登录状态下的准入提示，并区分历史 App 记录与当前 Web 环境。",
+          "learner_outcomes": [
+            "识别 Jimeng Web 创作首页的“创作”区域与“生成”“画布”入口",
+            "解释未登录状态下“对话”“画布”显示“请先登录”，并指出“登录”入口位置",
+            "区分历史 App 版本记录与当前 Web 观察属于不同客户端范围",
+            "解释进入创作区域的最小路径"
+          ],
+          "knowledge_refs": [
+            "JIM-K-0010",
+            "JIM-K-0029",
+            "JIM-K-0044",
+            "JIM-K-0045",
+            "JIM-K-0054",
+            "JIM-K-0055",
+            "JIM-K-0056"
+          ],
+          "graph_support_refs": ["CRR2-E-0005"],
+          "scope": "Jimeng Web 2026-10-04 未登录创作首页；不含登录后页面结构与其他客户端路径。",
+          "order_basis": "PEDAGOGICAL",
+          "order_rationale": "PEDAGOGICAL_RATIONALE: 在知道“声明分属哪一层”之后，再落到“自己从哪里进入、需要什么条件”，学习者能把准入提示理解为产品层事实而非模型能力；不是知识 prerequisite。",
+          "practice_intent": "在 Jimeng Web 创作首页指出创作入口、登录入口与两处“请先登录”提示，并口述最小进入路径。",
+          "completion_evidence": "学习者能指出正确入口与登录位置，并按顺序说出进入创作区域的最小路径。",
+          "limitations": "只覆盖该客户端该状态该时点；登录后页面结构、iOS/Android 路径与其他地区/账号差异未验证；不把“请先登录”扩大为平台级要求。",
+          "status": "blueprint"
+        }
+      ],
+      "module_completion_evidence": "学习者能对一组声明完成产品/模型/版本分层标注，并在 Jimeng Web 未登录首页指出创作入口与准入提示、说出最小进入路径。",
+      "limitations": "入口与准入只覆盖 2026-10-04 观察到的 Jimeng Web 未登录状态；APIs 与完整模型菜单不在本 Track 范围。"
+    },
+    {
+      "module_id": "JCA-M02",
+      "module_goal": "在指定即梦产品端完成一次基础图片生成、查看结果并保存，同时保持模型与产品的范围分离。",
+      "module_load_verdict": "COHESIVE",
+      "lesson_order": ["JCA-M02-L01", "JCA-M02-L02", "JCA-M02-L03"],
+      "lessons": [
+        {
+          "lesson_id": "JCA-M02-L01",
+          "module_id": "JCA-M02",
+          "title": "图片生成流程与提示输入",
+          "lesson_role": "PROCEDURE",
+          "purpose": "让学习者能按官方所述顺序解释图片生成流程，并完成提示输入与触发生成。",
+          "learner_outcomes": [
+            "解释图片生成三步流程及其起点",
+            "输入文本提示并触发一次图片生成"
+          ],
+          "knowledge_refs": ["JIM-K-0051", "JIM-K-0052"],
+          "graph_support_refs": ["CRR2-E-0002"],
+          "scope": "该官方产品页所述图片生成流程与 2026-10-04 观察到的 Jimeng Web 图片生成界面。",
+          "order_basis": "PEDAGOGICAL",
+          "order_rationale": "PEDAGOGICAL_RATIONALE: 作为本 Module 的第一课，先建立“输入→触发”的起点，后续步骤才有对象；不是知识 prerequisite。",
+          "practice_intent": "在该界面中加载或提供输入，写出一次文本提示并触发生成。",
+          "completion_evidence": "学习者能按顺序说出三步流程，并完成一次触发动作。",
+          "limitations": "建议性像素数值不是强制规格；生成张数与耗时表述不是承诺；未标明客户端版本。",
+          "status": "blueprint"
+        },
+        {
+          "lesson_id": "JCA-M02-L02",
+          "module_id": "JCA-M02",
+          "title": "查看生成结果与导出",
+          "lesson_role": "PROCEDURE",
+          "purpose": "让学习者能检查图片生成结果并完成下载导出。",
+          "learner_outcomes": [
+            "检查生成结果",
+            "完成下载导出"
+          ],
+          "knowledge_refs": ["JIM-K-0053"],
+          "graph_support_refs": ["CRR2-E-0003", "CRR2-E-0004"],
+          "scope": "该官方产品页所述第三步“增强、定制和导出”与 2026-10-04 观察到的结果页行为。",
+          "order_basis": "GRAPH_CONSTRAINED",
+          "order_rationale": "本课必须在“提示输入与触发生成”之后：生产图中 CRR2-E-0004 为 K-0052 PROCEDURE_PRECEDES K-0053，两端的 Knowledge 分属不同 Lesson，且本课顺序与边方向一致。",
+          "practice_intent": "对上一次生成的结果进行查看，并完成一次下载。",
+          "completion_evidence": "学习者能指出结果预览并完成下载动作。",
+          "limitations": "“免费编辑”等措辞不作为权益承诺；不描述修复/展开/删除的具体参数与效果。",
+          "status": "blueprint"
+        },
+        {
+          "lesson_id": "JCA-M02-L03",
+          "module_id": "JCA-M02",
+          "title": "Seedream 模型能力与图片产品流程的范围分离",
+          "lesson_role": "CONCEPT",
+          "purpose": "让学习者能把 Seedream 的模型层能力声明与本 Module 的产品流程区分开，不用模型能力证明产品可操作。",
+          "learner_outcomes": [
+            "区分 Seedream 模型层能力声明与图片产品流程步骤",
+            "解释产品流程证据不能证明模型能力，模型能力也不能证明产品可用"
+          ],
+          "knowledge_refs": [
+            "JIM-K-0004",
+            "JIM-K-0005",
+            "JIM-K-0006",
+            "JIM-K-0007",
+            "JIM-K-0008"
+          ],
+          "graph_support_refs": [],
+          "scope": "ByteDance Seed Model Layer 的 Seedream 能力声明与本 Track 产品流程的边界。",
+          "order_basis": "INDEPENDENT",
+          "order_rationale": "本课只做范围分离说明，可以放在流程之前或之后而不影响学习效果；当前顺序是课程组织选择，与前后两课可交换。",
+          "practice_intent": "给出一组模型层能力声明与产品流程步骤，让学习者分类并说明二者不能互相证明。",
+          "completion_evidence": "学习者能正确分类并给出一条“不能互推”的理由。",
+          "limitations": "不覆盖完整模型菜单、模型参数或效果保证；不把模型能力教成产品可用性。",
+          "status": "blueprint"
+        }
+      ],
+      "module_completion_evidence": "学习者能完成一次图片生成、检查结果并下载，同时说明该流程属产品层、模型能力不能证明产品可用。",
+      "limitations": "流程记录自未标明版本的产品页与单次界面观察；建议性数值与耗时表述不构成规格或承诺。"
+    },
+    {
+      "module_id": "JCA-M03",
+      "module_goal": "解释即梦 Seedance 2.5 产品页所述三步视频生成流程及其产物，并识别每一步的职责。",
+      "module_load_verdict": "COHESIVE",
+      "lesson_order": ["JCA-M03-L01", "JCA-M03-L02", "JCA-M03-L03"],
+      "lessons": [
+        {
+          "lesson_id": "JCA-M03-L01",
+          "module_id": "JCA-M03",
+          "title": "视频生成三步流程与第一步",
+          "lesson_role": "PROCEDURE",
+          "purpose": "让学习者能解释视频生成的三步结构，并说出第一步“进入工具并选择模型”的职责。",
+          "learner_outcomes": [
+            "解释视频生成三步流程及产物",
+            "解释第一步的职责"
+          ],
+          "knowledge_refs": ["JIM-K-0009", "JIM-K-0010", "JIM-K-0012", "JIM-K-0024"],
+          "graph_support_refs": ["JIM-E-0023"],
+          "scope": "即梦 Seedance 2.5 公开产品页所述三步流程与 2026-10-04 观察到的视频生成界面。",
+          "order_basis": "PEDAGOGICAL",
+          "order_rationale": "PEDAGOGICAL_RATIONALE: 作为本 Module 的第一课，先给出流程全貌与起点，后续步骤才有位置可挂；不是知识 prerequisite。",
+          "practice_intent": "让学习者按顺序列出三步并说明第一步做什么。",
+          "completion_evidence": "学习者能完整说出三步流程并指出产物为可下载的 AI 视频。",
+          "limitations": "只覆盖流程结构；不把步骤名称当作界面路径，不含界面跳转细节。",
+          "status": "blueprint"
+        },
+        {
+          "lesson_id": "JCA-M03-L02",
+          "module_id": "JCA-M03",
+          "title": "第二步：素材与提示词输入",
+          "lesson_role": "PROCEDURE",
+          "purpose": "让学习者能解释第二步中素材上传与提示词输入的职责。",
+          "learner_outcomes": [
+            "解释第二步允许的输入类型",
+            "解释提示词在该步骤中的职责"
+          ],
+          "knowledge_refs": ["JIM-K-0011", "JIM-K-0014"],
+          "graph_support_refs": ["JIM-E-0004", "JIM-E-0024"],
+          "scope": "即梦 Seedance 2.5 公开产品页所述第二步；产品层描述。",
+          "order_basis": "GRAPH_CONSTRAINED",
+          "order_rationale": "本课必须排在第一步之后：生产图中 JIM-E-0004 为 K-0010 PROCEDURE_PRECEDES K-0011，两端 Knowledge 分属不同 Lesson，本课顺序与边方向一致。",
+          "practice_intent": "让学习者指出第二步需要的输入类型，并说明提示词要描述的四类要素。",
+          "completion_evidence": "学习者能说出第二步的输入类型与提示词职责。",
+          "limitations": "不给出提示词结构、字数或示例，也不包含素材数量、格式与时长规格。",
+          "status": "blueprint"
+        },
+        {
+          "lesson_id": "JCA-M03-L03",
+          "module_id": "JCA-M03",
+          "title": "第三步：生成、预览与保存",
+          "lesson_role": "PROCEDURE",
+          "purpose": "让学习者能解释第三步的生成与输出职责。",
+          "learner_outcomes": [
+            "解释第三步的生成动作与输出处理",
+            "识别该流程的产物"
+          ],
+          "knowledge_refs": ["JIM-K-0046"],
+          "graph_support_refs": ["JIM-E-0025", "JIM-E-0026"],
+          "scope": "即梦 Seedance 2.5 公开产品页所述第三步；产品层描述。",
+          "order_basis": "GRAPH_CONSTRAINED",
+          "order_rationale": "本课必须排在第二步之后：生产图中 JIM-E-0026 为 K-0011 PROCEDURE_PRECEDES K-0046，两端 Knowledge 分属不同 Lesson，本课顺序与边方向一致。",
+          "practice_intent": "让学习者指出第三步包含生成、预览与保存，并说明产物去向。",
+          "completion_evidence": "学习者能解释第三步职责并指出产物为可下载视频。",
+          "limitations": "不主张把“生成 / 检查 / 调整 / 下载”当作独立官方步骤；不含失败重试路径。",
+          "status": "blueprint"
+        }
+      ],
+      "module_completion_evidence": "学习者能解释三步流程、指出每步职责与产物，并区分流程步骤名称与界面实际入口。",
+      "limitations": "本模块 READY 只指流程结构，不许可绕过入口、提示词与素材域的执行约束。"
+    },
+    {
+      "module_id": "JCA-M04",
+      "module_goal": "把创作意图写成可用于基础生成的提示词，并在主体表达不清楚或存在歧义时完成一次有依据的调整。",
+      "module_load_verdict": "COHESIVE",
+      "lesson_order": ["JCA-M04-L01", "JCA-M04-L02", "JCA-M04-L03"],
+      "lessons": [
+        {
+          "lesson_id": "JCA-M04-L01",
+          "module_id": "JCA-M04",
+          "title": "提示词在生成流程中的角色",
+          "lesson_role": "CONCEPT",
+          "purpose": "让学习者能解释提示词在生成流程中的位置与需要描述的四类要素。",
+          "learner_outcomes": [
+            "解释提示词属于流程中的输入步骤",
+            "识别提示词需要描述的主体、动作、镜头与视觉风格"
+          ],
+          "knowledge_refs": ["JIM-K-0011", "JIM-K-0020"],
+          "graph_support_refs": [],
+          "scope": "Jimeng Product Layer；产品页对提示词角色的说明。",
+          "order_basis": "PEDAGOGICAL",
+          "order_rationale": "PEDAGOGICAL_RATIONALE: 先说明提示词在流程中的位置与要素，再进入具体写法，零基础学习者更容易理解“为什么要这样写”；不是知识 prerequisite。",
+          "practice_intent": "让学习者指出提示词在流程中的位置，并列出四类需要描述的要素。",
+          "completion_evidence": "学习者能说出提示词的位置与四类要素。",
+          "limitations": "不给出结构、字数、语法或示例。",
+          "status": "blueprint"
+        },
+        {
+          "lesson_id": "JCA-M04-L02",
+          "module_id": "JCA-M04",
+          "title": "视频提示词的组织与主体不清楚时的修订",
+          "lesson_role": "PROCEDURE",
+          "purpose": "让学习者能按官方建议组织视频提示词，并在主体表达不清楚时完成一次补充描述。",
+          "learner_outcomes": [
+            "输入按官方建议组织的视频提示词",
+            "在主体表达不清楚时补充描述并完成一次修订"
+          ],
+          "knowledge_refs": ["JIM-K-0047", "JIM-K-0048"],
+          "graph_support_refs": [],
+          "scope": "Jimeng Product Layer；官方视频提示词 FAQ 的基础表达建议。",
+          "order_basis": "PEDAGOGICAL",
+          "order_rationale": "PEDAGOGICAL_RATIONALE: 在知道提示词位置与要素之后，进入视频场景的具体组织方法，学习者能把方法对应到已理解的要素；不是知识 prerequisite。",
+          "practice_intent": "写出一条视频提示词，并对一处“主体不清楚”的描述完成补充修订。",
+          "completion_evidence": "学习者能提交一条结构化视频提示词，并展示一次针对主体不清楚的修订。",
+          "limitations": "只表述官方建议，不承诺效果；不覆盖完整 Prompt 技法。",
+          "status": "blueprint"
+        },
+        {
+          "lesson_id": "JCA-M04-L03",
+          "module_id": "JCA-M04",
+          "title": "图片提示词的对象组织与歧义修订",
+          "lesson_role": "PROCEDURE",
+          "purpose": "让学习者能按官方建议组织图片提示词，并在出现歧义时完成一次改写。",
+          "learner_outcomes": [
+            "输入以对象为起点、组织为短句的图片提示词",
+            "在出现歧义词时完成一次改写"
+          ],
+          "knowledge_refs": ["JIM-K-0049", "JIM-K-0050"],
+          "graph_support_refs": [],
+          "scope": "Jimeng Product Layer；官方图片提示词指南的基础表达建议。",
+          "order_basis": "INDEPENDENT",
+          "order_rationale": "本课与视频提示词方法课没有依赖关系，也不存在必须的先后；两课可以交换，当前顺序只是课程组织选择。",
+          "practice_intent": "写出一条以对象为起点的图片提示词，并对一处歧义完成改写。",
+          "completion_evidence": "学习者能提交一条对象先行的图片提示词，并展示一次歧义修订。",
+          "limitations": "只表述官方建议，不承诺效果；不包含教学示例或完整技法。",
+          "status": "blueprint"
+        }
+      ],
+      "module_completion_evidence": "学习者能写出视频与图片各一条基础提示词，并各完成一次针对“主体不清楚”或“歧义”的修订。",
+      "limitations": "限官方基础表达建议，不承诺效果；完整 Prompt 技法为非阻断未来项。"
+    },
+    {
+      "module_id": "JCA-M05",
+      "module_goal": "区分参考图片、参考视频与音频参考的用途，并在限定产品流程中完成参考素材输入。",
+      "module_load_verdict": "COHESIVE",
+      "lesson_order": ["JCA-M05-L01", "JCA-M05-L02", "JCA-M05-L03"],
+      "lessons": [
+        {
+          "lesson_id": "JCA-M05-L01",
+          "module_id": "JCA-M05",
+          "title": "参考生视频的方式与参考素材类型",
+          "lesson_role": "CONCEPT",
+          "purpose": "让学习者能解释“参考生视频”这一方式，并区分文字输入、图片视觉参考与可组合素材类型。",
+          "learner_outcomes": [
+            "解释参考生视频是一种以上传参考视频为特征的生成方式",
+            "区分文字输入与图片视觉参考两种方式",
+            "识别可组合的素材类型"
+          ],
+          "knowledge_refs": ["JIM-K-0017", "JIM-K-0012", "JIM-K-0013"],
+          "graph_support_refs": [],
+          "scope": "Jimeng Product Layer；即梦 Seedance 2.5 产品页与 FAQ 对参考方式与素材类型的说明。",
+          "order_basis": "PEDAGOGICAL",
+          "order_rationale": "PEDAGOGICAL_RATIONALE: 先建立“什么是参考生视频、有哪些参考素材类型”，再进入具体输入路径与用途边界，零基础学习者不会在操作细节中迷失；不是知识 prerequisite。",
+          "practice_intent": "让学习者区分两种输入方式并列出可组合的素材类型。",
+          "completion_evidence": "学习者能解释参考生视频的特征并区分文字输入与图片视觉参考。",
+          "limitations": "不描述各素材类型的数量上限、格式或组合优先级。",
+          "status": "blueprint"
+        },
+        {
+          "lesson_id": "JCA-M05-L02",
+          "module_id": "JCA-M05",
+          "title": "参考内容的加入路径与总量提示",
+          "lesson_role": "PROCEDURE",
+          "purpose": "让学习者能在“全能参考”界面完成参考素材加入，并解释界面显示的总量提示。",
+          "learner_outcomes": [
+            "解释“全能参考”下“参考内容”的加入路径",
+            "解释界面显示的参考素材总量提示，并说明它不是分类型上限",
+            "解释当前界面涉及的图、文、音、视频多元素组合与 @ 引用方式"
+          ],
+          "knowledge_refs": ["JIM-K-0057", "JIM-K-0058", "JIM-K-0059", "JIM-K-0011", "JIM-K-0014"],
+          "graph_support_refs": ["CRR2-E-0006"],
+          "scope": "2026-10-04 观察到的 Jimeng Web 视频生成 / Seedance 2.5 / 全能参考界面。",
+          "order_basis": "PEDAGOGICAL",
+          "order_rationale": "PEDAGOGICAL_RATIONALE: 在理解参考方式与素材类型之后进入界面路径，学习者能把看到的入口对应到已知概念；不是知识 prerequisite。",
+          "practice_intent": "在该界面找到“参考内容”入口，按路径加入一次参考素材或写出一次 @ 引用。",
+          "completion_evidence": "学习者能指出入口并完成一次参考内容加入或 @ 引用，且能说明总量提示的含义与边界。",
+          "limitations": "截图未显示素材格式、大小、时长与分类型数量条件；不把界面总量提示教成模型层上限。",
+          "status": "blueprint"
+        },
+        {
+          "lesson_id": "JCA-M05-L03",
+          "module_id": "JCA-M05",
+          "title": "参考用途与使用边界",
+          "lesson_role": "APPLICATION",
+          "purpose": "让学习者能区分参考视频与参考图片的用途，并解释其使用边界与音频参考的验证状态。",
+          "learner_outcomes": [
+            "解释参考视频用于传达动态信息",
+            "解释参考图片与参考视频处于参照位置、其作用范围不扩展到其他内容",
+            "解释独立音频上传路径未由现有证据单独验证，并不假定该入口存在"
+          ],
+          "knowledge_refs": ["JIM-K-0015", "JIM-K-0022", "JIM-K-0023"],
+          "graph_support_refs": ["JIM-E-0001", "JIM-E-0003"],
+          "scope": "Jimeng Product Layer；即梦 Seedance 2.5 产品页对参考用途与边界的说明。",
+          "order_basis": "GRAPH_CONSTRAINED",
+          "order_rationale": "本课必须在“参考方式与素材类型”之后：生产图中 JIM-E-0001 为 K-0017 PREREQUISITE_OF K-0015、JIM-E-0003 为 K-0017 PREREQUISITE_OF K-0023，两端 Knowledge 分属不同 Lesson，本课顺序与两条边方向一致。",
+          "practice_intent": "给出一组使用情境，让学习者判断适合用参考视频、参考图片还是只用文字，并说明理由。",
+          "completion_evidence": "学习者能对给定情境正确区分参考用途，并说明参考素材的作用边界。",
+          "limitations": "不推出参考视频可用于风格或外观等非动态用途；独立音频上传记为未单独验证而非不支持。",
+          "status": "blueprint"
+        }
+      ],
+      "module_completion_evidence": "学习者能区分参考用途、在限定界面完成一次参考素材输入，并说明总量提示与音频参考的验证边界。",
+      "limitations": "只覆盖 2026-10-04 观察到的全能参考界面；素材条件、其它客户端与账号差异未验证。"
+    },
+    {
+      "module_id": "JCA-M06",
+      "module_goal": "在已证实 scope 内对已有图片执行一次局部修改并保存，并理解保留边界。",
+      "module_load_verdict": "COHESIVE",
+      "lesson_order": ["JCA-M06-L01", "JCA-M06-L02"],
+      "lessons": [
+        {
+          "lesson_id": "JCA-M06-L01",
+          "module_id": "JCA-M06",
+          "title": "局部编辑的能力与保留边界",
+          "lesson_role": "CONCEPT",
+          "purpose": "让学习者能解释局部编辑这一能力、其产品概念与保留边界，并把它与模型层编辑能力区分开。",
+          "learner_outcomes": [
+            "解释局部编辑只修改局部、无需重新生成整段视频的产品说明",
+            "解释修改与保留边界要求（保留原有构图、光影、音频、动作与时间线连续性）",
+            "区分模型层编辑能力与产品层编辑功能"
+          ],
+          "knowledge_refs": [
+            "JIM-K-0016",
+            "JIM-K-0019",
+            "JIM-K-0021",
+            "JIM-K-0003",
+            "JIM-K-0005",
+            "JIM-K-0006",
+            "JIM-K-0007"
+          ],
+          "graph_support_refs": ["JIM-E-0005"],
+          "scope": "Jimeng Product Layer 的局部编辑能力与边界；同时标注 ByteDance Seed Model Layer 的编辑能力属模型层。",
+          "order_basis": "PEDAGOGICAL",
+          "order_rationale": "PEDAGOGICAL_RATIONALE: 先理解“局部编辑是什么、边界在哪”，再动手执行修改，零基础学习者才能判断自己的修改要求是否落在可解释范围内；不是知识 prerequisite。",
+          "practice_intent": "给出若干编辑意图，让学习者判断哪些属于“只修改局部”，并说明保留边界意味着什么。",
+          "completion_evidence": "学习者能解释局部编辑与其保留边界，并正确区分模型层编辑能力与产品层编辑功能。",
+          "limitations": "保留边界是产品页约定的适用范围，不是每次编辑都成立的保证；不描述具体参数与效果。",
+          "status": "blueprint"
+        },
+        {
+          "lesson_id": "JCA-M06-L02",
+          "module_id": "JCA-M06",
+          "title": "图片修改任务的执行与交付",
+          "lesson_role": "PROCEDURE",
+          "purpose": "让学习者能对已有图片提交一次局部修改要求、检查结果并保存，同时说明子工具的验证边界。",
+          "learner_outcomes": [
+            "输入一次针对已有图片的局部修改要求并提交执行",
+            "检查修改结果并完成下载，或选择重新编辑、再次生成",
+            "解释“局部重绘”等只是结果页可见入口，其内部步骤尚未验证",
+            "解释“其他保持不变”是修改要求，不是产品保证"
+          ],
+          "knowledge_refs": ["JIM-K-0060", "JIM-K-0061"],
+          "graph_support_refs": ["CRR2-E-0007"],
+          "scope": "2026-10-04 观察到的 Jimeng Web / Seedream 5.0 Pro 图片修改任务与结果页。",
+          "order_basis": "PEDAGOGICAL",
+          "order_rationale": "PEDAGOGICAL_RATIONALE: 在理解能力与边界之后进入执行，学习者提交修改要求时更有判断依据；不是知识 prerequisite。",
+          "practice_intent": "在该界面中对已有图片提交一次局部修改要求，检查结果并完成下载。",
+          "completion_evidence": "学习者能提交一次局部修改要求、检查结果并完成下载，且能说明子工具入口的验证边界。",
+          "limitations": "子工具内部步骤未验证（NOT_VERIFIED，非 UNSUPPORTED）；不保证修改结果的保真度或保留要素一致性；本模块证据未验证视频编辑。",
+          "status": "blueprint"
+        }
+      ],
+      "module_completion_evidence": "学习者能对已有图片完成一次局部修改并保存，同时说明保留边界与子工具入口的验证状态。",
+      "limitations": "只覆盖 2026-10-04 的 Seedream 图片修改任务；Seedance 视频编辑与子工具内部步骤未验证；C1 全历史未解决。"
+    },
+    {
+      "module_id": "JCA-M07",
+      "module_goal": "在使用即梦生成功能时识别并遵守平台的创作使用边界与准入前提。",
+      "module_load_verdict": "HEAVY_BUT_COHESIVE",
+      "lesson_order": ["JCA-M07-L01", "JCA-M07-L02", "JCA-M07-L03", "JCA-M07-L04"],
+      "lessons": [
+        {
+          "lesson_id": "JCA-M07-L01",
+          "module_id": "JCA-M07",
+          "title": "输入内容的义务与权属要求",
+          "lesson_role": "SAFETY",
+          "purpose": "让学习者能识别所选条款对输入信息的义务与权属要求。",
+          "learner_outcomes": [
+            "识别不得输入或分享未经授权信息的要求",
+            "识别输入内容须为本人所有或已获授权、不得侵害他人权益的要求"
+          ],
+          "knowledge_refs": ["JIM-K-0025", "JIM-K-0026"],
+          "graph_support_refs": ["POL-E-0001", "POL-E-0002"],
+          "scope": "平台规则限 P14 所保存的即梦AI 用户服务协议第 4.1 节命题。",
+          "order_basis": "PEDAGOGICAL",
+          "order_rationale": "PEDAGOGICAL_RATIONALE: 输入是学习者最先接触的动作面，先讲输入义务能让规则立刻挂到已做过的行为上；不是知识 prerequisite。",
+          "practice_intent": "给出一组输入素材与信息，让学习者标出可能触及义务与权属要求的项，并说明理由。",
+          "completion_evidence": "学习者能识别输入义务与权属要求，并指出至少一处需要事先确认授权的输入。",
+          "limitations": "不判断具体内容是否违规，不解释“未经授权”的判定标准，不构成法律意见。",
+          "status": "blueprint"
+        },
+        {
+          "lesson_id": "JCA-M07-L02",
+          "module_id": "JCA-M07",
+          "title": "AI 内容标识规则",
+          "lesson_role": "SAFETY",
+          "purpose": "让学习者能解释平台对 AI 内容添加标识的规则与不得破坏标识的要求。",
+          "learner_outcomes": [
+            "解释平台对 AI 内容添加标识的依据",
+            "解释不得遮挡、涂抹、修改或删除平台添加标识的要求"
+          ],
+          "knowledge_refs": ["JIM-K-0027", "JIM-K-0028"],
+          "graph_support_refs": ["POL-E-0008"],
+          "scope": "平台规则限 P14 所保存的第 4.2 节命题。",
+          "order_basis": "INDEPENDENT",
+          "order_rationale": "本课与输入义务课、禁止内容课属于并列的规则族，三者之间没有依赖或必须的教学先后；本课可以交换到其它规则族之前或之后。",
+          "practice_intent": "给出一组对已生成内容的处理动作，让学习者判断哪些触碰标识规则。",
+          "completion_evidence": "学习者能解释标识的添加依据与不得破坏的要求，并正确判断给定处理动作。",
+          "limitations": "不判断具体标识形式与技术实现，也不表示平台一定对任何输出添加标识。",
+          "status": "blueprint"
+        },
+        {
+          "lesson_id": "JCA-M07-L03",
+          "module_id": "JCA-M07",
+          "title": "内容合规要求与禁止内容类型",
+          "lesson_role": "SAFETY",
+          "purpose": "让学习者能解释所输入与生成内容的合规要求、特定信息的来源标注要求，并区分禁止类内容规则的类型划分。",
+          "learner_outcomes": [
+            "解释内容须符合法律法规要求，以及特定信息须准确标注来源的要求",
+            "区分违法违规、不良、欺骗性与高危险性三类禁止内容规则",
+            "识别扰乱平台经营秩序信息规则的对象范围"
+          ],
+          "knowledge_refs": ["JIM-K-0030", "JIM-K-0031", "JIM-K-0032", "JIM-K-0033", "JIM-K-0034"],
+          "graph_support_refs": ["POL-E-0004", "POL-E-0005"],
+          "scope": "平台规则限 P14 所保存的第 4.3–4.7 节命题。",
+          "order_basis": "INDEPENDENT",
+          "order_rationale": "本课与输入义务课、标识课属于并列的规则族，没有依赖或必须的教学先后；当前顺序只是课程组织选择。",
+          "practice_intent": "给出一组内容描述，让学习者判断触及哪一类禁止规则，并指出需要标注来源的情形。",
+          "completion_evidence": "学习者能对给定内容完成类型归类，并指出至少一种需要标注来源的信息。",
+          "limitations": "只覆盖条款级规则的类型划分，不复述全部子项；不判断具体内容的性质，不构成法律意见。",
+          "status": "blueprint"
+        },
+        {
+          "lesson_id": "JCA-M07-L04",
+          "module_id": "JCA-M07",
+          "title": "平台处理上下文与生成动作的准入前提",
+          "lesson_role": "SAFETY",
+          "purpose": "让学习者能解释平台处理条款的组引用范围，并把真实身份认证前提与实际生成动作关联起来。",
+          "learner_outcomes": [
+            "解释平台处理条款所引用的规则集合范围与处理上下文",
+            "解释真实身份认证前提限定基础生成工作流中的实际生成动作"
+          ],
+          "knowledge_refs": ["JIM-K-0029", "JIM-K-0035", "JIM-K-0009", "JIM-K-0010", "JIM-K-0046"],
+          "graph_support_refs": ["CRR1-E-0001", "POL-E-0009", "POL-E-0010"],
+          "scope": "平台规则限第 4.8 节与第 4.3 节；准入结构限 P14 §4.3 与 P10 第三步的对照范围。",
+          "order_basis": "PEDAGOGICAL",
+          "order_rationale": "PEDAGOGICAL_RATIONALE: 在学完三类并列规则之后，本课把它们落到实际动作上（哪一步受什么前提与处理上下文约束），学习者才有一组具体动作可挂；不是知识 prerequisite，规则域与生成域之间只有 CONSTRAINS 边界。",
+          "practice_intent": "让学习者对一次计划中的视频生成，指出涉及的准入前提，并说明处理条款覆盖的规则集合范围。",
+          "completion_evidence": "学习者能把认证前提对应到实际生成动作，并说明处理条款的组引用范围。",
+          "limitations": "处理条款只表达处理上下文，不表示一定处罚、自动处罚或法律责任；不推断认证界面、执行时机或账号权限。",
+          "status": "blueprint"
+        }
+      ],
+      "module_completion_evidence": "学习者能对一次计划中的创作指出适用的输入与权属义务、标识要求、禁止内容类型、平台处理上下文，以及生成动作受真实身份认证约束这一前提。",
+      "limitations": "只覆盖 P14 所选命题，不构成完整政策或法律意见；认证界面与账号准入未实测。"
+    },
+    {
+      "module_id": "JCA-M08",
+      "module_goal": "在已证实 scope 内独立完成一次基础创作 workflow 并交付结果，把入口、提示词、生成、参考素材与修正串成一条完整路径。",
+      "module_load_verdict": "HEAVY_BUT_COHESIVE",
+      "lesson_order": ["JCA-M08-L01", "JCA-M08-L02", "JCA-M08-L03", "JCA-M08-L04"],
+      "lessons": [
+        {
+          "lesson_id": "JCA-M08-L01",
+          "module_id": "JCA-M08",
+          "title": "创作准备：入口、准入与任务目标",
+          "lesson_role": "INTEGRATION",
+          "purpose": "让学习者能在开始综合创作前完成入口定位、准入确认与任务目标设定。",
+          "learner_outcomes": [
+            "识别创作入口并按需要完成登录准入",
+            "说明本次创作的目标与可交付结果"
+          ],
+          "knowledge_refs": ["JIM-K-0054", "JIM-K-0055", "JIM-K-0056"],
+          "graph_support_refs": [],
+          "scope": "Jimeng Web 2026-10-04 观察到的创作入口与准入范围。",
+          "order_basis": "PEDAGOGICAL",
+          "order_rationale": "PEDAGOGICAL_RATIONALE: 综合实践以“先进得去、说清要做什么”为前提，因此作为本 Module 第一课；不是知识 prerequisite。",
+          "practice_intent": "让学习者进入创作区域并写出一句本次创作的目标说明。",
+          "completion_evidence": "学习者能进入创作区域并给出本次创作目标与预期交付物。",
+          "limitations": "不覆盖登录后完整页面结构；不包含账号权限、会员或地区差异。",
+          "status": "blueprint"
+        },
+        {
+          "lesson_id": "JCA-M08-L02",
+          "module_id": "JCA-M08",
+          "title": "独立完成一次图片创作流程",
+          "lesson_role": "INTEGRATION",
+          "purpose": "让学习者能独立走完图片生成流程并按意图组织图片提示词。",
+          "learner_outcomes": [
+            "按流程完成一次图片生成并下载结果",
+            "输入与创作意图相符的图片提示词"
+          ],
+          "knowledge_refs": ["JIM-K-0051", "JIM-K-0052", "JIM-K-0053", "JIM-K-0049"],
+          "graph_support_refs": [],
+          "scope": "该官方产品页所述图片流程与该界面 2026-10-04 观察范围。",
+          "order_basis": "PEDAGOGICAL",
+          "order_rationale": "PEDAGOGICAL_RATIONALE: 在完成准备之后，先从图片链路开始综合，输入项最少、反馈最快，便于学习者把注意力放在“整合”而非操作本身；不是知识 prerequisite。",
+          "practice_intent": "独立完成一次图片创作：写提示词、生成、检查并下载。",
+          "completion_evidence": "学习者能独立完成一次图片创作并交付下载结果。",
+          "limitations": "建议性数值与耗时表述不构成规格或承诺；未标明客户端版本。",
+          "status": "blueprint"
+        },
+        {
+          "lesson_id": "JCA-M08-L03",
+          "module_id": "JCA-M08",
+          "title": "独立完成一次视频创作流程并加入参考素材",
+          "lesson_role": "INTEGRATION",
+          "purpose": "让学习者能独立走完视频生成流程，并按已证实方式加入参考素材。",
+          "learner_outcomes": [
+            "按流程完成一次视频生成并下载产物",
+            "输入与创作意图相符的视频提示词",
+            "按已证实路径加入一次参考素材或 @ 引用"
+          ],
+          "knowledge_refs": ["JIM-K-0009", "JIM-K-0010", "JIM-K-0011", "JIM-K-0046", "JIM-K-0047", "JIM-K-0057"],
+          "graph_support_refs": [],
+          "scope": "即梦 Seedance 2.5 产品页流程与 2026-10-04 观察到的视频生成 / 全能参考界面。",
+          "order_basis": "INDEPENDENT",
+          "order_rationale": "本课与图片创作综合课之间没有依赖，也不存在必须的先后：先做图片或先做视频都可以；当前顺序只是课程组织选择。",
+          "practice_intent": "独立完成一次视频创作：写提示词、加入一次参考素材、生成并下载。",
+          "completion_evidence": "学习者能独立完成一次视频创作，并说明所用参考素材的用途。",
+          "limitations": "素材格式与分项数量条件未验证；独立音频上传入口未单独验证；不表示所有账号或地区开放该模式。",
+          "status": "blueprint"
+        },
+        {
+          "lesson_id": "JCA-M08-L04",
+          "module_id": "JCA-M08",
+          "title": "修正与交付",
+          "lesson_role": "INTEGRATION",
+          "purpose": "让学习者能对产出执行一次有依据的修改并完成交付。",
+          "learner_outcomes": [
+            "对已有产出提交一次局部修改要求",
+            "检查修改结果并完成交付"
+          ],
+          "knowledge_refs": ["JIM-K-0060", "JIM-K-0061"],
+          "graph_support_refs": [],
+          "scope": "2026-10-04 观察到的 Jimeng Web / Seedream 5.0 Pro 图片修改任务范围。",
+          "order_basis": "PEDAGOGICAL",
+          "order_rationale": "PEDAGOGICAL_RATIONALE: 修正是综合流程的最后一段，需要先有产出物作为对象，因此排在两条创作链路之后；不是知识 prerequisite。",
+          "practice_intent": "对上一课或本课产出提交一次局部修改，检查结果并完成交付。",
+          "completion_evidence": "学习者能提交一次局部修改、检查结果并完成交付，且能说明“其他保持不变”是修改要求而非产品保证。",
+          "limitations": "子工具内部步骤未验证；不保证保真度；不构成专业影视流程或自动化集成能力。",
+          "status": "blueprint"
+        }
+      ],
+      "module_completion_evidence": "学习者能在已证实 scope 内独立完成一次包含入口准入、提示词、生成、参考素材与修正的完整创作，并交付可下载结果。",
+      "limitations": "只整合前置模块已证实的能力；不覆盖未验证的子工具步骤、其它客户端、专业影视流程或自动化集成。"
+    }
+  ],
+  "coverage_summary": {
+    "module_count": 8,
+    "lesson_count": 24,
+    "mapped_module_knowledge_ref_count": 83,
+    "unmapped_module_knowledge_ref_count": 0
+  },
+  "sequence_summary": {
+    "lesson_transition_count": 16,
+    "graph_constrained_transition_count": 4,
+    "pedagogical_transition_count": 7,
+    "independent_transition_count": 5
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "lesson_id": "JCA-M02-L02",
+  "module_id": "JCA-M02",
+  "title": "查看生成结果与导出",
+  "lesson_role": "PROCEDURE",
+  "scope": "夹具：引用 Blueprint 之外的 Knowledge。",
+  "learner_outcomes": ["检查生成结果", "完成下载导出"],
+  "knowledge_refs": ["JIM-K-0053", "JIM-K-0051"],
+  "graph_support_refs": ["CRR2-E-0003", "CRR2-E-0004"],
+  "opening": "夹具 opening。",
+  "teaching_points": [
+    {
+      "point_id": "FIX-P01",
+      "knowledge_refs": ["JIM-K-0053"],
+      "explanation": "夹具 explanation。",
+      "scope_note": "夹具 scope note。"
+    }
+  ],
+  "guided_practice": "夹具 guided practice。",
+  "independent_practice": "夹具 independent practice。",
+  "completion_check": "夹具 completion check。",
+  "boundaries_and_misconceptions": ["夹具边界。"],
+  "lesson_summary": "夹具 summary。",
+  "limitations": "夹具 limitations。",
+  "status": "pilot"
+}

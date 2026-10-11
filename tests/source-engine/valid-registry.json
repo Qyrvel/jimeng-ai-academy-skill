@@ -1,0 +1,52 @@
+{
+  "sources": [
+    {
+      "source_id": "example-official-001",
+      "title": "[EXAMPLE 虚构] 示例平台官方手册",
+      "publisher": "[EXAMPLE 虚构] 示例平台团队",
+      "source_type": "official_documentation",
+      "trust_tier": "A",
+      "information_type": "DOCUMENTED",
+      "location": "https://example.invalid/manual",
+      "language": "zh-CN",
+      "version_scope": "unknown",
+      "published_at": "2024-02-29",
+      "last_verified_at": "2026-10-03",
+      "status": "candidate",
+      "notes": "EXAMPLE：完全虚构，仅演示字段组合；不代表已验证，不可用作真实知识来源。实验路径与信息状态同为虚构示意。",
+      "evidence_scope": "entire source"
+    },
+    {
+      "source_id": "example-tutorial-001",
+      "title": "[EXAMPLE 虚构] 示例专业教程",
+      "publisher": "[EXAMPLE 虚构] 示例作者",
+      "source_type": "professional_tutorial",
+      "trust_tier": "C",
+      "information_type": "INFERRED",
+      "location": "https://example.invalid/tutorial",
+      "language": "zh-CN",
+      "version_scope": "unknown",
+      "published_at": null,
+      "last_verified_at": null,
+      "status": "candidate",
+      "notes": "EXAMPLE：完全虚构，仅演示字段组合；不代表已验证，不可用作真实知识来源。实验路径与信息状态同为虚构示意。",
+      "evidence_scope": "entire source"
+    },
+    {
+      "source_id": "example-experiment-001",
+      "title": "[EXAMPLE 虚构] 示例用户实验",
+      "publisher": "[EXAMPLE 虚构] 示例实验者",
+      "source_type": "user_experiment",
+      "trust_tier": "D",
+      "information_type": "OBSERVED",
+      "location": "examples/fictional-experiment.md",
+      "language": "zh-CN",
+      "version_scope": "unknown",
+      "published_at": null,
+      "last_verified_at": null,
+      "status": "candidate",
+      "notes": "EXAMPLE：完全虚构，仅演示字段组合；不代表已验证，不可用作真实知识来源。实验路径与信息状态同为虚构示意。",
+      "evidence_scope": "entire source"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "reviews": [
+    {
+      "edge_id": "POL-E-0008",
+      "status": "KEEP",
+      "review_reason": "KNOWLEDGE_DEPENDENCY 成立：4.2 内「平台添加标识」与「不得破坏标识」两条规则中，后者的禁止对象由前者的添加行为产生，理解后者需要前者；该依赖是理解层面的，非适用层面的条件。",
+      "directness": "DIRECT",
+      "curriculum_leakage": false
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "reviews": [
+    {
+      "review_id": "NR-F-0005",
+      "item_ids": ["FIX-K-0007", "FIX-K-0008"],
+      "relation": "SCOPE_PARALLEL",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "Fixture 参考视频",
+      "rationale": "两项主题均为参考视频且同为 CAPABILITY，但知识层不同：FIX-K-0007 陈述 Fixture 产品层 2.0 说明支持上传参考视频参与生成；FIX-K-0008 陈述 Fixture 模型 2.0 说明该模型可理解参考视频中的信息。产品提供该能力与模型具备该能力不是同一个知识实体。",
+      "scope_check": "scope 分别为 Fixture Product Layer 与 Fixture Model Layer，属于不同层，按 Layer Preservation 必须保持平行，不得合并。",
+      "version_check": "version_scope 分别为 Fixture Product 2.0 与 Fixture Model 2.0；两者是同名不同对象的版本标识，不可互相替代，也不能由模型说明推出产品已部署。",
+      "provenance_check": "FIX-K-0007 引用 FIX-P01（产品层），FIX-K-0008 引用 FIX-P05（模型层），证据层不同且各自完整；合并会造成跨层证据混用，故不合并。"
+    },
+    {
+      "review_id": "NR-F-0001",
+      "item_ids": ["FIX-K-0001", "FIX-K-0002"],
+      "relation": "EXACT_DUPLICATE",
+      "decision": "MERGE_CANDIDATE",
+      "normalized_label": "Fixture 提示词长度上限",
+      "rationale": "两项 scope、version_scope、knowledge_type 完全相同，statement 均表达「Fixture 产品层 2.0 的提示词长度上限为 Fixture 上限值」这同一个知识，仅表述顺序与措辞不同（FIX-K-0002 另以「最大长度受限」重述同一约束），learner_outcome 与 limitations 亦一致，不构成两个知识实体。",
+      "scope_check": "scope 文字相同，均为 Fixture Product Layer；同层同范围为重复判定提供了前提。",
+      "version_check": "version_scope 文字相同，均为 Fixture Product 2.0；不存在版本差异，故排除 VERSION_VARIANT。",
+      "provenance_check": "两项引用同一 accepted 来源 FIX-P01 的同一共享段落，两条 support_note 指向同一事实。若将来合并，必须保留该 source_id 与段落定位；本轮只记为 MERGE_CANDIDATE，不执行合并，不修改 any evidence_refs。"
+    },
+    {
+      "review_id": "NR-F-0003",
+      "item_ids": ["FIX-K-0005", "FIX-K-0006"],
+      "relation": "VERSION_VARIANT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "Fixture 提示词长度上限（版本）",
+      "rationale": "两项主题相同（提示词长度上限）、knowledge_type 相同（CONSTRAINT）、scope 同层，但 statement 分别限定 Fixture 产品层 2.0 与 3.0，属于同一知识在不同明确版本下的表述，不得因主题相同而合并。",
+      "scope_check": "scope 相同，均为 Fixture Product Layer；层不构成区分依据，版本才是。",
+      "version_check": "version_scope 明确不同：Fixture Product 2.0 与 Fixture Product 3.0。不同明确版本默认保留为不同 Item，即使上限值文字相同也不得互相覆盖或合并。",
+      "provenance_check": "FIX-K-0005 引用 FIX-P03（2.0 版本段），FIX-K-0006 引用 FIX-P04（3.0 版本段），各自证据完整且版本对应；本轮不修改引用。"
+    },
+    {
+      "review_id": "NR-F-0002",
+      "item_ids": ["FIX-K-0003", "FIX-K-0004"],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "Fixture 参考图片输入",
+      "rationale": "两项 scope、version_scope、knowledge_type 相同，且共享同一核心信息「支持上传参考图片参与生成」；但 FIX-K-0004 另含「可同时添加多张参考图片」这一独立增量知识，FIX-K-0003 不含该增量，因此至少一方还有独立知识，属部分重叠而非完全重复。",
+      "scope_check": "scope 相同，均为 Fixture Product Layer；同层同范围下，重复判定仍取决于 statement 语义，而语义显示为部分重叠。",
+      "version_check": "version_scope 相同，均为 Fixture Product 2.0；版本不是区分依据。",
+      "provenance_check": "FIX-K-0003 引用 FIX-P01；FIX-K-0004 引用 FIX-P01 与 FIX-P02 两个来源，其中 FIX-P02 仅支持其增量部分。若将来合并，必须同时保留两条 support_note 及 FIX-P02 的段落定位，不得因合并丢失任一 accepted Evidence；本轮保持独立。"
+    },
+    {
+      "review_id": "NR-F-0004",
+      "item_ids": ["FIX-K-0009", "FIX-K-0010"],
+      "relation": "CONFLICT_CANDIDATE",
+      "decision": "NEEDS_REVIEW",
+      "normalized_label": "Fixture 导出分辨率限制",
+      "rationale": "两项 scope、version_scope、knowledge_type 与语义主题均相同（Fixture 产品层 2.0 默认设置下导出分辨率是否受上限限制），但陈述互相不兼容：一项说明该限制存在，另一项说明同条件下该限制不存在。属于同适用范围内可能不一致的陈述，只能标为需进一步审查。",
+      "scope_check": "scope 相同，均为 Fixture Product Layer，满足冲突判定的同范围前提；不涉及跨层，故不判 SCOPE_PARALLEL。",
+      "version_check": "version_scope 同为 Fixture Product 2.0，条件描述（默认设置）一致，属于可比较版本，满足冲突判定前提。",
+      "provenance_check": "FIX-K-0009 引用 FIX-P06，FIX-K-0010 引用 FIX-P07；两条 accepted OBSERVED 记录结论相反。本轮不得判定谁正确，也不得静默消解：冲突需回到 Evidence 与 Source 层复核（例如实验条件、参数是否一致、是否存在未记录的差异），因此在 Review 之外保留双方来源，不删除、不改写任何 Item。"
+    }
+  ]
+}

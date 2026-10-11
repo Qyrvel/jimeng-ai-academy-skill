@@ -1,0 +1,9 @@
+{
+  "artifact": "fixture-local baseline for tests/full-assessment-set/",
+  "role": "one shared immutable package every full-set fixture declares its assessment references into",
+  "assessment_members": 23,
+  "sources": {
+    "assessments": "academy-data/jimeng/assessment/full-assessments/assessments",
+    "pilot-sources": "academy-data/jimeng/assessment/pilot-assessments"
+  }
+}

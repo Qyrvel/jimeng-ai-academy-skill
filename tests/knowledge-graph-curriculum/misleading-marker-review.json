@@ -1,0 +1,11 @@
+{
+  "reviews": [
+    {
+      "edge_id": "POL-E-0008",
+      "status": "REMOVE",
+      "review_reason": "标记与理由矛盾：理由仅为课程结构，没有证明知识依赖；拒绝此 fixture。",
+      "directness": "DIRECT",
+      "curriculum_leakage": true
+    }
+  ]
+}

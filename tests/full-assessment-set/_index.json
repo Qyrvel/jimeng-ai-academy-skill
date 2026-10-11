@@ -1,0 +1,213 @@
+{
+  "set": "Gate 4.7A-CONT7-R3A critical full-set fixtures",
+  "runner": "tests/full-assessment-set/run_fixtures.py",
+  "validator": ".agents/skills/ai-academy/scripts/validate_full_assessment_set.py",
+  "graphs": [
+    "academy-data/jimeng/graph/seedance-pilot-graph-r2.json",
+    "academy-data/jimeng/graph/policy-pilot-graph-r1.json",
+    "academy-data/jimeng/graph/curriculum-readiness-core-graph-r2.json"
+  ],
+  "baseline": {
+    "root": "tests/full-assessment-set/_baseline",
+    "fingerprint": "tests/full-assessment-set/_baseline/baseline-fingerprint.json",
+    "shared": true,
+    "design": "HYBRID_DECLARATIVE_BASELINE",
+    "legal_source_modes": [
+      "LOCAL_BYTE_EXACT_COPY",
+      "CANONICAL_DIRECT_DECLARATION"
+    ],
+    "declared_reference_rule": "each fixture declares every member's assessment_files path explicitly; a LOCAL_BYTE_EXACT_COPY member is declared into the byte-identical _baseline/assessments/ mirror, and a CANONICAL_DIRECT_DECLARATION member into the exact frozen canonical source path"
+  },
+  "mutation_descriptor_contract": {
+    "applied_by": ".agents/skills/ai-academy/scripts/validate_full_assessment_set.py --apply-mutation <mutation.json>",
+    "set_manifest": "nested set / delete operations merged into the canonical full set manifest; delete_assessment withdraws one canonical assessment and its assessment_files entry; assessment_files is replaced with the fixture's full declared path map",
+    "coverage_manifest": "repository path used when the fixture folder has no local assessment-coverage-manifest.json"
+  },
+  "fixtures": [
+    {
+      "fixture": "valid-full-set",
+      "expected": "PASS",
+      "expected_exit": 0,
+      "expected_codes": [],
+      "companion_codes": [],
+      "set_manifest_mode": "fixture-local",
+      "mutation_descriptor": "tests/full-assessment-set/valid-full-set/mutation.json",
+      "intended_defect": "no defect: canonical assessment truth replayed through the fixture harness with every member's declared source path explicit",
+      "files": [
+        "tests/full-assessment-set/valid-full-set/mutation.json"
+      ]
+    },
+    {
+      "fixture": "invalid-derived-count",
+      "expected": "FAIL",
+      "expected_exit": 1,
+      "expected_codes": [
+        "DERIVED_METRIC_RECOMPUTATION"
+      ],
+      "companion_codes": [],
+      "set_manifest_mode": "fixture-local",
+      "mutation_descriptor": "tests/full-assessment-set/invalid-derived-count/mutation.json",
+      "intended_defect": "full_set.metrics.requirement_count is one above the recomputed count",
+      "files": [
+        "tests/full-assessment-set/invalid-derived-count/mutation.json"
+      ]
+    },
+    {
+      "fixture": "invalid-json-md-semantic-mismatch",
+      "expected": "FAIL",
+      "expected_exit": 1,
+      "expected_codes": [
+        "JSON_MD_CONSISTENCY"
+      ],
+      "companion_codes": [],
+      "set_manifest_mode": "fixture-local",
+      "mutation_descriptor": "tests/full-assessment-set/invalid-json-md-semantic-mismatch/mutation.json",
+      "intended_defect": "the canonical markdown is frozen while one JSON scalar (purpose) changed",
+      "files": [
+        "tests/full-assessment-set/invalid-json-md-semantic-mismatch/mutation.json",
+        "tests/full-assessment-set/invalid-json-md-semantic-mismatch/assessments/JCA-A-012.json",
+        "tests/full-assessment-set/invalid-json-md-semantic-mismatch/assessments/JCA-A-012.md"
+      ]
+    },
+    {
+      "fixture": "invalid-nonorder-prerequisite",
+      "expected": "FAIL",
+      "expected_exit": 1,
+      "expected_codes": [
+        "NON_ORDER_PREREQUISITE_GUARD"
+      ],
+      "companion_codes": [],
+      "set_manifest_mode": "fixture-local",
+      "mutation_descriptor": "tests/full-assessment-set/invalid-nonorder-prerequisite/mutation.json",
+      "intended_defect": "the set manifest declares an assessment prerequisite backed by no order relation",
+      "files": [
+        "tests/full-assessment-set/invalid-nonorder-prerequisite/mutation.json"
+      ]
+    },
+    {
+      "fixture": "invalid-pilot-semantic-drift",
+      "expected": "FAIL",
+      "expected_exit": 1,
+      "expected_codes": [
+        "PILOT_PROMOTION_FIDELITY"
+      ],
+      "companion_codes": [],
+      "set_manifest_mode": "fixture-local",
+      "mutation_descriptor": "tests/full-assessment-set/invalid-pilot-semantic-drift/mutation.json",
+      "intended_defect": "one frozen pilot source field (scope) differs from the promoted canonical beyond status",
+      "files": [
+        "tests/full-assessment-set/invalid-pilot-semantic-drift/mutation.json",
+        "tests/full-assessment-set/invalid-pilot-semantic-drift/pilot-sources/JCA-A-001.json",
+        "tests/full-assessment-set/invalid-pilot-semantic-drift/pilot-sources/JCA-A-002.json",
+        "tests/full-assessment-set/invalid-pilot-semantic-drift/pilot-sources/JCA-A-003.json",
+        "tests/full-assessment-set/invalid-pilot-semantic-drift/pilot-sources/JCA-A-004.json"
+      ]
+    },
+    {
+      "fixture": "invalid-uncovered-requirement",
+      "expected": "FAIL",
+      "expected_exit": 1,
+      "expected_codes": [
+        "REQUIREMENT_COVERAGE_IDENTITY_SET"
+      ],
+      "companion_codes": [
+        "CANONICAL_MEMBERSHIP_IDENTITY_SET",
+        "COVERAGE_MANIFEST_FIDELITY",
+        "DERIVED_METRIC_RECOMPUTATION",
+        "LEARNER_OUTCOME_COVERAGE_IDENTITY_SET"
+      ],
+      "set_manifest_mode": "fixture-local",
+      "mutation_descriptor": "tests/full-assessment-set/invalid-uncovered-requirement/mutation.json",
+      "intended_defect": "JCA-A-023 is withdrawn, so mastery-required requirement JCA-AR-024 has no carrier",
+      "files": [
+        "tests/full-assessment-set/invalid-uncovered-requirement/mutation.json",
+        "tests/full-assessment-set/invalid-uncovered-requirement/assessments/JCA-A-023.json",
+        "tests/full-assessment-set/invalid-uncovered-requirement/assessments/JCA-A-023.md"
+      ]
+    },
+    {
+      "fixture": "invalid-uncovered-outcome",
+      "expected": "FAIL",
+      "expected_exit": 1,
+      "expected_codes": [
+        "LEARNER_OUTCOME_COVERAGE_IDENTITY_SET"
+      ],
+      "companion_codes": [
+        "DERIVED_METRIC_RECOMPUTATION",
+        "PILOT_PROMOTION_FIDELITY"
+      ],
+      "set_manifest_mode": "fixture-local",
+      "mutation_descriptor": "tests/full-assessment-set/invalid-uncovered-outcome/mutation.json",
+      "intended_defect": "the assessment no longer observes JCA-M08-L02#1, so that canonical outcome has no coverage link",
+      "files": [
+        "tests/full-assessment-set/invalid-uncovered-outcome/mutation.json",
+        "tests/full-assessment-set/invalid-uncovered-outcome/assessments/JCA-A-004.json",
+        "tests/full-assessment-set/invalid-uncovered-outcome/assessments/JCA-A-004.md"
+      ]
+    },
+    {
+      "fixture": "invalid-unknown-assessment",
+      "expected": "FAIL",
+      "expected_exit": 1,
+      "expected_codes": [
+        "UNKNOWN_ASSESSMENT_REFERENCE"
+      ],
+      "companion_codes": [],
+      "set_manifest_mode": "fixture-local",
+      "mutation_descriptor": "tests/full-assessment-set/invalid-unknown-assessment/mutation.json",
+      "intended_defect": "the full set's own assessment entry list references an assessment id that exists in no canonical membership: a phantom manifest entry for an id with no canonical assessment file",
+      "files": [
+        "tests/full-assessment-set/invalid-unknown-assessment/mutation.json"
+      ]
+    },
+    {
+      "fixture": "invalid-duplicate-assessment",
+      "expected": "FAIL",
+      "expected_exit": 1,
+      "expected_codes": [
+        "DUPLICATE_ASSESSMENT_ID"
+      ],
+      "companion_codes": [],
+      "set_manifest_mode": "fixture-local",
+      "mutation_descriptor": "tests/full-assessment-set/invalid-duplicate-assessment/mutation.json",
+      "intended_defect": "the coverage manifest repeats one assessment entry, so the same assessment id is declared twice",
+      "files": [
+        "tests/full-assessment-set/invalid-duplicate-assessment/mutation.json",
+        "tests/full-assessment-set/invalid-duplicate-assessment/assessment-coverage-manifest.json"
+      ]
+    },
+    {
+      "fixture": "invalid-missing-assessment-file",
+      "expected": "FAIL",
+      "expected_exit": 1,
+      "expected_codes": [
+        "ASSESSMENT_FILE_EXISTENCE"
+      ],
+      "companion_codes": [
+        "CANONICAL_MEMBERSHIP_IDENTITY_SET"
+      ],
+      "set_manifest_mode": "fixture-local",
+      "mutation_descriptor": "tests/full-assessment-set/invalid-missing-assessment-file/mutation.json",
+      "intended_defect": "one member's declared assessment file path is redirected to a fixture-local path that holds no file at all, so the declared reference for that member cannot supply its assessment while every other declared member path still resolves",
+      "files": [
+        "tests/full-assessment-set/invalid-missing-assessment-file/mutation.json"
+      ]
+    },
+    {
+      "fixture": "invalid-bad-coverage-link",
+      "expected": "FAIL",
+      "expected_exit": 1,
+      "expected_codes": [
+        "COVERAGE_MANIFEST_FIDELITY"
+      ],
+      "companion_codes": [],
+      "set_manifest_mode": "fixture-local",
+      "mutation_descriptor": "tests/full-assessment-set/invalid-bad-coverage-link/mutation.json",
+      "intended_defect": "the coverage manifest mislabels the link_source of one requirement carrier, so an existing requirement link is declared with the wrong provenance",
+      "files": [
+        "tests/full-assessment-set/invalid-bad-coverage-link/mutation.json",
+        "tests/full-assessment-set/invalid-bad-coverage-link/assessment-coverage-manifest.json"
+      ]
+    }
+  ]
+}

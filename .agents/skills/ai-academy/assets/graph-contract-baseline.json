@@ -1,0 +1,34 @@
+{
+  "contract_name": "ai-academy-knowledge-graph",
+  "baseline_version": "1.0",
+  "freeze_gate": "Gate 3.3",
+  "relation_types": [
+    "PREREQUISITE_OF",
+    "PROCEDURE_PRECEDES",
+    "CONSTRAINS",
+    "VERSION_CONTEXT_FOR",
+    "SCOPE_PARALLEL_TO",
+    "VERSION_VARIANT_OF",
+    "STEP_OF",
+    "ENFORCEMENT_CONTEXT_FOR"
+  ],
+  "validators": [
+    "validate_knowledge_graph.py",
+    "validate_graph_integrity.py",
+    "validate_edge_review.py"
+  ],
+  "validated_pilots": [
+    {
+      "graph": "academy-data/jimeng/graph/seedance-pilot-graph-r2.json",
+      "knowledge": "academy-data/jimeng/knowledge/pilot-knowledge-registry.json",
+      "normalization": "academy-data/jimeng/knowledge/normalization-review.json",
+      "review": "academy-data/jimeng/graph/seedance-edge-review.json"
+    },
+    {
+      "graph": "academy-data/jimeng/graph/policy-pilot-graph-r1.json",
+      "knowledge": "academy-data/jimeng/knowledge/pilot-knowledge-registry.json",
+      "normalization": "academy-data/jimeng/knowledge/normalization-review.json",
+      "review": "academy-data/jimeng/graph/policy-edge-review-r1.json"
+    }
+  ]
+}

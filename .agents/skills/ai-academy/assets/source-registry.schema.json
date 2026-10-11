@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Academy Source Registry",
+  "type": "object",
+  "required": ["sources"],
+  "additionalProperties": false,
+  "properties": {
+    "sources": {"type": "array", "items": {"$ref": "#/$defs/source"}}
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "required": ["source_id", "title", "publisher", "source_type", "trust_tier", "information_type", "location", "evidence_scope", "language", "version_scope", "published_at", "last_verified_at", "status", "notes"],
+      "additionalProperties": false,
+      "properties": {
+        "source_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "title": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "publisher": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "source_type": {"type": "string", "enum": ["official_documentation", "official_help", "official_changelog", "official_course", "official_announcement", "paper", "standard", "primary_technical_source", "book", "professional_tutorial", "community_post", "forum", "video", "user_experiment", "other"]},
+        "trust_tier": {"type": "string", "enum": ["A", "B", "C", "D", "E"]},
+        "information_type": {"type": "string", "enum": ["DOCUMENTED", "OBSERVED", "INFERRED", "UNVERIFIED"]},
+        "location": {"type": "string", "minLength": 1, "pattern": "\\S", "description": "URL 或本地文件路径；不校验可达性。"},
+        "evidence_scope": {"type": "string", "minLength": 1, "pattern": "\\S", "description": "证据单元覆盖范围；整份资料为一个证据单元且无更精确范围时填写 entire source。"},
+        "language": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "version_scope": {"type": "string", "minLength": 1, "pattern": "\\S", "description": "适用版本或时间范围；无法确定时填写 unknown。"},
+        "published_at": {"type": ["string", "null"], "format": "date", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+        "last_verified_at": {"type": ["string", "null"], "format": "date", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+        "status": {"type": "string", "enum": ["candidate", "accepted", "stale", "deprecated", "rejected"]},
+        "notes": {"type": "string"}
+      }
+    }
+  }
+}

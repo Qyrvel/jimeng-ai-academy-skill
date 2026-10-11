@@ -1,0 +1,31 @@
+{
+  "track": "EXAMPLE: synthetic readiness test",
+  "domains": [
+    {
+      "domain_id": "CRD-01",
+      "name": "EXAMPLE foundation",
+      "criticality": "CORE",
+      "target_competency": "EXAMPLE limited understanding",
+      "knowledge_support": [
+        "EXAMPLE-K-1"
+      ],
+      "graph_support": "EXAMPLE reviewed structure",
+      "known_gaps": [
+        "EXAMPLE optional illustration deferred"
+      ],
+      "status": "BLOCKED",
+      "decision": "TARGETED_INGESTION_FIRST"
+    }
+  ],
+  "blocking_gaps": [
+    {
+      "gap_id": "EXAMPLE-G1",
+      "domain_id": "MISSING",
+      "gap_type": "KNOWLEDGE_INGESTION_GAP",
+      "description": "EXAMPLE missing procedure",
+      "blocking_reason": "EXAMPLE action unsupported",
+      "next_engine": "KNOWLEDGE_ENGINE"
+    }
+  ],
+  "track_verdict": "READY_AFTER_TARGETED_INGESTION"
+}

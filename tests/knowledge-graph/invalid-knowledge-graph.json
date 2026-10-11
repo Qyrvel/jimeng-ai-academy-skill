@@ -1,0 +1,218 @@
+{
+  "graph_id": "test-invalid-knowledge-graph",
+  "scope": "Fixture for Graph Validator unit tests; every check it must reject appears at least once.",
+  "extra_root_field": "must be rejected as an unexpected field",
+  "nodes": [
+    {"knowledge_id": "JIM-K-0001"},
+    {"knowledge_id": "JIM-K-0001"},
+    {"knowledge_id": "JIM-K-9999"},
+    {"knowledge_id": "JIM-K-0009"},
+    {"knowledge_id": "JIM-K-0010"},
+    {"knowledge_id": "JIM-K-0011"},
+    {"knowledge_id": "JIM-K-0014"},
+    {"knowledge_id": "JIM-K-0017"},
+    {"knowledge_id": "JIM-K-0023"},
+    {"knowledge_id": "JIM-K-0036"},
+    {"knowledge_id": "JIM-K-0038"}
+  ],
+  "edges": [
+    {
+      "edge_id": "BAD-E-0001",
+      "from": "JIM-K-8888",
+      "relation": "PREREQUISITE_OF",
+      "to": "JIM-K-0001",
+      "epistemic_status": "INFERRED",
+      "rationale": "from 未在 root.nodes 中声明，应被拒绝。",
+      "limitations": "INFERENCE_BOUNDARY: 用于测试 from 必须出现在 nodes 中。"
+    },
+    {
+      "edge_id": "BAD-E-0002",
+      "from": "JIM-K-0001",
+      "relation": "PREREQUISITE_OF",
+      "to": "JIM-K-7777",
+      "epistemic_status": "INFERRED",
+      "rationale": "to 未在 root.nodes 中声明，应被拒绝。",
+      "limitations": "INFERENCE_BOUNDARY: 用于测试 to 必须出现在 nodes 中。"
+    },
+    {
+      "edge_id": "BAD-E-0003",
+      "from": "JIM-K-0001",
+      "relation": "PREREQUISITE_OF",
+      "to": "JIM-K-0001",
+      "epistemic_status": "INFERRED",
+      "rationale": "自环，应被拒绝。",
+      "limitations": "INFERENCE_BOUNDARY: 用于测试 from != to。"
+    },
+    {
+      "edge_id": "BAD-E-0004",
+      "from": "JIM-K-0010",
+      "relation": "PROCEDURE_PRECEDES",
+      "to": "JIM-K-0011",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "本条本身合法，用于让下一条产生 edge_id 重复。",
+      "limitations": "仅用于测试 edge_id 唯一性。"
+    },
+    {
+      "edge_id": "BAD-E-0004",
+      "from": "JIM-K-0010",
+      "relation": "PREREQUISITE_OF",
+      "to": "JIM-K-0011",
+      "epistemic_status": "INFERRED",
+      "rationale": "edge_id 与上一条重复，应被拒绝。",
+      "limitations": "INFERENCE_BOUNDARY: 用于测试 edge_id 唯一性。"
+    },
+    {
+      "edge_id": "BAD-E-0005",
+      "from": "JIM-K-0001",
+      "relation": "RELATED_TO",
+      "to": "JIM-K-0014",
+      "epistemic_status": "INFERRED",
+      "rationale": "relation 为 Gate 3.0 禁止的关系，应被拒绝。",
+      "limitations": "INFERENCE_BOUNDARY: 用于测试 relation 枚举。"
+    },
+    {
+      "edge_id": "BAD-E-0006",
+      "from": "JIM-K-0001",
+      "relation": "PREREQUISITE_OF",
+      "to": "JIM-K-0014",
+      "epistemic_status": "VERIFIED",
+      "rationale": "epistemic_status 不在枚举内，应被拒绝。",
+      "limitations": "用于测试 epistemic_status 枚举。"
+    },
+    {
+      "edge_id": "BAD-E-0007",
+      "from": "JIM-K-0023",
+      "relation": "PREREQUISITE_OF",
+      "to": "JIM-K-0014",
+      "epistemic_status": "INFERRED",
+      "rationale": "INFERRED 但 limitations 缺少 INFERENCE_BOUNDARY，应被拒绝。",
+      "limitations": "本条故意不含该标记。"
+    },
+    {
+      "edge_id": "BAD-E-0008",
+      "from": "JIM-K-0001",
+      "relation": "CONSTRAINS",
+      "to": "JIM-K-0014",
+      "epistemic_status": "INFERRED",
+      "rationale": "CONSTRAINS 的 from 是 CAPABILITY，类型不符，应被拒绝。",
+      "limitations": "INFERENCE_BOUNDARY: 用于测试 CONSTRAINS 的类型规则。"
+    },
+    {
+      "edge_id": "BAD-E-0009",
+      "from": "JIM-K-0001",
+      "relation": "VERSION_CONTEXT_FOR",
+      "to": "JIM-K-0036",
+      "epistemic_status": "INFERRED",
+      "rationale": "VERSION_CONTEXT_FOR 的 from 不是 VERSION_CONTEXT，应被拒绝。",
+      "limitations": "INFERENCE_BOUNDARY: 用于测试 VERSION_CONTEXT_FOR 的类型规则。"
+    },
+    {
+      "edge_id": "BAD-E-0010",
+      "from": "JIM-K-0001",
+      "relation": "PROCEDURE_PRECEDES",
+      "to": "JIM-K-0011",
+      "epistemic_status": "INFERRED",
+      "rationale": "PROCEDURE_PRECEDES 的 from 不是 PROCEDURE，应被拒绝。",
+      "limitations": "INFERENCE_BOUNDARY: 用于测试 PROCEDURE_PRECEDES 的类型规则。"
+    },
+    {
+      "edge_id": "BAD-E-0011",
+      "from": "JIM-K-0014",
+      "relation": "SCOPE_PARALLEL_TO",
+      "to": "JIM-K-0001",
+      "epistemic_status": "INFERRED",
+      "rationale": "NORMALIZATION_JUSTIFICATION: 用于测试对称关系重复保存。",
+      "limitations": "INFERENCE_BOUNDARY: 与下一条构成双向重复。"
+    },
+    {
+      "edge_id": "BAD-E-0012",
+      "from": "JIM-K-0001",
+      "relation": "SCOPE_PARALLEL_TO",
+      "to": "JIM-K-0014",
+      "epistemic_status": "INFERRED",
+      "rationale": "NORMALIZATION_JUSTIFICATION: 与上一条构成双向重复，应被拒绝。",
+      "limitations": "INFERENCE_BOUNDARY: 用于测试对称关系重复保存。"
+    },
+    {
+      "edge_id": "BAD-E-0013",
+      "from": "JIM-K-0036",
+      "relation": "VERSION_VARIANT_OF",
+      "to": "JIM-K-0038",
+      "epistemic_status": "INFERRED",
+      "rationale": "VERSION_JUSTIFICATION: 用于测试对称关系重复保存。",
+      "limitations": "INFERENCE_BOUNDARY: 与下一条构成双向重复。"
+    },
+    {
+      "edge_id": "BAD-E-0014",
+      "from": "JIM-K-0038",
+      "relation": "VERSION_VARIANT_OF",
+      "to": "JIM-K-0036",
+      "epistemic_status": "INFERRED",
+      "rationale": "VERSION_JUSTIFICATION: 与上一条构成双向重复，应被拒绝。",
+      "limitations": "INFERENCE_BOUNDARY: 用于测试对称关系重复保存。"
+    },
+    {
+      "edge_id": "BAD-E-0015",
+      "from": "JIM-K-0010",
+      "relation": "SCOPE_PARALLEL_TO",
+      "to": "JIM-K-0001",
+      "epistemic_status": "INFERRED",
+      "rationale": "该 pair 在 Normalization Review 中为 DISTINCT，且此处未写 NORMALIZATION_JUSTIFICATION，应被拒绝。",
+      "limitations": "INFERENCE_BOUNDARY: 用于测试 SCOPE_PARALLEL_TO 的归一化支撑要求。"
+    },
+    {
+      "edge_id": "BAD-E-0016",
+      "from": "JIM-K-0001",
+      "relation": "VERSION_VARIANT_OF",
+      "to": "JIM-K-0036",
+      "epistemic_status": "INFERRED",
+      "rationale": "该 pair 在 Normalization Review 中无 VERSION_VARIANT，且此处未写 VERSION_JUSTIFICATION，应被拒绝。",
+      "limitations": "INFERENCE_BOUNDARY: 用于测试 VERSION_VARIANT_OF 的归一化支撑要求。"
+    },
+    {
+      "edge_id": "BAD-E-0017",
+      "from": "JIM-K-0017",
+      "relation": "STEP_OF",
+      "to": "JIM-K-0010",
+      "epistemic_status": "INFERRED",
+      "rationale": "STEP_OF 的 from 是 CONCEPT，类型不符，应被拒绝。",
+      "limitations": "INFERENCE_BOUNDARY: 用于测试 STEP_OF 的 from 必须是 PROCEDURE。"
+    },
+    {
+      "edge_id": "BAD-E-0018",
+      "from": "JIM-K-0010",
+      "relation": "STEP_OF",
+      "to": "JIM-K-0001",
+      "epistemic_status": "INFERRED",
+      "rationale": "STEP_OF 的 to 是 CAPABILITY，类型不符，应被拒绝。",
+      "limitations": "INFERENCE_BOUNDARY: 用于测试 STEP_OF 的 to 必须是 PROCEDURE。"
+    },
+    {
+      "edge_id": "BAD-E-0019",
+      "from": "JIM-K-0010",
+      "relation": "STEP_OF",
+      "to": "JIM-K-0010",
+      "epistemic_status": "INFERRED",
+      "rationale": "STEP_OF 自环，应被拒绝。",
+      "limitations": "INFERENCE_BOUNDARY: 用于测试 STEP_OF 的 from != to。"
+    },
+    {
+      "edge_id": "BAD-E-0020",
+      "from": "JIM-K-0010",
+      "relation": "STEP_OF",
+      "to": "JIM-K-0011",
+      "epistemic_status": "INFERRED",
+      "rationale": "用于与下一条构成 STEP_OF 双向伪关系。",
+      "limitations": "INFERENCE_BOUNDARY: 用于测试 STEP_OF 的方向性。"
+    },
+    {
+      "edge_id": "BAD-E-0021",
+      "from": "JIM-K-0011",
+      "relation": "STEP_OF",
+      "to": "JIM-K-0010",
+      "epistemic_status": "INFERRED",
+      "rationale": "STEP_OF 反向边：workflow 不可能是自己步骤的步骤，应被拒绝。",
+      "limitations": "INFERENCE_BOUNDARY: 用于测试 STEP_OF 的方向性。"
+    }
+  ]
+}

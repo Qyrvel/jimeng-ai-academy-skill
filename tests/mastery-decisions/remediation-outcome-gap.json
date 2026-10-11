@@ -1,0 +1,14 @@
+{
+  "snapshot_id": "fixture-decision-remediation-outcome-gap",
+  "mastery_unit_id": "JCA-MU-L04",
+  "hard_prerequisites_satisfied": true,
+  "satisfied_outcomes": [
+    "JCA-M02-L02#0"
+  ],
+  "misconception_outcomes": [],
+  "evidence_submitted": true,
+  "execution_criteria_met": true,
+  "expected_decision": "REMEDIATION",
+  "expected_reason": "REMEDIATE_OUTCOME_GAP",
+  "note": "证据已提交、执行无缺失，但某 required outcome 本身未达到 → REMEDIATION。"
+}

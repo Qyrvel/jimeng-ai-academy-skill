@@ -1,0 +1,11 @@
+{
+  "reviews": [
+    {
+      "edge_id": "CRR1-E-0001",
+      "status": "KEEP",
+      "review_reason": "P14 §4.3 明列生成行为；K0046 包含实际视频生成动作。跨来源映射标记 INFERRED，直接作用到生成这一子动作，保留版本与适用限制。规则→动作方向正确，无中间知识依赖或教学偏好；不将认证扩展到浏览入口或全部步骤。",
+      "directness": "DIRECT",
+      "curriculum_leakage": false
+    }
+  ]
+}

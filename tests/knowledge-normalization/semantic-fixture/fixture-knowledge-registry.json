@@ -1,0 +1,236 @@
+{
+  "items": [
+    {
+      "knowledge_id": "FIX-K-0001",
+      "title": "Fixture 提示词长度上限（表述一）",
+      "domain": "Fixture Prompt",
+      "knowledge_type": "CONSTRAINT",
+      "statement": "Fixture 产品层 2.0 说明提示词长度上限为 Fixture 上限值。",
+      "learner_outcome": "指出 Fixture 产品层 2.0 说明的提示词长度上限。",
+      "information_type": "DOCUMENTED",
+      "scope": "Fixture Product Layer；仅测试夹具数据，不代表任何真实产品。",
+      "version_scope": "Fixture Product 2.0",
+      "evidence_refs": [
+        {
+          "source_id": "FIX-P01",
+          "support_note": "Fixture 产品层能力说明共享段落给出提示词长度上限这一约束。"
+        }
+      ],
+      "limitations": "仅夹具陈述；不说明该上限的计量单位与例外情形。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "FIX-K-0002",
+      "title": "Fixture 提示词长度上限（表述二）",
+      "domain": "Fixture Prompt",
+      "knowledge_type": "CONSTRAINT",
+      "statement": "Fixture 产品层 2.0 说明中，提示词的最大长度受限，其上限为 Fixture 上限值。",
+      "learner_outcome": "指出 Fixture 产品层 2.0 说明的提示词长度上限。",
+      "information_type": "DOCUMENTED",
+      "scope": "Fixture Product Layer；仅测试夹具数据，不代表任何真实产品。",
+      "version_scope": "Fixture Product 2.0",
+      "evidence_refs": [
+        {
+          "source_id": "FIX-P01",
+          "support_note": "同一共享段落支持提示词长度受限且上限为 Fixture 上限值。"
+        }
+      ],
+      "limitations": "仅夹具陈述；不说明该上限的计量单位与例外情形。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "FIX-K-0003",
+      "title": "Fixture 参考图片输入能力（概述）",
+      "domain": "Fixture 参考素材",
+      "knowledge_type": "CAPABILITY",
+      "statement": "Fixture 产品层 2.0 说明支持上传参考图片参与生成。",
+      "learner_outcome": "识别 Fixture 产品层 2.0 说明的参考图片输入能力。",
+      "information_type": "DOCUMENTED",
+      "scope": "Fixture Product Layer；仅测试夹具数据，不代表任何真实产品。",
+      "version_scope": "Fixture Product 2.0",
+      "evidence_refs": [
+        {
+          "source_id": "FIX-P01",
+          "support_note": "共享段落列出参考图片作为输入方式，支持该能力概述。"
+        }
+      ],
+      "limitations": "仅夹具陈述；不说明素材格式与数量。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "FIX-K-0004",
+      "title": "Fixture 参考图片输入能力（含数量增量）",
+      "domain": "Fixture 参考素材",
+      "knowledge_type": "CAPABILITY",
+      "statement": "Fixture 产品层 2.0 说明支持上传参考图片参与生成，并可同时添加多张参考图片。",
+      "learner_outcome": "识别 Fixture 产品层 2.0 说明的参考图片输入能力，并指出可同时添加多张参考图片。",
+      "information_type": "DOCUMENTED",
+      "scope": "Fixture Product Layer；仅测试夹具数据，不代表任何真实产品。",
+      "version_scope": "Fixture Product 2.0",
+      "evidence_refs": [
+        {
+          "source_id": "FIX-P01",
+          "support_note": "共享段落支持参考图片输入这一共同核心信息。"
+        },
+        {
+          "source_id": "FIX-P02",
+          "support_note": "扩展段落另行说明可同时添加多张参考图片，属于本条独有的增量信息。"
+        }
+      ],
+      "limitations": "仅夹具陈述；不说明张数上限、格式与分辨率。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "FIX-K-0005",
+      "title": "Fixture 提示词长度上限（2.0 版本）",
+      "domain": "Fixture Prompt",
+      "knowledge_type": "CONSTRAINT",
+      "statement": "Fixture 产品层 2.0 说明提示词长度上限为 Fixture 上限值。",
+      "learner_outcome": "指出 Fixture 产品层 2.0 说明的提示词长度上限。",
+      "information_type": "DOCUMENTED",
+      "scope": "Fixture Product Layer；仅测试夹具数据，不代表任何真实产品。",
+      "version_scope": "Fixture Product 2.0",
+      "evidence_refs": [
+        {
+          "source_id": "FIX-P03",
+          "support_note": "2.0 版本段落给出该版本的提示词长度上限。"
+        }
+      ],
+      "limitations": "仅夹具陈述；不外推到其他版本。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "FIX-K-0006",
+      "title": "Fixture 提示词长度上限（3.0 版本）",
+      "domain": "Fixture Prompt",
+      "knowledge_type": "CONSTRAINT",
+      "statement": "Fixture 产品层 3.0 说明提示词长度上限为 Fixture 上限值。",
+      "learner_outcome": "指出 Fixture 产品层 3.0 说明的提示词长度上限。",
+      "information_type": "DOCUMENTED",
+      "scope": "Fixture Product Layer；仅测试夹具数据，不代表任何真实产品。",
+      "version_scope": "Fixture Product 3.0",
+      "evidence_refs": [
+        {
+          "source_id": "FIX-P04",
+          "support_note": "3.0 版本段落给出该版本的提示词长度上限。"
+        }
+      ],
+      "limitations": "仅夹具陈述；不外推到其他版本。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "FIX-K-0007",
+      "title": "Fixture 产品层参考视频能力",
+      "domain": "Fixture 参考素材",
+      "knowledge_type": "CAPABILITY",
+      "statement": "Fixture 产品层 2.0 说明支持上传参考视频参与生成。",
+      "learner_outcome": "识别 Fixture 产品层 2.0 说明的参考视频输入能力。",
+      "information_type": "DOCUMENTED",
+      "scope": "Fixture Product Layer；仅测试夹具数据，不代表任何真实产品。",
+      "version_scope": "Fixture Product 2.0",
+      "evidence_refs": [
+        {
+          "source_id": "FIX-P01",
+          "support_note": "共享段落把参考视频列为可用输入方式之一。"
+        }
+      ],
+      "limitations": "仅夹具陈述；不说明时长与格式。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "FIX-K-0008",
+      "title": "Fixture 模型层参考视频能力",
+      "domain": "Fixture 参考素材",
+      "knowledge_type": "CAPABILITY",
+      "statement": "Fixture 模型 2.0 说明该模型可理解参考视频中的信息。",
+      "learner_outcome": "识别 Fixture 模型 2.0 说明中参考视频信息可被理解这一能力。",
+      "information_type": "DOCUMENTED",
+      "scope": "Fixture Model Layer；仅测试夹具数据，不代表任何真实模型或产品部署。",
+      "version_scope": "Fixture Model 2.0",
+      "evidence_refs": [
+        {
+          "source_id": "FIX-P05",
+          "support_note": "模型层说明段直接声明可理解参考视频中的信息。"
+        }
+      ],
+      "limitations": "仅夹具陈述；不证明任何产品已部署该能力。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "FIX-K-0009",
+      "title": "Fixture 分辨率限制存在",
+      "domain": "Fixture 导出",
+      "knowledge_type": "CONSTRAINT",
+      "statement": "在 Fixture 产品层 2.0 默认设置下，导出分辨率存在 Fixture 上限限制。",
+      "learner_outcome": "指出 Fixture 产品层 2.0 默认设置下导出分辨率存在上限这一陈述。",
+      "information_type": "OBSERVED",
+      "scope": "Fixture Product Layer；仅测试夹具观察数据，不代表任何真实产品行为。",
+      "version_scope": "Fixture Product 2.0",
+      "evidence_refs": [
+        {
+          "source_id": "FIX-P06",
+          "support_note": "Fixture 实验记录：同一默认设置下导出一次，结果观察到分辨率被限制在上限。"
+        }
+      ],
+      "limitations": "仅夹具单次观察；不说明上限数值、是否可解除或是否随设置变化。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "FIX-K-0010",
+      "title": "Fixture 分辨率限制不存在",
+      "domain": "Fixture 导出",
+      "knowledge_type": "CONSTRAINT",
+      "statement": "在 Fixture 产品层 2.0 默认设置下，导出分辨率不存在 Fixture 上限限制。",
+      "learner_outcome": "指出 Fixture 产品层 2.0 默认设置下导出分辨率不存在上限这一陈述。",
+      "information_type": "OBSERVED",
+      "scope": "Fixture Product Layer；仅测试夹具观察数据，不代表任何真实产品行为。",
+      "version_scope": "Fixture Product 2.0",
+      "evidence_refs": [
+        {
+          "source_id": "FIX-P07",
+          "support_note": "Fixture 实验记录：同一默认设置下导出一次，未观察到分辨率上限。"
+        }
+      ],
+      "limitations": "仅夹具单次观察；不说明测试覆盖面与是否随设置变化。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "FIX-K-0011",
+      "title": "Fixture 文案说明替代方案",
+      "domain": "Fixture Prompt",
+      "knowledge_type": "CAPABILITY",
+      "statement": "Fixture 产品层 2.0 说明支持用文案说明替代参考素材。",
+      "learner_outcome": "识别 Fixture 产品层 2.0 说明中可用文案说明替代参考素材这一能力。",
+      "information_type": "DOCUMENTED",
+      "scope": "Fixture Product Layer；仅测试夹具数据，不代表任何真实产品。",
+      "version_scope": "Fixture Product 2.0",
+      "evidence_refs": [
+        {
+          "source_id": "FIX-P01",
+          "support_note": "共享段落提到可以仅用文案说明而不用参考素材。"
+        }
+      ],
+      "limitations": "仅夹具陈述；不说明适用条件与限制。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "FIX-K-0012",
+      "title": "Fixture 生成流程步骤",
+      "domain": "Fixture 流程",
+      "knowledge_type": "PROCEDURE",
+      "statement": "Fixture 产品层 2.0 说明生成流程包含准备输入、提交生成与导出结果三个步骤。",
+      "learner_outcome": "按顺序复述 Fixture 产品层 2.0 说明的三个流程步骤。",
+      "information_type": "DOCUMENTED",
+      "scope": "Fixture Product Layer；仅测试夹具数据，不代表任何真实产品。",
+      "version_scope": "Fixture Product 2.0",
+      "evidence_refs": [
+        {
+          "source_id": "FIX-P01",
+          "support_note": "共享段落概述了准备输入、提交生成与导出结果三个步骤。"
+        }
+      ],
+      "limitations": "仅夹具陈述；不含界面按钮与耗时信息。",
+      "status": "draft"
+    }
+  ]
+}

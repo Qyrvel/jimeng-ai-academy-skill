@@ -1,0 +1,28 @@
+{
+  "graph_id": "test-invalid-stepof-reverse",
+  "scope": "Integrity fixture: STEP_OF stored in both directions (K-0009 <-> K-0010). Expected: FAIL with the DIRECTION rule (a 2-cycle is also reported).",
+  "nodes": [
+    {"knowledge_id": "JIM-K-0009"},
+    {"knowledge_id": "JIM-K-0010"}
+  ],
+  "edges": [
+    {
+      "edge_id": "SOR-E-0001",
+      "from": "JIM-K-0010",
+      "relation": "STEP_OF",
+      "to": "JIM-K-0009",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "正向：步骤属于流程。",
+      "limitations": "测试用。"
+    },
+    {
+      "edge_id": "SOR-E-0002",
+      "from": "JIM-K-0009",
+      "relation": "STEP_OF",
+      "to": "JIM-K-0010",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "反向边：流程不可能是自己步骤的步骤，应被拒绝。",
+      "limitations": "测试用。"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "materials": [
+    {
+      "source_id": "M09",
+      "materialized_path": "public-fixture/M09.md",
+      "captured_at": "2026-10-03",
+      "evidence_scope": "sections: 开篇、Longer Narratives、Smarter Reference and Editing、Aiming for Professional Production",
+      "capture_status": "AVAILABLE",
+      "notes": "测试记录，不作为新增来源。"
+    },
+    {
+      "source_id": "P10",
+      "materialized_path": null,
+      "captured_at": "2026-10-03",
+      "evidence_scope": "section: 如何使用 Seedance 2.5 AI 视频生成器，三步操作说明",
+      "capture_status": "BLOCKED",
+      "notes": "测试记录，不作为新增来源。"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "graph_id": "test-valid-integrity-graph",
+  "scope": "Integrity fixture: one valid prerequisite edge, one valid in-workflow ordering pair, a valid STEP_OF membership set, one valid CONSTRAINS. Expected: PASS.",
+  "nodes": [
+    {"knowledge_id": "JIM-K-0009"},
+    {"knowledge_id": "JIM-K-0010"},
+    {"knowledge_id": "JIM-K-0011"},
+    {"knowledge_id": "JIM-K-0015"},
+    {"knowledge_id": "JIM-K-0017"},
+    {"knowledge_id": "JIM-K-0023"}
+  ],
+  "edges": [
+    {
+      "edge_id": "INT-E-0001",
+      "from": "JIM-K-0017",
+      "relation": "PREREQUISITE_OF",
+      "to": "JIM-K-0015",
+      "epistemic_status": "INFERRED",
+      "rationale": "KNOWLEDGE_DEPENDENCY: 理解参考生视频这一方式，是理解该方式中参考视频控制作用的前提。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为两条 Item 的 statement；不能推出执行层面的效果保证。"
+    },
+    {
+      "edge_id": "INT-E-0002",
+      "from": "JIM-K-0010",
+      "relation": "STEP_OF",
+      "to": "JIM-K-0009",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "K-0010 自称该流程第一步，K-0009 明列该步。",
+      "limitations": "只表示步骤归属，不表示教学顺序。"
+    },
+    {
+      "edge_id": "INT-E-0003",
+      "from": "JIM-K-0011",
+      "relation": "STEP_OF",
+      "to": "JIM-K-0009",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "K-0011 自称该流程的一步，K-0009 明列该步措辞。",
+      "limitations": "只表示步骤归属，不表示教学顺序。"
+    },
+    {
+      "edge_id": "INT-E-0004",
+      "from": "JIM-K-0010",
+      "relation": "PROCEDURE_PRECEDES",
+      "to": "JIM-K-0011",
+      "epistemic_status": "DOCUMENTED",
+      "rationale": "同一 workflow（K-0009）内的步骤先后，产品页以第一步/第二步明确给出。",
+      "limitations": "只表示该流程内的步骤先后。"
+    },
+    {
+      "edge_id": "INT-E-0005",
+      "from": "JIM-K-0023",
+      "relation": "CONSTRAINS",
+      "to": "JIM-K-0015",
+      "epistemic_status": "INFERRED",
+      "rationale": "用途边界限定该能力的适用范围。",
+      "limitations": "INFERENCE_BOUNDARY: 依据为两条 Item 同源同一小节；不能推出执行阈值。"
+    }
+  ]
+}

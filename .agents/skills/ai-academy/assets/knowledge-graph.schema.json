@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Academy Knowledge Graph",
+  "type": "object",
+  "required": ["graph_id", "scope", "nodes", "edges"],
+  "additionalProperties": false,
+  "properties": {
+    "graph_id": {"$ref": "#/$defs/text"},
+    "scope": {"$ref": "#/$defs/text"},
+    "nodes": {"type": "array", "items": {"$ref": "#/$defs/node"}},
+    "edges": {"type": "array", "items": {"$ref": "#/$defs/edge"}}
+  },
+  "$defs": {
+    "text": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "node": {
+      "type": "object",
+      "required": ["knowledge_id"],
+      "additionalProperties": false,
+      "properties": {
+        "knowledge_id": {"$ref": "#/$defs/text"}
+      }
+    },
+    "edge": {
+      "type": "object",
+      "required": ["edge_id", "from", "relation", "to", "epistemic_status", "rationale", "limitations"],
+      "additionalProperties": false,
+      "properties": {
+        "edge_id": {"$ref": "#/$defs/text"},
+        "from": {"$ref": "#/$defs/text"},
+        "relation": {"type": "string", "enum": ["PREREQUISITE_OF", "PROCEDURE_PRECEDES", "CONSTRAINS", "VERSION_CONTEXT_FOR", "SCOPE_PARALLEL_TO", "VERSION_VARIANT_OF", "STEP_OF", "ENFORCEMENT_CONTEXT_FOR"]},
+        "to": {"$ref": "#/$defs/text"},
+        "epistemic_status": {"type": "string", "enum": ["DOCUMENTED", "INFERRED"]},
+        "rationale": {"$ref": "#/$defs/text"},
+        "limitations": {"$ref": "#/$defs/text"}
+      }
+    }
+  }
+}

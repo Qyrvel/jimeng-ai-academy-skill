@@ -1,0 +1,168 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Curriculum Readiness Assessment",
+  "type": "object",
+  "required": [
+    "track",
+    "domains",
+    "blocking_gaps",
+    "track_verdict"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "track": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "domains": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "domain_id",
+          "name",
+          "criticality",
+          "target_competency",
+          "knowledge_support",
+          "graph_support",
+          "known_gaps",
+          "status",
+          "decision"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "domain_id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "criticality": {
+            "type": "string",
+            "enum": [
+              "FOUNDATIONAL",
+              "CORE",
+              "SUPPORTING",
+              "DYNAMIC",
+              "OPTIONAL",
+              "OUT_OF_SCOPE"
+            ]
+          },
+          "target_competency": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "knowledge_support": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            }
+          },
+          "graph_support": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "known_gaps": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            }
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "READY",
+              "PARTIAL",
+              "BLOCKED",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "decision": {
+            "type": "string",
+            "enum": [
+              "ALLOW_CURRICULUM_DESIGN",
+              "TARGETED_INGESTION_FIRST",
+              "GRAPH_DATA_EXPANSION_FIRST",
+              "DEFER_DYNAMIC",
+              "DEFER_OPTIONAL",
+              "NOT_APPLICABLE"
+            ]
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "blocking_gaps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "gap_id",
+          "domain_id",
+          "gap_type",
+          "description",
+          "blocking_reason",
+          "next_engine"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "gap_id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "domain_id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "gap_type": {
+            "type": "string",
+            "enum": [
+              "SOURCE_GAP",
+              "KNOWLEDGE_INGESTION_GAP",
+              "GRAPH_DATA_GAP"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "blocking_reason": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "next_engine": {
+            "type": "string",
+            "enum": [
+              "SOURCE_ENGINE",
+              "KNOWLEDGE_ENGINE",
+              "GRAPH_DATA_EXPANSION"
+            ]
+          }
+        }
+      }
+    },
+    "track_verdict": {
+      "type": "string",
+      "enum": [
+        "READY_FOR_CURRICULUM_DESIGN",
+        "READY_AFTER_TARGETED_INGESTION",
+        "NOT_READY_FOR_CURRICULUM_DESIGN"
+      ]
+    }
+  }
+}

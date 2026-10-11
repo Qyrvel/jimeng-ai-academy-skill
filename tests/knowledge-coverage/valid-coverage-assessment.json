@@ -1,0 +1,72 @@
+{
+  "track": "AI Academy fixture track for Coverage Validator unit tests",
+  "assessment_date": "2026-10-03",
+  "domains": [
+    {
+      "domain": "Fixture Covered Domain",
+      "criticality": "CORE",
+      "source_ingestion_decision": "ALLOW_INGESTION",
+      "knowledge_item_ids": ["FIXC-K-0001", "FIXC-K-0002"],
+      "coverage_status": "COVERED",
+      "coverage_rationale": "两项 Item 分别覆盖该领域的两个不同子知识，且 scope 与 version_scope 明确，因此判为 COVERED（依据结构而非数量阈值）。",
+      "known_gap": "缺少该领域的操作步骤类知识，但不影响当前许可范围的代表性。",
+      "next_action": "GRAPH_PILOT_ELIGIBLE"
+    },
+    {
+      "domain": "Fixture Partial Domain",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": ["FIXC-K-0001"],
+      "coverage_status": "PARTIAL",
+      "coverage_rationale": "已有至少一个相关 Item，但该领域的第二个子范围尚未形成 Item，因此为 PARTIAL。",
+      "known_gap": "第二个子范围缺少 Knowledge Item。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "Fixture Missing Domain",
+      "criticality": "CORE",
+      "source_ingestion_decision": "LIMITED_INGESTION",
+      "knowledge_item_ids": [],
+      "coverage_status": "MISSING",
+      "coverage_rationale": "来源许可已存在，但尚无任何该领域 Item，属知识抽取尚未完成的缺口。",
+      "known_gap": "该领域完全未入库。",
+      "next_action": "EXPAND_KNOWLEDGE"
+    },
+    {
+      "domain": "Fixture Return To Source Domain",
+      "criticality": "CORE",
+      "source_ingestion_decision": "ALLOW_INGESTION",
+      "knowledge_item_ids": [],
+      "coverage_status": "MISSING",
+      "coverage_rationale": "虽有 ALLOW_INGESTION，但本轮唯一可读证据在复核中被判定不足以支持任何原子知识，需新的 Source 证据；新阻塞原因为所需正文范围未取得。",
+      "known_gap": "缺少可支持 Knowledge Item 的 accepted Evidence。",
+      "next_action": "RETURN_TO_SOURCE"
+    },
+    {
+      "domain": "Fixture Deferred Domain",
+      "criticality": "DYNAMIC",
+      "source_ingestion_decision": "DEFER",
+      "knowledge_item_ids": [],
+      "coverage_status": "DEFERRED",
+      "coverage_rationale": "该领域在 Source Readiness 中为 DEFER，本阶段不应要求 Knowledge Engine 覆盖。",
+      "known_gap": "渠道与时效未对齐，保留在 Source Engine。",
+      "next_action": "DEFER"
+    },
+    {
+      "domain": "Fixture Not Applicable Domain",
+      "criticality": "OUT_OF_SCOPE",
+      "source_ingestion_decision": "NOT_APPLICABLE",
+      "knowledge_item_ids": [],
+      "coverage_status": "NOT_APPLICABLE",
+      "coverage_rationale": "不属于当前 Track。",
+      "known_gap": "无；不适用。",
+      "next_action": "NOT_APPLICABLE"
+    }
+  ],
+  "item_accounting": {
+    "registry_total": 4,
+    "mapped_item_ids": ["FIXC-K-0001", "FIXC-K-0002"],
+    "unmapped_item_ids": ["FIXC-K-0003", "FIXC-K-0004"]
+  },
+  "overall_recommendation": "NEEDS_TARGETED_INGESTION"
+}

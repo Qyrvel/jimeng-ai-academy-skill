@@ -1,0 +1,37 @@
+{
+  "reviews": [
+    {
+      "review_id": "NR-T-0001",
+      "item_ids": ["JIM-K-0001", "JIM-K-0002"],
+      "relation": "DISTINCT",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "生成模态与参考信息",
+      "rationale": "两项同为 ByteDance Seed Model Layer 的 Seedance 2.5 能力项，但一项描述生成模态定位，另一项描述参考视频可理解的信息类型，语义不同。",
+      "scope_check": "两项 scope 一致，均为 ByteDance Seed Model Layer；同层不改变语义不同的结论。",
+      "version_check": "两项 version_scope 均为 Seedance 2.5，版本相同，因此版本不构成区分依据，区分依据是 statement。",
+      "provenance_check": "各项仅引用 M09；保持独立不涉及证据迁移，accepted Evidence 无需变动。"
+    },
+    {
+      "review_id": "NR-T-0002",
+      "item_ids": ["JIM-K-0001", "JIM-K-0003"],
+      "relation": "PARTIAL_OVERLAP",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "编辑功能",
+      "rationale": "两项同层同版本且均涉及视频处理主题，但一项为生成模态定位，另一项为具体编辑能力，各自保留独立知识，不构成重复。",
+      "scope_check": "两项 scope 一致；同层重叠只说明主题接近，不构成合并依据。",
+      "version_check": "两项 version_scope 均为 Seedance 2.5，版本相同。",
+      "provenance_check": "两项分别引用 M09；若将来合并必须保留两者的 support_note，本轮不合并。"
+    },
+    {
+      "review_id": "NR-T-0003",
+      "item_ids": ["JIM-K-0005", "JIM-K-0009"],
+      "relation": "SCOPE_PARALLEL",
+      "decision": "KEEP_SEPARATE",
+      "normalized_label": "编辑功能",
+      "rationale": "一项为模型层交互编辑能力，另一项为产品层视频生成流程；主题表面接近但分属不同 Layer。",
+      "scope_check": "scope 分别为 ByteDance Seed Model Layer 与 Jimeng Product Layer，属于不同层，必须保持平行。",
+      "version_check": "version_scope 分别为 Seedream 5.0 Pro 与 Seedance 2.5，产品与模型版本不可直接比较。",
+      "provenance_check": "两项分别引用 M10 与 P10，证据层不同且各自完整，不存在证据丢失。"
+    }
+  ]
+}

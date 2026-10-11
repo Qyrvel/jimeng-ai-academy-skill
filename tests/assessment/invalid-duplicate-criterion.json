@@ -1,0 +1,15 @@
+{
+"assessment_id":"JCA-A-910","lesson_ids":["JCA-M02-L03"],"lesson_pair_reason":"NOT_APPLICABLE",
+"assessment_type":"CLASSIFY","purpose":"夹具：criterion_id 重复。",
+"target_outcomes":["区分 Seedream 模型层能力声明与图片产品流程步骤"],
+"knowledge_refs":["JIM-K-0004","JIM-K-0005"],
+"scope":"夹具 scope：criterion_id 重复。",
+"task":"夹具 task。","expected_evidence":"夹具 evidence。",
+"scoring_criteria":[{"criterion_id":"FIX-C1","description":"夹具 criterion A。","evidence_source":"归类结果","weight":2,"pass_condition":"夹具。"},{"criterion_id":"FIX-C1","description":"夹具 criterion B。","evidence_source":"手写理由","weight":2,"pass_condition":"夹具。"}],
+"max_score":4,"pass_score":4,
+"partial_credit_policy":"夹具。",
+"allowed_support":["lesson notes"],"disallowed_support":["external web search"],
+"feedback_boundary":"夹具。",
+"alignment":{"completion_check_alignment":"DIRECT","rationale":"夹具。"},
+"limitations":"夹具。","status":"pilot"
+}

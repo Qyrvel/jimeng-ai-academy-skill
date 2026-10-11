@@ -1,0 +1,47 @@
+{
+  "fixture": "invalid-uncovered-outcome",
+  "base_set_manifest": "academy-data/jimeng/assessment/full-assessments/full-assessment-set.json",
+  "base_coverage_manifest": "academy-data/jimeng/assessment/full-assessments/assessment-coverage-manifest.json",
+  "coverage_manifest": "academy-data/jimeng/assessment/full-assessments/assessment-coverage-manifest.json",
+  "set_manifest": {
+    "set": {
+      "coverage_manifest": "academy-data/jimeng/assessment/full-assessments/assessment-coverage-manifest.json",
+      "assessment_files": {
+        "JCA-A-001": "../../../academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-001.json",
+        "JCA-A-002": "../../../academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-002.json",
+        "JCA-A-003": "../../../academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-003.json",
+        "JCA-A-004": "assessments/JCA-A-004.json",
+        "JCA-A-005": "../../../academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-005.json",
+        "JCA-A-006": "../_baseline/assessments/JCA-A-006.json",
+        "JCA-A-007": "../_baseline/assessments/JCA-A-007.json",
+        "JCA-A-008": "../_baseline/assessments/JCA-A-008.json",
+        "JCA-A-009": "../_baseline/assessments/JCA-A-009.json",
+        "JCA-A-010": "../_baseline/assessments/JCA-A-010.json",
+        "JCA-A-011": "../_baseline/assessments/JCA-A-011.json",
+        "JCA-A-012": "../_baseline/assessments/JCA-A-012.json",
+        "JCA-A-013": "../_baseline/assessments/JCA-A-013.json",
+        "JCA-A-014": "../_baseline/assessments/JCA-A-014.json",
+        "JCA-A-015": "../_baseline/assessments/JCA-A-015.json",
+        "JCA-A-016": "../_baseline/assessments/JCA-A-016.json",
+        "JCA-A-017": "../_baseline/assessments/JCA-A-017.json",
+        "JCA-A-018": "../../../academy-data/jimeng/assessment/full-assessments/assessments/JCA-A-018.json",
+        "JCA-A-019": "../_baseline/assessments/JCA-A-019.json",
+        "JCA-A-020": "../_baseline/assessments/JCA-A-020.json",
+        "JCA-A-021": "../_baseline/assessments/JCA-A-021.json",
+        "JCA-A-022": "../_baseline/assessments/JCA-A-022.json",
+        "JCA-A-023": "../_baseline/assessments/JCA-A-023.json"
+      }
+    }
+  },
+  "note": "the assessment no longer observes JCA-M08-L02#1, so that canonical outcome has no coverage link",
+  "declared_member_count": 23,
+  "declared_source_mode_counts": {
+    "LOCAL_BYTE_EXACT_COPY": 17,
+    "CANONICAL_DIRECT_DECLARATION": 5,
+    "FIXTURE_LOCAL_SHADOW": 1
+  },
+  "companion_codes": [
+    "DERIVED_METRIC_RECOMPUTATION",
+    "PILOT_PROMOTION_FIDELITY"
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "contract_id": "jimeng-creator-academy-v1-course-evaluation",
+  "course_id": "jimeng-creator-academy-v1",
+  "status": "course_evaluation_contract",
+  "outcome_reference_form": "<lesson_id>#<0-based index into that lesson's learner_outcomes>",
+  "purpose": "把已冻结的 24 个 canonical Lesson mastery 决策、8 个 Module 结构与 4 个 hard Lesson transition 聚合成一个确定性、可验证的课程级评价合同。不生成新的教学内容，不存储学习者状态，不产生数字成绩。",
+  "decision_enum": ["COMPLETE", "RETRY_REQUIRED", "REMEDIATION_REQUIRED", "BLOCKED"],
+  "forbidden_decisions": ["FAILED", "GRADUATED", "FINAL_GRADE"],
+  "precedence": ["BLOCKED", "REMEDIATION_REQUIRED", "RETRY_REQUIRED", "COMPLETE"],
+  "lesson_mastery_input_contract": {
+    "source": "academy-data/jimeng/assessment/mastery-map.json",
+    "decision_enum": ["PASS", "RETRY", "REMEDIATION", "BLOCKED"],
+    "lesson_to_module_decision": {
+      "PASS": "COMPLETE",
+      "RETRY": "RETRY_REQUIRED",
+      "REMEDIATION": "REMEDIATION_REQUIRED",
+      "BLOCKED": "BLOCKED"
+    },
+    "rule": "课程级评价不重新发明 Lesson mastery，只消费 production mastery 的合法输出并聚合。"
+  },
+  "module_aggregation_rule": {
+    "unit": "MODULE",
+    "input": "该 Module 的全部 canonical Lesson mastery 决策，每个 Lesson 恰好一个",
+    "ordered_conditions": [
+      {"condition": "any_lesson_decision_is", "value": "BLOCKED", "module_status": "BLOCKED"},
+      {"condition": "any_lesson_decision_is", "value": "REMEDIATION", "module_status": "REMEDIATION_REQUIRED"},
+      {"condition": "any_lesson_decision_is", "value": "RETRY", "module_status": "RETRY_REQUIRED"},
+      {"condition": "every_lesson_decision_is", "value": "PASS", "module_status": "COMPLETE"}
+    ],
+    "first_match_wins": true,
+    "illegal_module_input": ["MISSING_LESSON_RESULT", "DUPLICATE_LESSON_RESULT", "EXTRA_LESSON_RESULT", "UNKNOWN_MASTERY_UNIT", "UNKNOWN_DECISION"],
+    "illegal_module_input_rule": "缺失、重复、越界或未知决策都属于非法 evaluation snapshot，必须报错，不得默认为 incomplete。"
+  },
+  "course_completion_rule": {
+    "unit": "COURSE",
+    "complete_iff": [
+      "every_canonical_lesson_mastery_unit_is_PASS",
+      "every_module_status_is_COMPLETE",
+      "all_hard_lesson_transitions_satisfied",
+      "production_mastery_prerequisite_semantics_consistent",
+      "no_non_order_relation_promoted_into_a_course_gate"
+    ],
+    "otherwise": "按 precedence 取严重度最高的状态",
+    "precedence": ["BLOCKED", "REMEDIATION_REQUIRED", "RETRY_REQUIRED"],
+    "complete_implies_empty_routing": true,
+    "no_numeric_grade": true,
+    "no_hidden_graduation_logic": "不得引入「80% 即通过」「完成 X 个模块即可结业」等未由冻结 upstream 支持的规则。"
+  },
+  "hard_sequence_rule": {
+    "source": "production mastery map hard_prerequisite_units + authoritative graph set order edges",
+    "legal_order_relations": ["PREREQUISITE_OF", "PROCEDURE_PRECEDES"],
+    "counts_are_recomputed": true,
+    "reported": ["hard_transition_count", "supporting_hard_edge_count", "hard_transitions"],    "later_unit_declared_pass_while_hard_prerequisite_not_pass": "INCONSISTENT_EVALUATION_SNAPSHOT",
+    "inconsistent_snapshot_rule": "不得静默改写为 BLOCKED；必须作为非法 snapshot 报错，validator FAIL。BLOCKED 只能由 production mastery 决策本身真实输出。"
+  },
+  "routing_rule": {
+    "retry_targets": "只包含当前 decision = RETRY 的 Lesson / mastery unit / assessment evidence 需求；不得重新打开已 PASS 的无关 Lesson。",
+    "remediation_targets": "包含当前 decision = REMEDIATION 的 Lesson / mastery unit，以及 production mastery 真实指出的 unmet learner outcome refs；不得泛化为重学整个 Course。",
+    "blocked_targets": "包含当前 decision = BLOCKED 的 Lesson / mastery unit，以及未满足的合法 hard prerequisite mastery unit。",
+    "blocked_by_mastery_units": "未满足的合法 hard prerequisite mastery unit，逐条给出 blocked lesson 归属。",
+    "non_order_relation_rule": "任何 non-order relation 都不得成为 module gate、course gate、track gate 或 completion prerequisite。",
+    "lossless": "overall_status = 最高严重度，但 retry / remediation / blocked 三组 routing target 全部保留真实集合。",
+    "complete_rule": "course_status = COMPLETE 时四个 routing 集合必须全部为空。"
+  },
+  "track_completion_applicability": {
+    "value": "NOT_APPLICABLE",
+    "basis": "CANONICAL_TRACK_ENTITY_COUNT = 0：当前 canonical project 中不存在真实 Track entity。",
+    "rule": "不得为满足 track completion 字样发明 synthetic Track 层级；validator 必须要求无 synthetic track result。"
+  },
+  "invalid_snapshot_semantics": {
+    "codes": [
+      "MISSING_LESSON_RESULT",
+      "DUPLICATE_LESSON_RESULT",
+      "EXTRA_LESSON_RESULT",
+      "UNKNOWN_MASTERY_UNIT",
+      "UNKNOWN_DECISION",
+      "INCONSISTENT_EVALUATION_SNAPSHOT",
+      "BLOCKED_PREREQUISITE_INCONSISTENT",
+      "NON_ORDER_COURSE_COMPLETION_GATE",
+      "INVALID_ROUTING_TARGET",
+      "STUDENT_STATE_FIELD"
+    ],
+    "rule": "非法 snapshot 必须 exit != 0 并命中对应 code，不得被解释为 incomplete，也不得被降级为 BLOCKED。"
+  },
+  "derived_metric_policy": {
+    "rule": "任何保留的 *_count / distribution / summary 必须由 validator 现场从源字段重算并比对，mismatch = FAIL。",
+    "contract_stores_no_upstream_bulk_data": true
+  },
+  "no_student_state_boundary": {
+    "ephemeral_snapshot_only": true,
+    "forbidden_fields": ["student_id", "user_id", "learner_id", "learner_profile", "history", "attempt_history", "timestamp", "progress", "saved_progress", "database_key", "session_id"],
+    "rule": "evaluation snapshot 只能是一次输入；不得包含学生身份、持久历史、attempt 序列或数据库键。"
+  },
+  "no_numeric_grade_boundary": {
+    "forbidden_fields": ["percentage", "gpa", "final_score", "letter_grade", "weighted_score"],
+    "rule": "本 V1 课程完成合同基于 mastery completeness 与 hard-sequence integrity，不创建数字成绩。"
+  },
+  "input_refs": {
+    "course_manifest": "academy-data/jimeng/course/jimeng-creator-academy-v1/course-manifest.json",
+    "mastery_map": "academy-data/jimeng/assessment/mastery-map.json",
+    "assessment_mapping": "academy-data/jimeng/assessment/full-assessment-mapping.json",
+    "graph_set": [
+      "academy-data/jimeng/graph/seedance-pilot-graph-r2.json",
+      "academy-data/jimeng/graph/policy-pilot-graph-r1.json",
+      "academy-data/jimeng/graph/curriculum-readiness-core-graph-r2.json"
+    ],
+    "full_assessment_set": "academy-data/jimeng/assessment/full-assessments/full-assessment-set.json",
+    "coverage_manifest": "academy-data/jimeng/assessment/full-assessments/assessment-coverage-manifest.json",
+    "engine": ".agents/skills/ai-academy/scripts/evaluate_course_completion.py",
+    "validator": ".agents/skills/ai-academy/scripts/validate_course_evaluation.py",
+    "schema": ".agents/skills/ai-academy/assets/course-evaluation.schema.json",
+    "policy": ".agents/skills/ai-academy/references/course-evaluation-policy.md"
+  },
+  "governance_mandate": {
+    "interfaces_between": ["LESSON-GRADE", "STAGE-GRADE"],
+    "not_responsible_for": ["content generation", "content storage", "learner state", "numeric grading"],
+    "note": "本课程级评价合同位于 Lesson 级 mastery 决策之上、Stage 级治理之下；它只做确定性聚合、路由与一致性校验，不对内容生成、内容存储、学习者状态或数字评分负责。"
+  },
+  "recomputed_counts_policy": {
+    "module_count": 8,
+    "canonical_lesson_count": 24,
+    "canonical_mastery_unit_count": 24,
+    "mastery_hard_transition_count": 4,
+    "mastery_supporting_hard_edge_count": 5,
+    "canonical_track_entity_count": 0,
+    "note": "这些数字是 validator 现场重算的比对对象，不是合同复制的大块 upstream 数据；合同不保存任何 Lesson / Assessment / outcome 清单。"
+  }
+}

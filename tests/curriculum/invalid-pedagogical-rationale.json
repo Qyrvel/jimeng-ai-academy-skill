@@ -1,0 +1,49 @@
+{
+  "curriculum_id": "fixture-invalid-pedagogical-rationale",
+  "track": "Fixture Track",
+  "version": "0.1",
+  "status": "skeleton",
+  "track_goal": "反例：order_basis = PEDAGOGICAL 但缺 PEDAGOGICAL_RATIONALE: 标记必须 FAIL。",
+  "entry_profile": "零基础夹具学习者。",
+  "exit_profile": "夹具能力。",
+  "scope": "夹具范围。",
+  "module_order": ["JCA-M01", "JCA-M02"],
+  "modules": [
+    {
+      "module_id": "JCA-M01",
+      "title": "夹具：基础认知",
+      "purpose": "夹具目的。",
+      "target_domain_ids": ["CRD-01", "CRD-02"],
+      "learner_outcomes": ["区分夹具声明"],
+      "knowledge_refs": ["JIM-K-0001", "JIM-K-0056"],
+      "graph_support_refs": ["CRR2-E-0005"],
+      "scope": "夹具 scope。",
+      "order_basis": "PEDAGOGICAL",
+      "order_rationale": "PEDAGOGICAL_RATIONALE: 夹具理由。",
+      "limitations": "夹具 limitations。",
+      "status": "skeleton"
+    },
+    {
+      "module_id": "JCA-M02",
+      "title": "夹具：核心覆盖",
+      "purpose": "夹具目的：故意漏掉 PEDAGOGICAL_RATIONALE: 标记。",
+      "target_domain_ids": ["CRD-03", "CRD-04", "CRD-05", "CRD-06", "CRD-07", "CRD-08", "CRD-09"],
+      "learner_outcomes": ["完成夹具生成"],
+      "knowledge_refs": ["JIM-K-0051", "JIM-K-0009", "JIM-K-0047", "JIM-K-0057", "JIM-K-0060", "JIM-K-0031", "JIM-K-0029"],
+      "graph_support_refs": ["CRR2-E-0002"],
+      "scope": "夹具 scope。",
+      "order_basis": "PEDAGOGICAL",
+      "order_rationale": "这个模块排在后面是因为课程这样安排更顺手。",
+      "limitations": "夹具 limitations。",
+      "status": "skeleton"
+    }
+  ],
+  "deferred_domains": [],
+  "coverage_summary": {
+    "module_count": 2,
+    "foundational_domain_count": 2,
+    "core_domain_count": 7,
+    "mapped_mandatory_count": 9,
+    "unmapped_mandatory_count": 0
+  }
+}

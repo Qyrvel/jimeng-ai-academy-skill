@@ -1,0 +1,80 @@
+{
+  "items": [
+    {
+      "knowledge_id": "FIXC-K-0001",
+      "title": "Fixture 覆盖域能力甲",
+      "domain": "Fixture Coverage",
+      "knowledge_type": "CAPABILITY",
+      "statement": "Fixture 覆盖域说明支持能力甲。",
+      "learner_outcome": "识别 Fixture 覆盖域说明的能力甲。",
+      "information_type": "DOCUMENTED",
+      "scope": "Fixture Coverage Layer；仅测试夹具数据。",
+      "version_scope": "Fixture 1.0",
+      "evidence_refs": [
+        {
+          "source_id": "FIXC-P01",
+          "support_note": "Fixture 覆盖域说明段列出能力甲。"
+        }
+      ],
+      "limitations": "仅夹具陈述。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "FIXC-K-0002",
+      "title": "Fixture 覆盖域能力乙",
+      "domain": "Fixture Coverage",
+      "knowledge_type": "CAPABILITY",
+      "statement": "Fixture 覆盖域说明支持能力乙。",
+      "learner_outcome": "识别 Fixture 覆盖域说明的能力乙。",
+      "information_type": "DOCUMENTED",
+      "scope": "Fixture Coverage Layer；仅测试夹具数据。",
+      "version_scope": "Fixture 1.0",
+      "evidence_refs": [
+        {
+          "source_id": "FIXC-P01",
+          "support_note": "Fixture 覆盖域说明段列出能力乙。"
+        }
+      ],
+      "limitations": "仅夹具陈述。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "FIXC-K-0003",
+      "title": "Fixture 未映射项甲",
+      "domain": "Fixture Unmapped",
+      "knowledge_type": "CONCEPT",
+      "statement": "Fixture 未映射项甲陈述一个纯夹具概念。",
+      "learner_outcome": "识别该夹具概念。",
+      "information_type": "DOCUMENTED",
+      "scope": "Fixture Unmapped Layer；仅测试夹具数据。",
+      "version_scope": "Fixture 1.0",
+      "evidence_refs": [
+        {
+          "source_id": "FIXC-P01",
+          "support_note": "Fixture 说明段支持该概念。"
+        }
+      ],
+      "limitations": "仅夹具陈述。",
+      "status": "draft"
+    },
+    {
+      "knowledge_id": "FIXC-K-0004",
+      "title": "Fixture 未映射项乙",
+      "domain": "Fixture Unmapped",
+      "knowledge_type": "POLICY",
+      "statement": "Fixture 未映射项乙陈述一条纯夹具政策。",
+      "learner_outcome": "识别该夹具政策。",
+      "information_type": "DOCUMENTED",
+      "scope": "Fixture Unmapped Layer；仅测试夹具数据。",
+      "version_scope": "Fixture 1.0",
+      "evidence_refs": [
+        {
+          "source_id": "FIXC-P01",
+          "support_note": "Fixture 说明段支持该政策。"
+        }
+      ],
+      "limitations": "仅夹具陈述。",
+      "status": "draft"
+    }
+  ]
+}

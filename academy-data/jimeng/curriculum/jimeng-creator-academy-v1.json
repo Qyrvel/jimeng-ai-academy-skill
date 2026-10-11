@@ -1,0 +1,299 @@
+{
+  "curriculum_id": "jimeng-creator-academy-v1",
+  "track": "Jimeng Creator Academy V1",
+  "version": "0.1",
+  "status": "skeleton",
+  "track_goal": "让零基础普通创作者能在当前即梦 Web 产品端完成基础图片与视频创作：定位创作入口并遵守准入条件，写出可用的基础提示词，按已证实的方式加入参考素材，在已证实 scope 内对已有作品执行一次局部修改并保存，并遵守已覆盖的平台使用规则；同时保持产品声明、模型声明与 API 之间的范围分离。",
+  "entry_profile": "零基础普通创作者，不要求已有即梦操作经验，不要求编程、API、专业剪辑或模型训练知识；能使用浏览器访问即梦官方 Web。",
+  "exit_profile": "能在明确支持的客户端（Jimeng Web）识别创作入口并解释必要准入条件；能完成一次基础图片生成与一次基础视频生成并保存或下载结果；能把创作意图写成基础提示词并完成一次有依据的描述调整；能按已证实的方式加入参考图片与参考视频并区分其用途；能在已证实 scope 内对已有图片执行一次局部修改并保存；能区分产品声明、模型声明与 API，不由模型能力推断账号已开放；能识别所选平台使用义务、AI 内容标识要求与生成动作的准入前提。",
+  "scope": "Jimeng Creator Academy V1，面向零基础普通创作者。主要实践环境为 2026-10-04 观察到的 Jimeng Web（未登录创作首页、已登录图片生成界面、已登录视频生成 / 全能参考界面、已登录图片修改任务界面），模型范围限 Seedance 2.5 与 Seedream 5.0 Pro 的产品层可见行为，平台规则限 P14 所保存的第 4.1–4.8 节命题。不含 API 开发、企业部署、自动化集成、专业影视 pipeline、全部移动端或未来模型。",
+  "module_order": [
+    "JCA-M01",
+    "JCA-M02",
+    "JCA-M03",
+    "JCA-M04",
+    "JCA-M05",
+    "JCA-M06",
+    "JCA-M07",
+    "JCA-M08"
+  ],
+  "modules": [
+    {
+      "module_id": "JCA-M01",
+      "title": "产品、模型与创作入口认知",
+      "purpose": "建立产品声明 / 模型声明 / API 的范围分离意识，并在明确支持的客户端识别创作入口与必要准入条件。",
+      "target_domain_ids": ["CRD-01", "CRD-02"],
+      "learner_outcomes": [
+        "区分产品声明、模型声明与 API 声明，并不由模型能力推断账号已开放",
+        "识别 Jimeng Web 创作首页的“创作”区域与“生成”“画布”入口",
+        "解释未登录状态下“对话”“画布”显示“请先登录”，并指出“登录”入口的位置",
+        "区分历史 App 版本记录与当前 Web 观察属于不同客户端范围"
+      ],
+      "knowledge_refs": [
+        "JIM-K-0001",
+        "JIM-K-0010",
+        "JIM-K-0014",
+        "JIM-K-0029",
+        "JIM-K-0036",
+        "JIM-K-0038",
+        "JIM-K-0042",
+        "JIM-K-0043",
+        "JIM-K-0044",
+        "JIM-K-0045",
+        "JIM-K-0054",
+        "JIM-K-0055",
+        "JIM-K-0056"
+      ],
+      "graph_support_refs": ["CRR2-E-0005"],
+      "scope": "Jimeng Product Layer 与 ByteDance Seed Model Layer 的范围分离认知；创作入口与准入只限 2026-10-04 观察到的 Jimeng Web 未登录创作首页。",
+      "order_basis": "PEDAGOGICAL",
+      "order_rationale": "PEDAGOGICAL_RATIONALE: 零基础学习者先建立“这是什么、从哪里进入、需要什么准入”的认知，再进入具体生成操作，可避免把模型能力误当产品入口；本顺序不是知识 prerequisite，Graph 中该两域之间没有 PREREQUISITE_OF 边。",
+      "limitations": "入口与准入只覆盖该客户端该状态该时点；登录后页面结构、iOS/Android 路径与其他地区/账号差异未验证；历史 App 版本记录不作为当前 Web 操作依据；APIs 范围不在本 Track。",
+      "status": "skeleton"
+    },
+    {
+      "module_id": "JCA-M02",
+      "title": "第一次基础图片生成",
+      "purpose": "在指定即梦产品端完成一次基础图片生成，查看结果并保存。",
+      "target_domain_ids": ["CRD-03"],
+      "learner_outcomes": [
+        "解释官方产品页所述的图片生成三步流程",
+        "输入文本提示并通过“生成”触发一次图片生成",
+        "检查生成结果并完成下载"
+      ],
+      "knowledge_refs": [
+        "JIM-K-0004",
+        "JIM-K-0005",
+        "JIM-K-0006",
+        "JIM-K-0007",
+        "JIM-K-0008",
+        "JIM-K-0051",
+        "JIM-K-0052",
+        "JIM-K-0053"
+      ],
+      "graph_support_refs": ["CRR2-E-0002", "CRR2-E-0003", "CRR2-E-0004"],
+      "scope": "Jimeng Product Layer；该官方产品页所述图片生成流程，以及 2026-10-04 观察到的 Jimeng Web 图片生成界面；模型范围限 Seedream 5.0 Pro 的产品层可见行为。",
+      "order_basis": "PEDAGOGICAL",
+      "order_rationale": "PEDAGOGICAL_RATIONALE: 图片生成的输入与参数最少、反馈最快，适合作为零基础学习者的第一次可操作成功；本顺序不是知识 prerequisite，Graph 中图片流程与视频流程之间没有依赖边。",
+      "limitations": "该流程记录自未标明客户端版本的产品页；建议性像素数值不是强制规格；生成张数与耗时表述不是承诺；Model Layer 的 Seedream 能力未被教成产品可用性。",
+      "status": "skeleton"
+    },
+    {
+      "module_id": "JCA-M03",
+      "title": "视频生成流程与产物",
+      "purpose": "解释指定产品页所述的三步视频生成流程及产物，识别各步骤职责。",
+      "target_domain_ids": ["CRD-04"],
+      "learner_outcomes": [
+        "解释视频生成三步流程并识别每一步的职责",
+        "识别该流程的产物为可下载的 AI 视频",
+        "区分流程步骤名称与界面实际入口"
+      ],
+      "knowledge_refs": [
+        "JIM-K-0009",
+        "JIM-K-0010",
+        "JIM-K-0011",
+        "JIM-K-0012",
+        "JIM-K-0014",
+        "JIM-K-0024",
+        "JIM-K-0046"
+      ],
+      "graph_support_refs": ["JIM-E-0004", "JIM-E-0023", "JIM-E-0024", "JIM-E-0025", "JIM-E-0026"],
+      "scope": "Jimeng Product Layer；即梦 Seedance 2.5 公开产品页所述三步流程与 2026-10-04 观察到的 Jimeng Web 视频生成界面。",
+      "order_basis": "PEDAGOGICAL",
+      "order_rationale": "PEDAGOGICAL_RATIONALE: 在图片生成成功经验之后进入视频流程，学习者已具备“输入→生成→查看→保存”的共同骨架，只需叠加视频特有的步骤；本顺序不是知识 prerequisite，该域与图片域之间没有 Graph 依赖边。",
+      "limitations": "本模块 READY 只指流程结构，不许可绕过入口、提示词与素材域的执行约束；不把流程步骤名称当作界面路径；不包含界面跳转与等待细节。",
+      "status": "skeleton"
+    },
+    {
+      "module_id": "JCA-M04",
+      "title": "Prompt 基础表达与调整",
+      "purpose": "把创作意图写成可用于基础生成的提示词，并在主体表达不清楚或存在歧义时完成一次有依据的调整。",
+      "target_domain_ids": ["CRD-05"],
+      "learner_outcomes": [
+        "输入包含主体、动作、镜头与视觉风格的基础提示词",
+        "区分视频提示词与图片提示词的组织建议",
+        "修改一次表达不清楚或存在歧义的提示词"
+      ],
+      "knowledge_refs": [
+        "JIM-K-0011",
+        "JIM-K-0020",
+        "JIM-K-0047",
+        "JIM-K-0048",
+        "JIM-K-0049",
+        "JIM-K-0050"
+      ],
+      "graph_support_refs": [],
+      "scope": "Jimeng Product Layer；官方基础表达建议（产品页与提示词指南），只覆盖基础表达与一次修订。",
+      "order_basis": "PEDAGOGICAL",
+      "order_rationale": "PEDAGOGICAL_RATIONALE: 学习者已看过一次生成结果后再学习方法与修订，能把建议对应到实际输出；该域的四项方法为自足知识，Graph 中没有必要依赖边，故本顺序纯属教学安排，不是知识 prerequisite。",
+      "limitations": "只表述官方建议，不承诺效果；不覆盖完整 Prompt 技法、参数调优或风格库；产品实际生成仍受入口、图片与素材域约束。",
+      "status": "skeleton"
+    },
+    {
+      "module_id": "JCA-M05",
+      "title": "参考素材输入与用途区分",
+      "purpose": "区分参考图片、参考视频与音频参考的用途，并在限定产品流程中完成参考素材输入。",
+      "target_domain_ids": ["CRD-06"],
+      "learner_outcomes": [
+        "解释“全能参考”下“参考内容”的加入路径",
+        "区分参考视频用于动态信息与参考图片用作视觉参考的不同用途",
+        "解释当前界面显示的参考素材总量提示，并说明它不是分类型上限",
+        "解释独立音频上传路径未由现有证据单独验证，并不假定该入口存在"
+      ],
+      "knowledge_refs": [
+        "JIM-K-0011",
+        "JIM-K-0012",
+        "JIM-K-0013",
+        "JIM-K-0014",
+        "JIM-K-0015",
+        "JIM-K-0017",
+        "JIM-K-0022",
+        "JIM-K-0023",
+        "JIM-K-0057",
+        "JIM-K-0058",
+        "JIM-K-0059"
+      ],
+      "graph_support_refs": ["CRR2-E-0006", "JIM-E-0001", "JIM-E-0003"],
+      "scope": "Jimeng Product Layer；2026-10-04 观察到的 Jimeng Web 视频生成 / Seedance 2.5 / 全能参考界面，以及 P12 的参考用途说明。",
+      "order_basis": "PEDAGOGICAL",
+      "order_rationale": "PEDAGOGICAL_RATIONALE: 先完成无参考的基础生成，再引入参考素材，学习者可以把“参考改变了什么”与前一步的输出对照；本顺序不是知识 prerequisite。",
+      "limitations": "截图未显示素材格式、大小、时长与分类型数量条件；独立音频上传未单独验证但不等于不支持；不表示所有账号、地区或客户端开放该模式；不把界面总量提示教成模型层上限。",
+      "status": "skeleton"
+    },
+    {
+      "module_id": "JCA-M06",
+      "title": "编辑与局部修正",
+      "purpose": "在已证实 scope 内对已有图片执行一次局部修改并保存，并理解保留边界。",
+      "target_domain_ids": ["CRD-07"],
+      "learner_outcomes": [
+        "输入一次针对已有图片的局部修改要求并提交执行",
+        "检查修改结果并完成下载，或选择重新编辑、再次生成",
+        "解释结果页“局部重绘”等只是可见入口，其内部步骤尚未验证",
+        "解释“其他保持不变”是用户提出的修改要求，不是产品保证"
+      ],
+      "knowledge_refs": [
+        "JIM-K-0003",
+        "JIM-K-0005",
+        "JIM-K-0006",
+        "JIM-K-0007",
+        "JIM-K-0016",
+        "JIM-K-0019",
+        "JIM-K-0021",
+        "JIM-K-0060",
+        "JIM-K-0061"
+      ],
+      "graph_support_refs": ["CRR2-E-0007", "JIM-E-0005"],
+      "scope": "Jimeng Product Layer；2026-10-04 观察到的 Jimeng Web / Seedream 5.0 Pro 图片修改任务与结果页；视频局部编辑只到既有产品页范围。",
+      "order_basis": "PEDAGOGICAL",
+      "order_rationale": "PEDAGOGICAL_RATIONALE: 修正以“已有作品”为前提，安排在能产出作品的模块之后，学习者才有可修改的对象；本顺序不是知识 prerequisite。",
+      "limitations": "“局部重绘”“去画布编辑”等子工具内部步骤未验证（NOT_VERIFIED，非 UNSUPPORTED）；不保证修改结果的保真度或保留要素一致性；Seedance 2.5 视频编辑未被该证据验证；C1 全历史未解决。",
+      "status": "skeleton"
+    },
+    {
+      "module_id": "JCA-M07",
+      "title": "平台使用规则与生成准入",
+      "purpose": "识别所选平台使用义务、标识要求与有条件处理上下文，并把身份认证前提与基础生成动作关联起来，避免把规则当孤立背景。",
+      "target_domain_ids": ["CRD-08", "CRD-09"],
+      "learner_outcomes": [
+        "遵守所选条款要求的输入义务，并识别不得侵害他人权益的要求",
+        "解释 AI 内容标识的添加规则与不得破坏标识的要求",
+        "解释对所输入与生成内容的合规要求，以及特定信息须标注来源的要求",
+        "区分禁止类内容规则的类型划分，并解释平台处理条款的组引用范围",
+        "解释真实身份认证前提限定视频生成流程中的实际生成动作"
+      ],
+      "knowledge_refs": [
+        "JIM-K-0009",
+        "JIM-K-0010",
+        "JIM-K-0025",
+        "JIM-K-0026",
+        "JIM-K-0027",
+        "JIM-K-0028",
+        "JIM-K-0029",
+        "JIM-K-0030",
+        "JIM-K-0031",
+        "JIM-K-0032",
+        "JIM-K-0033",
+        "JIM-K-0034",
+        "JIM-K-0035",
+        "JIM-K-0046"
+      ],
+      "graph_support_refs": [
+        "CRR1-E-0001",
+        "POL-E-0001",
+        "POL-E-0004",
+        "POL-E-0008",
+        "POL-E-0009",
+        "POL-E-0010"
+      ],
+      "scope": "Jimeng Product Layer；平台规则限 P14 所保存的即梦AI 用户服务协议第 4.1–4.8 节命题；准入结构限 P14 §4.3 与 P10 第三步的对照范围。",
+      "order_basis": "PEDAGOGICAL",
+      "order_rationale": "PEDAGOGICAL_RATIONALE: 把义务与准入安排在动手模块之后，学习者能把每条规则挂到已经做过的具体动作上（输入、生成、标识、输出），比抽象先行更易建立正确联想；本顺序不是知识 prerequisite，规则域与生成域之间只有 CONSTRAINS 边界，没有依赖边。",
+      "limitations": "只覆盖 P14 所选命题，不构成完整政策或法律意见；不解释“未经授权”等判定标准，不提供合规结论；平台处置条款只表达处理上下文，不表示一定处罚或自动处罚；认证界面、执行时机与账号权限未验证。",
+      "status": "skeleton"
+    },
+    {
+      "module_id": "JCA-M08",
+      "title": "综合独立创作",
+      "purpose": "在已证实 scope 内独立完成一次基础创作 workflow 并交付结果，把入口、提示词、生成、参考素材与修正串成一条完整路径。",
+      "target_domain_ids": ["CRD-02", "CRD-03", "CRD-04", "CRD-05", "CRD-06", "CRD-07"],
+      "learner_outcomes": [
+        "完成一次基础图片或视频创作并下载结果",
+        "输入与创作意图相符的提示词，并在需要时加入已证实的参考素材",
+        "对产出执行一次有依据的修改并保存",
+        "在创作过程中遵守已覆盖的平台使用规则与准入前提"
+      ],
+      "knowledge_refs": [
+        "JIM-K-0009",
+        "JIM-K-0010",
+        "JIM-K-0011",
+        "JIM-K-0046",
+        "JIM-K-0047",
+        "JIM-K-0049",
+        "JIM-K-0051",
+        "JIM-K-0052",
+        "JIM-K-0053",
+        "JIM-K-0054",
+        "JIM-K-0055",
+        "JIM-K-0056",
+        "JIM-K-0057",
+        "JIM-K-0060",
+        "JIM-K-0061"
+      ],
+      "graph_support_refs": [],
+      "scope": "Jimeng Product Layer；只整合前面模块已在 2026-10-04 观察范围内证实的能力，不新增能力声明。",
+      "order_basis": "PEDAGOGICAL",
+      "order_rationale": "PEDAGOGICAL_RATIONALE: 综合实践需要以先前的入口、生成、提示词、参考与编辑模块为素材，因此安排在最后；这是课程组织要求，不是 Graph dependency，也未向 Graph 回写任何边。",
+      "limitations": "不覆盖未验证的子工具步骤或其他客户端；不构成专业影视流程、自动化集成或企业部署能力；本模块只定义 purpose、outcome、required knowledge refs 与 scope，不含作业正文或项目题目。",
+      "status": "skeleton"
+    }
+  ],
+  "deferred_domains": [
+    {
+      "domain_id": "CRD-10",
+      "disposition": "future_extension",
+      "reason": "产品与模型历史背景（SUPPORTING / PARTIAL）：已保存版本记录可作为后续受控扩展，不是选择当前唯一操作路径的依据；本轮不作为必修 outcome。"
+    },
+    {
+      "domain_id": "CRD-11",
+      "disposition": "deferred_dynamic",
+      "reason": "会员 / 积分 / 实时价格属动态信息，需按渠道与时点另行核查，不纳入稳定骨架。"
+    },
+    {
+      "domain_id": "CRD-12",
+      "disposition": "deferred_optional",
+      "reason": "API / 社区经验 / 可复现实验为可选范围，Creator Track 不要求，且相关来源未准入。"
+    },
+    {
+      "domain_id": "CRD-13",
+      "disposition": "out_of_scope",
+      "reason": "API 实时服务状态不属于普通创作者 Track。"
+    }
+  ],
+  "coverage_summary": {
+    "module_count": 8,
+    "foundational_domain_count": 2,
+    "core_domain_count": 7,
+    "mapped_mandatory_count": 9,
+    "unmapped_mandatory_count": 0
+  }
+}
